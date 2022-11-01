@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entidad.Roles
+﻿namespace Entidad.Roles
 {
-    internal class Usuario
+    public class Usuario
     {
     }
 }

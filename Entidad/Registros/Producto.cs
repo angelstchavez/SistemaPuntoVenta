@@ -1,6 +1,6 @@
 ﻿namespace Entidad.Registros
 {
-    internal class Producto
+    public class Producto
     {
     }
 }

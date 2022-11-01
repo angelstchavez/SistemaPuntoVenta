@@ -59,6 +59,11 @@
     <Compile Include="Repositorios\Roles\RepositorioCliente.cs" />
     <Compile Include="Repositorios\Roles\RepositorioUsuario.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{ae3beb26-9e81-4baf-851b-699194bdeb3b}</Project>
+      <Name>Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -122,5 +122,15 @@
   <ItemGroup>
     <None Include="Imagenes\Vectores\oficina.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{ae3beb26-9e81-4baf-851b-699194bdeb3b}</Project>
+      <Name>Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{c4416c23-5d2d-44e0-90cb-6a6e9ac301f1}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

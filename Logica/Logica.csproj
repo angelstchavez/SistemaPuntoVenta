@@ -47,5 +47,15 @@
     <Folder Include="Implementaciones\" />
     <Folder Include="Servicios\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj">
+      <Project>{ae9e76da-9fc4-491b-a9d2-ae4081142cd5}</Project>
+      <Name>Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidad\Entidad.csproj">
+      <Project>{ae3beb26-9e81-4baf-851b-699194bdeb3b}</Project>
+      <Name>Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
