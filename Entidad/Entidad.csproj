@@ -42,6 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registros\Categoria.cs" />
+    <Compile Include="Registros\Producto.cs" />
+    <Compile Include="Registros\Reporte.cs" />
+    <Compile Include="Registros\Servicio.cs" />
+    <Compile Include="Registros\Venta.cs" />
+    <Compile Include="Roles\Administrador.cs" />
+    <Compile Include="Roles\Cliente.cs" />
+    <Compile Include="Roles\Persona.cs" />
+    <Compile Include="Roles\Usuario.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
