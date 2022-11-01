@@ -41,10 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archivos\Registros\ArchivoCategoria.cs" />
+    <Compile Include="Archivos\Registros\ArchivoProducto.cs" />
+    <Compile Include="Archivos\Registros\ArchivoReporte.cs" />
+    <Compile Include="Archivos\Registros\ArchivoServicio.cs" />
+    <Compile Include="Archivos\Registros\ArchivoVenta.cs" />
+    <Compile Include="Archivos\Roles\ArchivoAdministrador.cs" />
+    <Compile Include="Archivos\Roles\ArchivoCliente.cs" />
+    <Compile Include="Archivos\Roles\ArchivoUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Archivos\" />
     <Folder Include="Repositorios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
