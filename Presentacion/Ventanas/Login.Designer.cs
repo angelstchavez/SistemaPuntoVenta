@@ -55,11 +55,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(352, 12);
+            this.label1.Location = new System.Drawing.Point(352, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 33);
+            this.label1.Size = new System.Drawing.Size(181, 34);
             this.label1.TabIndex = 1;
             this.label1.Text = "COMPUNET";
             // 
@@ -98,9 +98,9 @@
             // 
             // TxUsuario
             // 
-            this.TxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(61)))));
+            this.TxUsuario.BackColor = System.Drawing.Color.White;
             this.TxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxUsuario.ForeColor = System.Drawing.Color.White;
+            this.TxUsuario.ForeColor = System.Drawing.Color.Black;
             this.TxUsuario.Location = new System.Drawing.Point(361, 104);
             this.TxUsuario.Name = "TxUsuario";
             this.TxUsuario.Size = new System.Drawing.Size(211, 26);
@@ -108,9 +108,9 @@
             // 
             // TxContraseña
             // 
-            this.TxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(30)))), ((int)(((byte)(61)))));
+            this.TxContraseña.BackColor = System.Drawing.Color.White;
             this.TxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxContraseña.ForeColor = System.Drawing.Color.White;
+            this.TxContraseña.ForeColor = System.Drawing.Color.Black;
             this.TxContraseña.Location = new System.Drawing.Point(361, 163);
             this.TxContraseña.Name = "TxContraseña";
             this.TxContraseña.Size = new System.Drawing.Size(211, 26);
@@ -152,7 +152,7 @@
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
             this.label5.Location = new System.Drawing.Point(389, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 18);
