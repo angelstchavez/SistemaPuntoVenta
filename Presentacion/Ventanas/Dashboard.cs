@@ -14,6 +14,7 @@ namespace Presentacion.Ventanas
         private void Dashboard_Load(object sender, System.EventArgs e)
         {
             AbrirNuevoPanel(new Inicio());
+            BtnRegresar.Visible = false;
         }
         #endregion
 
@@ -55,7 +56,8 @@ namespace Presentacion.Ventanas
 
         private void Btn_04_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelCategoria(), "Gestor de categorias");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_05_Click(object sender, System.EventArgs e)
@@ -97,7 +99,10 @@ namespace Presentacion.Ventanas
 
         private void BtnRegresar_Click(object sender, System.EventArgs e)
         {
-
+            AbrirNuevoPanel(new Inicio());
+            Titulo.Text = "Bajdeja principal";
+            BtnRegresar.Visible = false;
+            MenuLateral.Visible = true;
         }
         #endregion
 

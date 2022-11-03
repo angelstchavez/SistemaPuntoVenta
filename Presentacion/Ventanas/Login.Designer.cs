@@ -43,11 +43,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.oficina;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 282);
+            this.pictureBox1.Size = new System.Drawing.Size(337, 337);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -67,7 +67,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Silver;
             this.label2.Location = new System.Drawing.Point(358, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 18);
@@ -78,8 +78,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(358, 83);
+            this.label3.ForeColor = System.Drawing.Color.Silver;
+            this.label3.Location = new System.Drawing.Point(358, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 18);
             this.label3.TabIndex = 3;
@@ -89,8 +89,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(358, 142);
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(358, 166);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 18);
             this.label4.TabIndex = 4;
@@ -98,20 +98,20 @@
             // 
             // TxUsuario
             // 
-            this.TxUsuario.BackColor = System.Drawing.Color.White;
+            this.TxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.TxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxUsuario.ForeColor = System.Drawing.Color.Black;
-            this.TxUsuario.Location = new System.Drawing.Point(361, 104);
+            this.TxUsuario.ForeColor = System.Drawing.Color.White;
+            this.TxUsuario.Location = new System.Drawing.Point(361, 128);
             this.TxUsuario.Name = "TxUsuario";
             this.TxUsuario.Size = new System.Drawing.Size(211, 26);
             this.TxUsuario.TabIndex = 5;
             // 
             // TxContraseña
             // 
-            this.TxContraseña.BackColor = System.Drawing.Color.White;
+            this.TxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.TxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxContraseña.ForeColor = System.Drawing.Color.Black;
-            this.TxContraseña.Location = new System.Drawing.Point(361, 163);
+            this.TxContraseña.ForeColor = System.Drawing.Color.White;
+            this.TxContraseña.Location = new System.Drawing.Point(361, 187);
             this.TxContraseña.Name = "TxContraseña";
             this.TxContraseña.Size = new System.Drawing.Size(211, 26);
             this.TxContraseña.TabIndex = 6;
@@ -121,13 +121,14 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.White;
-            this.checkBox1.Location = new System.Drawing.Point(361, 195);
+            this.checkBox1.ForeColor = System.Drawing.Color.Silver;
+            this.checkBox1.Location = new System.Drawing.Point(361, 219);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(138, 20);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Mostrar contraseña";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // BtnIngresar
             // 
@@ -139,9 +140,9 @@
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIngresar.ForeColor = System.Drawing.Color.White;
-            this.BtnIngresar.Location = new System.Drawing.Point(361, 239);
+            this.BtnIngresar.Location = new System.Drawing.Point(358, 275);
             this.BtnIngresar.Name = "BtnIngresar";
-            this.BtnIngresar.Size = new System.Drawing.Size(211, 30);
+            this.BtnIngresar.Size = new System.Drawing.Size(211, 40);
             this.BtnIngresar.TabIndex = 8;
             this.BtnIngresar.Text = "Ingresar";
             this.BtnIngresar.UseVisualStyleBackColor = false;
@@ -153,7 +154,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Silver;
-            this.label5.Location = new System.Drawing.Point(389, 276);
+            this.label5.Location = new System.Drawing.Point(383, 326);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 18);
             this.label5.TabIndex = 9;
@@ -163,8 +164,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(122)))));
-            this.ClientSize = new System.Drawing.Size(584, 311);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnIngresar);
             this.Controls.Add(this.checkBox1);

@@ -34,5 +34,10 @@ namespace Presentacion.Ventanas
                 e.Cancel = false; Environment.Exit(1);
             }
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
