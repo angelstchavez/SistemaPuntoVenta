@@ -4,7 +4,7 @@ namespace Entidad.Registros
 {
     public class Venta
     {
-        public string IdVenta { get; set; }
+        public int IdVenta { get; set; }
         public string Usuario { get; set; }
         public string TipoDocumento { get; set; }
         public string NumeroDocumento { get; set; }
@@ -19,7 +19,12 @@ namespace Entidad.Registros
         public override string ToString()
         {
             return $"{IdVenta};{Usuario};{TipoDocumento};{NumeroDocumento};{DocumentoCliente};" +
-                $"{NombreCliente};{MontoPago};{MontoCambio};{MontoTotal};{Productos};{FechaRegistro}";
+                $"{NombreCliente};{MontoPago};{MontoCambio};{MontoTotal};{FechaRegistro}";
+        }
+
+        public string MostrarPorductos()
+        {
+            return $"{Productos}";
         }
     }
 }
