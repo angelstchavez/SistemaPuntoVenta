@@ -28,19 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TxContador = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConsultar = new System.Windows.Forms.TextBox();
             this.Datos = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtAgregar = new System.Windows.Forms.TextBox();
+            this.txtNombreCategoria = new System.Windows.Forms.TextBox();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
             this.BtnExportarExcel = new System.Windows.Forms.Button();
             this.BtnReporte = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnAgregar
@@ -53,7 +58,7 @@
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAgregar.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregar.Location = new System.Drawing.Point(203, 31);
+            this.BtnAgregar.Location = new System.Drawing.Point(196, 26);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(90, 26);
             this.BtnAgregar.TabIndex = 3;
@@ -83,49 +88,89 @@
             this.TxContador.TabIndex = 6;
             this.TxContador.Text = "Registros: 0";
             // 
-            // textBox1
+            // txtConsultar
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(938, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 26);
-            this.textBox1.TabIndex = 4;
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtConsultar.ForeColor = System.Drawing.Color.White;
+            this.txtConsultar.Location = new System.Drawing.Point(938, 69);
+            this.txtConsultar.Name = "txtConsultar";
+            this.txtConsultar.Size = new System.Drawing.Size(150, 26);
+            this.txtConsultar.TabIndex = 4;
+            this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
             // 
             // Datos
             // 
             this.Datos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Datos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Datos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Datos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.Datos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Datos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Datos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Datos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Datos.EnableHeadersVisualStyles = false;
+            this.Datos.GridColor = System.Drawing.Color.Black;
             this.Datos.Location = new System.Drawing.Point(12, 101);
             this.Datos.Name = "Datos";
+            this.Datos.ReadOnly = true;
+            this.Datos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Datos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Datos.RowHeadersWidth = 15;
+            this.Datos.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Datos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.Datos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.Datos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            this.Datos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.Datos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Datos.Size = new System.Drawing.Size(1076, 427);
             this.Datos.TabIndex = 0;
+            this.Datos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Datos_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 10);
+            this.label2.Location = new System.Drawing.Point(5, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nombre:";
             // 
-            // txtAgregar
+            // txtNombreCategoria
             // 
-            this.txtAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.txtAgregar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAgregar.ForeColor = System.Drawing.Color.White;
-            this.txtAgregar.Location = new System.Drawing.Point(15, 31);
-            this.txtAgregar.Name = "txtAgregar";
-            this.txtAgregar.Size = new System.Drawing.Size(150, 26);
-            this.txtAgregar.TabIndex = 9;
+            this.txtNombreCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.txtNombreCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombreCategoria.ForeColor = System.Drawing.Color.White;
+            this.txtNombreCategoria.Location = new System.Drawing.Point(8, 26);
+            this.txtNombreCategoria.Name = "txtNombreCategoria";
+            this.txtNombreCategoria.Size = new System.Drawing.Size(150, 26);
+            this.txtNombreCategoria.TabIndex = 9;
             // 
             // BtnLimpiar
             // 
@@ -138,7 +183,7 @@
             this.BtnLimpiar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.ForeColor = System.Drawing.Color.White;
             this.BtnLimpiar.Image = global::Presentacion.Properties.Resources.limpiar;
-            this.BtnLimpiar.Location = new System.Drawing.Point(171, 31);
+            this.BtnLimpiar.Location = new System.Drawing.Point(164, 26);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(26, 26);
             this.BtnLimpiar.TabIndex = 10;
@@ -208,6 +253,7 @@
             this.BtnExportarExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnExportarExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnExportarExcel.UseVisualStyleBackColor = false;
+            this.BtnExportarExcel.Click += new System.EventHandler(this.BtnExportarExcel_Click);
             // 
             // BtnReporte
             // 
@@ -230,24 +276,34 @@
             this.BtnReporte.UseVisualStyleBackColor = false;
             this.BtnReporte.Click += new System.EventHandler(this.BtnReporte_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtNombreCategoria);
+            this.panel1.Controls.Add(this.BtnLimpiar);
+            this.panel1.Controls.Add(this.BtnAgregar);
+            this.panel1.Location = new System.Drawing.Point(15, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(295, 60);
+            this.panel1.TabIndex = 11;
+            // 
             // PanelCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1100, 636);
-            this.Controls.Add(this.BtnLimpiar);
-            this.Controls.Add(this.txtAgregar);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.BtnAgregar);
             this.Controls.Add(this.TxContador);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtEliminar);
             this.Controls.Add(this.BtnActualizar);
             this.Controls.Add(this.Datos);
             this.Controls.Add(this.BtnExportarExcel);
             this.Controls.Add(this.BtnReporte);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -256,6 +312,8 @@
             this.Text = "PanelCategoria";
             this.Load += new System.EventHandler(this.PanelCategoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Datos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,11 +327,12 @@
         private System.Windows.Forms.Button BtnReporte;
         private System.Windows.Forms.Label TxContador;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConsultar;
         private System.Windows.Forms.Button BtEliminar;
         private System.Windows.Forms.DataGridView Datos;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtAgregar;
+        private System.Windows.Forms.TextBox txtNombreCategoria;
         private System.Windows.Forms.Button BtnLimpiar;
+        private System.Windows.Forms.Panel panel1;
     }
 }
