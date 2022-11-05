@@ -8,6 +8,6 @@ namespace Logica.Servicios.Registros
         bool AgregarReporte(Reporte reporte);
         bool EliminarReporte(Reporte reporte);
         bool ActualizarReporte(Reporte reporte);
-        List<Reporte> ListaReportes();
+        List<Reporte> ListarReportes();
     }
 }

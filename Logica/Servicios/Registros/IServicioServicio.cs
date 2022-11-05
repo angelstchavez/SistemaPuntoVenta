@@ -8,6 +8,6 @@ namespace Logica.Servicios.Registros
         bool AgregarServicio(Servicio rervicio);
         bool EliminarServicio(Servicio rervicio);
         bool ActualizarServicio(Servicio rervicio);
-        List<Servicio> ListaServicios();
+        List<Servicio> ListarServicios();
     }
 }

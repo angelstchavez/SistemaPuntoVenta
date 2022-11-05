@@ -8,6 +8,6 @@ namespace Logica.Servicios.Registros
         bool AgregarVenta(Venta venta);
         bool EliminarVenta(Venta venta);
         bool ActualizarVenta(Venta venta);
-        List<Venta> ListaVentas();
+        List<Venta> ListarVentas();
     }
 }
