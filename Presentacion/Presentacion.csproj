@@ -116,7 +116,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\limpiar.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Iconos\cancel.png" />
   </ItemGroup>
