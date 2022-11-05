@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2010.Excel;
+using System;
 using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
@@ -41,7 +42,8 @@ namespace Presentacion.Ventanas
 
         private void Btn_01_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelVenta(), "Realizar venta");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_02_Click(object sender, System.EventArgs e)
@@ -51,7 +53,8 @@ namespace Presentacion.Ventanas
 
         private void Btn_03_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelReporte(), "Gestor de reportes");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_04_Click(object sender, System.EventArgs e)
@@ -62,27 +65,32 @@ namespace Presentacion.Ventanas
 
         private void Btn_05_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelProducto(), "Gestor de productos");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_06_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelServicio(), "Gestor de servicios");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_07_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelCliente(), "Gestor de clientes");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_08_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelUsuario(), "Gestor de usuarios");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_09_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelProveedor(), "Gestor de proveedores");
+            BtnRegresar.Visible = true;
         }
         #endregion
 
@@ -116,7 +124,8 @@ namespace Presentacion.Ventanas
             {
                 e.Cancel = false; Environment.Exit(1);
             }
-            #endregion
+         
         }
+        #endregion
     }
 }

@@ -70,12 +70,57 @@
     <Compile Include="Paneles\PanelCategoria.Designer.cs">
       <DependentUpon>PanelCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\PanelCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelCliente.Designer.cs">
+      <DependentUpon>PanelCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\PanelProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelProducto.Designer.cs">
+      <DependentUpon>PanelProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\PanelProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelProveedor.Designer.cs">
+      <DependentUpon>PanelProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\PanelReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelReporte.Designer.cs">
+      <DependentUpon>PanelReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\PanelServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelServicio.Designer.cs">
+      <DependentUpon>PanelServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\PanelUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelUsuario.Designer.cs">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paneles\PanelVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelVenta.Designer.cs">
+      <DependentUpon>PanelVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\RJComboBox.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Ventanas\Carga.cs">
       <SubType>Form</SubType>
@@ -103,6 +148,27 @@
     </Compile>
     <EmbeddedResource Include="Paneles\PanelCategoria.resx">
       <DependentUpon>PanelCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelCliente.resx">
+      <DependentUpon>PanelCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelProducto.resx">
+      <DependentUpon>PanelProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelProveedor.resx">
+      <DependentUpon>PanelProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelReporte.resx">
+      <DependentUpon>PanelReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelServicio.resx">
+      <DependentUpon>PanelServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelUsuario.resx">
+      <DependentUpon>PanelUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelVenta.resx">
+      <DependentUpon>PanelVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
