@@ -38,8 +38,9 @@ namespace Datos.Repositorios.Registros
                 Servicio servicio = new Servicio();
                 servicio.IdServicio = int.Parse(cadena.Split(';')[0]);
                 servicio.Nombre = cadena.Split(';')[1];
-                servicio.FechaRegistro = cadena.Split(';')[2];
-                servicio.Estado = bool.Parse(cadena.Split(';')[3]);
+                servicio.Precio = decimal.Parse(cadena.Split(';')[2]);
+                servicio.FechaRegistro = cadena.Split(';')[3];
+                servicio.Estado = bool.Parse(cadena.Split(';')[4]);
                 return servicio;
             }
             catch (Exception e) { throw e; }

@@ -16,5 +16,35 @@ namespace Presentacion.Paneles
         {
             InitializeComponent();
         }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnReporte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnExportarExcel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -3,6 +3,8 @@ using System;
 using SpreadsheetLight;
 using System.Windows.Forms;
 using Entidad.Registros;
+using System.IO;
+using System.Linq.Expressions;
 
 namespace Presentacion.Paneles
 {
@@ -23,6 +25,32 @@ namespace Presentacion.Paneles
         #endregion
 
         #region FUNCIONES
+        private void GenerarArchivo()
+        {
+
+            const string ruta = "categorias.dat";
+            //Chequeo que la extensión sea efectivamente .pdf
+            if (System.IO.Path.GetExtension(ruta).ToLower() == ".dat")
+            {
+                //Dado el caso, verifico que exista el archivo..
+                if (System.IO.File.Exists(ruta))
+                {
+                    CrearCategoria();
+                }
+                else
+                {
+                    //Caso que la ruta tenga la extensión correcta, pero el archivo
+                    //no exista en el disco
+                    StreamWriter archivo = new StreamWriter(ruta, true);
+                    CrearCategoria();
+                }
+            }
+            else
+            {
+                //Caso de que la extensión sea incorrecta.
+                MessageBox.Show("El formato del archivo no es correcto.");
+            }
+        }
         private void CargarDatos()
         {
             //Inicio el contador
@@ -123,7 +151,7 @@ namespace Presentacion.Paneles
             try
             {
                 DialogResult resultado = MessageBox.Show("Desea eliminar la categoría "
-                + Datos[1, posicion].Value + " del  registro?", "Mensaje del sistema",
+                + Datos[1, posicion].Value + " del registro?", "Mensaje del sistema",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (resultado == DialogResult.Yes)
@@ -270,7 +298,8 @@ namespace Presentacion.Paneles
         #region BOTONES CRUD
         private void BtnAgregar_Click(object sender, System.EventArgs e)
         {
-            AgregarCategoria();
+            GenerarArchivo();
+            //AgregarCategoria();
         }
 
         private void BtnActualizar_Click(object sender, System.EventArgs e)

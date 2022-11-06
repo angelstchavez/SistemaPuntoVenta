@@ -16,5 +16,10 @@ namespace Presentacion.Paneles
         {
             InitializeComponent();
         }
+
+        private void PanelProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

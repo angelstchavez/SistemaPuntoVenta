@@ -26,6 +26,7 @@ namespace Logica.Implementaciones.Registros
                     {
                         item.IdServicio = servicio.IdServicio;
                         item.Nombre = servicio.Nombre;
+                        item.Precio = servicio.Precio;
                         item.FechaRegistro = servicio.FechaRegistro;
                         item.Estado = servicio.Estado;
                         break;

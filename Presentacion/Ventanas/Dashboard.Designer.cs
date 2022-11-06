@@ -445,7 +445,7 @@
             this.BarraSuperior.Location = new System.Drawing.Point(200, 0);
             this.BarraSuperior.Margin = new System.Windows.Forms.Padding(4);
             this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(884, 35);
+            this.BarraSuperior.Size = new System.Drawing.Size(899, 35);
             this.BarraSuperior.TabIndex = 1;
             // 
             // BtnRegresar
@@ -459,7 +459,7 @@
             this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegresar.ForeColor = System.Drawing.Color.White;
             this.BtnRegresar.Image = global::Presentacion.Properties.Resources.regresar;
-            this.BtnRegresar.Location = new System.Drawing.Point(774, 0);
+            this.BtnRegresar.Location = new System.Drawing.Point(789, 0);
             this.BtnRegresar.Name = "BtnRegresar";
             this.BtnRegresar.Size = new System.Drawing.Size(110, 35);
             this.BtnRegresar.TabIndex = 0;
@@ -495,7 +495,7 @@
             this.BarraInferior.Location = new System.Drawing.Point(200, 671);
             this.BarraInferior.Margin = new System.Windows.Forms.Padding(4);
             this.BarraInferior.Name = "BarraInferior";
-            this.BarraInferior.Size = new System.Drawing.Size(884, 40);
+            this.BarraInferior.Size = new System.Drawing.Size(899, 40);
             this.BarraInferior.TabIndex = 2;
             // 
             // pictureBox5
@@ -503,7 +503,7 @@
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::Presentacion.Properties.Resources.telegram;
-            this.pictureBox5.Location = new System.Drawing.Point(728, 7);
+            this.pictureBox5.Location = new System.Drawing.Point(743, 7);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.TabIndex = 8;
@@ -514,7 +514,7 @@
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::Presentacion.Properties.Resources.skype;
-            this.pictureBox4.Location = new System.Drawing.Point(758, 7);
+            this.pictureBox4.Location = new System.Drawing.Point(773, 7);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(24, 24);
             this.pictureBox4.TabIndex = 7;
@@ -525,7 +525,7 @@
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::Presentacion.Properties.Resources.whats;
-            this.pictureBox3.Location = new System.Drawing.Point(788, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(803, 7);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.TabIndex = 6;
@@ -536,7 +536,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::Presentacion.Properties.Resources.facebook;
-            this.pictureBox2.Location = new System.Drawing.Point(818, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(833, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.TabIndex = 5;
@@ -547,7 +547,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.instagram;
-            this.pictureBox1.Location = new System.Drawing.Point(848, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(863, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.TabIndex = 4;
@@ -606,21 +606,21 @@
             this.Contenedor.Location = new System.Drawing.Point(200, 35);
             this.Contenedor.Margin = new System.Windows.Forms.Padding(4);
             this.Contenedor.Name = "Contenedor";
-            this.Contenedor.Size = new System.Drawing.Size(884, 636);
+            this.Contenedor.Size = new System.Drawing.Size(899, 636);
             this.Contenedor.TabIndex = 3;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 711);
+            this.ClientSize = new System.Drawing.Size(1099, 711);
             this.Controls.Add(this.Contenedor);
             this.Controls.Add(this.BarraInferior);
             this.Controls.Add(this.BarraSuperior);
             this.Controls.Add(this.MenuLateral);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1100, 750);
+            this.MinimumSize = new System.Drawing.Size(1115, 750);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
