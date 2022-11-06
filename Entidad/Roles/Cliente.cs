@@ -8,7 +8,7 @@
         public override string ToString()
         {
             return $"{Id};{Nombres};{Apellidos};{NumeroDocumento};" +
-                $"{Correo};{Telefono};{Estado};{FechaRegistro}";
+                $"{Correo};{Telefono};{FechaRegistro};{Estado}";
         }
     }
 }

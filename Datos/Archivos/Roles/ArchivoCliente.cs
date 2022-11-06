@@ -1,8 +1,7 @@
-﻿using Entidad.Registros;
+﻿using Entidad.Roles;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System;
-using Entidad.Roles;
 
 namespace Datos.Archivos.Roles
 {

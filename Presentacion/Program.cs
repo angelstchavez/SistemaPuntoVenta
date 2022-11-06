@@ -12,34 +12,33 @@ namespace Presentacion
         [STAThread]
         static void Main()
         {
+            #region GENERACIÓN DE ARCHIVOS
+            //Registros
+            StreamWriter sw_categoria = new StreamWriter("categorias.dat", true);
+            sw_categoria.Close();
 
-            //Archivos
-            StreamWriter sw;
+            StreamWriter sw_producto = new StreamWriter("productos.dat", true);
+            sw_producto.Close();
 
-            sw = new StreamWriter("categorias.dat", true);
-            sw.Close();
+            StreamWriter sw_servicio = new StreamWriter("servicios.dat", true);
+            sw_servicio.Close();
 
-            sw = new StreamWriter("productos.dat", true);
-            sw.Close();
+            StreamWriter sw_ventas = new StreamWriter("ventas.dat", true);
+            sw_ventas.Close();
 
-            sw = new StreamWriter("servicios.dat", true);
-            sw.Close();
+            StreamWriter sw_reporte = new StreamWriter("reportes.dat", true);
+            sw_reporte.Close();
 
-            sw = new StreamWriter("ventas.dat", true);
-            sw.Close();
+            //Roles
+            StreamWriter sw_cliente = new StreamWriter("clientes.dat", true);
+            sw_cliente.Close();
 
-            sw = new StreamWriter("clientes.dat", true);
-            sw.Close();
+            StreamWriter sw_usuarios = new StreamWriter("usuarios.dat", true);
+            sw_usuarios.Close();
 
-            sw = new StreamWriter("usuarios.dat", true);
-            sw.Close();
-
-            sw = new StreamWriter("administradores.dat", true);
-            sw.Close();
-
-            sw = new StreamWriter("reportes.dat", true);
-            sw.Close();
-
+            StreamWriter sw_administrador = new StreamWriter("administradores.dat", true);
+            sw_administrador.Close();
+            #endregion
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

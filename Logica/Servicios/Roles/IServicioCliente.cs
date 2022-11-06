@@ -8,6 +8,6 @@ namespace Logica.Servicios.Roles
         bool AgregarCliente(Cliente cliente);
         bool EliminarCliente(Cliente cliente);
         bool ActualizarCliente(Cliente cliente);
-        List<Cliente> ListaClientes();
+        List<Cliente> ListarClientes();
     }
 }
