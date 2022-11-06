@@ -1,7 +1,7 @@
 ﻿using Entidad.Registros;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System;
 
 namespace Datos.Repositorios.Registros
 {

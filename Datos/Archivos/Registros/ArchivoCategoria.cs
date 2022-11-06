@@ -2,6 +2,7 @@
 using System.IO;
 using System;
 using Entidad.Registros;
+using Seguridad;
 
 namespace Datos.Archivos
 {
@@ -24,6 +25,7 @@ namespace Datos.Archivos
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, true);
+                Encriptacion encriptar = new Encriptacion();
                 sw.WriteLine(categoria.ToString());
                 sw.Close();
                 return true;
