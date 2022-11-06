@@ -2,8 +2,11 @@
 using Logica.Implementaciones.Registros;
 using SpreadsheetLight;
 using System;
-using System.IO;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.tool.xml;
+using System.IO;
 
 namespace Presentacion.Paneles
 {
@@ -24,6 +27,84 @@ namespace Presentacion.Paneles
         #endregion
 
         #region FUNCIONES
+        private void ExportarPDF()
+        {
+            if (categoriaImpl.ListarCategorias().Count == 0)
+            {
+                MessageBox.Show("No existen registros para exportar.", "Mensaje del sistema",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    SaveFileDialog savefile = new SaveFileDialog();
+                    savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("CAT_" + "dd-MM-yyyy"));
+
+
+
+                    //string PaginaHTML_Texto = "<table border=\"1\"><tr><td>HOLA MUNDO</td></tr></table>";
+                    string PaginaHTML_Texto = Properties.Resources.PlantillaCategorias.ToString();
+                    PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CATEGORIA", "CATEGORÍAS");
+                    PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", "");
+                    PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
+
+                    string filas = string.Empty;
+
+                    foreach (DataGridViewRow row in Datos.Rows)
+                    {
+                        filas += "<tr>";
+                        filas += "<td>" + row.Cells["IdCategoria"].Value.ToString() + "</td>";
+                        filas += "<td>" + row.Cells["Nombre"].Value.ToString() + "</td>";
+                        filas += "<td>" + row.Cells["FechaRegistro"].Value.ToString() + "</td>";
+                        filas += "<td>" + row.Cells["Estado"].Value.ToString() + "</td>";
+                        filas += "</tr>";
+                    }
+                    PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
+
+                    if (savefile.ShowDialog() == DialogResult.OK)
+                    {
+                        using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
+                        {
+                            //Creamos un nuevo documento y lo definimos como PDF
+                            Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+
+                            PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                            pdfDoc.Open();
+                            pdfDoc.Add(new Phrase(""));
+
+                            //Agregamos la imagen del banner al documento
+                            iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logo, System.Drawing.Imaging.ImageFormat.Png);
+                            img.ScaleToFit(60, 60);
+                            img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                            //img.SetAbsolutePosition(10,100);
+                            img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
+                            pdfDoc.Add(img);
+
+
+                            //pdfDoc.Add(new Phrase("Hola Mundo"));
+                            using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                            {
+                                XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                            }
+
+                            pdfDoc.Close();
+                            stream.Close();
+
+                            MessageBox.Show("Reporte generado exitosamente.", "Mensaje del sistema",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Mensaje del sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private void CargarDatos()
         {
             //Inicio el contador
@@ -303,7 +384,7 @@ namespace Presentacion.Paneles
 
         private void BtnReporte_Click(object sender, System.EventArgs e)
         {
-
+            ExportarPDF();
         }
         #endregion
 
