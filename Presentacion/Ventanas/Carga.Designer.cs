@@ -33,7 +33,6 @@
             this.Ocultar = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.BarraCarga = new System.Windows.Forms.ProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxAño = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -52,38 +51,27 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.login;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.oficina;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(400, 308);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // BarraCarga
             // 
-            this.BarraCarga.Location = new System.Drawing.Point(12, 327);
+            this.BarraCarga.Location = new System.Drawing.Point(12, 320);
             this.BarraCarga.Name = "BarraCarga";
-            this.BarraCarga.Size = new System.Drawing.Size(400, 15);
+            this.BarraCarga.Size = new System.Drawing.Size(300, 15);
             this.BarraCarga.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 345);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 18);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Cargando sistema...";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(205, 345);
+            this.label1.Location = new System.Drawing.Point(103, 338);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 18);
             this.label1.TabIndex = 4;
@@ -94,7 +82,7 @@
             this.TxAño.AutoSize = true;
             this.TxAño.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxAño.ForeColor = System.Drawing.Color.White;
-            this.TxAño.Location = new System.Drawing.Point(371, 345);
+            this.TxAño.Location = new System.Drawing.Point(270, 338);
             this.TxAño.Name = "TxAño";
             this.TxAño.Size = new System.Drawing.Size(52, 18);
             this.TxAño.TabIndex = 5;
@@ -105,10 +93,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.ClientSize = new System.Drawing.Size(426, 376);
+            this.ClientSize = new System.Drawing.Size(323, 370);
             this.Controls.Add(this.TxAño);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.BarraCarga);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,7 +117,6 @@
         private System.Windows.Forms.Timer Ocultar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar BarraCarga;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TxAño;
     }
