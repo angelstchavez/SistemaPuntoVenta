@@ -1,4 +1,5 @@
 ﻿using Entidad.Roles;
+using Seguridad;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +25,7 @@ namespace Datos.Archivos.Roles
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, true);
-                sw.WriteLine(administrador.ToString());
+                sw.WriteLine(Encriptacion.Encrypt(administrador.ToString()));
                 sw.Close();
                 return true;
             }

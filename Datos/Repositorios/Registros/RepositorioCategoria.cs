@@ -1,4 +1,5 @@
 ﻿using Entidad.Registros;
+using Seguridad;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,7 +24,7 @@ namespace Datos.Repositorios.Registros
                 List<Categoria> categorias = new List<Categoria>();
                 while (!sr.EndOfStream)
                 {
-                    categorias.Add(Mappear(sr.ReadLine()));
+                    categorias.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
                 }
                 sr.Close();
                 return categorias;

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Seguridad
 {
-    public class Encriptacion
+    public static class Encriptacion
     {
-        public string Encrypt(string cadena)
+        public static string Encrypt(string cadena)
         {
             string hash = "SistemaPuntoVenta";
             byte[] data = UTF8Encoding.UTF8.GetBytes(cadena);
@@ -23,7 +23,7 @@ namespace Seguridad
             return Convert.ToBase64String(result);
         }
 
-        public String Decrypt(string cadenaEncriptada)
+        public static string Decrypt(string cadenaEncriptada)
         {
             string hash = "SistemaPuntoVenta";
             byte[] data = Convert.FromBase64String(cadenaEncriptada);
