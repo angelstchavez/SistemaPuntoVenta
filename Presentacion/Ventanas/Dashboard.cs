@@ -97,7 +97,8 @@ namespace Presentacion.Ventanas
         #region BOTONES SECUNDARIOS
         private void BtnConfiguracion_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelConfiguracion(), "Configuración del sistema");
+            BtnRegresar.Visible = true;
         }
 
         private void BtnCerrarSesion_Click(object sender, System.EventArgs e)

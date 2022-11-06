@@ -102,8 +102,8 @@
             this.BtnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnConfiguracion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.BtnConfiguracion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.BtnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BtnConfiguracion.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.BtnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
             this.BtnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfiguracion.ForeColor = System.Drawing.Color.White;
             this.BtnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("BtnConfiguracion.Image")));
@@ -121,12 +121,12 @@
             // 
             // BtnCerrarSesion
             // 
-            this.BtnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.BtnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
             this.BtnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BtnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.BtnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.BtnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
+            this.BtnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.BtnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.BtnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.BtnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrarSesion.Image")));
