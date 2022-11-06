@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System;
+using Seguridad;
 
 namespace Datos.Repositorios.Registros
 {
@@ -23,7 +24,7 @@ namespace Datos.Repositorios.Registros
                 List<Producto> productos = new List<Producto>();
                 while (!sr.EndOfStream)
                 {
-                    productos.Add(Mappear(sr.ReadLine()));
+                    productos.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
                 }
                 sr.Close();
                 return productos;

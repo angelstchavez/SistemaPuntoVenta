@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System;
+using Seguridad;
 
 namespace Datos.Repositorios.Roles
 {
@@ -23,7 +24,7 @@ namespace Datos.Repositorios.Roles
                 List<Cliente> clientes = new List<Cliente>();
                 while (!sr.EndOfStream)
                 {
-                    clientes.Add(Mappear(sr.ReadLine()));
+                    clientes.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
                 }
                 sr.Close();
                 return clientes;

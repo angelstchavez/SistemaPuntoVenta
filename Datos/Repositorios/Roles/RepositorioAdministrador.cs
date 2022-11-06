@@ -1,4 +1,5 @@
 ﻿using Entidad.Roles;
+using Seguridad;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,7 +25,7 @@ namespace Datos.Repositorios.Roles
                 List<Administrador> administrador = new List<Administrador>();
                 while (!sr.EndOfStream)
                 {
-                    administrador.Add(Mappear(sr.ReadLine()));
+                    administrador.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
                 }
                 sr.Close();
                 return administrador;
