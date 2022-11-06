@@ -309,7 +309,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Vectores\logo.png" />
-    <Content Include="Recursos\PlantillaCategorias.html" />
     <None Include="Recursos\Plantillas\PlantillaCategorias.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
