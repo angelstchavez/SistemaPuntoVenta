@@ -1,5 +1,5 @@
-﻿using DocumentFormat.OpenXml.Office2010.Excel;
-using System;
+﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
@@ -112,6 +112,38 @@ namespace Presentacion.Ventanas
             Titulo.Text = "Bajdeja principal";
             BtnRegresar.Visible = false;
             MenuLateral.Visible = true;
+        }
+        #endregion
+
+        #region BOTONES REDES SOCIALES
+        private void lnkGmail_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.gmail.com");
+        }
+
+        private void lnkTelegram_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://web.telegram.org");
+        }
+
+        private void lnkSkype_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.skype.com");
+        }
+
+        private void lnkWhatsapp_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.whatsapp.com");
+        }
+
+        private void lnkFacebook_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.facebook.com");
+        }
+
+        private void lnkInstagram_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.instagram.com");
         }
         #endregion
 
