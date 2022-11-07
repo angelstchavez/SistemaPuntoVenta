@@ -58,7 +58,7 @@ namespace Datos.Repositorios.Registros
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, modo);
-                foreach (var item in productos) { sw.WriteLine(item.ToString()); }
+                foreach (var item in productos) { sw.WriteLine(Encriptacion.Encrypt(item.ToString())); }
                 sw.Close();
                 return true;
             }
