@@ -311,5 +311,8 @@
     <None Include="Imagenes\Vectores\logo.png" />
     <None Include="Recursos\Plantillas\PlantillaCategorias.html" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\carpeta.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
