@@ -362,24 +362,34 @@ namespace Presentacion.Paneles
 
         private void BtEliminar_Click(object sender, System.EventArgs e)
         {
-            if (categoriaImpl.ListarCategorias().Count == 0)
+            try
             {
-                MessageBox.Show("No hay categorias registradas.", "Mensaje del sistema",
-                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                if (posicion < 0)
+                if (categoriaImpl.ListarCategorias().Count == 0)
                 {
-                    MessageBox.Show("Seleccione un registro.", "Mensaje del sistema",
+                    MessageBox.Show("No hay categorias registradas.", "Mensaje del sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    LocalizarRegistro(categoriaImpl.ListarCategorias()[posicion]);
-                    EliminarCategoria();
+                    if (posicion < 0)
+                    {
+                        MessageBox.Show("Seleccione un registro.", "Mensaje del sistema",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        LocalizarRegistro(categoriaImpl.ListarCategorias()[posicion]);
+                        EliminarCategoria();
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Mensaje del sistema",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
         }
 
         private void BtnReporte_Click(object sender, System.EventArgs e)

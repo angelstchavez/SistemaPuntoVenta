@@ -8,6 +8,6 @@ namespace Logica.Servicios.Roles
         bool AgregarUsuario(Usuario usuario);
         bool EliminarUsuario(Usuario usuario);
         bool ActualizarUsuario(Usuario usuario);
-        List<Usuario> ListaUsuarios();
+        List<Usuario> ListarUsuarios();
     }
 }
