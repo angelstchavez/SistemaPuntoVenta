@@ -86,12 +86,6 @@ namespace Presentacion.Ventanas
             AbrirOpcion(new Paneles.PanelUsuario(), "Gestor de usuarios");
             BtnRegresar.Visible = true;
         }
-
-        private void Btn_09_Click(object sender, System.EventArgs e)
-        {
-            AbrirOpcion(new Paneles.PanelProveedor(), "Gestor de proveedores");
-            BtnRegresar.Visible = true;
-        }
         #endregion
 
         #region BOTONES SECUNDARIOS

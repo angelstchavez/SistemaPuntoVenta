@@ -32,7 +32,6 @@
             this.MenuLateral = new System.Windows.Forms.Panel();
             this.BtnConfiguracion = new System.Windows.Forms.Button();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
-            this.Btn_09 = new System.Windows.Forms.Button();
             this.Btn_08 = new System.Windows.Forms.Button();
             this.Btn_07 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -78,7 +77,6 @@
             this.MenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.MenuLateral.Controls.Add(this.BtnConfiguracion);
             this.MenuLateral.Controls.Add(this.BtnCerrarSesion);
-            this.MenuLateral.Controls.Add(this.Btn_09);
             this.MenuLateral.Controls.Add(this.Btn_08);
             this.MenuLateral.Controls.Add(this.Btn_07);
             this.MenuLateral.Controls.Add(this.button9);
@@ -143,30 +141,6 @@
             this.BtnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnCerrarSesion.UseVisualStyleBackColor = false;
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
-            // 
-            // Btn_09
-            // 
-            this.Btn_09.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_09.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_09.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_09.FlatAppearance.BorderSize = 0;
-            this.Btn_09.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_09.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_09.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_09.ForeColor = System.Drawing.Color.White;
-            this.Btn_09.Image = global::Presentacion.Properties.Resources.proveedor;
-            this.Btn_09.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_09.Location = new System.Drawing.Point(0, 470);
-            this.Btn_09.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_09.Name = "Btn_09";
-            this.Btn_09.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_09.Size = new System.Drawing.Size(200, 45);
-            this.Btn_09.TabIndex = 12;
-            this.Btn_09.Text = " Proveedores";
-            this.Btn_09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_09.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_09.UseVisualStyleBackColor = false;
-            this.Btn_09.Click += new System.EventHandler(this.Btn_09_Click);
             // 
             // Btn_08
             // 
@@ -673,7 +647,6 @@
         private System.Windows.Forms.Panel BarraLogo;
         private System.Windows.Forms.Button BtnConfiguracion;
         private System.Windows.Forms.Button BtnCerrarSesion;
-        private System.Windows.Forms.Button Btn_09;
         private System.Windows.Forms.Button Btn_08;
         private System.Windows.Forms.Button Btn_07;
         private System.Windows.Forms.Button button9;

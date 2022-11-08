@@ -97,12 +97,6 @@
     <Compile Include="Paneles\PanelProducto.Designer.cs">
       <DependentUpon>PanelProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Paneles\PanelProveedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Paneles\PanelProveedor.Designer.cs">
-      <DependentUpon>PanelProveedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Paneles\PanelReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,9 +166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelProducto.resx">
       <DependentUpon>PanelProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Paneles\PanelProveedor.resx">
-      <DependentUpon>PanelProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelReporte.resx">
       <DependentUpon>PanelReporte.cs</DependentUpon>
