@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica.Implementaciones.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace Presentacion.Paneles
         {
             InitializeComponent();
         }
+
+        public static ProductoImpl productoImpl = new ProductoImpl();
 
         private void PanelProducto_Load(object sender, EventArgs e)
         {

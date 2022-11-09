@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logica.Implementaciones.Registros;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,7 @@ namespace Presentacion.Paneles
         {
             InitializeComponent();
         }
+
+        public static VentaImpl ventaImpl = new VentaImpl();
     }
 }

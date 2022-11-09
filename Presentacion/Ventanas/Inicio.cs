@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using Presentacion.Paneles;
+using System;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
@@ -16,6 +10,7 @@ namespace Presentacion.Ventanas
         public Inicio()
         {
             InitializeComponent();
+            CargarDatos();
         }
 
         private void ControlFechaHora_Tick(object sender, EventArgs e)
@@ -23,5 +18,19 @@ namespace Presentacion.Ventanas
             TxHora.Text = DateTime.Now.ToString("hh:mm:ss tt", CultureInfo.InvariantCulture);
             TxFecha.Text = DateTime.Now.ToShortDateString();
         }
+
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
+        }
+        private void CargarDatos()
+        {
+            ventas.Text = Convert.ToString(PanelVenta.ventaImpl.ListarVentas().Count);
+            clientes.Text = Convert.ToString(PanelCliente.clienteImpl.ListarClientes().Count);
+            productos.Text = Convert.ToString(PanelProducto.productoImpl.ListarProductos().Count);
+            servicios.Text = Convert.ToString(PanelServicio.servicioImpl.ListarServicios().Count);
+            categorias.Text = Convert.ToString(PanelCategoria.categoriaImpl.ListarCategorias().Count);
+        }
+
     }
 }

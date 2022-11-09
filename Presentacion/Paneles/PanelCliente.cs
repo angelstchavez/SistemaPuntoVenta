@@ -14,7 +14,7 @@ namespace Presentacion.Paneles
         }
 
         #region LOAD
-        ClienteImpl clienteImpl = new ClienteImpl();
+        public static ClienteImpl clienteImpl = new ClienteImpl();
         int posicion = 0;
         private void PanelCliente_Load(object sender, EventArgs e)
         {

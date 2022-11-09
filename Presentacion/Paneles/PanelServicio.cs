@@ -14,7 +14,7 @@ namespace Presentacion.Paneles
         }
 
         #region LOAD
-        ServicioImpl servicioImpl = new ServicioImpl();
+        public static ServicioImpl servicioImpl = new ServicioImpl();
         int posicion = 0;
         private void PanelServicio_Load(object sender, EventArgs e)
         {

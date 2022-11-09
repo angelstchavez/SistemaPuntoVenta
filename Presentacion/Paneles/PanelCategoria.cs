@@ -18,7 +18,7 @@ namespace Presentacion.Paneles
         }
 
         #region LOAD
-        CategoriaImpl categoriaImpl = new CategoriaImpl();
+        public static CategoriaImpl categoriaImpl = new CategoriaImpl();
         int posicion = 0;
         private void PanelCategoria_Load(object sender, System.EventArgs e)
         {
