@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Logica.Implementaciones.Registros.CategoriaImpl" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAMAAAAAAQAAAAAAAAQAAYAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementaciones\Registros\CategoriaImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Logica.Implementaciones.Registros.ProductoImpl" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAABAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAM=</HashCode>
+      <FileName>Implementaciones\Registros\ProductoImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Logica.Implementaciones.Registros.ReporteImpl" BaseTypeListCollapsed="true">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAABAEEAAAAAAIAAAAAEAA=</HashCode>
+      <FileName>Implementaciones\Registros\ReporteImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Logica.Implementaciones.Registros.ServicioImpl" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gICBAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Implementaciones\Registros\ServicioImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Logica.Implementaciones.Registros.VentaImpl" BaseTypeListCollapsed="true">
+    <Position X="7" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAEIAAAAAAAAAAAAAAAgABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Implementaciones\Registros\VentaImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Logica.Implementaciones.Roles.AdministradorImpl" Collapsed="true">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementaciones\Roles\AdministradorImpl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Logica.Implementaciones.Roles.ClienteImpl" BaseTypeListCollapsed="true">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAACEAAAAAAAAAAAAAgAAAAAAAAAAACAAAAAAQAA=</HashCode>
+      <FileName>Implementaciones\Roles\ClienteImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Logica.Implementaciones.Roles.UsuarioImpl" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAIAAIAAAIAAAAAAAAAAAEAAAAAACAAAAAAA=</HashCode>
+      <FileName>Implementaciones\Roles\UsuarioImpl.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Logica.Servicios.Registros.IServicioCategoria">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAQAAAAAAAAQAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\Registros\IServicioCategoria.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logica.Servicios.Registros.IServicioProducto">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAE=</HashCode>
+      <FileName>Servicios\Registros\IServicioProducto.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logica.Servicios.Registros.IServicioReporte">
+    <Position X="10.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAABAEAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Servicios\Registros\IServicioReporte.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logica.Servicios.Registros.IServicioServicio" Collapsed="true">
+    <Position X="10.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AICBAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\Registros\IServicioServicio.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logica.Servicios.Registros.IServicioVenta">
+    <Position X="7" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Servicios\Registros\IServicioVenta.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logica.Servicios.Roles.IServicioAdministrador">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAgAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAA=</HashCode>
+      <FileName>Servicios\Roles\IServicioAdministrador.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logica.Servicios.Roles.IServicioCliente">
+    <Position X="10.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAEAAAAAAAAAAAAAgAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Servicios\Roles\IServicioCliente.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Logica.Servicios.Roles.IServicioUsuario">
+    <Position X="8.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAIAAAIAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\Roles\IServicioUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

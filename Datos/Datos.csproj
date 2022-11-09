@@ -69,5 +69,8 @@
       <Name>Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CapaDatos.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

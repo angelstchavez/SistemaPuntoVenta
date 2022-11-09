@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="Datos.Archivos.ArchivoCategoria">
+    <Position X="12" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Registros\ArchivoCategoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Archivos.ArchivoProducto">
+    <Position X="10" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Registros\ArchivoProducto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Archivos.ArchivoReporte">
+    <Position X="13.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Registros\ArchivoReporte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Archivos.ArchivoServicio">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Registros\ArchivoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Archivos.ArchivoVenta">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Registros\ArchivoVenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Archivos.Roles.ArchivoAdministrador">
+    <Position X="15.75" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Roles\ArchivoAdministrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Archivos.Roles.ArchivoCliente">
+    <Position X="15.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Roles\ArchivoCliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Archivos.Roles.ArchivoUsuario">
+    <Position X="14" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAECAA=</HashCode>
+      <FileName>Archivos\Roles\ArchivoUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Roles.RepositorioAdministrador">
+    <Position X="16" Y="12" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Repositorios\Roles\RepositorioAdministrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Roles.RepositorioCliente">
+    <Position X="15.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Repositorios\Roles\RepositorioCliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Roles.RepositorioUsuario">
+    <Position X="14" Y="12" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Repositorios\Roles\RepositorioUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Registros.RepositorioCategoria">
+    <Position X="12" Y="12" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorios\Registros\RepositorioCategoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Registros.RepositorioProducto">
+    <Position X="10" Y="12" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Repositorios\Registros\RepositorioProducto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Registros.RepositorioReporte">
+    <Position X="13.75" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorios\Registros\RepositorioReporte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Registros.RepositorioServicio">
+    <Position X="11.75" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorios\Registros\RepositorioServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Datos.Repositorios.Registros.RepositorioVenta">
+    <Position X="10" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositorios\Registros\RepositorioVenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

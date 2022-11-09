@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entidad.Registros.Categoria">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAQAgAAAAAAAAAAAAAAQAAAAAAg=</HashCode>
+      <FileName>Registros\Categoria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Registros.Producto">
+    <Position X="13.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAQAAAAAkAAAAgAAFgAAAAAAAAAAQAAAAEAg=</HashCode>
+      <FileName>Registros\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Registros.Reporte">
+    <Position X="15.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAg=</HashCode>
+      <FileName>Registros\Reporte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Registros.Servicio">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAEAAAAgAAQAAAAAAAAAAAQAAAAAAg=</HashCode>
+      <FileName>Registros\Servicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Registros.Venta">
+    <Position X="15.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAABAEQAgAABAAAAAABAgAAAIUAAAAFAA=</HashCode>
+      <FileName>Registros\Venta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Roles.Administrador">
+    <Position X="5.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIGAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\Administrador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Roles.Cliente">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <InheritanceLine Type="Entidad.Roles.Persona" FixedToPoint="true">
+      <Path>
+        <Point X="8.375" Y="4.565" />
+        <Point X="8.375" Y="4.875" />
+        <Point X="8.625" Y="4.875" />
+        <Point X="8.625" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Roles\Cliente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Roles.Persona">
+    <Position X="7.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAEAEgAAAAAAAAAAAAAAAAQAAAAAAg=</HashCode>
+      <FileName>Roles\Persona.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidad.Roles.Usuario">
+    <Position X="10" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIGAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

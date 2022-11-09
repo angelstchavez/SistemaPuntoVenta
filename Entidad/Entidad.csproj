@@ -52,5 +52,8 @@
     <Compile Include="Roles\Persona.cs" />
     <Compile Include="Roles\Usuario.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="CapaEntidad.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

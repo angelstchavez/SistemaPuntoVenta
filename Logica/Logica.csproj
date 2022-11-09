@@ -59,7 +59,9 @@
     <Compile Include="Servicios\Roles\IServicioCliente.cs" />
     <Compile Include="Servicios\Roles\IServicioUsuario.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="CapaLogica.cd" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
       <Project>{ae9e76da-9fc4-491b-a9d2-ae4081142cd5}</Project>
