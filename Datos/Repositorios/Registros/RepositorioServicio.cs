@@ -24,7 +24,7 @@ namespace Datos.Repositorios.Registros
                 List<Servicio> servicios = new List<Servicio>();
                 while (!sr.EndOfStream)
                 {
-                    servicios.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
+                    servicios.Add(Mappear(sr.ReadLine()));
                 }
                 sr.Close();
                 return servicios;
@@ -52,7 +52,7 @@ namespace Datos.Repositorios.Registros
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, modo);
-                foreach (var item in servicios) { sw.WriteLine(Encriptacion.Encrypt(item.ToString())); }
+                foreach (var item in servicios) { sw.WriteLine(item.ToString()); }
                 sw.Close();
                 return true;
             }

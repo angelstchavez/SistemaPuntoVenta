@@ -25,7 +25,7 @@ namespace Datos.Archivos.Roles
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, true);
-                sw.WriteLine(Encriptacion.Encrypt(cliente.ToString()));
+                sw.WriteLine(cliente.ToString());
                 sw.Close();
                 return true;
             }

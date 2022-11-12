@@ -24,7 +24,7 @@ namespace Datos.Repositorios.Roles
                 List<Usuario> usuarios = new List<Usuario>();
                 while (!sr.EndOfStream)
                 {
-                    usuarios.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
+                    usuarios.Add(Mappear(sr.ReadLine()));
                 }
                 sr.Close();
                 return usuarios;
@@ -54,7 +54,7 @@ namespace Datos.Repositorios.Roles
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, modo);
-                foreach (var item in usuarios) { sw.WriteLine(Encriptacion.Decrypt(item.ToString())); }
+                foreach (var item in usuarios) { sw.WriteLine(item.ToString()); }
                 sw.Close();
                 return true;
             }

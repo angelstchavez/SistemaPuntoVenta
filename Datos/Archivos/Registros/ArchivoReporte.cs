@@ -26,7 +26,7 @@ namespace Datos.Archivos
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, true);
-                sw.WriteLine(Encriptacion.Encrypt(reporte.ToString()));
+                sw.WriteLine(reporte.ToString());
                 sw.Close();
                 return true;
             }

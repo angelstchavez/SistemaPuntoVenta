@@ -38,6 +38,15 @@ namespace Presentacion
 
             StreamWriter sw_administrador = new StreamWriter("administradores.dat", true);
             sw_administrador.Close();
+
+            #region CONEXION
+            StreamWriter conexion = new StreamWriter("ConnectionString.xml", false);
+            conexion.WriteLine("<?xml version=\"1.0\"?>");
+            conexion.WriteLine("<database DBcnString=\"SistemaPuntoVenta\">");
+            conexion.WriteLine("</database>");
+            conexion.Close();
+            #endregion
+
             #endregion
 
             Application.EnableVisualStyles();

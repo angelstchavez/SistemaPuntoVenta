@@ -24,7 +24,7 @@ namespace Datos.Repositorios.Registros
                 List<Producto> productos = new List<Producto>();
                 while (!sr.EndOfStream)
                 {
-                    productos.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
+                    productos.Add(Mappear(sr.ReadLine()));
                 }
                 sr.Close();
                 return productos;
@@ -58,7 +58,7 @@ namespace Datos.Repositorios.Registros
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, modo);
-                foreach (var item in productos) { sw.WriteLine(Encriptacion.Encrypt(item.ToString())); }
+                foreach (var item in productos) { sw.WriteLine(item.ToString()); }
                 sw.Close();
                 return true;
             }

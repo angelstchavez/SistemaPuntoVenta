@@ -24,7 +24,7 @@ namespace Datos.Repositorios.Registros
                 List<Categoria> categorias = new List<Categoria>();
                 while (!sr.EndOfStream)
                 {
-                    categorias.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
+                    categorias.Add(Mappear(sr.ReadLine()));
                 }
                 sr.Close();
                 return categorias;
@@ -51,7 +51,7 @@ namespace Datos.Repositorios.Registros
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, modo);
-                foreach (var item in categorias) { sw.WriteLine(Encriptacion.Encrypt(item.ToString())); }
+                foreach (var item in categorias) { sw.WriteLine(item.ToString()); }
                 sw.Close();
                 return true;
             }

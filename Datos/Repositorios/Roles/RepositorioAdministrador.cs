@@ -25,7 +25,7 @@ namespace Datos.Repositorios.Roles
                 List<Administrador> administrador = new List<Administrador>();
                 while (!sr.EndOfStream)
                 {
-                    administrador.Add(Mappear(Encriptacion.Decrypt(sr.ReadLine())));
+                    administrador.Add(Mappear(sr.ReadLine()));
                 }
                 sr.Close();
                 return administrador;
@@ -55,7 +55,7 @@ namespace Datos.Repositorios.Roles
             try
             {
                 StreamWriter sw = new StreamWriter(ruta, modo);
-                foreach (var item in administradores) { sw.WriteLine(Encriptacion.Decrypt(item.ToString())); }
+                foreach (var item in administradores) { sw.WriteLine(item.ToString()); }
                 sw.Close();
                 return true;
             }
