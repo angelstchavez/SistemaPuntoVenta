@@ -20,6 +20,7 @@ namespace Presentacion.Paneles
         }
 
         #region LOAD
+        LogicaUsuario logicaUsuario = new LogicaUsuario();
         private void PanelUsuario_Load(object sender, System.EventArgs e)
         {
             LlenarDatos();
@@ -41,7 +42,7 @@ namespace Presentacion.Paneles
             //Lennar el box de roles
             foreach (var item in roles)
             {
-                boxRol.Items.Add(new OpcionCombo() { valor = 0, texto = item.Descripcion });
+                boxRol.Items.Add(new OpcionCombo() { valor = item.IdRol, texto = item.Descripcion });
             }
             boxRol.DisplayMember = "Texto";
             boxRol.ValueMember = "valor";
@@ -73,20 +74,13 @@ namespace Presentacion.Paneles
         }
         private void AgregarUsuario()
         {
-            DatosUsuario.Rows.Add(new object[] {"",txtId.Text,txtIdentificacion.Text,txtNombre.Text,
-                txtCorreo.Text,txtConfContraseña.Text,((OpcionCombo)boxRol.SelectedItem).valor.ToString(),
-            ((OpcionCombo)boxRol.SelectedItem).texto.ToString(),
-            ((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
-            ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
-
-            Limpiar();
-            MessageBox.Show("Usuario agregado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            RegistrarUsuario();
         }
         private void Limpiar()
         {
             txtId.Text = "0";
             txtIndice.Text = "-1";
-            txtIdentificacion.Text = "";
+            txtDocumento.Text = "";
             txtNombre.Text = "";
             txtCorreo.Text = "";
             txtContraseña.Text = "";
@@ -94,6 +88,38 @@ namespace Presentacion.Paneles
             boxRol.SelectedIndex = 0;
             boxEstado.SelectedIndex = 0;
         }
+        private void RegistrarUsuario()
+        {
+            string mensaje = string.Empty;
+
+            Usuario usuario = new Usuario()
+            {
+                IdUsuario = Convert.ToInt32(txtId.Text),
+                Documento = txtDocumento.Text,
+                NombreCompleto = txtNombre.Text,
+                Correo = txtCorreo.Text,
+                Contraseña = txtConfContraseña.Text,
+                ObJRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)boxRol.SelectedItem).valor) },
+                Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1 ? true : false
+            };
+            int IdUsuarioGenerado = logicaUsuario.Registrar(usuario, out mensaje);
+
+            if (IdUsuarioGenerado != 0)
+            {
+                DatosUsuario.Rows.Add(new object[] {"",IdUsuarioGenerado,txtDocumento.Text,txtNombre.Text,
+                txtCorreo.Text,txtConfContraseña.Text,((OpcionCombo)boxRol.SelectedItem).valor.ToString(),
+            ((OpcionCombo)boxRol.SelectedItem).texto.ToString(),
+            ((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
+            ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
+
+                Limpiar();
+                MessageBox.Show("Usuario agregado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(mensaje,"Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        } 
         #endregion
 
         #region BOTONES
@@ -184,7 +210,7 @@ namespace Presentacion.Paneles
                         {
                             txtIndice.Text = indice.ToString();
                             txtId.Text = DatosUsuario.Rows[indice].Cells["IdUsuario"].Value.ToString();
-                            txtIdentificacion.Text = DatosUsuario.Rows[indice].Cells["Documento"].Value.ToString();
+                            txtDocumento.Text = DatosUsuario.Rows[indice].Cells["Documento"].Value.ToString();
                             txtNombre.Text = DatosUsuario.Rows[indice].Cells["NombreCompleto"].Value.ToString();
                             txtCorreo.Text = DatosUsuario.Rows[indice].Cells["Correo"].Value.ToString();
                             txtContraseña.Text = DatosUsuario.Rows[indice].Cells["Clave"].Value.ToString();
