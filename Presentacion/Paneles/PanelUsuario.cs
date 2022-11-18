@@ -1,7 +1,13 @@
-﻿using Entidad.Roles;
+﻿using DocumentFormat.OpenXml.Office2010.Excel;
+using DocumentFormat.OpenXml.Spreadsheet;
+using DocumentFormat.OpenXml.Wordprocessing;
+using Entidad.Roles;
 using Logica.Logica.Roles;
+using Presentacion.Properties;
 using Presentacion.Recursos;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Presentacion.Paneles
@@ -16,13 +22,12 @@ namespace Presentacion.Paneles
         #region LOAD
         private void PanelUsuario_Load(object sender, System.EventArgs e)
         {
-            txtId.Visible = false;
-            LlenarCombobox();
+            LlenarDatos();
         }
         #endregion
 
         #region FUNCIONES
-        private void LlenarCombobox()
+        private void LlenarDatos()
         {
             boxEstado.Items.Add(new OpcionCombo() { valor = 1, texto = "Activo" });
             boxEstado.Items.Add(new OpcionCombo() { valor = 2, texto = "Inactivo" });
@@ -60,7 +65,7 @@ namespace Presentacion.Paneles
             //Llenar tabla
             foreach (var item in usuarios)
             {
-                DatosUsuario.Rows.Add(new object[] {item.IdUsuario,item.Documento,item.NombreCompleto,
+                DatosUsuario.Rows.Add(new object[] {"",item.IdUsuario,item.Documento,item.NombreCompleto,
                 item.Correo,item.Contraseña,item.ObJRol.IdRol, item.ObJRol.Descripcion,item.Estado == true ? 1 : 0,
                 item.Estado == true ? "Activo" : "Inactivo" });
             }
@@ -68,7 +73,7 @@ namespace Presentacion.Paneles
         }
         private void AgregarUsuario()
         {
-            DatosUsuario.Rows.Add(new object[] {txtId.Text,txtIdentificacion.Text,txtNombre.Text,
+            DatosUsuario.Rows.Add(new object[] {"",txtId.Text,txtIdentificacion.Text,txtNombre.Text,
                 txtCorreo.Text,txtConfContraseña.Text,((OpcionCombo)boxRol.SelectedItem).valor.ToString(),
             ((OpcionCombo)boxRol.SelectedItem).texto.ToString(),
             ((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
@@ -79,6 +84,8 @@ namespace Presentacion.Paneles
         }
         private void Limpiar()
         {
+            txtId.Text = "0";
+            txtIndice.Text = "-1";
             txtIdentificacion.Text = "";
             txtNombre.Text = "";
             txtCorreo.Text = "";
@@ -87,7 +94,6 @@ namespace Presentacion.Paneles
             boxRol.SelectedIndex = 0;
             boxEstado.SelectedIndex = 0;
         }
-
         #endregion
 
         #region BOTONES
@@ -133,5 +139,87 @@ namespace Presentacion.Paneles
             txtConfContraseña.UseSystemPasswordChar = true;
         }
         #endregion
+
+        private void DatosUsuario_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0)
+                    return;
+                if (e.ColumnIndex == 0)
+                {
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                    var w = Resources.check.Width;
+                    var h = Resources.check.Height;
+                    var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                    var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                    e.Graphics.DrawImage(Resources.check, new Rectangle(x, y, w, h));
+                    e.Handled = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void DatosUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            try
+            {
+                if (DatosUsuario.Columns[e.ColumnIndex].Name == "btnSeleccion")
+                {
+                    
+                    int indice = e.RowIndex;
+
+
+                    if (indice >= 0)
+                    {
+                        if (e.RowIndex < 0)
+                            return;
+                        if (e.ColumnIndex == 0)
+                        {
+                            txtIndice.Text = indice.ToString();
+                            txtId.Text = DatosUsuario.Rows[indice].Cells["IdUsuario"].Value.ToString();
+                            txtIdentificacion.Text = DatosUsuario.Rows[indice].Cells["Documento"].Value.ToString();
+                            txtNombre.Text = DatosUsuario.Rows[indice].Cells["NombreCompleto"].Value.ToString();
+                            txtCorreo.Text = DatosUsuario.Rows[indice].Cells["Correo"].Value.ToString();
+                            txtContraseña.Text = DatosUsuario.Rows[indice].Cells["Clave"].Value.ToString();
+                            txtConfContraseña.Text = DatosUsuario.Rows[indice].Cells["Clave"].Value.ToString();
+
+                            foreach (OpcionCombo oc in boxRol.Items)
+                            {
+
+                                if (oc.texto == Convert.ToString(DatosUsuario.Rows[indice].Cells["Rol"].Value))
+                                {
+                                    int indiceBoxRol = boxRol.Items.IndexOf(oc);
+                                    boxRol.SelectedIndex = indiceBoxRol;
+                                    break;
+                                }
+                            }
+
+                            foreach (OpcionCombo oc in boxEstado.Items)
+                            {
+
+                                if (oc.texto == Convert.ToString(DatosUsuario.Rows[indice].Cells["EstadoValor"].Value))
+                                {
+                                    int indiceBoxRol = boxEstado.Items.IndexOf(oc);
+                                    boxEstado.SelectedIndex = indiceBoxRol;
+                                    break;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
