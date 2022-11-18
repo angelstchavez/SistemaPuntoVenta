@@ -5,6 +5,7 @@ using Presentacion.Paneles;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -64,6 +65,28 @@ namespace Presentacion.Ventanas
             Titulo.Text = titulo;
             AbrirNuevoPanel(panel);
         }
+        
+        private void abrirPanel()
+        {
+            Form form = new Form();
+            using (PanelAcercaDe mm = new PanelAcercaDe())
+            {
+                form.StartPosition = FormStartPosition.CenterScreen;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Opacity = .70d;
+                form.BackColor = System.Drawing.Color.Black;
+                form.WindowState = FormWindowState.Maximized;
+                form.TopMost = true;
+                form.Location = this.Location;
+                form.ShowInTaskbar = false;
+                form.Show();
+
+                mm.Owner = form;
+                mm.ShowDialog();
+
+                form.Dispose();
+            }
+        }
         #endregion
 
         #region BOTONES PRINCIPALES
@@ -98,7 +121,7 @@ namespace Presentacion.Ventanas
 
         private void Btn_06_Click(object sender, System.EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelMantenimiento(), "Mantenimiento");
+            AbrirOpcion(new Paneles.PanelCategoria(), "Mantenimiento");
             BtnRegresar.Visible = true;
         }
 
@@ -121,8 +144,7 @@ namespace Presentacion.Ventanas
         }
         private void Btn_010_Click(object sender, EventArgs e)
         {
-            PanelAcercaDe acercaDe = new PanelAcercaDe();
-            acercaDe.ShowDialog();
+            abrirPanel();
         }
         #endregion
 

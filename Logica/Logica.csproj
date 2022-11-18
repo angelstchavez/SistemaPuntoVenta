@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\Registros\LogicaCategoria.cs" />
     <Compile Include="Logica\Registros\LogicaPermiso.cs" />
     <Compile Include="Logica\Roles\LogicaRol.cs" />
     <Compile Include="Logica\Roles\LogicaUsuario.cs" />

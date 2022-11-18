@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
@@ -19,7 +12,7 @@ namespace Presentacion.Ventanas
         private void Carga_Load(object sender, EventArgs e)
         {
             //Muestra el año actual
-            TxAño.Text = DateTime.Now.Year.ToString() + ".";
+            //TxAño.Text = DateTime.Now.Year.ToString() + ".";
             this.Opacity = 0.0;
             Mostrar.Start();
         }

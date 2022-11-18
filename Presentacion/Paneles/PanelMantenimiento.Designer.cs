@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.PagCategorias = new System.Windows.Forms.TabControl();
+            this.PagProductos = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.TabControl.SuspendLayout();
+            this.PagCategorias.SuspendLayout();
             this.SuspendLayout();
             // 
-            // TabControl
+            // PagCategorias
             // 
-            this.TabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PagCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TabControl.Controls.Add(this.tabPage1);
-            this.TabControl.Controls.Add(this.tabPage2);
-            this.TabControl.Location = new System.Drawing.Point(12, 12);
-            this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(1076, 612);
-            this.TabControl.TabIndex = 0;
+            this.PagCategorias.Controls.Add(this.PagProductos);
+            this.PagCategorias.Controls.Add(this.tabPage2);
+            this.PagCategorias.Location = new System.Drawing.Point(12, 12);
+            this.PagCategorias.Name = "PagCategorias";
+            this.PagCategorias.SelectedIndex = 0;
+            this.PagCategorias.Size = new System.Drawing.Size(1076, 612);
+            this.PagCategorias.TabIndex = 0;
             // 
-            // tabPage1
+            // PagProductos
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1068, 581);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.PagProductos.Location = new System.Drawing.Point(4, 27);
+            this.PagProductos.Name = "PagProductos";
+            this.PagProductos.Padding = new System.Windows.Forms.Padding(3);
+            this.PagProductos.Size = new System.Drawing.Size(1068, 581);
+            this.PagProductos.TabIndex = 0;
+            this.PagProductos.Text = "Productos";
+            this.PagProductos.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -64,7 +64,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1068, 581);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Categorias";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // PanelMantenimiento
@@ -73,21 +73,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1100, 636);
-            this.Controls.Add(this.TabControl);
+            this.Controls.Add(this.PagCategorias);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PanelMantenimiento";
             this.Text = "PanelMantenimiento";
-            this.TabControl.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.PanelMantenimiento_Load);
+            this.PagCategorias.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl TabControl;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl PagCategorias;
+        private System.Windows.Forms.TabPage PagProductos;
         private System.Windows.Forms.TabPage tabPage2;
     }
 }

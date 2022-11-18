@@ -1,11 +1,15 @@
-﻿using Entidad.Registros;
+﻿using Datos.Datos.Roles;
+using Entidad.Registros;
+using Entidad.Roles;
+using Logica.Logica.Registros;
+using Logica.Logica.Roles;
+using Presentacion.Properties;
+using Presentacion.Recursos;
 using SpreadsheetLight;
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using iTextSharp.tool.xml;
-using System.IO;
 
 namespace Presentacion.Paneles
 {
@@ -18,158 +22,71 @@ namespace Presentacion.Paneles
 
         #region LOAD
         int posicion = 0;
+        LogicaCategoria logicaCategoria = new LogicaCategoria();
         private void PanelCategoria_Load(object sender, System.EventArgs e)
         {
-            CargarDatos();
+            LlenarDatos();
         }
         #endregion
 
         #region FUNCIONES
-        private void ExportarPDF()
-        {
-            //if (categoriaImpl.ListarCategorias().Count == 0)
-            //{
-            //    MessageBox.Show("No existen registros para exportar.", "Mensaje del sistema",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    try
-            //    {
-            //        SaveFileDialog savefile = new SaveFileDialog();
-            //        savefile.FileName = string.Format("{0}.pdf", DateTime.Now.ToString("CAT_" + "dd-MM-yyyy"));
-
-
-
-            //        //string PaginaHTML_Texto = "<table border=\"1\"><tr><td>HOLA MUNDO</td></tr></table>";
-            //        string PaginaHTML_Texto = Properties.Resources.PlantillaCategorias.ToString();
-            //        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@CATEGORIA", "CATEGORÍAS");
-            //        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DOCUMENTO", "");
-            //        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA", DateTime.Now.ToString("dd/MM/yyyy"));
-
-            //        string filas = string.Empty;
-
-            //        foreach (DataGridViewRow row in Datos.Rows)
-            //        {
-            //            filas += "<tr>";
-            //            filas += "<td>" + row.Cells["IdCategoria"].Value.ToString() + "</td>";
-            //            filas += "<td>" + row.Cells["Nombre"].Value.ToString() + "</td>";
-            //            filas += "<td>" + row.Cells["FechaRegistro"].Value.ToString() + "</td>";
-            //            filas += "<td>" + row.Cells["Estado"].Value.ToString() + "</td>";
-            //            filas += "</tr>";
-            //        }
-            //        PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
-
-            //        if (savefile.ShowDialog() == DialogResult.OK)
-            //        {
-            //            using (FileStream stream = new FileStream(savefile.FileName, FileMode.Create))
-            //            {
-            //                //Creamos un nuevo documento y lo definimos como PDF
-            //                Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
-
-            //                PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
-            //                pdfDoc.Open();
-            //                pdfDoc.Add(new Phrase(""));
-
-            //                //Agregamos la imagen del banner al documento
-            //                iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.logo, System.Drawing.Imaging.ImageFormat.Png);
-            //                img.ScaleToFit(60, 60);
-            //                img.Alignment = iTextSharp.text.Image.UNDERLYING;
-
-            //                //img.SetAbsolutePosition(10,100);
-            //                img.SetAbsolutePosition(pdfDoc.LeftMargin, pdfDoc.Top - 60);
-            //                pdfDoc.Add(img);
-
-
-            //                //pdfDoc.Add(new Phrase("Hola Mundo"));
-            //                using (StringReader sr = new StringReader(PaginaHTML_Texto))
-            //                {
-            //                    XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-            //                }
-
-            //                pdfDoc.Close();
-            //                stream.Close();
-
-            //                MessageBox.Show("Reporte generado exitosamente.", "Mensaje del sistema",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //            }
-
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-        }
-        private void CargarDatos()
-        {
-            ////Inicio el contador
-            //TxContador.Text = "Registros: " + categoriaImpl.ListarCategorias().Count;
-
-            ////Cargo los registros en la tabla
-            //Datos.DataSource = categoriaImpl.ListarCategorias();
-        }
         private void ExportarExcel()
         {
-            //if (categoriaImpl.ListarCategorias().Count == 0)
-            //{
-            //    MessageBox.Show("No existen registros para exportar.", "Mensaje del sistema",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    try
-            //    {
+            if (DatosCategoria.Rows.Count == 0)
+            {
+                MessageBox.Show("No existen registros para exportar.", "Mensaje del sistema",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    //Objeto que permite crear el ecxel (Se utilizó una librería externa llamada SpreadSheetLigth)
+                    SLDocument sL = new SLDocument();
 
-            //        //Objeto que permite crear el ecxel (Se utilizó una librería externa llamada SpreadSheetLigth)
-            //        SLDocument sL = new SLDocument();
+                    //Le da estilos a el archivo excel
+                    SLStyle sLStyle = new SLStyle();
+                    sLStyle.Font.FontSize = 12;
+                    sLStyle.Font.Bold = true;
 
-            //        //Le da estilos a el archivo excel
-            //        SLStyle sLStyle = new SLStyle();
-            //        sLStyle.Font.FontSize = 12;
-            //        sLStyle.Font.Bold = true;
+                    //Recorre las columnas
+                    int iColumn = 1;
+                    foreach (DataGridViewColumn column in DatosCategoria.Columns)
+                    {
+                        sL.SetCellValue(1, iColumn, column.HeaderText.ToString());
+                        sL.SetCellStyle(1, iColumn, sLStyle);
+                        iColumn++;
+                    }
 
-            //        //Recorre las columnas
-            //        int iColumn = 1;
-            //        foreach (DataGridViewColumn column in Datos.Columns)
-            //        {
-            //            sL.SetCellValue(1, iColumn, column.HeaderText.ToString());
-            //            sL.SetCellStyle(1, iColumn, sLStyle);
-            //            iColumn++;
-            //        }
+                    //Recorre las filas
+                    int irow = 2;
+                    foreach (DataGridViewRow row in DatosCategoria.Rows)
+                    {
+                        sL.SetCellValue(irow, 1, row.Cells[1].Value.ToString());
+                        sL.SetCellValue(irow, 2, row.Cells[2].Value.ToString());
+                        sL.SetCellValue(irow, 4, row.Cells[4].Value.ToString());
+                        irow++;
+                    }
 
-            //        //Recorre las filas
-            //        int irow = 2;
-            //        foreach (DataGridViewRow row in Datos.Rows)
-            //        {
-            //            sL.SetCellValue(irow, 1, row.Cells[0].Value.ToString());
-            //            sL.SetCellValue(irow, 2, row.Cells[1].Value.ToString());
-            //            sL.SetCellValue(irow, 3, row.Cells[2].Value.ToString());
-            //            sL.SetCellValue(irow, 4, row.Cells[3].Value.ToString());
-            //            irow++;
-            //        }
-
-            //        //Guarda el archivo
-            //        SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            //        saveFileDialog1.Title = "Guardar archivo";
-            //        saveFileDialog1.CheckPathExists = true;
-            //        saveFileDialog1.DefaultExt = "xlsx";
-            //        saveFileDialog1.Filter = "xlsx files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-            //        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //        {
-            //            sL.SaveAs(saveFileDialog1.FileName);
-            //            MessageBox.Show("¡Archivo exportado con exito!", "Mensaje del sistema",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+                    //Guarda el archivo
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                    saveFileDialog1.Title = "Guardar archivo";
+                    saveFileDialog1.CheckPathExists = true;
+                    saveFileDialog1.DefaultExt = "xlsx";
+                    saveFileDialog1.Filter = "xlsx files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                    if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        sL.SaveAs(saveFileDialog1.FileName);
+                        MessageBox.Show("¡Archivo exportado con exito!", "Mensaje del sistema",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Mensaje del sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
         private void FiltrarBusqueda()
         {
@@ -233,36 +150,39 @@ namespace Presentacion.Paneles
         private void LimpiarCampos()
         {
             txtNombreCategoria.Text = "";
+            boxEstado.SelectedIndex = 0;
             txtConsultar.Text = "";
         }
         private void CrearCategoria()
         {
-            ////Creamos la categoria
-            //Categoria categoria = new Categoria();
+            string mensaje = string.Empty;
 
-            ////Este valor se toma del campo de texto
-            //categoria.Nombre = txtNombreCategoria.Text.ToUpperInvariant();
+            Categoria categoria = new Categoria()
+            {
+                IdCategoria = Convert.ToInt32(txtId.Text),
+                Descripcion = txtNombreCategoria.Text,
+                Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1 ? true : false
+            };
+            int IdCategoriaGenerado = logicaCategoria.Registrar(categoria, out mensaje);
 
+            if (categoria.IdCategoria != 0)
+            {
+                DatosCategoria.Rows.Add(new object[] {"",IdCategoriaGenerado,txtNombreCategoria.Text,
+            ((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
+            ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
 
-            ////categoria.Id = (categoriaImpl.ListarCategorias().Count + 1);
-
-            ////Estos valores se ponen por defecto
-            //Random numeroRandom = new Random();
-            //categoria.IdCategoria = numeroRandom.Next(0, 1000000);
-            //categoria.FechaRegistro = DateTime.Today.ToShortDateString().ToString();
-            //categoria.Estado = true;
-
-            ////La agregamos al archivo
-            //categoriaImpl.AgregarCategoria(categoria);
-
-            ////Actualizamos la tabla de registros para que aparezca el registro en la tabla
-            //Datos.DataSource = null;
-            //Datos.DataSource = categoriaImpl.ListarCategorias();
+                LimpiarCampos();
+                MessageBox.Show("Categoria agregada exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void AgregarCategoria()
         {
             ///* Si el botón dice "Agregar" entonces empieza el proceso de agregación.
-            //    Caso contrario, si NO dice "agregar", entonces significa que el usuario va a editar.
+            //    Caso contrario, si NO dice "agregar", entonces significa que el Categoria va a editar.
             // */
             //if (BtnAgregar.Text == "Agregar")
             //{
@@ -298,7 +218,7 @@ namespace Presentacion.Paneles
             //                    }
             //                }
 
-            //                //Si ya existe entonces le avisamos al usuario que ya existe esa categoria.
+            //                //Si ya existe entonces le avisamos al Categoria que ya existe esa categoria.
             //                if (categoriaExistente)
             //                {
             //                    MessageBox.Show("La categoría " + txtNombreCategoria.Text.ToUpperInvariant()
@@ -322,7 +242,7 @@ namespace Presentacion.Paneles
             //            }
             //            else
             //            {
-            //                //Si el usuario se arrepiente, le mandanos este mensaje.
+            //                //Si el Categoria se arrepiente, le mandanos este mensaje.
             //                MessageBox.Show("Proceso cancelado.", "Mensaje del sistema",
             //                MessageBoxButtons.OK, MessageBoxIcon.Information);
             //                LimpiarCampos();
@@ -345,53 +265,31 @@ namespace Presentacion.Paneles
         {
             //txtNombreCategoria.Text = categoria.Nombre;
         }
+
+        private void LlenarDatos()
+        {
+            TxContador.Text = "Registros: " + DatosCategoria.Rows.Count.ToString();
+
+            boxEstado.Items.Add(new OpcionCombo() { valor = 1, texto = "Activo" });
+            boxEstado.Items.Add(new OpcionCombo() { valor = 2, texto = "Inactivo" });
+            boxEstado.DisplayMember = "Texto";
+            boxEstado.ValueMember = "valor";
+            boxEstado.SelectedIndex = 0;
+
+            LogicaCategoria logicaCategoria = new LogicaCategoria();
+            List<Categoria> categorias = logicaCategoria.Listar();
+
+            //Llenar tabla
+            foreach (var item in categorias)
+            {
+                DatosCategoria.Rows.Add(new object[] {"",item.IdCategoria,item.Descripcion,item.Estado == true ? 1 : 0,
+                item.Estado == true ? "Activo" : "Inactivo" });
+            }
+        }
         #endregion
 
         #region BOTONES CRUD
-        private void BtnAgregar_Click(object sender, System.EventArgs e)
-        {
-            AgregarCategoria();
-        }
 
-        private void BtnActualizar_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
-        private void BtEliminar_Click(object sender, System.EventArgs e)
-        {
-            //try
-            //{
-            //    if (categoriaImpl.ListarCategorias().Count == 0)
-            //    {
-            //        MessageBox.Show("No hay categorias registradas.", "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //    else
-            //    {
-            //        if (posicion < 0)
-            //        {
-            //            MessageBox.Show("Seleccione un registro.", "Mensaje del sistema",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //        }
-            //        else
-            //        {
-            //            LocalizarRegistro(categoriaImpl.ListarCategorias()[posicion]);
-            //            EliminarCategoria();
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}          
-        }
-
-        private void BtnReporte_Click(object sender, System.EventArgs e)
-        {
-            ExportarPDF();
-        }
         #endregion
 
         #region BOTONES SECUNDARIOS
@@ -412,8 +310,42 @@ namespace Presentacion.Paneles
         }
         private void Datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            posicion = Datos.CurrentRow.Index;
+            //posicion = Datos.CurrentRow.Index;
         }
         #endregion
+
+        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void DatosCategoria_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex < 0)
+                    return;
+                if (e.ColumnIndex == 0)
+                {
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                    var w = Resources.check.Width;
+                    var h = Resources.check.Height;
+                    var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                    var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                    e.Graphics.DrawImage(Resources.check, new Rectangle(x, y, w, h));
+                    e.Handled = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            CrearCategoria();
+        }
     }
 }

@@ -1,7 +1,4 @@
-﻿using DocumentFormat.OpenXml.Office2010.Excel;
-using DocumentFormat.OpenXml.Spreadsheet;
-using DocumentFormat.OpenXml.Wordprocessing;
-using Entidad.Roles;
+﻿using Entidad.Roles;
 using Logica.Logica.Roles;
 using Presentacion.Properties;
 using Presentacion.Recursos;

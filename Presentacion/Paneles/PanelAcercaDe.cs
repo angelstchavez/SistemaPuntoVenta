@@ -13,7 +13,7 @@ namespace Presentacion.Paneles
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Close();
         }
 
         private void gitCarlos_Click(object sender, EventArgs e)
