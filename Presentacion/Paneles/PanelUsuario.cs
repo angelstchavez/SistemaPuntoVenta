@@ -50,7 +50,7 @@ namespace Presentacion.Paneles
             ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
 
             Limpiar();
-            MessageBox.Show("Usuario agregado exitosamente.","Completado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Usuario agregado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void Limpiar()
         {
@@ -62,6 +62,7 @@ namespace Presentacion.Paneles
             boxRol.SelectedIndex = 0;
             boxEstado.SelectedIndex = 0;
         }
+
         #endregion
 
         #region BOTONES
@@ -79,16 +80,33 @@ namespace Presentacion.Paneles
         {
 
         }
-        #endregion
 
         private void BtnLimpiar_Click(object sender, System.EventArgs e)
         {
             Limpiar();
         }
+        #endregion
 
         private void txtIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                e.Handled = true;
+            }
         }
+
+        #region EVENTOS CLIC
+        private void KeyConfPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = false;
+            txtConfContraseña.UseSystemPasswordChar = false;
+        }
+
+        private void KeyConfPass_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = true;
+            txtConfContraseña.UseSystemPasswordChar = true;
+        }
+        #endregion
     }
 }
