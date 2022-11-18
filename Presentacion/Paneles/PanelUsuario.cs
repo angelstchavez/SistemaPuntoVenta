@@ -33,6 +33,7 @@ namespace Presentacion.Paneles
             LogicaRol logicaRol = new LogicaRol();
             List<Rol> roles = logicaRol.Listar();
 
+            //Lennar el box de roles
             foreach (var item in roles)
             {
                 boxRol.Items.Add(new OpcionCombo() { valor = 0, texto = item.Descripcion });
@@ -40,6 +41,30 @@ namespace Presentacion.Paneles
             boxRol.DisplayMember = "Texto";
             boxRol.ValueMember = "valor";
             boxRol.SelectedIndex = 0;
+
+            //Lennar el box de consulta
+            foreach (DataGridViewColumn item in DatosUsuario.Columns)
+            {
+                if (item.Visible)
+                {
+                    boxConsulta.Items.Add(new OpcionCombo() { valor = item.Name, texto = item.HeaderText });
+                }
+            }
+            boxConsulta.DisplayMember = "Texto";
+            boxConsulta.ValueMember = "valor";
+            boxConsulta.SelectedIndex = 0;
+
+            LogicaUsuario logicaUsuario = new LogicaUsuario();
+            List<Usuario> usuarios = logicaUsuario.Listar();
+
+            //Llenar tabla
+            foreach (var item in usuarios)
+            {
+                DatosUsuario.Rows.Add(new object[] {item.IdUsuario,item.Documento,item.NombreCompleto,
+                item.Correo,item.Contraseña,item.ObJRol.IdRol, item.ObJRol.Descripcion,item.Estado == true ? 1 : 0,
+                item.Estado == true ? "Activo" : "Inactivo" });
+            }
+
         }
         private void AgregarUsuario()
         {

@@ -26,7 +26,7 @@ namespace Presentacion.Ventanas
                 //    MessageBox.Show(item.ToString());
                 //}
 
-                Usuario usuario = new LogicaUsuario().Listar().Where(u => u.Documento == txtUsuario.Text && u.Contraseña == txtContraseña.Text).FirstOrDefault();
+                Usuario usuario = new LogicaUsuario().Validad().Where(u => u.Documento == txtUsuario.Text && u.Contraseña == txtContraseña.Text).FirstOrDefault();
 
                 if(txtUsuario.Text == "")
                 {

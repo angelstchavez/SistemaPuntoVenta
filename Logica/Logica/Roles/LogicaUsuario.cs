@@ -12,5 +12,10 @@ namespace Logica.Logica.Roles
         {
             return datosUsuario.ListarUsuarios();
         }
+
+        public List<Usuario> Validad()
+        {
+            return datosUsuario.ValidarUsuarios();
+        }
     }
 }
