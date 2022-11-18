@@ -359,5 +359,20 @@
   <ItemGroup>
     <None Include="Imagenes\Iconos\check.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Logos\ing-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Logos\upc-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Vectores\Programmer-amico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\git.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

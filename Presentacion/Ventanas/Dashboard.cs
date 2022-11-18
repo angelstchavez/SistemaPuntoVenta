@@ -1,6 +1,7 @@
 ﻿using DocumentFormat.OpenXml.Wordprocessing;
 using Entidad.Roles;
 using Logica.Logica.Registros;
+using Presentacion.Paneles;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -120,8 +121,8 @@ namespace Presentacion.Ventanas
         }
         private void Btn_010_Click(object sender, EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelAcercaDe(), "Acerca de");
-            BtnRegresar.Visible = true;
+            PanelAcercaDe acercaDe = new PanelAcercaDe();
+            acercaDe.ShowDialog();
         }
         #endregion
 
