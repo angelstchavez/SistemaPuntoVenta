@@ -1,25 +1,52 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using Entidad.Roles;
+using Logica.Logica.Registros;
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
 {
     public partial class Dashboard : Form
     {
-        public Dashboard()
+        private static Usuario usuarioActual;
+
+        public Dashboard(Usuario usuario)
         {
+            usuarioActual = usuario;
             InitializeComponent();
         }
 
         #region LOAD
         private void Dashboard_Load(object sender, System.EventArgs e)
         {
+            ValidadControles();
             AbrirNuevoPanel(new Inicio());
             BtnRegresar.Visible = false;
+            lblUsuario.Text = usuarioActual.NombreCompleto;
         }
         #endregion
 
         #region FUNCIONES
+        private void ValidadControles()
+        {
+            LogicaPermiso logicaPermiso = new LogicaPermiso();
+            List<Permiso> permisos = logicaPermiso.Listar(usuarioActual.IdUsuario);
+
+            //Recorremos los elementos del menú lateral
+            foreach (var elemento in MenuLateral.Controls)
+            {
+                //Si el elemento del menú lateral es un botón entonces ejecuta el bloque de codigo
+                if (elemento is Button boton)
+                {
+                    bool encontrado = permisos.Any(m => m.NombreMenu == boton.Name);
+                    if (encontrado) { boton.Visible = true; }
+                    else { boton.Visible = false; }
+                }
+            }
+        }
         private void AbrirNuevoPanel(Form formHijo)
         {
             while (Contenedor.Controls.Count > 0) { Contenedor.Controls.RemoveAt(0); }
@@ -39,7 +66,6 @@ namespace Presentacion.Ventanas
         #endregion
 
         #region BOTONES PRINCIPALES
-
         private void Btn_01_Click(object sender, System.EventArgs e)
         {
             AbrirOpcion(new Paneles.PanelVenta(), "Realizar venta");
@@ -71,7 +97,7 @@ namespace Presentacion.Ventanas
 
         private void Btn_06_Click(object sender, System.EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelServicio(), "Gestor de servicios");
+            AbrirOpcion(new Paneles.PanelMantenimiento(), "Mantenimiento");
             BtnRegresar.Visible = true;
         }
 
@@ -84,6 +110,17 @@ namespace Presentacion.Ventanas
         private void Btn_08_Click(object sender, System.EventArgs e)
         {
             AbrirOpcion(new Paneles.PanelUsuario(), "Gestor de usuarios");
+            BtnRegresar.Visible = true;
+        }
+
+        private void Btn_09_Click(object sender, EventArgs e)
+        {
+            AbrirOpcion(new Paneles.PanelReporte(), "Gestor de reportes");
+            BtnRegresar.Visible = true;
+        }
+        private void Btn_010_Click(object sender, EventArgs e)
+        {
+            AbrirOpcion(new Paneles.PanelAcercaDe(), "Acerca de");
             BtnRegresar.Visible = true;
         }
         #endregion
@@ -110,32 +147,32 @@ namespace Presentacion.Ventanas
         #endregion
 
         #region BOTONES REDES SOCIALES
-        private void lnkGmail_Click(object sender, EventArgs e)
+        private void LnkGmail_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.gmail.com");
         }
 
-        private void lnkTelegram_Click(object sender, EventArgs e)
+        private void LnkTelegram_Click(object sender, EventArgs e)
         {
             Process.Start("http://web.telegram.org");
         }
 
-        private void lnkSkype_Click(object sender, EventArgs e)
+        private void LnkSkype_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.skype.com");
         }
 
-        private void lnkWhatsapp_Click(object sender, EventArgs e)
+        private void LnkWhatsapp_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.whatsapp.com");
         }
 
-        private void lnkFacebook_Click(object sender, EventArgs e)
+        private void LnkFacebook_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.facebook.com");
         }
 
-        private void lnkInstagram_Click(object sender, EventArgs e)
+        private void LnkInstagram_Click(object sender, EventArgs e)
         {
             Process.Start("http://www.instagram.com");
         }
@@ -151,7 +188,7 @@ namespace Presentacion.Ventanas
             {
                 e.Cancel = false; Environment.Exit(1);
             }
-         
+
         }
         #endregion
     }

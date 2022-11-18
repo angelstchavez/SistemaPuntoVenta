@@ -74,6 +74,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Paneles\PanelAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelAcercaDe.Designer.cs">
+      <DependentUpon>PanelAcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\PanelCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     <Compile Include="Paneles\PanelConfiguracion.Designer.cs">
       <DependentUpon>PanelConfiguracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\PanelMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelMantenimiento.Designer.cs">
+      <DependentUpon>PanelMantenimiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\PanelProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,12 +115,6 @@
     </Compile>
     <Compile Include="Paneles\PanelReporte.Designer.cs">
       <DependentUpon>PanelReporte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Paneles\PanelServicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Paneles\PanelServicio.Designer.cs">
-      <DependentUpon>PanelServicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Paneles\PanelUsuario.cs">
       <SubType>Form</SubType>
@@ -129,6 +135,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Recursos\OpcionCombo.cs" />
     <Compile Include="Recursos\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +163,9 @@
     <Compile Include="Ventanas\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Paneles\PanelAcercaDe.resx">
+      <DependentUpon>PanelAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelCategoria.resx">
       <DependentUpon>PanelCategoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,14 +175,14 @@
     <EmbeddedResource Include="Paneles\PanelConfiguracion.resx">
       <DependentUpon>PanelConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelMantenimiento.resx">
+      <DependentUpon>PanelMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelProducto.resx">
       <DependentUpon>PanelProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelReporte.resx">
       <DependentUpon>PanelReporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Paneles\PanelServicio.resx">
-      <DependentUpon>PanelServicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelUsuario.resx">
       <DependentUpon>PanelUsuario.cs</DependentUpon>
@@ -197,7 +207,6 @@
     <EmbeddedResource Include="Ventanas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="CapaPresentacion.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -316,6 +325,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Iconos\dinero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\herramientas-para-reparar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\informacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\basura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -46,7 +46,7 @@ namespace Presentacion.Recursos
             btnIcon.FlatStyle = FlatStyle.Flat;
             btnIcon.FlatAppearance.BorderSize = 0;
             btnIcon.BackColor = backColor;
-            btnIcon.Size = new Size(30, 30);
+            btnIcon.Size = new Size(26, 26);
             btnIcon.Cursor = Cursors.Hand;
             btnIcon.Click += new EventHandler(Icon_Click);//Open dropdown list
             btnIcon.Paint += new PaintEventHandler(Icon_Paint);//Draw icon
@@ -67,7 +67,7 @@ namespace Presentacion.Recursos
             this.Controls.Add(lblText);//2
             this.Controls.Add(btnIcon);//1
             this.Controls.Add(cmbList);//0
-            this.MinimumSize = new Size(200, 30);
+            this.MinimumSize = new Size(200, 26);
             this.Size = new Size(200, 26);
             this.ForeColor = Color.DimGray;
             this.Padding = new Padding(borderSize);//Border Size

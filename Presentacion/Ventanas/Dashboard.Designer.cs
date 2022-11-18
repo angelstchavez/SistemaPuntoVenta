@@ -30,18 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.MenuLateral = new System.Windows.Forms.Panel();
-            this.BtnConfiguracion = new System.Windows.Forms.Button();
+            this.acercaDe = new System.Windows.Forms.Button();
+            this.configuracion = new System.Windows.Forms.Button();
+            this.resportes = new System.Windows.Forms.Button();
+            this.proveedores = new System.Windows.Forms.Button();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
-            this.Btn_08 = new System.Windows.Forms.Button();
-            this.Btn_07 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.Btn_06 = new System.Windows.Forms.Button();
-            this.Btn_05 = new System.Windows.Forms.Button();
-            this.Btn_04 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.Btn_03 = new System.Windows.Forms.Button();
-            this.Btn_02 = new System.Windows.Forms.Button();
-            this.Btn_01 = new System.Windows.Forms.Button();
+            this.usuarios = new System.Windows.Forms.Button();
+            this.clientes = new System.Windows.Forms.Button();
+            this.mantenimiento = new System.Windows.Forms.Button();
+            this.compras = new System.Windows.Forms.Button();
+            this.ventas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BarraLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,44 +47,40 @@
             this.BtnRegresar = new System.Windows.Forms.Button();
             this.Titulo = new System.Windows.Forms.Label();
             this.BarraInferior = new System.Windows.Forms.Panel();
-            this.lnkGmail = new System.Windows.Forms.PictureBox();
-            this.lnkTelegram = new System.Windows.Forms.PictureBox();
-            this.lnkSkype = new System.Windows.Forms.PictureBox();
-            this.lnkWhatsapp = new System.Windows.Forms.PictureBox();
-            this.lnkFacebook = new System.Windows.Forms.PictureBox();
-            this.lnkInstagram = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LnkGmail = new System.Windows.Forms.PictureBox();
+            this.LnkTelegram = new System.Windows.Forms.PictureBox();
+            this.LnkSkype = new System.Windows.Forms.PictureBox();
+            this.LnkWhatsapp = new System.Windows.Forms.PictureBox();
+            this.LnkFacebook = new System.Windows.Forms.PictureBox();
+            this.LnkInstagram = new System.Windows.Forms.PictureBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Contenedor = new System.Windows.Forms.Panel();
             this.MenuLateral.SuspendLayout();
             this.BarraLogo.SuspendLayout();
             this.BarraSuperior.SuspendLayout();
             this.BarraInferior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkGmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkTelegram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkSkype)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkWhatsapp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkFacebook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkInstagram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkGmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkTelegram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkSkype)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkWhatsapp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkFacebook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkInstagram)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuLateral
             // 
             this.MenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.MenuLateral.Controls.Add(this.BtnConfiguracion);
+            this.MenuLateral.Controls.Add(this.acercaDe);
+            this.MenuLateral.Controls.Add(this.configuracion);
+            this.MenuLateral.Controls.Add(this.resportes);
+            this.MenuLateral.Controls.Add(this.proveedores);
             this.MenuLateral.Controls.Add(this.BtnCerrarSesion);
-            this.MenuLateral.Controls.Add(this.Btn_08);
-            this.MenuLateral.Controls.Add(this.Btn_07);
-            this.MenuLateral.Controls.Add(this.button9);
-            this.MenuLateral.Controls.Add(this.Btn_06);
-            this.MenuLateral.Controls.Add(this.Btn_05);
-            this.MenuLateral.Controls.Add(this.Btn_04);
-            this.MenuLateral.Controls.Add(this.button5);
-            this.MenuLateral.Controls.Add(this.Btn_03);
-            this.MenuLateral.Controls.Add(this.Btn_02);
-            this.MenuLateral.Controls.Add(this.Btn_01);
+            this.MenuLateral.Controls.Add(this.usuarios);
+            this.MenuLateral.Controls.Add(this.clientes);
+            this.MenuLateral.Controls.Add(this.mantenimiento);
+            this.MenuLateral.Controls.Add(this.compras);
+            this.MenuLateral.Controls.Add(this.ventas);
             this.MenuLateral.Controls.Add(this.button1);
             this.MenuLateral.Controls.Add(this.BarraLogo);
             this.MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
@@ -96,28 +90,100 @@
             this.MenuLateral.Size = new System.Drawing.Size(200, 711);
             this.MenuLateral.TabIndex = 0;
             // 
-            // BtnConfiguracion
+            // acercaDe
             // 
-            this.BtnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.BtnConfiguracion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnConfiguracion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.BtnConfiguracion.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.BtnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.BtnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnConfiguracion.ForeColor = System.Drawing.Color.White;
-            this.BtnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("BtnConfiguracion.Image")));
-            this.BtnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnConfiguracion.Location = new System.Drawing.Point(0, 631);
-            this.BtnConfiguracion.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnConfiguracion.Name = "BtnConfiguracion";
-            this.BtnConfiguracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.BtnConfiguracion.Size = new System.Drawing.Size(200, 40);
-            this.BtnConfiguracion.TabIndex = 14;
-            this.BtnConfiguracion.Text = "Configuración";
-            this.BtnConfiguracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnConfiguracion.UseVisualStyleBackColor = false;
-            this.BtnConfiguracion.Click += new System.EventHandler(this.BtnConfiguracion_Click);
+            this.acercaDe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.acercaDe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.acercaDe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.acercaDe.FlatAppearance.BorderSize = 0;
+            this.acercaDe.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.acercaDe.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.acercaDe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.acercaDe.ForeColor = System.Drawing.Color.White;
+            this.acercaDe.Image = global::Presentacion.Properties.Resources.informacion;
+            this.acercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.acercaDe.Location = new System.Drawing.Point(0, 415);
+            this.acercaDe.Margin = new System.Windows.Forms.Padding(4);
+            this.acercaDe.Name = "acercaDe";
+            this.acercaDe.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.acercaDe.Size = new System.Drawing.Size(200, 45);
+            this.acercaDe.TabIndex = 17;
+            this.acercaDe.Text = " Acerca de";
+            this.acercaDe.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.acercaDe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.acercaDe.UseVisualStyleBackColor = false;
+            this.acercaDe.Click += new System.EventHandler(this.Btn_010_Click);
+            // 
+            // configuracion
+            // 
+            this.configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.configuracion.Dock = System.Windows.Forms.DockStyle.Top;
+            this.configuracion.FlatAppearance.BorderSize = 0;
+            this.configuracion.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.configuracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.configuracion.ForeColor = System.Drawing.Color.White;
+            this.configuracion.Image = global::Presentacion.Properties.Resources.setting;
+            this.configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.configuracion.Location = new System.Drawing.Point(0, 370);
+            this.configuracion.Margin = new System.Windows.Forms.Padding(4);
+            this.configuracion.Name = "configuracion";
+            this.configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.configuracion.Size = new System.Drawing.Size(200, 45);
+            this.configuracion.TabIndex = 16;
+            this.configuracion.Text = " Configuración";
+            this.configuracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.configuracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.configuracion.UseVisualStyleBackColor = false;
+            // 
+            // resportes
+            // 
+            this.resportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.resportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.resportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.resportes.FlatAppearance.BorderSize = 0;
+            this.resportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.resportes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.resportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.resportes.ForeColor = System.Drawing.Color.White;
+            this.resportes.Image = global::Presentacion.Properties.Resources.reporte;
+            this.resportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.resportes.Location = new System.Drawing.Point(0, 325);
+            this.resportes.Margin = new System.Windows.Forms.Padding(4);
+            this.resportes.Name = "resportes";
+            this.resportes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.resportes.Size = new System.Drawing.Size(200, 45);
+            this.resportes.TabIndex = 15;
+            this.resportes.Text = " Reportes";
+            this.resportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.resportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.resportes.UseVisualStyleBackColor = false;
+            this.resportes.Click += new System.EventHandler(this.Btn_09_Click);
+            // 
+            // proveedores
+            // 
+            this.proveedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.proveedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.proveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.proveedores.FlatAppearance.BorderSize = 0;
+            this.proveedores.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.proveedores.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.proveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.proveedores.ForeColor = System.Drawing.Color.White;
+            this.proveedores.Image = global::Presentacion.Properties.Resources.proveedor;
+            this.proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.proveedores.Location = new System.Drawing.Point(0, 285);
+            this.proveedores.Margin = new System.Windows.Forms.Padding(4);
+            this.proveedores.Name = "proveedores";
+            this.proveedores.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.proveedores.Size = new System.Drawing.Size(200, 40);
+            this.proveedores.TabIndex = 14;
+            this.proveedores.Text = " Proveedores";
+            this.proveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.proveedores.UseVisualStyleBackColor = false;
+            this.proveedores.Click += new System.EventHandler(this.BtnConfiguracion_Click);
             // 
             // BtnCerrarSesion
             // 
@@ -142,234 +208,124 @@
             this.BtnCerrarSesion.UseVisualStyleBackColor = false;
             this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
-            // Btn_08
+            // usuarios
             // 
-            this.Btn_08.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_08.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_08.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_08.FlatAppearance.BorderSize = 0;
-            this.Btn_08.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_08.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_08.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_08.ForeColor = System.Drawing.Color.White;
-            this.Btn_08.Image = global::Presentacion.Properties.Resources.usuario;
-            this.Btn_08.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_08.Location = new System.Drawing.Point(0, 425);
-            this.Btn_08.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_08.Name = "Btn_08";
-            this.Btn_08.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_08.Size = new System.Drawing.Size(200, 45);
-            this.Btn_08.TabIndex = 11;
-            this.Btn_08.Text = " Usuarios";
-            this.Btn_08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_08.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_08.UseVisualStyleBackColor = false;
-            this.Btn_08.Click += new System.EventHandler(this.Btn_08_Click);
+            this.usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.usuarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.usuarios.FlatAppearance.BorderSize = 0;
+            this.usuarios.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.usuarios.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.usuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.usuarios.ForeColor = System.Drawing.Color.White;
+            this.usuarios.Image = global::Presentacion.Properties.Resources.usuario;
+            this.usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.usuarios.Location = new System.Drawing.Point(0, 240);
+            this.usuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.usuarios.Name = "usuarios";
+            this.usuarios.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.usuarios.Size = new System.Drawing.Size(200, 45);
+            this.usuarios.TabIndex = 11;
+            this.usuarios.Text = " Usuarios";
+            this.usuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.usuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.usuarios.UseVisualStyleBackColor = false;
+            this.usuarios.Click += new System.EventHandler(this.Btn_08_Click);
             // 
-            // Btn_07
+            // clientes
             // 
-            this.Btn_07.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_07.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_07.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_07.FlatAppearance.BorderSize = 0;
-            this.Btn_07.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_07.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_07.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_07.ForeColor = System.Drawing.Color.White;
-            this.Btn_07.Image = global::Presentacion.Properties.Resources.hombre;
-            this.Btn_07.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_07.Location = new System.Drawing.Point(0, 380);
-            this.Btn_07.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_07.Name = "Btn_07";
-            this.Btn_07.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_07.Size = new System.Drawing.Size(200, 45);
-            this.Btn_07.TabIndex = 10;
-            this.Btn_07.Text = " Clientes";
-            this.Btn_07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_07.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_07.UseVisualStyleBackColor = false;
-            this.Btn_07.Click += new System.EventHandler(this.Btn_07_Click);
+            this.clientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.clientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.clientes.FlatAppearance.BorderSize = 0;
+            this.clientes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.clientes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clientes.ForeColor = System.Drawing.Color.White;
+            this.clientes.Image = global::Presentacion.Properties.Resources.hombre;
+            this.clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clientes.Location = new System.Drawing.Point(0, 195);
+            this.clientes.Margin = new System.Windows.Forms.Padding(4);
+            this.clientes.Name = "clientes";
+            this.clientes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.clientes.Size = new System.Drawing.Size(200, 45);
+            this.clientes.TabIndex = 10;
+            this.clientes.Text = " Clientes";
+            this.clientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.clientes.UseVisualStyleBackColor = false;
+            this.clientes.Click += new System.EventHandler(this.Btn_07_Click);
             // 
-            // button9
+            // mantenimiento
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.LightGray;
-            this.button9.Location = new System.Drawing.Point(0, 355);
-            this.button9.Margin = new System.Windows.Forms.Padding(4);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 25);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Roles";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.UseVisualStyleBackColor = false;
+            this.mantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.mantenimiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
+            this.mantenimiento.FlatAppearance.BorderSize = 0;
+            this.mantenimiento.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.mantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.mantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mantenimiento.ForeColor = System.Drawing.Color.White;
+            this.mantenimiento.Image = global::Presentacion.Properties.Resources.herramientas_para_reparar;
+            this.mantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mantenimiento.Location = new System.Drawing.Point(0, 150);
+            this.mantenimiento.Margin = new System.Windows.Forms.Padding(4);
+            this.mantenimiento.Name = "mantenimiento";
+            this.mantenimiento.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.mantenimiento.Size = new System.Drawing.Size(200, 45);
+            this.mantenimiento.TabIndex = 8;
+            this.mantenimiento.Text = " Mantenimiento";
+            this.mantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.mantenimiento.UseVisualStyleBackColor = false;
+            this.mantenimiento.Click += new System.EventHandler(this.Btn_06_Click);
             // 
-            // Btn_06
+            // compras
             // 
-            this.Btn_06.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_06.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_06.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_06.FlatAppearance.BorderSize = 0;
-            this.Btn_06.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_06.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_06.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_06.ForeColor = System.Drawing.Color.White;
-            this.Btn_06.Image = global::Presentacion.Properties.Resources.servicio;
-            this.Btn_06.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_06.Location = new System.Drawing.Point(0, 310);
-            this.Btn_06.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_06.Name = "Btn_06";
-            this.Btn_06.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_06.Size = new System.Drawing.Size(200, 45);
-            this.Btn_06.TabIndex = 8;
-            this.Btn_06.Text = " Servicios";
-            this.Btn_06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_06.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_06.UseVisualStyleBackColor = false;
-            this.Btn_06.Click += new System.EventHandler(this.Btn_06_Click);
+            this.compras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.compras.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.compras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.compras.FlatAppearance.BorderSize = 0;
+            this.compras.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.compras.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.compras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.compras.ForeColor = System.Drawing.Color.White;
+            this.compras.Image = global::Presentacion.Properties.Resources.caja;
+            this.compras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.compras.Location = new System.Drawing.Point(0, 105);
+            this.compras.Margin = new System.Windows.Forms.Padding(4);
+            this.compras.Name = "compras";
+            this.compras.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.compras.Size = new System.Drawing.Size(200, 45);
+            this.compras.TabIndex = 3;
+            this.compras.Text = " Compras";
+            this.compras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.compras.UseVisualStyleBackColor = false;
+            this.compras.Click += new System.EventHandler(this.Btn_02_Click);
             // 
-            // Btn_05
+            // ventas
             // 
-            this.Btn_05.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_05.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_05.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_05.FlatAppearance.BorderSize = 0;
-            this.Btn_05.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_05.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_05.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_05.ForeColor = System.Drawing.Color.White;
-            this.Btn_05.Image = global::Presentacion.Properties.Resources.producto;
-            this.Btn_05.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_05.Location = new System.Drawing.Point(0, 265);
-            this.Btn_05.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_05.Name = "Btn_05";
-            this.Btn_05.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_05.Size = new System.Drawing.Size(200, 45);
-            this.Btn_05.TabIndex = 7;
-            this.Btn_05.Text = " Productos";
-            this.Btn_05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_05.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_05.UseVisualStyleBackColor = false;
-            this.Btn_05.Click += new System.EventHandler(this.Btn_05_Click);
-            // 
-            // Btn_04
-            // 
-            this.Btn_04.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_04.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_04.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_04.FlatAppearance.BorderSize = 0;
-            this.Btn_04.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_04.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_04.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_04.ForeColor = System.Drawing.Color.White;
-            this.Btn_04.Image = global::Presentacion.Properties.Resources.categoria;
-            this.Btn_04.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_04.Location = new System.Drawing.Point(0, 220);
-            this.Btn_04.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_04.Name = "Btn_04";
-            this.Btn_04.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_04.Size = new System.Drawing.Size(200, 45);
-            this.Btn_04.TabIndex = 6;
-            this.Btn_04.Text = " Categorías";
-            this.Btn_04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_04.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_04.UseVisualStyleBackColor = false;
-            this.Btn_04.Click += new System.EventHandler(this.Btn_04_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.LightGray;
-            this.button5.Location = new System.Drawing.Point(0, 195);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(200, 25);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Gestión";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // Btn_03
-            // 
-            this.Btn_03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_03.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_03.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_03.FlatAppearance.BorderSize = 0;
-            this.Btn_03.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_03.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_03.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_03.ForeColor = System.Drawing.Color.White;
-            this.Btn_03.Image = global::Presentacion.Properties.Resources.reporte;
-            this.Btn_03.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_03.Location = new System.Drawing.Point(0, 150);
-            this.Btn_03.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_03.Name = "Btn_03";
-            this.Btn_03.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_03.Size = new System.Drawing.Size(200, 45);
-            this.Btn_03.TabIndex = 4;
-            this.Btn_03.Text = " Reportes";
-            this.Btn_03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_03.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_03.UseVisualStyleBackColor = false;
-            this.Btn_03.Click += new System.EventHandler(this.Btn_03_Click);
-            // 
-            // Btn_02
-            // 
-            this.Btn_02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_02.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_02.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_02.FlatAppearance.BorderSize = 0;
-            this.Btn_02.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_02.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_02.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_02.ForeColor = System.Drawing.Color.White;
-            this.Btn_02.Image = global::Presentacion.Properties.Resources.consultar;
-            this.Btn_02.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_02.Location = new System.Drawing.Point(0, 105);
-            this.Btn_02.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_02.Name = "Btn_02";
-            this.Btn_02.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_02.Size = new System.Drawing.Size(200, 45);
-            this.Btn_02.TabIndex = 3;
-            this.Btn_02.Text = " Consultar ventas";
-            this.Btn_02.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_02.UseVisualStyleBackColor = false;
-            this.Btn_02.Click += new System.EventHandler(this.Btn_02_Click);
-            // 
-            // Btn_01
-            // 
-            this.Btn_01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Btn_01.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Btn_01.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Btn_01.FlatAppearance.BorderSize = 0;
-            this.Btn_01.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_01.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.Btn_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_01.ForeColor = System.Drawing.Color.White;
-            this.Btn_01.Image = global::Presentacion.Properties.Resources.cierre;
-            this.Btn_01.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_01.Location = new System.Drawing.Point(0, 60);
-            this.Btn_01.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_01.Name = "Btn_01";
-            this.Btn_01.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.Btn_01.Size = new System.Drawing.Size(200, 45);
-            this.Btn_01.TabIndex = 2;
-            this.Btn_01.Text = " Realizar venta";
-            this.Btn_01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_01.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Btn_01.UseVisualStyleBackColor = false;
-            this.Btn_01.Click += new System.EventHandler(this.Btn_01_Click);
+            this.ventas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.ventas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ventas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ventas.FlatAppearance.BorderSize = 0;
+            this.ventas.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.ventas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.ventas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ventas.ForeColor = System.Drawing.Color.White;
+            this.ventas.Image = global::Presentacion.Properties.Resources.cierre;
+            this.ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ventas.Location = new System.Drawing.Point(0, 60);
+            this.ventas.Margin = new System.Windows.Forms.Padding(4);
+            this.ventas.Name = "ventas";
+            this.ventas.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.ventas.Size = new System.Drawing.Size(200, 45);
+            this.ventas.TabIndex = 2;
+            this.ventas.Text = " Ventas";
+            this.ventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ventas.UseVisualStyleBackColor = false;
+            this.ventas.Click += new System.EventHandler(this.Btn_01_Click);
             // 
             // button1
             // 
@@ -392,7 +348,7 @@
             // 
             // BarraLogo
             // 
-            this.BarraLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.BarraLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(142)))));
             this.BarraLogo.Controls.Add(this.label1);
             this.BarraLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraLogo.Location = new System.Drawing.Point(0, 0);
@@ -458,15 +414,13 @@
             // BarraInferior
             // 
             this.BarraInferior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.BarraInferior.Controls.Add(this.lnkGmail);
-            this.BarraInferior.Controls.Add(this.lnkTelegram);
-            this.BarraInferior.Controls.Add(this.lnkSkype);
-            this.BarraInferior.Controls.Add(this.lnkWhatsapp);
-            this.BarraInferior.Controls.Add(this.lnkFacebook);
-            this.BarraInferior.Controls.Add(this.lnkInstagram);
-            this.BarraInferior.Controls.Add(this.label4);
-            this.BarraInferior.Controls.Add(this.label5);
-            this.BarraInferior.Controls.Add(this.label3);
+            this.BarraInferior.Controls.Add(this.LnkGmail);
+            this.BarraInferior.Controls.Add(this.LnkTelegram);
+            this.BarraInferior.Controls.Add(this.LnkSkype);
+            this.BarraInferior.Controls.Add(this.LnkWhatsapp);
+            this.BarraInferior.Controls.Add(this.LnkFacebook);
+            this.BarraInferior.Controls.Add(this.LnkInstagram);
+            this.BarraInferior.Controls.Add(this.lblUsuario);
             this.BarraInferior.Controls.Add(this.label2);
             this.BarraInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BarraInferior.Location = new System.Drawing.Point(200, 671);
@@ -475,112 +429,89 @@
             this.BarraInferior.Size = new System.Drawing.Size(899, 40);
             this.BarraInferior.TabIndex = 2;
             // 
-            // lnkGmail
+            // LnkGmail
             // 
-            this.lnkGmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkGmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.lnkGmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkGmail.Image = global::Presentacion.Properties.Resources.gmail;
-            this.lnkGmail.Location = new System.Drawing.Point(713, 7);
-            this.lnkGmail.Name = "lnkGmail";
-            this.lnkGmail.Size = new System.Drawing.Size(24, 24);
-            this.lnkGmail.TabIndex = 9;
-            this.lnkGmail.TabStop = false;
-            this.lnkGmail.Click += new System.EventHandler(this.lnkGmail_Click);
+            this.LnkGmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LnkGmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.LnkGmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkGmail.Image = global::Presentacion.Properties.Resources.gmail;
+            this.LnkGmail.Location = new System.Drawing.Point(713, 7);
+            this.LnkGmail.Name = "LnkGmail";
+            this.LnkGmail.Size = new System.Drawing.Size(24, 24);
+            this.LnkGmail.TabIndex = 9;
+            this.LnkGmail.TabStop = false;
+            this.LnkGmail.Click += new System.EventHandler(this.LnkGmail_Click);
             // 
-            // lnkTelegram
+            // LnkTelegram
             // 
-            this.lnkTelegram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkTelegram.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkTelegram.Image = global::Presentacion.Properties.Resources.telegram;
-            this.lnkTelegram.Location = new System.Drawing.Point(743, 7);
-            this.lnkTelegram.Name = "lnkTelegram";
-            this.lnkTelegram.Size = new System.Drawing.Size(24, 24);
-            this.lnkTelegram.TabIndex = 8;
-            this.lnkTelegram.TabStop = false;
-            this.lnkTelegram.Click += new System.EventHandler(this.lnkTelegram_Click);
+            this.LnkTelegram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LnkTelegram.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkTelegram.Image = global::Presentacion.Properties.Resources.telegram;
+            this.LnkTelegram.Location = new System.Drawing.Point(743, 7);
+            this.LnkTelegram.Name = "LnkTelegram";
+            this.LnkTelegram.Size = new System.Drawing.Size(24, 24);
+            this.LnkTelegram.TabIndex = 8;
+            this.LnkTelegram.TabStop = false;
+            this.LnkTelegram.Click += new System.EventHandler(this.LnkTelegram_Click);
             // 
-            // lnkSkype
+            // LnkSkype
             // 
-            this.lnkSkype.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkSkype.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkSkype.Image = global::Presentacion.Properties.Resources.skype;
-            this.lnkSkype.Location = new System.Drawing.Point(773, 7);
-            this.lnkSkype.Name = "lnkSkype";
-            this.lnkSkype.Size = new System.Drawing.Size(24, 24);
-            this.lnkSkype.TabIndex = 7;
-            this.lnkSkype.TabStop = false;
-            this.lnkSkype.Click += new System.EventHandler(this.lnkSkype_Click);
+            this.LnkSkype.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LnkSkype.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkSkype.Image = global::Presentacion.Properties.Resources.skype;
+            this.LnkSkype.Location = new System.Drawing.Point(773, 7);
+            this.LnkSkype.Name = "LnkSkype";
+            this.LnkSkype.Size = new System.Drawing.Size(24, 24);
+            this.LnkSkype.TabIndex = 7;
+            this.LnkSkype.TabStop = false;
+            this.LnkSkype.Click += new System.EventHandler(this.LnkSkype_Click);
             // 
-            // lnkWhatsapp
+            // LnkWhatsapp
             // 
-            this.lnkWhatsapp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkWhatsapp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkWhatsapp.Image = global::Presentacion.Properties.Resources.whats;
-            this.lnkWhatsapp.Location = new System.Drawing.Point(803, 7);
-            this.lnkWhatsapp.Name = "lnkWhatsapp";
-            this.lnkWhatsapp.Size = new System.Drawing.Size(24, 24);
-            this.lnkWhatsapp.TabIndex = 6;
-            this.lnkWhatsapp.TabStop = false;
-            this.lnkWhatsapp.Click += new System.EventHandler(this.lnkWhatsapp_Click);
+            this.LnkWhatsapp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LnkWhatsapp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkWhatsapp.Image = global::Presentacion.Properties.Resources.whats;
+            this.LnkWhatsapp.Location = new System.Drawing.Point(803, 7);
+            this.LnkWhatsapp.Name = "LnkWhatsapp";
+            this.LnkWhatsapp.Size = new System.Drawing.Size(24, 24);
+            this.LnkWhatsapp.TabIndex = 6;
+            this.LnkWhatsapp.TabStop = false;
+            this.LnkWhatsapp.Click += new System.EventHandler(this.LnkWhatsapp_Click);
             // 
-            // lnkFacebook
+            // LnkFacebook
             // 
-            this.lnkFacebook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkFacebook.Image = global::Presentacion.Properties.Resources.facebook;
-            this.lnkFacebook.Location = new System.Drawing.Point(833, 7);
-            this.lnkFacebook.Name = "lnkFacebook";
-            this.lnkFacebook.Size = new System.Drawing.Size(24, 24);
-            this.lnkFacebook.TabIndex = 5;
-            this.lnkFacebook.TabStop = false;
-            this.lnkFacebook.Click += new System.EventHandler(this.lnkFacebook_Click);
+            this.LnkFacebook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LnkFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkFacebook.Image = global::Presentacion.Properties.Resources.facebook;
+            this.LnkFacebook.Location = new System.Drawing.Point(833, 7);
+            this.LnkFacebook.Name = "LnkFacebook";
+            this.LnkFacebook.Size = new System.Drawing.Size(24, 24);
+            this.LnkFacebook.TabIndex = 5;
+            this.LnkFacebook.TabStop = false;
+            this.LnkFacebook.Click += new System.EventHandler(this.LnkFacebook_Click);
             // 
-            // lnkInstagram
+            // LnkInstagram
             // 
-            this.lnkInstagram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lnkInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lnkInstagram.Image = global::Presentacion.Properties.Resources.instagram;
-            this.lnkInstagram.Location = new System.Drawing.Point(863, 7);
-            this.lnkInstagram.Name = "lnkInstagram";
-            this.lnkInstagram.Size = new System.Drawing.Size(24, 24);
-            this.lnkInstagram.TabIndex = 4;
-            this.lnkInstagram.TabStop = false;
-            this.lnkInstagram.Click += new System.EventHandler(this.lnkInstagram_Click);
+            this.LnkInstagram.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.LnkInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LnkInstagram.Image = global::Presentacion.Properties.Resources.instagram;
+            this.LnkInstagram.Location = new System.Drawing.Point(863, 7);
+            this.LnkInstagram.Name = "LnkInstagram";
+            this.LnkInstagram.Size = new System.Drawing.Size(24, 24);
+            this.LnkInstagram.TabIndex = 4;
+            this.LnkInstagram.TabStop = false;
+            this.LnkInstagram.Click += new System.EventHandler(this.LnkInstagram_Click);
             // 
-            // label4
+            // lblUsuario
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(142, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Administrador";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(142, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 19);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Rol:";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 20);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 18);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "admin";
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblUsuario.Location = new System.Drawing.Point(3, 20);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(23, 18);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "---";
             // 
             // label2
             // 
@@ -628,12 +559,12 @@
             this.BarraSuperior.PerformLayout();
             this.BarraInferior.ResumeLayout(false);
             this.BarraInferior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkGmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkTelegram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkSkype)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkWhatsapp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkFacebook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lnkInstagram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkGmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkTelegram)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkSkype)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkWhatsapp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkFacebook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LnkInstagram)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -645,31 +576,27 @@
         private System.Windows.Forms.Panel BarraInferior;
         private System.Windows.Forms.Panel Contenedor;
         private System.Windows.Forms.Panel BarraLogo;
-        private System.Windows.Forms.Button BtnConfiguracion;
+        private System.Windows.Forms.Button proveedores;
         private System.Windows.Forms.Button BtnCerrarSesion;
-        private System.Windows.Forms.Button Btn_08;
-        private System.Windows.Forms.Button Btn_07;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button Btn_06;
-        private System.Windows.Forms.Button Btn_05;
-        private System.Windows.Forms.Button Btn_04;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button Btn_03;
-        private System.Windows.Forms.Button Btn_02;
-        private System.Windows.Forms.Button Btn_01;
+        private System.Windows.Forms.Button usuarios;
+        private System.Windows.Forms.Button clientes;
+        private System.Windows.Forms.Button mantenimiento;
+        private System.Windows.Forms.Button compras;
+        private System.Windows.Forms.Button ventas;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Titulo;
         private System.Windows.Forms.Button BtnRegresar;
-        private System.Windows.Forms.PictureBox lnkTelegram;
-        private System.Windows.Forms.PictureBox lnkSkype;
-        private System.Windows.Forms.PictureBox lnkWhatsapp;
-        private System.Windows.Forms.PictureBox lnkFacebook;
-        private System.Windows.Forms.PictureBox lnkInstagram;
-        private System.Windows.Forms.PictureBox lnkGmail;
+        private System.Windows.Forms.PictureBox LnkTelegram;
+        private System.Windows.Forms.PictureBox LnkSkype;
+        private System.Windows.Forms.PictureBox LnkWhatsapp;
+        private System.Windows.Forms.PictureBox LnkFacebook;
+        private System.Windows.Forms.PictureBox LnkInstagram;
+        private System.Windows.Forms.PictureBox LnkGmail;
+        private System.Windows.Forms.Button configuracion;
+        private System.Windows.Forms.Button resportes;
+        private System.Windows.Forms.Button acercaDe;
     }
 }

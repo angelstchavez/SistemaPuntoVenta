@@ -41,26 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementaciones\Registros\CategoriaImpl.cs" />
-    <Compile Include="Implementaciones\Registros\ProductoImpl.cs" />
-    <Compile Include="Implementaciones\Registros\ReporteImpl.cs" />
-    <Compile Include="Implementaciones\Registros\ServicioImpl.cs" />
-    <Compile Include="Implementaciones\Registros\VentaImpl.cs" />
-    <Compile Include="Implementaciones\Roles\AdministradorImpl.cs" />
-    <Compile Include="Implementaciones\Roles\ClienteImpl.cs" />
-    <Compile Include="Implementaciones\Roles\UsuarioImpl.cs" />
+    <Compile Include="Logica\Registros\LogicaPermiso.cs" />
+    <Compile Include="Logica\Roles\LogicaUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servicios\Registros\IServicioCategoria.cs" />
-    <Compile Include="Servicios\Registros\IServicioProducto.cs" />
-    <Compile Include="Servicios\Registros\IServicioReporte.cs" />
-    <Compile Include="Servicios\Registros\IServicioServicio.cs" />
-    <Compile Include="Servicios\Registros\IServicioVenta.cs" />
-    <Compile Include="Servicios\Roles\IServicioAdministrador.cs" />
-    <Compile Include="Servicios\Roles\IServicioCliente.cs" />
-    <Compile Include="Servicios\Roles\IServicioUsuario.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="CapaLogica.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">
@@ -72,5 +55,6 @@
       <Name>Entidad</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

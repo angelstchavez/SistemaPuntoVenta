@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -43,14 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archivos\Registros\ArchivoCategoria.cs" />
-    <Compile Include="Archivos\Registros\ArchivoProducto.cs" />
-    <Compile Include="Archivos\Registros\ArchivoReporte.cs" />
-    <Compile Include="Archivos\Registros\ArchivoServicio.cs" />
-    <Compile Include="Archivos\Registros\ArchivoVenta.cs" />
-    <Compile Include="Archivos\Roles\ArchivoAdministrador.cs" />
-    <Compile Include="Archivos\Roles\ArchivoCliente.cs" />
-    <Compile Include="Archivos\Roles\ArchivoUsuario.cs" />
+    <Compile Include="Conexion.cs" />
     <Compile Include="ConexionMaestra.cs" />
     <Compile Include="ConexionManual.cs">
       <SubType>Form</SubType>
@@ -58,20 +52,14 @@
     <Compile Include="ConexionManual.Designer.cs">
       <DependentUpon>ConexionManual.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datos\Registros\DatosPermisos.cs" />
+    <Compile Include="Datos\Roles\DatosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Repositorios\Registros\RepositorioCategoria.cs" />
-    <Compile Include="Repositorios\Registros\RepositorioProducto.cs" />
-    <Compile Include="Repositorios\Registros\RepositorioReporte.cs" />
-    <Compile Include="Repositorios\Registros\RepositorioServicio.cs" />
-    <Compile Include="Repositorios\Registros\RepositorioVenta.cs" />
-    <Compile Include="Repositorios\Roles\RepositorioAdministrador.cs" />
-    <Compile Include="Repositorios\Roles\RepositorioCliente.cs" />
-    <Compile Include="Repositorios\Roles\RepositorioUsuario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entidad\Entidad.csproj">
@@ -84,9 +72,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="CapaDatos.cd" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="ConexionManual.resx">
       <DependentUpon>ConexionManual.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,7 +81,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\oficina.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Presentacion.Paneles
 {
@@ -15,6 +7,20 @@ namespace Presentacion.Paneles
         public PanelUsuario()
         {
             InitializeComponent();
+        }
+
+        private void PanelUsuario_Load(object sender, System.EventArgs e)
+        {
+            LlenarCombobox();
+        }
+
+        private void LlenarCombobox()
+        {
+            boxEstado.Items.Add(new Recursos.OpcionCombo() { valor = 1, texto = "ACTIVO"});
+            boxEstado.Items.Add(new Recursos.OpcionCombo() { valor = 2, texto = "INACTIVO" });
+            boxEstado.DisplayMember = "Texto";
+            boxEstado.ValueMember = "valor";
+            boxEstado.SelectedIndex = 0;
         }
     }
 }

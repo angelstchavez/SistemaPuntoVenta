@@ -25,11 +25,11 @@ namespace Presentacion.Ventanas
         }
         private void CargarDatos()
         {
-            ventas.Text = Convert.ToString(PanelVenta.ventaImpl.ListarVentas().Count);
-            clientes.Text = Convert.ToString(PanelCliente.clienteImpl.ListarClientes().Count);
-            productos.Text = Convert.ToString(PanelProducto.productoImpl.ListarProductos().Count);
-            servicios.Text = Convert.ToString(PanelServicio.servicioImpl.ListarServicios().Count);
-            categorias.Text = Convert.ToString(PanelCategoria.categoriaImpl.ListarCategorias().Count);
+            //ventas.Text = Convert.ToString(PanelVenta.ventaImpl.ListarVentas().Count);
+            //clientes.Text = Convert.ToString(PanelCliente.clienteImpl.ListarClientes().Count);
+            //productos.Text = Convert.ToString(PanelProducto.productoImpl.ListarProductos().Count);
+            //servicios.Text = Convert.ToString(PanelServicio.servicioImpl.ListarServicios().Count);
+            //categorias.Text = Convert.ToString(PanelCategoria.categoriaImpl.ListarCategorias().Count);
         }
 
     }

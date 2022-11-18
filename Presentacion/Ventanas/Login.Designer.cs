@@ -33,9 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxUsuario = new System.Windows.Forms.TextBox();
-            this.TxContraseña = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.checkContraseña = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BtnIngresar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,9 +81,9 @@
             this.label3.ForeColor = System.Drawing.Color.Silver;
             this.label3.Location = new System.Drawing.Point(358, 107);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 18);
+            this.label3.Size = new System.Drawing.Size(92, 18);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Usuario:";
+            this.label3.Text = "Documento:";
             // 
             // label4
             // 
@@ -96,39 +96,39 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Contraseña:";
             // 
-            // TxUsuario
+            // txtUsuario
             // 
-            this.TxUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.TxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxUsuario.ForeColor = System.Drawing.Color.White;
-            this.TxUsuario.Location = new System.Drawing.Point(361, 128);
-            this.TxUsuario.Name = "TxUsuario";
-            this.TxUsuario.Size = new System.Drawing.Size(211, 26);
-            this.TxUsuario.TabIndex = 5;
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtUsuario.Location = new System.Drawing.Point(361, 128);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(211, 26);
+            this.txtUsuario.TabIndex = 5;
             // 
-            // TxContraseña
+            // txtContraseña
             // 
-            this.TxContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.TxContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxContraseña.ForeColor = System.Drawing.Color.White;
-            this.TxContraseña.Location = new System.Drawing.Point(361, 187);
-            this.TxContraseña.Name = "TxContraseña";
-            this.TxContraseña.Size = new System.Drawing.Size(211, 26);
-            this.TxContraseña.TabIndex = 6;
-            this.TxContraseña.UseSystemPasswordChar = true;
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtContraseña.Location = new System.Drawing.Point(361, 187);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(211, 26);
+            this.txtContraseña.TabIndex = 6;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
-            // checkBox1
+            // checkContraseña
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.ForeColor = System.Drawing.Color.Silver;
-            this.checkBox1.Location = new System.Drawing.Point(361, 219);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(138, 20);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Mostrar contraseña";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkContraseña.AutoSize = true;
+            this.checkContraseña.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkContraseña.ForeColor = System.Drawing.Color.Silver;
+            this.checkContraseña.Location = new System.Drawing.Point(361, 219);
+            this.checkContraseña.Name = "checkContraseña";
+            this.checkContraseña.Size = new System.Drawing.Size(138, 20);
+            this.checkContraseña.TabIndex = 7;
+            this.checkContraseña.Text = "Mostrar contraseña";
+            this.checkContraseña.UseVisualStyleBackColor = true;
+            this.checkContraseña.CheckedChanged += new System.EventHandler(this.checkContraseña_CheckedChanged);
             // 
             // label5
             // 
@@ -162,15 +162,16 @@
             // 
             // Login
             // 
+            this.AcceptButton = this.BtnIngresar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnIngresar);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.TxContraseña);
-            this.Controls.Add(this.TxUsuario);
+            this.Controls.Add(this.checkContraseña);
+            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -197,9 +198,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxUsuario;
-        private System.Windows.Forms.TextBox TxContraseña;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.CheckBox checkContraseña;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button BtnIngresar;
     }

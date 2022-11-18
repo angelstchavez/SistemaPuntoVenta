@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Presentacion.Paneles
 {
-    public partial class PanelVenta : Form
+    public partial class PanelMantenimiento : Form
     {
-        public PanelVenta()
+        public PanelMantenimiento()
         {
             InitializeComponent();
         }
-
-        //public static VentaImpl ventaImpl = new VentaImpl();
     }
 }
