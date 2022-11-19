@@ -43,12 +43,9 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.boxEstado = new Presentacion.Recursos.RJComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.boxRol = new Presentacion.Recursos.RJComboBox();
             this.txtConfContraseña = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
@@ -76,6 +73,8 @@
             this.btnLimpiarConsulta = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.boxConsulta = new Presentacion.Recursos.RJComboBox();
+            this.boxEstado = new Presentacion.Recursos.RJComboBox();
+            this.boxRol = new Presentacion.Recursos.RJComboBox();
             this.PanelLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
@@ -92,7 +91,6 @@
             this.PanelLateral.Controls.Add(this.txtId);
             this.PanelLateral.Controls.Add(this.label8);
             this.PanelLateral.Controls.Add(this.btnEliminar);
-            this.PanelLateral.Controls.Add(this.btnEditar);
             this.PanelLateral.Controls.Add(this.btnAgregar);
             this.PanelLateral.Controls.Add(this.label7);
             this.PanelLateral.Controls.Add(this.boxEstado);
@@ -135,7 +133,7 @@
             this.KeyConfPass.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.KeyConfPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KeyConfPass.Image = global::Presentacion.Properties.Resources.ojo;
-            this.KeyConfPass.Location = new System.Drawing.Point(244, 397);
+            this.KeyConfPass.Location = new System.Drawing.Point(244, 427);
             this.KeyConfPass.Name = "KeyConfPass";
             this.KeyConfPass.Size = new System.Drawing.Size(26, 26);
             this.KeyConfPass.TabIndex = 21;
@@ -146,16 +144,16 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.trabajo_en_equipo;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(107, 25);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(87, 89);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
@@ -165,12 +163,11 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Presentacion.Properties.Resources.codigo_limpio;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiar.Location = new System.Drawing.Point(155, 588);
+            this.btnLimpiar.Location = new System.Drawing.Point(242, 583);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnLimpiar.Size = new System.Drawing.Size(115, 29);
+            this.btnLimpiar.Size = new System.Drawing.Size(29, 29);
             this.btnLimpiar.TabIndex = 19;
-            this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -194,7 +191,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Orange;
-            this.label8.Location = new System.Drawing.Point(12, 87);
+            this.label8.Location = new System.Drawing.Point(12, 117);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(276, 32);
             this.label8.TabIndex = 17;
@@ -202,7 +199,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
@@ -212,10 +209,10 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.limpiar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(30, 588);
+            this.btnEliminar.Location = new System.Drawing.Point(136, 583);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnEliminar.Size = new System.Drawing.Size(115, 29);
+            this.btnEliminar.Size = new System.Drawing.Size(102, 29);
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,32 +220,9 @@
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(142)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(142)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Image = global::Presentacion.Properties.Resources.edit;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(155, 553);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnEditar.Size = new System.Drawing.Size(115, 29);
-            this.btnEditar.TabIndex = 15;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
-            // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgregar.FlatAppearance.BorderSize = 0;
             this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(140)))), ((int)(((byte)(59)))));
@@ -258,10 +232,10 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Presentacion.Properties.Resources.salvar;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(30, 553);
+            this.btnAgregar.Location = new System.Drawing.Point(30, 583);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(115, 29);
+            this.btnAgregar.Size = new System.Drawing.Size(102, 29);
             this.btnAgregar.TabIndex = 14;
             this.btnAgregar.Text = "Guardar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -273,68 +247,28 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(27, 493);
+            this.label7.Location = new System.Drawing.Point(27, 523);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 18);
             this.label7.TabIndex = 13;
             this.label7.Text = "Estado:";
             // 
-            // boxEstado
-            // 
-            this.boxEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxEstado.BorderSize = 1;
-            this.boxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxEstado.ForeColor = System.Drawing.Color.Gray;
-            this.boxEstado.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxEstado.ListTextColor = System.Drawing.Color.Gray;
-            this.boxEstado.Location = new System.Drawing.Point(30, 512);
-            this.boxEstado.MinimumSize = new System.Drawing.Size(200, 26);
-            this.boxEstado.Name = "boxEstado";
-            this.boxEstado.Padding = new System.Windows.Forms.Padding(1);
-            this.boxEstado.Size = new System.Drawing.Size(240, 26);
-            this.boxEstado.TabIndex = 12;
-            this.boxEstado.Texts = "";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(27, 436);
+            this.label6.Location = new System.Drawing.Point(27, 466);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 18);
             this.label6.TabIndex = 11;
             this.label6.Text = "Rol:";
-            // 
-            // boxRol
-            // 
-            this.boxRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxRol.BorderSize = 1;
-            this.boxRol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxRol.ForeColor = System.Drawing.Color.Gray;
-            this.boxRol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxRol.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxRol.ListTextColor = System.Drawing.Color.Gray;
-            this.boxRol.Location = new System.Drawing.Point(30, 455);
-            this.boxRol.MinimumSize = new System.Drawing.Size(200, 24);
-            this.boxRol.Name = "boxRol";
-            this.boxRol.Padding = new System.Windows.Forms.Padding(1);
-            this.boxRol.Size = new System.Drawing.Size(240, 26);
-            this.boxRol.TabIndex = 10;
-            this.boxRol.Texts = "";
             // 
             // txtConfContraseña
             // 
             this.txtConfContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtConfContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConfContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txtConfContraseña.Location = new System.Drawing.Point(30, 397);
+            this.txtConfContraseña.Location = new System.Drawing.Point(30, 427);
             this.txtConfContraseña.Name = "txtConfContraseña";
             this.txtConfContraseña.Size = new System.Drawing.Size(208, 26);
             this.txtConfContraseña.TabIndex = 9;
@@ -344,7 +278,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(27, 376);
+            this.label5.Location = new System.Drawing.Point(27, 406);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 18);
             this.label5.TabIndex = 8;
@@ -355,7 +289,7 @@
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txtContraseña.Location = new System.Drawing.Point(30, 335);
+            this.txtContraseña.Location = new System.Drawing.Point(30, 365);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(240, 26);
             this.txtContraseña.TabIndex = 7;
@@ -365,7 +299,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(27, 314);
+            this.label4.Location = new System.Drawing.Point(27, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 18);
             this.label4.TabIndex = 6;
@@ -376,7 +310,7 @@
             this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.ForeColor = System.Drawing.Color.Gray;
-            this.txtCorreo.Location = new System.Drawing.Point(30, 274);
+            this.txtCorreo.Location = new System.Drawing.Point(30, 304);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(240, 26);
             this.txtCorreo.TabIndex = 5;
@@ -385,7 +319,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(27, 253);
+            this.label3.Location = new System.Drawing.Point(27, 283);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 18);
             this.label3.TabIndex = 4;
@@ -396,7 +330,7 @@
             this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombre.Location = new System.Drawing.Point(30, 211);
+            this.txtNombre.Location = new System.Drawing.Point(30, 241);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(240, 26);
             this.txtNombre.TabIndex = 3;
@@ -405,7 +339,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(27, 190);
+            this.label2.Location = new System.Drawing.Point(27, 220);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 18);
             this.label2.TabIndex = 2;
@@ -416,7 +350,7 @@
             this.txtDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtDocumento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDocumento.ForeColor = System.Drawing.Color.Gray;
-            this.txtDocumento.Location = new System.Drawing.Point(30, 150);
+            this.txtDocumento.Location = new System.Drawing.Point(30, 180);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(240, 26);
             this.txtDocumento.TabIndex = 1;
@@ -426,7 +360,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(27, 129);
+            this.label1.Location = new System.Drawing.Point(27, 159);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 18);
             this.label1.TabIndex = 0;
@@ -497,8 +431,8 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DatosUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DatosUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -517,8 +451,8 @@
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DatosUsuario.DefaultCellStyle = dataGridViewCellStyle6;
             this.DatosUsuario.EnableHeadersVisualStyles = false;
@@ -531,16 +465,16 @@
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Orange;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DatosUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DatosUsuario.RowHeadersWidth = 20;
             this.DatosUsuario.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.DatosUsuario.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.DatosUsuario.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.DatosUsuario.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.DatosUsuario.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DatosUsuario.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Orange;
+            this.DatosUsuario.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DatosUsuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DatosUsuario.Size = new System.Drawing.Size(772, 584);
             this.DatosUsuario.TabIndex = 19;
@@ -694,6 +628,46 @@
             this.boxConsulta.TabIndex = 22;
             this.boxConsulta.Texts = "";
             // 
+            // boxEstado
+            // 
+            this.boxEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxEstado.BorderSize = 1;
+            this.boxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxEstado.ForeColor = System.Drawing.Color.Gray;
+            this.boxEstado.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxEstado.ListTextColor = System.Drawing.Color.Gray;
+            this.boxEstado.Location = new System.Drawing.Point(30, 542);
+            this.boxEstado.MinimumSize = new System.Drawing.Size(200, 26);
+            this.boxEstado.Name = "boxEstado";
+            this.boxEstado.Padding = new System.Windows.Forms.Padding(1);
+            this.boxEstado.Size = new System.Drawing.Size(240, 26);
+            this.boxEstado.TabIndex = 12;
+            this.boxEstado.Texts = "";
+            // 
+            // boxRol
+            // 
+            this.boxRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxRol.BorderSize = 1;
+            this.boxRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxRol.ForeColor = System.Drawing.Color.Gray;
+            this.boxRol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxRol.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxRol.ListTextColor = System.Drawing.Color.Gray;
+            this.boxRol.Location = new System.Drawing.Point(30, 485);
+            this.boxRol.MinimumSize = new System.Drawing.Size(200, 24);
+            this.boxRol.Name = "boxRol";
+            this.boxRol.Padding = new System.Windows.Forms.Padding(1);
+            this.boxRol.Size = new System.Drawing.Size(240, 26);
+            this.boxRol.TabIndex = 10;
+            this.boxRol.Texts = "";
+            // 
             // PanelUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -728,7 +702,6 @@
 
         private System.Windows.Forms.Panel PanelLateral;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label7;
         private Recursos.RJComboBox boxEstado;

@@ -71,7 +71,7 @@ namespace Presentacion.Paneles
         }
         private void AgregarUsuario()
         {
-            RegistrarUsuario();
+            ControlUsuario();
         }
         private void Limpiar()
         {
@@ -85,7 +85,7 @@ namespace Presentacion.Paneles
             boxRol.SelectedIndex = 0;
             boxEstado.SelectedIndex = 0;
         }
-        private void RegistrarUsuario()
+        private void ControlUsuario()
         {
             string mensaje = string.Empty;
 
@@ -99,24 +99,70 @@ namespace Presentacion.Paneles
                 ObJRol = new Rol() { IdRol = Convert.ToInt32(((OpcionCombo)boxRol.SelectedItem).valor) },
                 Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1 ? true : false
             };
-            int IdUsuarioGenerado = logicaUsuario.Registrar(usuario, out mensaje);
 
-            if (IdUsuarioGenerado != 0)
+
+            if (usuario.IdUsuario == 0)
             {
-                DatosUsuario.Rows.Add(new object[] {"",IdUsuarioGenerado,txtDocumento.Text,txtNombre.Text,
+
+                DialogResult dialogo = MessageBox.Show("¿Desea agregar este nuevo usuario?",
+                "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    //Registrar
+                    int IdUsuarioGenerado = logicaUsuario.Registrar(usuario, out mensaje);
+
+                    if (IdUsuarioGenerado != 0)
+                    {
+                        DatosUsuario.Rows.Add(new object[] {"",IdUsuarioGenerado,txtDocumento.Text,txtNombre.Text,
                 txtCorreo.Text,txtConfContraseña.Text,((OpcionCombo)boxRol.SelectedItem).valor.ToString(),
             ((OpcionCombo)boxRol.SelectedItem).texto.ToString(),
             ((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
             ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
 
-                Limpiar();
-                MessageBox.Show("Usuario agregado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                        MessageBox.Show("Usuario agregado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+
             }
             else
             {
-                MessageBox.Show(mensaje,"Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult dialogo = MessageBox.Show("¿Desea editar este usuario?",
+                "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    //Editar
+                    bool resultado = new LogicaUsuario().Editar(usuario, out mensaje);
+                    if (resultado)
+                    {
+                        DataGridViewRow row = DatosUsuario.Rows[Convert.ToInt32(txtIndice.Text)];
+                        row.Cells["IdUsuario"].Value = txtId.Text;
+                        row.Cells["Documento"].Value = txtDocumento.Text;
+                        row.Cells["NombreCompleto"].Value = txtNombre.Text;
+                        row.Cells["Correo"].Value = txtCorreo.Text;
+                        row.Cells["Clave"].Value = txtConfContraseña.Text;
+                        row.Cells["Rol"].Value = ((OpcionCombo)boxRol.SelectedItem).texto.ToString();
+                        row.Cells["IdRol"].Value = ((OpcionCombo)boxRol.SelectedItem).valor.ToString();
+                        row.Cells["Estado"].Value = ((OpcionCombo)boxEstado.SelectedItem).valor.ToString();
+                        row.Cells["EstadoValor"].Value = ((OpcionCombo)boxEstado.SelectedItem).texto.ToString();
+
+                        Limpiar();
+                        MessageBox.Show("Usuario editado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-        } 
+        }
         #endregion
 
         #region BOTONES
@@ -195,7 +241,7 @@ namespace Presentacion.Paneles
             {
                 if (DatosUsuario.Columns[e.ColumnIndex].Name == "btnSeleccion")
                 {
-                    
+
                     int indice = e.RowIndex;
 
 
