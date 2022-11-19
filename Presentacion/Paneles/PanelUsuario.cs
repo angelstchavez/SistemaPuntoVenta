@@ -174,7 +174,7 @@ namespace Presentacion.Paneles
                 if (dialogo == DialogResult.No) { }
                 else
                 {
-                    
+
 
                     Usuario usuario = new Usuario()
                     {
@@ -194,8 +194,31 @@ namespace Presentacion.Paneles
                     {
                         MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                } 
+                }
             }
+        }
+        private void FiltroBusqueda()
+        {
+            try
+            {
+                string ColumnaFiltro = ((OpcionCombo)boxConsulta.SelectedItem).texto.ToString();
+
+                if (DatosUsuario.Rows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in DatosUsuario.Rows)
+                    {
+                        if (row.Cells[ColumnaFiltro].Value.ToString().Trim().ToUpperInvariant().Contains(txtConsultar.Text.Trim().ToUpper()))
+                        { row.Visible = true; }
+                        else { row.Visible = false; }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
         #endregion
 
@@ -203,7 +226,7 @@ namespace Presentacion.Paneles
         private void BtnAgregar_Click(object sender, System.EventArgs e)
         {
             AgregarUsuario();
-        } 
+        }
         private void BtnEliminar_Click(object sender, System.EventArgs e)
         {
             EliminarUsuario();
@@ -316,6 +339,25 @@ namespace Presentacion.Paneles
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            FiltroBusqueda();
+        }
+
+        private void btnLimpiarConsulta_Click(object sender, EventArgs e)
+        {
+            txtConsultar.Text = "";
+            foreach (DataGridViewRow row in DatosUsuario.Rows)
+            {
+                row.Visible = true;
+            }
+        }
+
+        private void txtConsultar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FiltroBusqueda();
         }
     }
 }
