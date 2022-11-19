@@ -71,7 +71,7 @@ namespace Presentacion.Paneles
         }
         private void AgregarUsuario()
         {
-            ControlUsuario();
+            Registrar_Editar_Usuario();
         }
         private void Limpiar()
         {
@@ -85,7 +85,7 @@ namespace Presentacion.Paneles
             boxRol.SelectedIndex = 0;
             boxEstado.SelectedIndex = 0;
         }
-        private void ControlUsuario()
+        private void Registrar_Editar_Usuario()
         {
             string mensaje = string.Empty;
 
@@ -163,24 +163,51 @@ namespace Presentacion.Paneles
                 }
             }
         }
+        private void EliminarUsuario()
+        {
+            if (Convert.ToInt32(txtId.Text) != 0)
+            {
+                string mensaje = string.Empty;
+
+                DialogResult dialogo = MessageBox.Show("¿Desea eliminar este usuario?",
+                    "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    
+
+                    Usuario usuario = new Usuario()
+                    {
+                        IdUsuario = Convert.ToInt32(txtId.Text)
+                    };
+
+                    bool respuesta = new LogicaUsuario().Eliminar(usuario, out mensaje);
+
+                    if (respuesta)
+                    {
+                        DatosUsuario.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+
+                        Limpiar();
+                        MessageBox.Show("Usuario eliminado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                } 
+            }
+        }
         #endregion
 
         #region BOTONES
         private void BtnAgregar_Click(object sender, System.EventArgs e)
         {
             AgregarUsuario();
-        }
-
-        private void BtnEditar_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
+        } 
         private void BtnEliminar_Click(object sender, System.EventArgs e)
         {
-
+            EliminarUsuario();
         }
-
         private void BtnLimpiar_Click(object sender, System.EventArgs e)
         {
             Limpiar();

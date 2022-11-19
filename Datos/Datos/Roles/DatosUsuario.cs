@@ -181,8 +181,8 @@ namespace Datos.Datos.Roles
                 {
                     SqlCommand cmd = new SqlCommand("EliminarUsuario", connection);
                     cmd.Parameters.AddWithValue("@IdUsuario", usuario.IdUsuario); 
-                    cmd.Parameters.AddWithValue("@Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.AddWithValue("@Mensaje", SqlDbType.VarChar).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar,500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
                     connection.Open();
                     cmd.ExecuteNonQuery();
