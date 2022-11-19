@@ -54,6 +54,7 @@
     </Compile>
     <Compile Include="Datos\Registros\DatosCategoria.cs" />
     <Compile Include="Datos\Registros\DatosPermisos.cs" />
+    <Compile Include="Datos\Roles\DatosProveedor.cs" />
     <Compile Include="Datos\Roles\DatosRol.cs" />
     <Compile Include="Datos\Roles\DatosUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

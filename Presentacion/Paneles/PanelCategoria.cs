@@ -69,11 +69,13 @@ namespace Presentacion.Paneles
                     }
 
                     //Guarda el archivo
-                    SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-                    saveFileDialog1.Title = "Guardar archivo";
-                    saveFileDialog1.CheckPathExists = true;
-                    saveFileDialog1.DefaultExt = "xlsx";
-                    saveFileDialog1.Filter = "xlsx files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
+                    SaveFileDialog saveFileDialog1 = new SaveFileDialog
+                    {
+                        Title = "Guardar archivo",
+                        CheckPathExists = true,
+                        DefaultExt = "xlsx",
+                        Filter = "xlsx files (*.xlsx)|*.xlsx|All files (*.*)|*.*"
+                    };
                     if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                     {
                         sL.SaveAs(saveFileDialog1.FileName);
@@ -161,7 +163,7 @@ namespace Presentacion.Paneles
             {
                 IdCategoria = Convert.ToInt32(txtId.Text),
                 Descripcion = txtNombreCategoria.Text,
-                Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1 ? true : false
+                Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1
             };
             int IdCategoriaGenerado = logicaCategoria.Registrar(categoria, out mensaje);
 
@@ -261,11 +263,6 @@ namespace Presentacion.Paneles
             //    //ModificarCategoria();
             //}
         }
-        private void LocalizarRegistro(Categoria categoria)
-        {
-            //txtNombreCategoria.Text = categoria.Nombre;
-        }
-
         private void LlenarDatos()
         {
             TxContador.Text = "Registros: " + DatosCategoria.Rows.Count.ToString();
