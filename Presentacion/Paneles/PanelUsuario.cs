@@ -286,7 +286,6 @@ namespace Presentacion.Paneles
 
         private void DatosUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             try
             {
                 if (DatosUsuario.Columns[e.ColumnIndex].Name == "btnSeleccion")

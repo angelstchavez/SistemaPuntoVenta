@@ -135,7 +135,6 @@ namespace Datos.Datos.Roles
                     cmd.Parameters.AddWithValue("@IdCliente", Cliente.IdCliente);
                     cmd.CommandType = CommandType.Text;
                     connection.Open();
-                    cmd.ExecuteNonQuery();
                     respuesta = cmd.ExecuteNonQuery() > 0 ? true : false;
                 }
                 catch (Exception ex)

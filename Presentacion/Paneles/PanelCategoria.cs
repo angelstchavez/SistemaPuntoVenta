@@ -21,7 +21,6 @@ namespace Presentacion.Paneles
         }
 
         #region LOAD
-        int posicion = 0;
         LogicaCategoria logicaCategoria = new LogicaCategoria();
         private void PanelCategoria_Load(object sender, System.EventArgs e)
         {
@@ -301,7 +300,7 @@ namespace Presentacion.Paneles
         #endregion
 
         #region EXTRAS
-        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        private void TxtConsultar_TextChanged(object sender, EventArgs e)
         {
             FiltrarBusqueda();
         }
@@ -311,7 +310,7 @@ namespace Presentacion.Paneles
         }
         #endregion
 
-        private void btnLimpiar_Click_1(object sender, EventArgs e)
+        private void BtnLimpiar_Click_1(object sender, EventArgs e)
         {
             LimpiarCampos();
         }
@@ -340,7 +339,7 @@ namespace Presentacion.Paneles
             }
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void BtnAgregar_Click(object sender, EventArgs e)
         {
             CrearCategoria();
         }

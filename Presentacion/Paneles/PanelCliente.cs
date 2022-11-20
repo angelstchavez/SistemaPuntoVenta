@@ -1,6 +1,11 @@
 ﻿using Entidad.Roles;
+using Logica.Logica.Roles;
+using Presentacion.Properties;
+using Presentacion.Recursos;
 using SpreadsheetLight;
 using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Presentacion.Paneles
@@ -12,387 +17,261 @@ namespace Presentacion.Paneles
             InitializeComponent();
         }
 
-        #region LOAD
-        //public static ClienteImpl clienteImpl = new ClienteImpl();
-        //int posicion = 0;
+        LogicaCliente logicaCliente = new LogicaCliente();
+
         private void PanelCliente_Load(object sender, EventArgs e)
         {
-            CargarDatos();
-        }
-        #endregion
-
-        #region BOTONES
-        private void BtnLimpiar_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
+            LlenarDatos();
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
+        private void LlenarDatos()
         {
-            AgregarCliente();
-        }
+            boxEstado.Items.Add(new OpcionCombo() { valor = 1, texto = "Activo" });
+            boxEstado.Items.Add(new OpcionCombo() { valor = 2, texto = "Inactivo" });
+            boxEstado.DisplayMember = "Texto";
+            boxEstado.ValueMember = "valor";
+            boxEstado.SelectedIndex = 0;
 
-        private void BtnActualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtEliminar_Click(object sender, EventArgs e)
-        {
-            //if (clienteImpl.ListarClientes().Count == 0)
-            //{
-            //    MessageBox.Show("No hay clientes registrados.", "Mensaje del sistema",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    if (posicion < 0)
-            //    {
-            //        MessageBox.Show("Seleccione un registro.", "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //    else
-            //    {
-            //        LocalizarRegistro(clienteImpl.ListarClientes()[posicion]);
-            //        EliminarCliente();
-            //    }
-            //}
-        }
-
-        private void BtnReporte_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnExportarExcel_Click(object sender, EventArgs e)
-        {
-            ExportarExcel();
-        }
-
-        #endregion
-
-        #region FUNCIONES
-        private void CrearCliente()
-        {
-            ////Creamos la categoria
-            //Cliente cliente = new Cliente();
-
-            ////Este valor se toma del campo de texto
-            //cliente.Nombres = txtNombres.Text.ToUpperInvariant();
-            //cliente.Apellidos = txtApellidos.Text.ToUpperInvariant();
-            //cliente.NumeroDocumento = txtDocumento.Text.ToUpperInvariant();
-            //cliente.Correo = txtCorreo.Text.ToUpperInvariant();
-            //cliente.Telefono = txtTelefono.Text.ToUpperInvariant();
-            ////categoria.Id = (categoriaImpl.ListarCategorias().Count + 1);
-
-            ////Estos valores se ponen por defecto
-            //Random numeroRandom = new Random();
-            //cliente.Id = numeroRandom.Next(0, 1000000);
-            //cliente.FechaRegistro = DateTime.Today.ToShortDateString().ToString();
-            //cliente.Estado = true;
-
-            ////La agregamos al archivo
-            //clienteImpl.AgregarCliente(cliente);
-
-            ////Actualizamos la tabla de registros para que aparezca el registro en la tabla
-            //Datos.DataSource = null;
-            //Datos.DataSource = clienteImpl.ListarClientes();
-        }
-        private bool ValidarCamposVacios()
-        {
-            if (txtNombres.Text == "")
+            //Lennar el box de consulta
+            foreach (DataGridViewColumn item in DatosCliente.Columns)
             {
-                MessageBox.Show("El campo de nombres está vacio.", "Mensaje del sistema",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtNombres.Focus();
-                return true;
+                if (item.Visible)
+                {
+                    boxConsulta.Items.Add(new OpcionCombo() { valor = item.Name, texto = item.HeaderText });
+                }
             }
-            else if (txtApellidos.Text == "")
+            boxConsulta.DisplayMember = "Texto";
+            boxConsulta.ValueMember = "valor";
+            boxConsulta.SelectedIndex = 0;
+
+            LogicaCliente logicaCliente = new LogicaCliente();
+            List<Cliente> clientes = logicaCliente.Listar();
+
+            //Llenar tabla
+            foreach (var item in clientes)
             {
-                MessageBox.Show("El campo de apellidos está vacio.", "Mensaje del sistema",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtApellidos.Focus();
-                return true;
+                DatosCliente.Rows.Add(new object[] {"",item.IdCliente,item.Documento,item.NombreCompleto,
+                item.Correo,item.Telefono,item.Estado == true ? 1 : 0,
+                item.Estado == true ? "Activo" : "Inactivo" });
             }
-            else if (txtDocumento.Text == "")
+        }
+
+        private void Registrar_Editar_Cliente()
+        {
+            string mensaje = string.Empty;
+
+            Cliente Cliente = new Cliente()
             {
-                MessageBox.Show("El campo de documento está vacio.", "Mensaje del sistema",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtDocumento.Focus();
-                return true;
-            }
-            else if (txtCorreo.Text == "")
+                IdCliente = Convert.ToInt32(txtId.Text),
+                Documento = txtDocumento.Text,
+                NombreCompleto = txtNombre.Text,
+                Correo = txtCorreo.Text,
+                Telefono = txtTelefono.Text,
+                Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1 ? true : false
+            };
+
+            if (Cliente.IdCliente == 0)
             {
-                MessageBox.Show("El campo de correo está vacio.", "Mensaje del sistema",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtCorreo.Focus();
-                return true;
-            }
-            else if (txtTelefono.Text == "")
-            {
-                MessageBox.Show("El campo de teléfono está vacio.", "Mensaje del sistema",
-                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtTelefono.Focus();
-                return true;
+
+                DialogResult dialogo = MessageBox.Show("¿Desea agregar este nuevo cliente?",
+                "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    //Registrar
+                    int IdClienteGenerado = logicaCliente.Registrar(Cliente, out mensaje);
+
+                    if (IdClienteGenerado != 0)
+                    {
+                        DatosCliente.Rows.Add(new object[] {"",IdClienteGenerado,txtDocumento.Text,txtNombre.Text,
+                         txtCorreo.Text,txtTelefono.Text,((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
+                         ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
+
+                        Limpiar();
+                        MessageBox.Show("Cliente agregado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
-                //No hay campos vacíos
-                return false;
+                DialogResult dialogo = MessageBox.Show("¿Desea editar este Cliente?",
+                "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    //Editar
+                    bool resultado = new LogicaCliente().Editar(Cliente, out mensaje);
+                    if (resultado)
+                    {
+                        DataGridViewRow row = DatosCliente.Rows[Convert.ToInt32(txtIndice.Text)];
+                        row.Cells["IdCliente"].Value = txtId.Text;
+                        row.Cells["Documento"].Value = txtDocumento.Text;
+                        row.Cells["NombreCompleto"].Value = txtNombre.Text;
+                        row.Cells["Correo"].Value = txtCorreo.Text;
+                        row.Cells["Telefono"].Value = txtTelefono.Text;
+                        row.Cells["Estado"].Value = ((OpcionCombo)boxEstado.SelectedItem).valor.ToString();
+                        row.Cells["EstadoValor"].Value = ((OpcionCombo)boxEstado.SelectedItem).texto.ToString();
+
+                        Limpiar();
+                        MessageBox.Show("Cliente editado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
         }
-        private void AgregarCliente()
-        {
-            ///* Si el botón dice "Agregar" entonces empieza el proceso de agregación.
-            //    Caso contrario, si NO dice "agregar", entonces significa que el usuario va a editar.
-            // */
-            //if (BtnAgregar.Text == "Agregar")
-            //{
-            //    try
-            //    {
-            //        //Validamos si hay campos vacios
-            //        if (ValidarCamposVacios() == true)
-            //        { 
 
-            //        }
-            //        else
-            //        {
-            //            //Le preguntamos si quiere agregar la categoría
-            //            DialogResult resultado = MessageBox.Show("Desea agregar el cliente "
-            //            + txtNombres.Text.ToUpperInvariant() + " " + txtApellidos.Text.ToUpperInvariant() + " al registro?", "Mensaje del sistema",
-            //            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            //            //sI dice que si, empieza el proceso de agregación
-            //            if (resultado == DialogResult.Yes)
-            //            {
-            //                bool clienteExistente = false;
-
-            //                //Validamos si ese cliente ya se encuentra registrado
-            //                foreach (var item in clienteImpl.ListarClientes())
-            //                {
-            //                    if (item.NumeroDocumento.ToString() == txtDocumento.Text.ToUpperInvariant())
-            //                    {
-            //                        clienteExistente = true;
-            //                        break;
-
-            //                    }
-            //                }
-
-            //                //Si ya existe entonces le avisamos al usuario que ya existe esa categoria.
-            //                if (clienteExistente)
-            //                {
-            //                    MessageBox.Show("El cliente " + txtNombres.Text.ToUpperInvariant() + " " + txtApellidos.Text.ToUpperInvariant()
-            //                        + " ya se encuentra registrada.", "Mensaje del sistema",
-            //                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //                }
-            //                else
-            //                {
-            //                    //Creamos la categoría
-            //                    CrearCliente();
-
-            //                    //Reseteamos la configuración
-            //                    LimpiarCampos();
-
-            //                    MessageBox.Show("Cliente creado exitosamente.", "Mensaje del sistema",
-            //                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //                    //Actualizamos el contador
-            //                    TxContador.Text = "Registros: " + clienteImpl.ListarClientes().Count;
-            //                }
-            //            }
-            //            else
-            //            {
-            //                //Si el usuario se arrepiente, le mandanos este mensaje.
-            //                MessageBox.Show("Proceso cancelado.", "Mensaje del sistema",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //                LimpiarCampos();
-            //            }
-
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //else
-            //{
-            //    //ModificarCategoria();
-            //}
-        }
-        private void LimpiarCampos()
-        {
-            txtNombres.Text = "";
-            txtApellidos.Text = "";
-            txtDocumento.Text = "";
-            txtCorreo.Text = "";
-            txtTelefono.Text = "";
-        }
-        private void CargarDatos()
-        {
-            ////Inicio el contador
-            //TxContador.Text = "Registros: " + clienteImpl.ListarClientes().Count;
-
-            ////Cargo los registros en la tabla
-            //Datos.DataSource = clienteImpl.ListarClientes();
-        }
         private void EliminarCliente()
         {
-            //try
-            //{
-            //    DialogResult resultado = MessageBox.Show("Desea eliminar el cliente "
-            //    + Datos[1, posicion].Value + " del registro?", "Mensaje del sistema",
-            //    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Convert.ToInt32(txtId.Text) != 0)
+            {
+                string mensaje = string.Empty;
 
-            //    if (resultado == DialogResult.Yes)
-            //    {
-            //        clienteImpl.EliminarCliente(clienteImpl.ListarClientes()[posicion]);
+                DialogResult dialogo = MessageBox.Show("¿Desea eliminar este Cliente?",
+                    "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
 
-            //        MessageBox.Show("Cliente eliminado correctamente.", "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            //        Datos.DataSource = null;
-            //        Datos.DataSource = clienteImpl.ListarClientes();
-            //        TxContador.Text = "Registros: " + clienteImpl.ListarClientes().Count;
-            //    }
-            //    else
-            //    {
-            //        LimpiarCampos();
-            //        MessageBox.Show("Proceso cancelado.", "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                    Cliente Cliente = new Cliente()
+                    {
+                        IdCliente = Convert.ToInt32(txtId.Text)
+                    };
+
+                    bool respuesta = new LogicaCliente().Eliminar(Cliente, out mensaje);
+
+                    if (respuesta)
+                    {
+                        DatosCliente.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+
+                        Limpiar();
+                        MessageBox.Show("Cliente eliminado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
-        private void ExportarExcel()
+
+        private void Limpiar()
         {
-            //if (clienteImpl.ListarClientes().Count == 0)
-            //{
-            //    MessageBox.Show("No existen registros para exportar.", "Mensaje del sistema",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
-            //else
-            //{
-            //    try
-            //    {
-
-            //        //Objeto que permite crear el ecxel (Se utilizó una librería externa llamada SpreadSheetLigth)
-            //        SLDocument sL = new SLDocument();
-
-            //        //Le da estilos a el archivo excel
-            //        SLStyle sLStyle = new SLStyle();
-            //        sLStyle.Font.FontSize = 12;
-            //        sLStyle.Font.Bold = true;
-
-            //        //Recorre las columnas
-            //        int iColumn = 1;
-            //        foreach (DataGridViewColumn column in Datos.Columns)
-            //        {
-            //            sL.SetCellValue(1, iColumn, column.HeaderText.ToString());
-            //            sL.SetCellStyle(1, iColumn, sLStyle);
-            //            iColumn++;
-            //        }
-
-            //        //Recorre las filas
-            //        int irow = 2;
-            //        foreach (DataGridViewRow row in Datos.Rows)
-            //        {
-            //            sL.SetCellValue(irow, 1, row.Cells[0].Value.ToString());
-            //            sL.SetCellValue(irow, 2, row.Cells[1].Value.ToString());
-            //            sL.SetCellValue(irow, 3, row.Cells[2].Value.ToString());
-            //            sL.SetCellValue(irow, 4, row.Cells[3].Value.ToString());
-            //            irow++;
-            //        }
-
-            //        //Guarda el archivo
-            //        SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            //        saveFileDialog1.Title = "Guardar archivo";
-            //        saveFileDialog1.CheckPathExists = true;
-            //        saveFileDialog1.DefaultExt = "xlsx";
-            //        saveFileDialog1.Filter = "xlsx files (*.xlsx)|*.xlsx|All files (*.*)|*.*";
-            //        if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            //        {
-            //            sL.SaveAs(saveFileDialog1.FileName);
-            //            MessageBox.Show("¡Archivo exportado con exito!", "Mensaje del sistema",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+            txtId.Text = "0";
+            txtIndice.Text = "-1";
+            txtDocumento.Text = "";
+            txtNombre.Text = "";
+            txtCorreo.Text = "";
+            txtTelefono.Text = "";
+            boxEstado.SelectedIndex = 0;
         }
-        private void FiltrarBusqueda()
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (txtConsultar.Text != "")
-            //{
-            //    //Tabla
-            //    Datos.CurrentCell = null;
+            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Este campo solo admite numeros.", "Mensaje del sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.Handled = true;
+            }
+        }
 
-            //    foreach (DataGridViewRow row in Datos.Rows) { row.Visible = false; }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Registrar_Editar_Cliente();
+        }
 
-            //    foreach (DataGridViewRow row in Datos.Rows)
-            //    {
-            //        foreach (DataGridViewCell cell in row.Cells)
-            //        {
-            //            if ((cell.Value.ToString().ToUpperInvariant().IndexOf(txtConsultar.Text.ToUpperInvariant()) == 0))
-            //            {
-            //                row.Visible = true;
-            //                break;
-            //            }
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    Datos.DataSource = null;
-            //    Datos.DataSource = clienteImpl.ListarClientes();
-            //}
-        }
-        private void LocalizarRegistro(Cliente cliente)
+        private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            //txtNombres.Text = cliente.Nombres;
-            //txtApellidos.Text = cliente.Apellidos;
-            //txtDocumento.Text = cliente.NumeroDocumento;
-            //txtCorreo.Text = cliente.Correo;
-            //txtTelefono.Text = cliente.Telefono;
+            Limpiar();
         }
-        #endregion
 
-        #region EXTRAS
-        private void txtConsultar_TextChanged(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            FiltrarBusqueda();
+            EliminarCliente();
         }
-        private void Datos_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void DatosCliente_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            //posicion = Datos.CurrentRow.Index;
+            try
+            {
+                if (e.RowIndex < 0)
+                    return;
+                if (e.ColumnIndex == 0)
+                {
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                    var w = Resources.check.Width;
+                    var h = Resources.check.Height;
+                    var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                    var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                    e.Graphics.DrawImage(Resources.check, new Rectangle(x, y, w, h));
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
         private void txtDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
             {
                 MessageBox.Show("Este campo solo admite numeros.", "Mensaje del sistema",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
                 e.Handled = true;
             }
         }
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void DatosCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
+            try
             {
-                MessageBox.Show("Este campo solo admite numeros.", "Mensaje del sistema",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                e.Handled = true;
+                if (DatosCliente.Columns[e.ColumnIndex].Name == "btnSeleccion")
+                {
+
+                    int indice = e.RowIndex;
+
+
+                    if (indice >= 0)
+                    {
+                        if (e.RowIndex < 0)
+                            return;
+                        if (e.ColumnIndex == 0)
+                        {
+                            txtIndice.Text = indice.ToString();
+                            txtId.Text = DatosCliente.Rows[indice].Cells["IdCliente"].Value.ToString();
+                            txtDocumento.Text = DatosCliente.Rows[indice].Cells["Documento"].Value.ToString();
+                            txtNombre.Text = DatosCliente.Rows[indice].Cells["NombreCompleto"].Value.ToString();
+                            txtCorreo.Text = DatosCliente.Rows[indice].Cells["Correo"].Value.ToString();
+                            txtTelefono.Text = DatosCliente.Rows[indice].Cells["Telefono"].Value.ToString();
+
+                            foreach (OpcionCombo oc in boxEstado.Items)
+                            {
+
+                                if (oc.texto == Convert.ToString(DatosCliente.Rows[indice].Cells["EstadoValor"].Value))
+                                {
+                                    int indiceBoxRol = boxEstado.Items.IndexOf(oc);
+                                    boxEstado.SelectedIndex = indiceBoxRol;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        #endregion
     }
 }

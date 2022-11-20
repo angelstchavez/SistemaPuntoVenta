@@ -383,5 +383,8 @@
   <ItemGroup>
     <None Include="Imagenes\Iconos\git.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\clientes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

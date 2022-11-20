@@ -18,8 +18,8 @@ namespace Logica.Logica.Roles
             mensaje = string.Empty;
             if (Cliente.Documento == "") { mensaje += "El documento no puede quedar vacío."; }
             if (Cliente.NombreCompleto == "") { mensaje += "El nombre no puede quedar vacío."; }
-            if (Cliente.Correo == "") { mensaje += "La contraseña no puede quedar vacía."; }
-            if (Cliente.Telefono == "") { mensaje += "La contraseña no puede quedar vacía."; }
+            if (Cliente.Correo == "") { mensaje += "El correo no puede quedar vacía."; }
+            if (Cliente.Telefono == "") { mensaje += "El telefono no puede quedar vacía."; }
             if (mensaje != string.Empty) { return 0; }
             else { return datosCliente.RegistrarCliente(Cliente, out mensaje); }
         }
@@ -29,8 +29,8 @@ namespace Logica.Logica.Roles
             mensaje = string.Empty;
             if (Cliente.Documento == "") { mensaje += "El documento no puede quedar vacío."; }
             if (Cliente.NombreCompleto == "") { mensaje += "El nombre no puede quedar vacío."; }
-            if (Cliente.Correo == "") { mensaje += "La contraseña no puede quedar vacía."; }
-            if (Cliente.Telefono == "") { mensaje += "La contraseña no puede quedar vacía."; }
+            if (Cliente.Correo == "") { mensaje += "El correo no puede quedar vacía."; }
+            if (Cliente.Telefono == "") { mensaje += "El telefono no puede quedar vacía."; }
             if (mensaje != string.Empty) { return false; }
             else { return datosCliente.EditarCliente(Cliente, out mensaje); }
 

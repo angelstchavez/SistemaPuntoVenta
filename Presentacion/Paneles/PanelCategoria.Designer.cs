@@ -88,7 +88,7 @@
             this.txtConsultar.Name = "txtConsultar";
             this.txtConsultar.Size = new System.Drawing.Size(150, 26);
             this.txtConsultar.TabIndex = 4;
-            this.txtConsultar.TextChanged += new System.EventHandler(this.txtConsultar_TextChanged);
+            this.txtConsultar.TextChanged += new System.EventHandler(this.TxtConsultar_TextChanged);
             // 
             // label2
             // 
@@ -148,7 +148,7 @@
             this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click_1);
+            this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click_1);
             // 
             // label7
             // 
@@ -245,7 +245,7 @@
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            this.btnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // BtnExportarExcel
             // 

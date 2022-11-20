@@ -45,7 +45,9 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.boxEstado = new Presentacion.Recursos.RJComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.boxRol = new Presentacion.Recursos.RJComboBox();
             this.txtConfContraseña = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtContraseña = new System.Windows.Forms.TextBox();
@@ -58,9 +60,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Datos = new System.Windows.Forms.DataGridView();
             this.DatosUsuario = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnLimpiarConsulta = new System.Windows.Forms.Button();
             this.btnSeleccion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,10 +70,11 @@
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnLimpiarConsulta = new System.Windows.Forms.Button();
             this.txtConsultar = new System.Windows.Forms.TextBox();
             this.boxConsulta = new Presentacion.Recursos.RJComboBox();
-            this.boxEstado = new Presentacion.Recursos.RJComboBox();
-            this.boxRol = new Presentacion.Recursos.RJComboBox();
             this.PanelLateral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
@@ -253,6 +253,26 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Estado:";
             // 
+            // boxEstado
+            // 
+            this.boxEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxEstado.BorderSize = 1;
+            this.boxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxEstado.ForeColor = System.Drawing.Color.Gray;
+            this.boxEstado.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxEstado.ListTextColor = System.Drawing.Color.Gray;
+            this.boxEstado.Location = new System.Drawing.Point(30, 542);
+            this.boxEstado.MinimumSize = new System.Drawing.Size(200, 26);
+            this.boxEstado.Name = "boxEstado";
+            this.boxEstado.Padding = new System.Windows.Forms.Padding(1);
+            this.boxEstado.Size = new System.Drawing.Size(240, 26);
+            this.boxEstado.TabIndex = 12;
+            this.boxEstado.Texts = "";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -262,6 +282,26 @@
             this.label6.Size = new System.Drawing.Size(35, 18);
             this.label6.TabIndex = 11;
             this.label6.Text = "Rol:";
+            // 
+            // boxRol
+            // 
+            this.boxRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxRol.BorderSize = 1;
+            this.boxRol.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxRol.ForeColor = System.Drawing.Color.Gray;
+            this.boxRol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxRol.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxRol.ListTextColor = System.Drawing.Color.Gray;
+            this.boxRol.Location = new System.Drawing.Point(30, 485);
+            this.boxRol.MinimumSize = new System.Drawing.Size(200, 24);
+            this.boxRol.Name = "boxRol";
+            this.boxRol.Padding = new System.Windows.Forms.Padding(1);
+            this.boxRol.Size = new System.Drawing.Size(240, 26);
+            this.boxRol.TabIndex = 10;
+            this.boxRol.Texts = "";
             // 
             // txtConfContraseña
             // 
@@ -481,43 +521,6 @@
             this.DatosUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosUsuario_CellContentClick);
             this.DatosUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosUsuario_CellPainting);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gold;
-            this.label9.Location = new System.Drawing.Point(312, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(237, 19);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Lista de usuarios registrados:";
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(616, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 18);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Consultar por:";
-            // 
-            // btnLimpiarConsulta
-            // 
-            this.btnLimpiarConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLimpiarConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.btnLimpiarConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarConsulta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.btnLimpiarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarConsulta.Image = global::Presentacion.Properties.Resources.codigo_limpio;
-            this.btnLimpiarConsulta.Location = new System.Drawing.Point(1062, 9);
-            this.btnLimpiarConsulta.Name = "btnLimpiarConsulta";
-            this.btnLimpiarConsulta.Size = new System.Drawing.Size(26, 26);
-            this.btnLimpiarConsulta.TabIndex = 22;
-            this.btnLimpiarConsulta.UseVisualStyleBackColor = false;
-            this.btnLimpiarConsulta.Click += new System.EventHandler(this.btnLimpiarConsulta_Click);
-            // 
             // btnSeleccion
             // 
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -595,8 +598,46 @@
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gold;
+            this.label9.Location = new System.Drawing.Point(312, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(237, 19);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Lista de usuarios registrados:";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(616, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(105, 18);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Consultar por:";
+            // 
+            // btnLimpiarConsulta
+            // 
+            this.btnLimpiarConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLimpiarConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.btnLimpiarConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiarConsulta.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnLimpiarConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiarConsulta.Image = global::Presentacion.Properties.Resources.codigo_limpio;
+            this.btnLimpiarConsulta.Location = new System.Drawing.Point(1062, 9);
+            this.btnLimpiarConsulta.Name = "btnLimpiarConsulta";
+            this.btnLimpiarConsulta.Size = new System.Drawing.Size(26, 26);
+            this.btnLimpiarConsulta.TabIndex = 22;
+            this.btnLimpiarConsulta.UseVisualStyleBackColor = false;
+            this.btnLimpiarConsulta.Click += new System.EventHandler(this.btnLimpiarConsulta_Click);
+            // 
             // txtConsultar
             // 
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConsultar.ForeColor = System.Drawing.Color.Gray;
@@ -626,46 +667,6 @@
             this.boxConsulta.Size = new System.Drawing.Size(150, 26);
             this.boxConsulta.TabIndex = 22;
             this.boxConsulta.Texts = "";
-            // 
-            // boxEstado
-            // 
-            this.boxEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxEstado.BorderSize = 1;
-            this.boxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxEstado.ForeColor = System.Drawing.Color.Gray;
-            this.boxEstado.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxEstado.ListTextColor = System.Drawing.Color.Gray;
-            this.boxEstado.Location = new System.Drawing.Point(30, 542);
-            this.boxEstado.MinimumSize = new System.Drawing.Size(200, 26);
-            this.boxEstado.Name = "boxEstado";
-            this.boxEstado.Padding = new System.Windows.Forms.Padding(1);
-            this.boxEstado.Size = new System.Drawing.Size(240, 26);
-            this.boxEstado.TabIndex = 12;
-            this.boxEstado.Texts = "";
-            // 
-            // boxRol
-            // 
-            this.boxRol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxRol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxRol.BorderSize = 1;
-            this.boxRol.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxRol.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxRol.ForeColor = System.Drawing.Color.Gray;
-            this.boxRol.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxRol.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxRol.ListTextColor = System.Drawing.Color.Gray;
-            this.boxRol.Location = new System.Drawing.Point(30, 485);
-            this.boxRol.MinimumSize = new System.Drawing.Size(200, 24);
-            this.boxRol.Name = "boxRol";
-            this.boxRol.Padding = new System.Windows.Forms.Padding(1);
-            this.boxRol.Size = new System.Drawing.Size(240, 26);
-            this.boxRol.TabIndex = 10;
-            this.boxRol.Texts = "";
             // 
             // PanelUsuario
             // 
