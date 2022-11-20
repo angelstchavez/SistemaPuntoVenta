@@ -519,6 +519,7 @@
             this.DatosUsuario.Size = new System.Drawing.Size(772, 584);
             this.DatosUsuario.TabIndex = 19;
             this.DatosUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosUsuario_CellContentClick);
+            this.DatosUsuario.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DatosUsuario_CellFormatting);
             this.DatosUsuario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosUsuario_CellPainting);
             // 
             // btnSeleccion
