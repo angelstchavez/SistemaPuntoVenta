@@ -32,7 +32,7 @@
             this.MenuLateral = new System.Windows.Forms.Panel();
             this.acercaDe = new System.Windows.Forms.Button();
             this.configuracion = new System.Windows.Forms.Button();
-            this.resportes = new System.Windows.Forms.Button();
+            this.reportes = new System.Windows.Forms.Button();
             this.proveedores = new System.Windows.Forms.Button();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
             this.usuarios = new System.Windows.Forms.Button();
@@ -73,7 +73,7 @@
             this.MenuLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.MenuLateral.Controls.Add(this.acercaDe);
             this.MenuLateral.Controls.Add(this.configuracion);
-            this.MenuLateral.Controls.Add(this.resportes);
+            this.MenuLateral.Controls.Add(this.reportes);
             this.MenuLateral.Controls.Add(this.proveedores);
             this.MenuLateral.Controls.Add(this.BtnCerrarSesion);
             this.MenuLateral.Controls.Add(this.usuarios);
@@ -137,29 +137,29 @@
             this.configuracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.configuracion.UseVisualStyleBackColor = false;
             // 
-            // resportes
+            // reportes
             // 
-            this.resportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.resportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.resportes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.resportes.FlatAppearance.BorderSize = 0;
-            this.resportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.resportes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.resportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.resportes.ForeColor = System.Drawing.Color.White;
-            this.resportes.Image = global::Presentacion.Properties.Resources.reporte;
-            this.resportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.resportes.Location = new System.Drawing.Point(0, 325);
-            this.resportes.Margin = new System.Windows.Forms.Padding(4);
-            this.resportes.Name = "resportes";
-            this.resportes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.resportes.Size = new System.Drawing.Size(200, 45);
-            this.resportes.TabIndex = 15;
-            this.resportes.Text = " Reportes";
-            this.resportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.resportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.resportes.UseVisualStyleBackColor = false;
-            this.resportes.Click += new System.EventHandler(this.Btn_09_Click);
+            this.reportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.reportes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reportes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reportes.FlatAppearance.BorderSize = 0;
+            this.reportes.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.reportes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.reportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportes.ForeColor = System.Drawing.Color.White;
+            this.reportes.Image = global::Presentacion.Properties.Resources.reporte;
+            this.reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportes.Location = new System.Drawing.Point(0, 325);
+            this.reportes.Margin = new System.Windows.Forms.Padding(4);
+            this.reportes.Name = "reportes";
+            this.reportes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.reportes.Size = new System.Drawing.Size(200, 45);
+            this.reportes.TabIndex = 15;
+            this.reportes.Text = " Reportes";
+            this.reportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.reportes.UseVisualStyleBackColor = false;
+            this.reportes.Click += new System.EventHandler(this.Btn_09_Click);
             // 
             // proveedores
             // 
@@ -348,7 +348,7 @@
             // 
             // BarraLogo
             // 
-            this.BarraLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(142)))));
+            this.BarraLogo.BackColor = System.Drawing.Color.Black;
             this.BarraLogo.Controls.Add(this.label1);
             this.BarraLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraLogo.Location = new System.Drawing.Point(0, 0);
@@ -596,7 +596,7 @@
         private System.Windows.Forms.PictureBox LnkInstagram;
         private System.Windows.Forms.PictureBox LnkGmail;
         private System.Windows.Forms.Button configuracion;
-        private System.Windows.Forms.Button resportes;
+        private System.Windows.Forms.Button reportes;
         private System.Windows.Forms.Button acercaDe;
     }
 }

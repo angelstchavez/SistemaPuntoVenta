@@ -361,16 +361,23 @@ namespace Presentacion.Paneles
 
         private void DatosUsuario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (this.DatosUsuario.Columns[e.ColumnIndex].Name == "EstadoValor")
+            try
             {
-                if(Convert.ToString(e.Value) == "Activo")
+                if (this.DatosUsuario.Columns[e.ColumnIndex].Name == "EstadoValor")
                 {
-                    e.CellStyle.BackColor = Color.FromArgb(15, 140, 59);
+                    if (Convert.ToString(e.Value) == "Activo")
+                    {
+                        e.CellStyle.BackColor = Color.FromArgb(15, 140, 59);
+                    }
+                    else
+                    {
+                        e.CellStyle.BackColor = Color.FromArgb(255, 23, 23);
+                    }
                 }
-                else
-                {
-                    e.CellStyle.BackColor = Color.FromArgb(255, 23, 23);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
     }

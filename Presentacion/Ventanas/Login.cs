@@ -30,22 +30,29 @@ namespace Presentacion.Ventanas
 
                 if(txtUsuario.Text == "")
                 {
-                    MessageBox.Show("El campo del documento está vacío.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El campo del documento está vacío.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUsuario.Focus();
                 }  else if (txtContraseña.Text == "")
                 {
-                    MessageBox.Show("El campo de contraseña está vacío.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El campo de contraseña está vacío.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtContraseña.Focus();
                 }
                 else
                 {
                     if (usuario != null)
                     {
-                        this.Hide();
-                        Carga welcome = new Carga();
-                        welcome.ShowDialog();
-                        Dashboard dashboard = new Dashboard(usuario);
-                        dashboard.Show();
+                        if(usuario.Estado == false)
+                        {
+                            MessageBox.Show("Este usuario se encuentra Inactivo.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else
+                        {
+                            this.Hide();
+                            Carga welcome = new Carga();
+                            welcome.ShowDialog();
+                            Dashboard dashboard = new Dashboard(usuario);
+                            dashboard.Show();
+                        }
                     }
                     else
                     {
