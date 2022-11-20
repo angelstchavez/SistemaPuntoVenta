@@ -31,10 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label10 = new System.Windows.Forms.Label();
             this.txtIndice = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,6 +52,13 @@
             this.btnLimpiarConsulta = new System.Windows.Forms.Button();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.DatosCliente = new System.Windows.Forms.DataGridView();
+            this.Datos = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtConsultar = new System.Windows.Forms.TextBox();
+            this.PanelLateral = new System.Windows.Forms.Panel();
+            this.boxEstado = new Presentacion.Recursos.RJComboBox();
             this.btnSeleccion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,14 +67,6 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Datos = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDocumento = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtConsultar = new System.Windows.Forms.TextBox();
-            this.PanelLateral = new System.Windows.Forms.Panel();
-            this.boxEstado = new Presentacion.Recursos.RJComboBox();
-            this.boxConsulta = new Presentacion.Recursos.RJComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatosCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Datos)).BeginInit();
@@ -79,11 +78,11 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(614, 15);
+            this.label10.Location = new System.Drawing.Point(748, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 18);
+            this.label10.Size = new System.Drawing.Size(124, 18);
             this.label10.TabIndex = 28;
-            this.label10.Text = "Consultar por:";
+            this.label10.Text = "Consulta filtrada:";
             // 
             // txtIndice
             // 
@@ -275,6 +274,7 @@
             this.btnLimpiarConsulta.Size = new System.Drawing.Size(26, 26);
             this.btnLimpiarConsulta.TabIndex = 29;
             this.btnLimpiarConsulta.UseVisualStyleBackColor = false;
+            this.btnLimpiarConsulta.Click += new System.EventHandler(this.btnLimpiarConsulta_Click);
             // 
             // txtNombre
             // 
@@ -348,68 +348,6 @@
             this.DatosCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosCliente_CellContentClick);
             this.DatosCliente.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DatosCliente_CellFormatting);
             this.DatosCliente.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosCliente_CellPainting);
-            // 
-            // btnSeleccion
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.btnSeleccion.DefaultCellStyle = dataGridViewCellStyle2;
-            this.btnSeleccion.FillWeight = 19.83354F;
-            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSeleccion.HeaderText = "";
-            this.btnSeleccion.Name = "btnSeleccion";
-            this.btnSeleccion.ReadOnly = true;
-            // 
-            // IdCliente
-            // 
-            this.IdCliente.HeaderText = "ID";
-            this.IdCliente.Name = "IdCliente";
-            this.IdCliente.ReadOnly = true;
-            this.IdCliente.Visible = false;
-            // 
-            // Documento
-            // 
-            this.Documento.FillWeight = 105.2105F;
-            this.Documento.HeaderText = "DOCUMENTO";
-            this.Documento.Name = "Documento";
-            this.Documento.ReadOnly = true;
-            // 
-            // NombreCompleto
-            // 
-            this.NombreCompleto.FillWeight = 105.2105F;
-            this.NombreCompleto.HeaderText = "NOMBRE";
-            this.NombreCompleto.Name = "NombreCompleto";
-            this.NombreCompleto.ReadOnly = true;
-            // 
-            // Correo
-            // 
-            this.Correo.FillWeight = 105.2105F;
-            this.Correo.HeaderText = "CORREO";
-            this.Correo.Name = "Correo";
-            this.Correo.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.HeaderText = "TELEFONO";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 89.54315F;
-            this.Estado.HeaderText = "ESTADO VALOR";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 117.497F;
-            this.EstadoValor.HeaderText = "ESTADO";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
             // 
             // Datos
             // 
@@ -495,6 +433,7 @@
             // 
             // txtConsultar
             // 
+            this.txtConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtConsultar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtConsultar.ForeColor = System.Drawing.Color.Gray;
@@ -502,6 +441,7 @@
             this.txtConsultar.Name = "txtConsultar";
             this.txtConsultar.Size = new System.Drawing.Size(177, 26);
             this.txtConsultar.TabIndex = 31;
+            this.txtConsultar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConsultar_KeyPress);
             // 
             // PanelLateral
             // 
@@ -550,26 +490,68 @@
             this.boxEstado.TabIndex = 12;
             this.boxEstado.Texts = "";
             // 
-            // boxConsulta
+            // btnSeleccion
             // 
-            this.boxConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.boxConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxConsulta.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxConsulta.BorderSize = 1;
-            this.boxConsulta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxConsulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxConsulta.ForeColor = System.Drawing.Color.Gray;
-            this.boxConsulta.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxConsulta.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxConsulta.ListTextColor = System.Drawing.Color.Gray;
-            this.boxConsulta.Location = new System.Drawing.Point(721, 11);
-            this.boxConsulta.MinimumSize = new System.Drawing.Size(150, 24);
-            this.boxConsulta.Name = "boxConsulta";
-            this.boxConsulta.Padding = new System.Windows.Forms.Padding(1);
-            this.boxConsulta.Size = new System.Drawing.Size(150, 26);
-            this.boxConsulta.TabIndex = 30;
-            this.boxConsulta.Texts = "";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.btnSeleccion.DefaultCellStyle = dataGridViewCellStyle2;
+            this.btnSeleccion.FillWeight = 21.34974F;
+            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSeleccion.HeaderText = "";
+            this.btnSeleccion.Name = "btnSeleccion";
+            this.btnSeleccion.ReadOnly = true;
+            // 
+            // IdCliente
+            // 
+            this.IdCliente.HeaderText = "ID";
+            this.IdCliente.Name = "IdCliente";
+            this.IdCliente.ReadOnly = true;
+            this.IdCliente.Visible = false;
+            // 
+            // Documento
+            // 
+            this.Documento.FillWeight = 113.2534F;
+            this.Documento.HeaderText = "DOCUMENTO";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            // 
+            // NombreCompleto
+            // 
+            this.NombreCompleto.FillWeight = 113.2534F;
+            this.NombreCompleto.HeaderText = "NOMBRE";
+            this.NombreCompleto.Name = "NombreCompleto";
+            this.NombreCompleto.ReadOnly = true;
+            // 
+            // Correo
+            // 
+            this.Correo.FillWeight = 113.2534F;
+            this.Correo.HeaderText = "CORREO";
+            this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.FillWeight = 107.6446F;
+            this.Telefono.HeaderText = "TELEFONO";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 89.54315F;
+            this.Estado.HeaderText = "ESTADO VALOR";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 84.20742F;
+            this.EstadoValor.HeaderText = "ESTADO";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
             // 
             // PanelCliente
             // 
@@ -580,7 +562,6 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnLimpiarConsulta);
-            this.Controls.Add(this.boxConsulta);
             this.Controls.Add(this.DatosCliente);
             this.Controls.Add(this.Datos);
             this.Controls.Add(this.txtConsultar);
@@ -619,7 +600,6 @@
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLimpiarConsulta;
-        private Recursos.RJComboBox boxConsulta;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView DatosCliente;
         private System.Windows.Forms.DataGridView Datos;

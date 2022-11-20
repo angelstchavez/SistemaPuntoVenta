@@ -34,7 +34,7 @@
             this.configuracion = new System.Windows.Forms.Button();
             this.reportes = new System.Windows.Forms.Button();
             this.proveedores = new System.Windows.Forms.Button();
-            this.BtnCerrarSesion = new System.Windows.Forms.Button();
+            this.cerrarSesion = new System.Windows.Forms.Button();
             this.usuarios = new System.Windows.Forms.Button();
             this.clientes = new System.Windows.Forms.Button();
             this.mantenimiento = new System.Windows.Forms.Button();
@@ -75,7 +75,7 @@
             this.MenuLateral.Controls.Add(this.configuracion);
             this.MenuLateral.Controls.Add(this.reportes);
             this.MenuLateral.Controls.Add(this.proveedores);
-            this.MenuLateral.Controls.Add(this.BtnCerrarSesion);
+            this.MenuLateral.Controls.Add(this.cerrarSesion);
             this.MenuLateral.Controls.Add(this.usuarios);
             this.MenuLateral.Controls.Add(this.clientes);
             this.MenuLateral.Controls.Add(this.mantenimiento);
@@ -183,30 +183,30 @@
             this.proveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.proveedores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.proveedores.UseVisualStyleBackColor = false;
-            this.proveedores.Click += new System.EventHandler(this.BtnConfiguracion_Click);
+            this.proveedores.Click += new System.EventHandler(this.BtnProveedor_Click);
             // 
-            // BtnCerrarSesion
+            // cerrarSesion
             // 
-            this.BtnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
-            this.BtnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.BtnCerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.BtnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
-            this.BtnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.BtnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("BtnCerrarSesion.Image")));
-            this.BtnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnCerrarSesion.Location = new System.Drawing.Point(0, 671);
-            this.BtnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
-            this.BtnCerrarSesion.Name = "BtnCerrarSesion";
-            this.BtnCerrarSesion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.BtnCerrarSesion.Size = new System.Drawing.Size(200, 40);
-            this.BtnCerrarSesion.TabIndex = 13;
-            this.BtnCerrarSesion.Text = "Cerrar sesión";
-            this.BtnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCerrarSesion.UseVisualStyleBackColor = false;
-            this.BtnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
+            this.cerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(7)))), ((int)(((byte)(7)))));
+            this.cerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.cerrarSesion.FlatAppearance.BorderSize = 0;
+            this.cerrarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.cerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.cerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.cerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("cerrarSesion.Image")));
+            this.cerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cerrarSesion.Location = new System.Drawing.Point(0, 671);
+            this.cerrarSesion.Margin = new System.Windows.Forms.Padding(4);
+            this.cerrarSesion.Name = "cerrarSesion";
+            this.cerrarSesion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.cerrarSesion.Size = new System.Drawing.Size(200, 40);
+            this.cerrarSesion.TabIndex = 13;
+            this.cerrarSesion.Text = "Cerrar sesión";
+            this.cerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cerrarSesion.UseVisualStyleBackColor = false;
+            this.cerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesion_Click);
             // 
             // usuarios
             // 
@@ -348,7 +348,7 @@
             // 
             // BarraLogo
             // 
-            this.BarraLogo.BackColor = System.Drawing.Color.Black;
+            this.BarraLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.BarraLogo.Controls.Add(this.label1);
             this.BarraLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraLogo.Location = new System.Drawing.Point(0, 0);
@@ -550,6 +550,7 @@
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.MenuLateral.ResumeLayout(false);
@@ -577,7 +578,7 @@
         private System.Windows.Forms.Panel Contenedor;
         private System.Windows.Forms.Panel BarraLogo;
         private System.Windows.Forms.Button proveedores;
-        private System.Windows.Forms.Button BtnCerrarSesion;
+        private System.Windows.Forms.Button cerrarSesion;
         private System.Windows.Forms.Button usuarios;
         private System.Windows.Forms.Button clientes;
         private System.Windows.Forms.Button mantenimiento;

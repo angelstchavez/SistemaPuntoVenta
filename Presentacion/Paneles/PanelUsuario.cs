@@ -1,4 +1,6 @@
-﻿using Entidad.Roles;
+﻿using Datos.Datos.Roles;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Entidad.Roles;
 using Logica.Logica.Roles;
 using Presentacion.Properties;
 using Presentacion.Recursos;
@@ -44,18 +46,6 @@ namespace Presentacion.Paneles
             boxRol.DisplayMember = "Texto";
             boxRol.ValueMember = "valor";
             boxRol.SelectedIndex = 0;
-
-            //Lennar el box de consulta
-            foreach (DataGridViewColumn item in DatosUsuario.Columns)
-            {
-                if (item.Visible)
-                {
-                    boxConsulta.Items.Add(new OpcionCombo() { valor = item.Name, texto = item.HeaderText });
-                }
-            }
-            boxConsulta.DisplayMember = "Texto";
-            boxConsulta.ValueMember = "valor";
-            boxConsulta.SelectedIndex = 0;
 
             LogicaUsuario logicaUsuario = new LogicaUsuario();
             List<Usuario> usuarios = logicaUsuario.Listar();
@@ -201,15 +191,33 @@ namespace Presentacion.Paneles
         {
             try
             {
-                string ColumnaFiltro = ((OpcionCombo)boxConsulta.SelectedItem).texto.ToString();
+                if (txtConsultar.Text != "")
+                {
+                    //Tabla
+                    DatosUsuario.CurrentCell = null;
 
-                if (DatosUsuario.Rows.Count > 0)
+                    foreach (DataGridViewRow row in DatosUsuario.Rows) { row.Visible = false; }
+
+                    foreach (DataGridViewRow row in DatosUsuario.Rows)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            if ((cell.Value.ToString().ToUpperInvariant().IndexOf(txtConsultar.Text.ToUpperInvariant()) == 0))
+                            {
+                                row.Visible = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                else
                 {
                     foreach (DataGridViewRow row in DatosUsuario.Rows)
                     {
-                        if (row.Cells[ColumnaFiltro].Value.ToString().Trim().ToUpperInvariant().Contains(txtConsultar.Text.Trim().ToUpper()))
-                        { row.Visible = true; }
-                        else { row.Visible = false; }
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            row.Visible = true;
+                        }
                     }
                 }
             }
@@ -217,8 +225,6 @@ namespace Presentacion.Paneles
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
         #endregion
 
@@ -367,17 +373,17 @@ namespace Presentacion.Paneles
                 {
                     if (Convert.ToString(e.Value) == "Activo")
                     {
-                        e.CellStyle.BackColor = Color.FromArgb(15, 140, 59);
+                        e.CellStyle.BackColor = System.Drawing.Color.FromArgb(15, 140, 59);
                     }
                     else
                     {
-                        e.CellStyle.BackColor = Color.FromArgb(255, 23, 23);
+                        e.CellStyle.BackColor = System.Drawing.Color.FromArgb(255, 23, 23);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

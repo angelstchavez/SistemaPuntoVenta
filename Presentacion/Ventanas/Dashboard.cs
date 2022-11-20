@@ -92,13 +92,14 @@ namespace Presentacion.Ventanas
         #region BOTONES PRINCIPALES
         private void Btn_01_Click(object sender, System.EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelVenta(), "Realizar venta");
+            AbrirOpcion(new Paneles.PanelVenta(), "Gestor de ventas");
             BtnRegresar.Visible = true;
         }
 
         private void Btn_02_Click(object sender, System.EventArgs e)
         {
-
+            AbrirOpcion(new Paneles.PanelCompra(), "Gestor de compras");
+            BtnRegresar.Visible = true;
         }
 
         private void Btn_03_Click(object sender, System.EventArgs e)
@@ -149,21 +150,30 @@ namespace Presentacion.Ventanas
         #endregion
 
         #region BOTONES SECUNDARIOS
-        private void BtnConfiguracion_Click(object sender, System.EventArgs e)
+        private void BtnProveedor_Click(object sender, System.EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelConfiguracion(), "Configuración del sistema");
+            AbrirOpcion(new Paneles.PanelProveedor(), "Gestor de proveedores");
             BtnRegresar.Visible = true;
         }
 
         private void BtnCerrarSesion_Click(object sender, System.EventArgs e)
         {
+            DialogResult dialogo = MessageBox.Show("¿Desea cerrar el sesión?",
+            "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogo == DialogResult.No) {  }
+            else
+            {
+                this.Hide();
+                Login Login = new Login();
+                Login.Show();
+            }
 
         }
 
         private void BtnRegresar_Click(object sender, System.EventArgs e)
         {
             AbrirNuevoPanel(new Inicio());
-            Titulo.Text = "Bajdeja principal";
+            Titulo.Text = "Bandeja principal";
             BtnRegresar.Visible = false;
             MenuLateral.Visible = true;
         }

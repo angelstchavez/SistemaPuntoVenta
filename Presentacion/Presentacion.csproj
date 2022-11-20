@@ -92,6 +92,12 @@
     <Compile Include="Paneles\PanelCliente.Designer.cs">
       <DependentUpon>PanelCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\PanelCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelCompra.Designer.cs">
+      <DependentUpon>PanelCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\PanelConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelCliente.resx">
       <DependentUpon>PanelCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelCompra.resx">
+      <DependentUpon>PanelCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelConfiguracion.resx">
       <DependentUpon>PanelConfiguracion.cs</DependentUpon>

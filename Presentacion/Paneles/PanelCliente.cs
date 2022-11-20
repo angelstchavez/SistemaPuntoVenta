@@ -1,4 +1,5 @@
-﻿using Entidad.Roles;
+﻿using Datos.Datos.Roles;
+using Entidad.Roles;
 using Logica.Logica.Roles;
 using Presentacion.Properties;
 using Presentacion.Recursos;
@@ -32,21 +33,8 @@ namespace Presentacion.Paneles
             boxEstado.ValueMember = "valor";
             boxEstado.SelectedIndex = 0;
 
-            //Lennar el box de consulta
-            foreach (DataGridViewColumn item in DatosCliente.Columns)
-            {
-                if (item.Visible)
-                {
-                    boxConsulta.Items.Add(new OpcionCombo() { valor = item.Name, texto = item.HeaderText });
-                }
-            }
-            boxConsulta.DisplayMember = "Texto";
-            boxConsulta.ValueMember = "valor";
-            boxConsulta.SelectedIndex = 0;
-
             LogicaCliente logicaCliente = new LogicaCliente();
             List<Cliente> clientes = logicaCliente.Listar();
-
             //Llenar tabla
             foreach (var item in clientes)
             {
@@ -173,6 +161,39 @@ namespace Presentacion.Paneles
             boxEstado.SelectedIndex = 0;
         }
 
+        private void FiltrarBusqueda()
+        {
+            if (txtConsultar.Text != "")
+            {
+                //Tabla
+                DatosCliente.CurrentCell = null;
+
+                foreach (DataGridViewRow row in DatosCliente.Rows) { row.Visible = false; }
+
+                foreach (DataGridViewRow row in DatosCliente.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if ((cell.Value.ToString().ToUpperInvariant().IndexOf(txtConsultar.Text.ToUpperInvariant()) == 0))
+                        {
+                            row.Visible = true;
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow row in DatosCliente.Rows)
+                {
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        row.Visible = true;
+                    }
+                }
+            }
+        }
+
         private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
@@ -295,7 +316,24 @@ namespace Presentacion.Paneles
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
+        }
+
+        private void txtConsultar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            FiltrarBusqueda();
+        }
+
+        private void btnLimpiarConsulta_Click(object sender, EventArgs e)
+        {
+            txtConsultar.Text = "";
+            List<Cliente> clientes = logicaCliente.Listar();
+            foreach (var item in clientes)
+            {
+                DatosCliente.Rows.Add(new object[] {"",item.IdCliente,item.Documento,item.NombreCompleto,
+                item.Correo,item.Telefono,item.Estado == true ? 1 : 0,
+                item.Estado == true ? "Activo" : "Inactivo" });
+            }
         }
     }
 }
