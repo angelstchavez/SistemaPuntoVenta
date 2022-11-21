@@ -66,7 +66,7 @@ namespace Presentacion.Ventanas
             AbrirNuevoPanel(panel);
         }
         
-        private void abrirPanel()
+        private void abrirPanelAcercaDe()
         {
             Form form = new Form();
             using (PanelAcercaDe mm = new PanelAcercaDe())
@@ -145,7 +145,7 @@ namespace Presentacion.Ventanas
         }
         private void Btn_010_Click(object sender, EventArgs e)
         {
-            abrirPanel();
+            abrirPanelAcercaDe();
         }
         #endregion
 

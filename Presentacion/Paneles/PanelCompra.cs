@@ -25,11 +25,50 @@ namespace Presentacion.Paneles
             boxTipoDocumento.SelectedIndex = 0;
 
             txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            txtProd.Text = "0";
+            txtProv.Text = "0";
+        }
+
+        private void abrirPanelProveedor()
+        {
+            Form form = new Form();
+            using (VentProveedor mm = new VentProveedor())
+            {
+                form.StartPosition = FormStartPosition.CenterScreen;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Opacity = .70d;
+                form.BackColor = System.Drawing.Color.Black;
+                form.WindowState = FormWindowState.Maximized;
+                form.TopMost = true;
+                form.Location = this.Location;
+                form.ShowInTaskbar = false;
+                form.Show();
+                mm.Owner = form;
+
+                var result = mm.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    txtProv.Text = mm.proveedor.IdProveedor.ToString();
+                    txtDocumento.Text = mm.proveedor.Documento.ToString();
+                    txtRazonSocial.Text = mm.proveedor.RazonSocial.ToString();
+                }
+                else
+                {
+                    txtDocumento.Select();
+                }
+                form.Dispose();
+            }
         }
 
         private void PanelCompra_Load(object sender, System.EventArgs e)
         {
             LLenarDatos();
+        }
+
+        private void btnBuscarProv_Click(object sender, EventArgs e)
+        {
+            abrirPanelProveedor();
         }
     }
 }

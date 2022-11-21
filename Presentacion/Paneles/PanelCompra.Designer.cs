@@ -43,6 +43,7 @@
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtProd = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtPrecioVenta = new System.Windows.Forms.TextBox();
@@ -68,13 +69,12 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.btnBuscarProv = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtProv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtProd = new System.Windows.Forms.TextBox();
-            this.txtProv = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DatosProductos)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -252,11 +252,24 @@
             this.panel1.Size = new System.Drawing.Size(891, 84);
             this.panel1.TabIndex = 33;
             // 
+            // txtProd
+            // 
+            this.txtProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.txtProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtProd.Location = new System.Drawing.Point(161, 18);
+            this.txtProd.Name = "txtProd";
+            this.txtProd.Size = new System.Drawing.Size(22, 26);
+            this.txtProd.TabIndex = 42;
+            this.txtProd.Text = "0";
+            this.txtProd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProd.Visible = false;
+            // 
             // txtCantidad
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCantidad.ForeColor = System.Drawing.Color.Gray;
+            this.txtCantidad.ForeColor = System.Drawing.Color.DarkGray;
             this.txtCantidad.Location = new System.Drawing.Point(718, 50);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(73, 26);
@@ -276,7 +289,7 @@
             // 
             this.txtPrecioVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtPrecioVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecioVenta.ForeColor = System.Drawing.Color.Gray;
+            this.txtPrecioVenta.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPrecioVenta.Location = new System.Drawing.Point(591, 50);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(120, 26);
@@ -296,7 +309,7 @@
             // 
             this.txtPrecioCompra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtPrecioCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecioCompra.ForeColor = System.Drawing.Color.Gray;
+            this.txtPrecioCompra.ForeColor = System.Drawing.Color.DarkGray;
             this.txtPrecioCompra.Location = new System.Drawing.Point(463, 50);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(120, 26);
@@ -346,7 +359,7 @@
             // 
             this.txtNombreProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtNombreProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreProd.ForeColor = System.Drawing.Color.Gray;
+            this.txtNombreProd.ForeColor = System.Drawing.Color.DarkGray;
             this.txtNombreProd.Location = new System.Drawing.Point(224, 50);
             this.txtNombreProd.Name = "txtNombreProd";
             this.txtNombreProd.Size = new System.Drawing.Size(231, 26);
@@ -387,7 +400,7 @@
             // 
             this.txtCodgProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtCodgProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodgProducto.ForeColor = System.Drawing.Color.Gray;
+            this.txtCodgProducto.ForeColor = System.Drawing.Color.DarkGray;
             this.txtCodgProducto.Location = new System.Drawing.Point(6, 50);
             this.txtCodgProducto.Name = "txtCodgProducto";
             this.txtCodgProducto.Size = new System.Drawing.Size(177, 26);
@@ -463,7 +476,7 @@
             this.txtFecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtFecha.ForeColor = System.Drawing.Color.Gray;
+            this.txtFecha.ForeColor = System.Drawing.Color.DarkGray;
             this.txtFecha.Location = new System.Drawing.Point(6, 49);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
@@ -485,7 +498,7 @@
             this.txtDocumento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtDocumento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDocumento.ForeColor = System.Drawing.Color.Gray;
+            this.txtDocumento.ForeColor = System.Drawing.Color.DarkGray;
             this.txtDocumento.Location = new System.Drawing.Point(6, 49);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(177, 26);
@@ -516,7 +529,7 @@
             this.txtRazonSocial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRazonSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtRazonSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRazonSocial.ForeColor = System.Drawing.Color.Gray;
+            this.txtRazonSocial.ForeColor = System.Drawing.Color.DarkGray;
             this.txtRazonSocial.Location = new System.Drawing.Point(227, 49);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(250, 26);
@@ -540,6 +553,7 @@
             this.btnBuscarProv.TabIndex = 40;
             this.btnBuscarProv.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBuscarProv.UseVisualStyleBackColor = false;
+            this.btnBuscarProv.Click += new System.EventHandler(this.btnBuscarProv_Click);
             // 
             // panel2
             // 
@@ -556,6 +570,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(487, 84);
             this.panel2.TabIndex = 34;
+            // 
+            // txtProv
+            // 
+            this.txtProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.txtProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtProv.Location = new System.Drawing.Point(455, 20);
+            this.txtProv.Name = "txtProv";
+            this.txtProv.Size = new System.Drawing.Size(22, 26);
+            this.txtProv.TabIndex = 41;
+            this.txtProv.Text = "0";
+            this.txtProv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProv.Visible = false;
             // 
             // label6
             // 
@@ -615,32 +642,6 @@
             this.label14.TabIndex = 44;
             this.label14.Text = "Total a pagar:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtProd
-            // 
-            this.txtProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.txtProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtProd.Location = new System.Drawing.Point(161, 18);
-            this.txtProd.Name = "txtProd";
-            this.txtProd.Size = new System.Drawing.Size(22, 26);
-            this.txtProd.TabIndex = 42;
-            this.txtProd.Text = "0";
-            this.txtProd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtProd.Visible = false;
-            // 
-            // txtProv
-            // 
-            this.txtProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.txtProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtProv.Location = new System.Drawing.Point(455, 20);
-            this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(22, 26);
-            this.txtProv.TabIndex = 41;
-            this.txtProv.Text = "0";
-            this.txtProv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtProv.Visible = false;
             // 
             // PanelCompra
             // 

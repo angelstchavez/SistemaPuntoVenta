@@ -222,6 +222,9 @@
     <EmbeddedResource Include="Recursos\RJComboBox.resx">
       <DependentUpon>RJComboBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\VentProveedor.resx">
+      <DependentUpon>VentProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Carga.resx">
       <DependentUpon>Carga.cs</DependentUpon>
     </EmbeddedResource>
