@@ -37,7 +37,7 @@
             this.cerrarSesion = new System.Windows.Forms.Button();
             this.usuarios = new System.Windows.Forms.Button();
             this.clientes = new System.Windows.Forms.Button();
-            this.mantenimiento = new System.Windows.Forms.Button();
+            this.categorias = new System.Windows.Forms.Button();
             this.compras = new System.Windows.Forms.Button();
             this.ventas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Contenedor = new System.Windows.Forms.Panel();
+            this.productos = new System.Windows.Forms.Button();
             this.MenuLateral.SuspendLayout();
             this.BarraLogo.SuspendLayout();
             this.BarraSuperior.SuspendLayout();
@@ -78,7 +79,8 @@
             this.MenuLateral.Controls.Add(this.cerrarSesion);
             this.MenuLateral.Controls.Add(this.usuarios);
             this.MenuLateral.Controls.Add(this.clientes);
-            this.MenuLateral.Controls.Add(this.mantenimiento);
+            this.MenuLateral.Controls.Add(this.productos);
+            this.MenuLateral.Controls.Add(this.categorias);
             this.MenuLateral.Controls.Add(this.compras);
             this.MenuLateral.Controls.Add(this.ventas);
             this.MenuLateral.Controls.Add(this.button1);
@@ -102,7 +104,7 @@
             this.acercaDe.ForeColor = System.Drawing.Color.White;
             this.acercaDe.Image = global::Presentacion.Properties.Resources.informacion;
             this.acercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.acercaDe.Location = new System.Drawing.Point(0, 415);
+            this.acercaDe.Location = new System.Drawing.Point(0, 460);
             this.acercaDe.Margin = new System.Windows.Forms.Padding(4);
             this.acercaDe.Name = "acercaDe";
             this.acercaDe.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -126,7 +128,7 @@
             this.configuracion.ForeColor = System.Drawing.Color.White;
             this.configuracion.Image = global::Presentacion.Properties.Resources.setting;
             this.configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.configuracion.Location = new System.Drawing.Point(0, 370);
+            this.configuracion.Location = new System.Drawing.Point(0, 415);
             this.configuracion.Margin = new System.Windows.Forms.Padding(4);
             this.configuracion.Name = "configuracion";
             this.configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -149,7 +151,7 @@
             this.reportes.ForeColor = System.Drawing.Color.White;
             this.reportes.Image = global::Presentacion.Properties.Resources.reporte;
             this.reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportes.Location = new System.Drawing.Point(0, 325);
+            this.reportes.Location = new System.Drawing.Point(0, 370);
             this.reportes.Margin = new System.Windows.Forms.Padding(4);
             this.reportes.Name = "reportes";
             this.reportes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -173,7 +175,7 @@
             this.proveedores.ForeColor = System.Drawing.Color.White;
             this.proveedores.Image = global::Presentacion.Properties.Resources.proveedor;
             this.proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.proveedores.Location = new System.Drawing.Point(0, 285);
+            this.proveedores.Location = new System.Drawing.Point(0, 330);
             this.proveedores.Margin = new System.Windows.Forms.Padding(4);
             this.proveedores.Name = "proveedores";
             this.proveedores.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -220,7 +222,7 @@
             this.usuarios.ForeColor = System.Drawing.Color.White;
             this.usuarios.Image = global::Presentacion.Properties.Resources.usuario;
             this.usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.usuarios.Location = new System.Drawing.Point(0, 240);
+            this.usuarios.Location = new System.Drawing.Point(0, 285);
             this.usuarios.Margin = new System.Windows.Forms.Padding(4);
             this.usuarios.Name = "usuarios";
             this.usuarios.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -244,7 +246,7 @@
             this.clientes.ForeColor = System.Drawing.Color.White;
             this.clientes.Image = global::Presentacion.Properties.Resources.hombre;
             this.clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.clientes.Location = new System.Drawing.Point(0, 195);
+            this.clientes.Location = new System.Drawing.Point(0, 240);
             this.clientes.Margin = new System.Windows.Forms.Padding(4);
             this.clientes.Name = "clientes";
             this.clientes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -256,29 +258,29 @@
             this.clientes.UseVisualStyleBackColor = false;
             this.clientes.Click += new System.EventHandler(this.Btn_07_Click);
             // 
-            // mantenimiento
+            // categorias
             // 
-            this.mantenimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.mantenimiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mantenimiento.FlatAppearance.BorderSize = 0;
-            this.mantenimiento.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.mantenimiento.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.mantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.mantenimiento.ForeColor = System.Drawing.Color.White;
-            this.mantenimiento.Image = global::Presentacion.Properties.Resources.herramientas_para_reparar;
-            this.mantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mantenimiento.Location = new System.Drawing.Point(0, 150);
-            this.mantenimiento.Margin = new System.Windows.Forms.Padding(4);
-            this.mantenimiento.Name = "mantenimiento";
-            this.mantenimiento.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.mantenimiento.Size = new System.Drawing.Size(200, 45);
-            this.mantenimiento.TabIndex = 8;
-            this.mantenimiento.Text = " Mantenimiento";
-            this.mantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.mantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.mantenimiento.UseVisualStyleBackColor = false;
-            this.mantenimiento.Click += new System.EventHandler(this.Btn_06_Click);
+            this.categorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.categorias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categorias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.categorias.FlatAppearance.BorderSize = 0;
+            this.categorias.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.categorias.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.categorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.categorias.ForeColor = System.Drawing.Color.White;
+            this.categorias.Image = global::Presentacion.Properties.Resources.categoria;
+            this.categorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.categorias.Location = new System.Drawing.Point(0, 150);
+            this.categorias.Margin = new System.Windows.Forms.Padding(4);
+            this.categorias.Name = "categorias";
+            this.categorias.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.categorias.Size = new System.Drawing.Size(200, 45);
+            this.categorias.TabIndex = 8;
+            this.categorias.Text = " Categorías";
+            this.categorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.categorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.categorias.UseVisualStyleBackColor = false;
+            this.categorias.Click += new System.EventHandler(this.Btn_06_Click);
             // 
             // compras
             // 
@@ -535,6 +537,29 @@
             this.Contenedor.Size = new System.Drawing.Size(899, 636);
             this.Contenedor.TabIndex = 3;
             // 
+            // productos
+            // 
+            this.productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.productos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.productos.FlatAppearance.BorderSize = 0;
+            this.productos.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.productos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productos.ForeColor = System.Drawing.Color.White;
+            this.productos.Image = global::Presentacion.Properties.Resources.producto;
+            this.productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productos.Location = new System.Drawing.Point(0, 195);
+            this.productos.Margin = new System.Windows.Forms.Padding(4);
+            this.productos.Name = "productos";
+            this.productos.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.productos.Size = new System.Drawing.Size(200, 45);
+            this.productos.TabIndex = 18;
+            this.productos.Text = " Productos";
+            this.productos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.productos.UseVisualStyleBackColor = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -581,7 +606,7 @@
         private System.Windows.Forms.Button cerrarSesion;
         private System.Windows.Forms.Button usuarios;
         private System.Windows.Forms.Button clientes;
-        private System.Windows.Forms.Button mantenimiento;
+        private System.Windows.Forms.Button categorias;
         private System.Windows.Forms.Button compras;
         private System.Windows.Forms.Button ventas;
         private System.Windows.Forms.Button button1;
@@ -599,5 +624,6 @@
         private System.Windows.Forms.Button configuracion;
         private System.Windows.Forms.Button reportes;
         private System.Windows.Forms.Button acercaDe;
+        private System.Windows.Forms.Button productos;
     }
 }
