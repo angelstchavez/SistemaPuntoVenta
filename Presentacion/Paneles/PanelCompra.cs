@@ -1,29 +1,30 @@
-﻿using Datos.Datos.Roles;
-using Entidad.Roles;
-using Logica.Logica.Roles;
-using System.Collections.Generic;
+﻿using Entidad.Roles;
+using Presentacion.Recursos;
+using System;
 using System.Windows.Forms;
 
 namespace Presentacion.Paneles
 {
     public partial class PanelCompra : Form
     {
-        public PanelCompra()
+
+        private Usuario usuario;
+        public PanelCompra(Usuario usuario = null)
         {
+            MessageBox.Show(usuario.NombreCompleto);
             InitializeComponent();
         }
 
+
         private void LLenarDatos()
         {
-            LogicaCliente logicaCliente = new LogicaCliente();
-            List<Cliente> clientes = logicaCliente.Listar();
-            //Llenar tabla
-            foreach (var item in clientes)
-            {
-                DatosProductos.Rows.Add(new object[] {"",item.IdCliente,item.Documento,item.NombreCompleto,
-                item.Correo,item.Telefono,item.Estado == true ? 1 : 0,
-                item.Estado == true ? "Activo" : "Inactivo" });
-            }
+            boxTipoDocumento.Items.Add(new OpcionCombo() { valor = 1, texto = "Boleta" });
+            boxTipoDocumento.Items.Add(new OpcionCombo() { valor = 2, texto = "Factura" });
+            boxTipoDocumento.DisplayMember = "Texto";
+            boxTipoDocumento.ValueMember = "valor";
+            boxTipoDocumento.SelectedIndex = 0;
+
+            txtFecha.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
         private void PanelCompra_Load(object sender, System.EventArgs e)

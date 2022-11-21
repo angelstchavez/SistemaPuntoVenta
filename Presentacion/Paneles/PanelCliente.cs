@@ -1,9 +1,7 @@
-﻿using Datos.Datos.Roles;
-using Entidad.Roles;
+﻿using Entidad.Roles;
 using Logica.Logica.Roles;
 using Presentacion.Properties;
 using Presentacion.Recursos;
-using SpreadsheetLight;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -38,7 +36,7 @@ namespace Presentacion.Paneles
             //Llenar tabla
             foreach (var item in clientes)
             {
-                DatosCliente.Rows.Add(new object[] {"",item.IdCliente,item.Documento,item.NombreCompleto,
+                DatosClientes.Rows.Add(new object[] {"",item.IdCliente,item.Documento,item.NombreCompleto,
                 item.Correo,item.Telefono,item.Estado == true ? 1 : 0,
                 item.Estado == true ? "Activo" : "Inactivo" });
             }
@@ -71,7 +69,7 @@ namespace Presentacion.Paneles
 
                     if (IdClienteGenerado != 0)
                     {
-                        DatosCliente.Rows.Add(new object[] {"",IdClienteGenerado,txtDocumento.Text,txtNombre.Text,
+                        DatosClientes.Rows.Add(new object[] {"",IdClienteGenerado,txtDocumento.Text,txtNombre.Text,
                          txtCorreo.Text,txtTelefono.Text,((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
                          ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
 
@@ -95,7 +93,7 @@ namespace Presentacion.Paneles
                     bool resultado = new LogicaCliente().Editar(Cliente, out mensaje);
                     if (resultado)
                     {
-                        DataGridViewRow row = DatosCliente.Rows[Convert.ToInt32(txtIndice.Text)];
+                        DataGridViewRow row = DatosClientes.Rows[Convert.ToInt32(txtIndice.Text)];
                         row.Cells["IdCliente"].Value = txtId.Text;
                         row.Cells["Documento"].Value = txtDocumento.Text;
                         row.Cells["NombreCompleto"].Value = txtNombre.Text;
@@ -137,7 +135,7 @@ namespace Presentacion.Paneles
 
                     if (respuesta)
                     {
-                        DatosCliente.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                        DatosClientes.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
 
                         Limpiar();
                         MessageBox.Show("Cliente eliminado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -166,11 +164,11 @@ namespace Presentacion.Paneles
             if (txtConsultar.Text != "")
             {
                 //Tabla
-                DatosCliente.CurrentCell = null;
+                DatosClientes.CurrentCell = null;
 
-                foreach (DataGridViewRow row in DatosCliente.Rows) { row.Visible = false; }
+                foreach (DataGridViewRow row in DatosClientes.Rows) { row.Visible = false; }
 
-                foreach (DataGridViewRow row in DatosCliente.Rows)
+                foreach (DataGridViewRow row in DatosClientes.Rows)
                 {
                     foreach (DataGridViewCell cell in row.Cells)
                     {
@@ -184,7 +182,7 @@ namespace Presentacion.Paneles
             }
             else
             {
-                foreach (DataGridViewRow row in DatosCliente.Rows)
+                foreach (DataGridViewRow row in DatosClientes.Rows)
                 {
                     foreach (DataGridViewCell cell in row.Cells)
                     {
@@ -256,7 +254,7 @@ namespace Presentacion.Paneles
         {
             try
             {
-                if (DatosCliente.Columns[e.ColumnIndex].Name == "btnSeleccion")
+                if (DatosClientes.Columns[e.ColumnIndex].Name == "btnSeleccion")
                 {
 
                     int indice = e.RowIndex;
@@ -269,16 +267,16 @@ namespace Presentacion.Paneles
                         if (e.ColumnIndex == 0)
                         {
                             txtIndice.Text = indice.ToString();
-                            txtId.Text = DatosCliente.Rows[indice].Cells["IdCliente"].Value.ToString();
-                            txtDocumento.Text = DatosCliente.Rows[indice].Cells["Documento"].Value.ToString();
-                            txtNombre.Text = DatosCliente.Rows[indice].Cells["NombreCompleto"].Value.ToString();
-                            txtCorreo.Text = DatosCliente.Rows[indice].Cells["Correo"].Value.ToString();
-                            txtTelefono.Text = DatosCliente.Rows[indice].Cells["Telefono"].Value.ToString();
+                            txtId.Text = DatosClientes.Rows[indice].Cells["IdCliente"].Value.ToString();
+                            txtDocumento.Text = DatosClientes.Rows[indice].Cells["Documento"].Value.ToString();
+                            txtNombre.Text = DatosClientes.Rows[indice].Cells["NombreCompleto"].Value.ToString();
+                            txtCorreo.Text = DatosClientes.Rows[indice].Cells["Correo"].Value.ToString();
+                            txtTelefono.Text = DatosClientes.Rows[indice].Cells["Telefono"].Value.ToString();
 
                             foreach (OpcionCombo oc in boxEstado.Items)
                             {
 
-                                if (oc.texto == Convert.ToString(DatosCliente.Rows[indice].Cells["EstadoValor"].Value))
+                                if (oc.texto == Convert.ToString(DatosClientes.Rows[indice].Cells["EstadoValor"].Value))
                                 {
                                     int indiceBoxRol = boxEstado.Items.IndexOf(oc);
                                     boxEstado.SelectedIndex = indiceBoxRol;
@@ -299,7 +297,7 @@ namespace Presentacion.Paneles
         {
             try
             {
-                if (this.DatosCliente.Columns[e.ColumnIndex].Name == "EstadoValor")
+                if (this.DatosClientes.Columns[e.ColumnIndex].Name == "EstadoValor")
                 {
                     if (Convert.ToString(e.Value) == "Activo")
                     {
@@ -330,7 +328,7 @@ namespace Presentacion.Paneles
             List<Cliente> clientes = logicaCliente.Listar();
             foreach (var item in clientes)
             {
-                DatosCliente.Rows.Add(new object[] {"",item.IdCliente,item.Documento,item.NombreCompleto,
+                DatosClientes.Rows.Add(new object[] {"",item.IdCliente,item.Documento,item.NombreCompleto,
                 item.Correo,item.Telefono,item.Estado == true ? 1 : 0,
                 item.Estado == true ? "Activo" : "Inactivo" });
             }

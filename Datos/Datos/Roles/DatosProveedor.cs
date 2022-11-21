@@ -87,7 +87,7 @@ namespace Datos.Datos.Roles
 
         public bool EditarProveedor(Proveedor Proveedor, out string mensaje)
         {
-            bool respuesta = false;
+            bool resultado = false;
             mensaje = string.Empty;
 
             using (SqlConnection connection = new SqlConnection(Conexion.cadena))
@@ -100,24 +100,24 @@ namespace Datos.Datos.Roles
                     cmd.Parameters.AddWithValue("@RazonSocial", Proveedor.RazonSocial);
                     cmd.Parameters.AddWithValue("@Telefono", Proveedor.Telefono);
                     cmd.Parameters.AddWithValue("@Estado", Proveedor.Estado);
-                    cmd.Parameters.Add("Respuesta", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
                     connection.Open();
                     cmd.ExecuteNonQuery();
 
-                    respuesta = Convert.ToBoolean(cmd.Parameters["Respuesta"].Value);
+                    resultado = Convert.ToBoolean(cmd.Parameters["Resultado"].Value);
                     mensaje = cmd.Parameters["Mensaje"].Value.ToString();
 
                 }
                 catch (Exception ex)
                 {
                     connection.Close();
-                    respuesta = false;
+                    resultado = false;
                     mensaje = ex.Message;
                 }
             }
-            return respuesta;
+            return resultado;
         }
 
         public bool EliminarProveedor(Proveedor Proveedor, out string mensaje)

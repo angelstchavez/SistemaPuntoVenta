@@ -98,7 +98,7 @@ namespace Presentacion.Ventanas
 
         private void Btn_02_Click(object sender, System.EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelCompra(), "Gestor de compras");
+            AbrirOpcion(new Paneles.PanelCompra(usuarioActual), "Gestor de compras");
             BtnRegresar.Visible = true;
         }
 

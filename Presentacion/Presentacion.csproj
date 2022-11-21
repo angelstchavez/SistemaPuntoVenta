@@ -151,6 +151,12 @@
     <Compile Include="Recursos\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Recursos\VentProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\VentProveedor.Designer.cs">
+      <DependentUpon>VentProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ventanas\Carga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -400,6 +406,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Iconos\envio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\billetera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\camara.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\camion-de-reparto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
