@@ -9,12 +9,12 @@ namespace Presentacion.Paneles
     {
 
         private Usuario usuario;
+        
         public PanelCompra(Usuario usuario = null)
         {
             MessageBox.Show(usuario.NombreCompleto);
             InitializeComponent();
         }
-
 
         private void LLenarDatos()
         {
@@ -61,6 +61,39 @@ namespace Presentacion.Paneles
             }
         }
 
+        private void abrirPanelProducto()
+        {
+            Form form = new Form();
+            using (VentProducto mm = new VentProducto())
+            {
+                form.StartPosition = FormStartPosition.CenterScreen;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Opacity = .70d;
+                form.BackColor = System.Drawing.Color.Black;
+                form.WindowState = FormWindowState.Maximized;
+                form.TopMost = true;
+                form.Location = this.Location;
+                form.ShowInTaskbar = false;
+                form.Show();
+                mm.Owner = form;
+
+                var result = mm.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    txtProv.Text = mm.producto.IdProducto.ToString();
+                    txtCodgProducto.Text = mm.producto.Codigo.ToString();
+                    txtNombreProd.Text = mm.producto.Nombre.ToString();
+                    txtPrecioCompra.Select();
+                }
+                else
+                {
+                    txtDocumento.Select();
+                }
+                form.Dispose();
+            }
+        }
+
         private void PanelCompra_Load(object sender, System.EventArgs e)
         {
             LLenarDatos();
@@ -69,6 +102,11 @@ namespace Presentacion.Paneles
         private void btnBuscarProv_Click(object sender, EventArgs e)
         {
             abrirPanelProveedor();
+        }
+
+        private void btnBuscarProd_Click(object sender, EventArgs e)
+        {
+            abrirPanelProducto();
         }
     }
 }

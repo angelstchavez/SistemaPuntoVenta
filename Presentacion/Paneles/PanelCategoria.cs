@@ -25,10 +25,19 @@ namespace Presentacion.Paneles
         private void PanelCategoria_Load(object sender, System.EventArgs e)
         {
             LlenarDatos();
+            ContarRegistros();
         }
         #endregion
 
         #region FUNCIONES
+        public void ContarRegistros()
+        {
+            LogicaCategoria logicaCategoria = new LogicaCategoria();
+            List<Categoria> categorias = logicaCategoria.Listar();
+            int contCategorias = 0;
+            foreach (var item in categorias) { contCategorias++; }
+            lblContador.Text = "Registros: " + Convert.ToString(contCategorias);
+        }
         private void ExportarExcel()
         {
             if (DatosCategoria.Rows.Count == 0)
@@ -118,153 +127,111 @@ namespace Presentacion.Paneles
         }
         private void EliminarCategoria()
         {
-            //try
-            //{
-            //    DialogResult resultado = MessageBox.Show("Desea eliminar la categoría "
-            //    + Datos[1, posicion].Value + " del registro?", "Mensaje del sistema",
-            //    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (Convert.ToInt32(txtId.Text) != 0)
+            {
+                string mensaje = string.Empty;
 
-            //    if (resultado == DialogResult.Yes)
-            //    {
-            //        categoriaImpl.EliminarCategoria(categoriaImpl.ListarCategorias()[posicion]);
+                DialogResult dialogo = MessageBox.Show("¿Desea eliminar este categoria?",
+                    "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    Categoria Categoria = new Categoria()
+                    {
+                        IdCategoria = Convert.ToInt32(txtId.Text)
+                    };
 
-            //        MessageBox.Show("Categoría eliminada correctamente.", "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bool respuesta = new LogicaCategoria().Eliminar(Categoria, out mensaje);
 
-            //        Datos.DataSource = null;
-            //        Datos.DataSource = categoriaImpl.ListarCategorias();
-            //        TxContador.Text = "Registros: " + categoriaImpl.ListarCategorias().Count;
-            //    }
-            //    else
-            //    {
-            //        LimpiarCampos();
-            //        MessageBox.Show("Proceso cancelado.", "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+                    if (respuesta)
+                    {
+                        DatosCategoria.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+
+                        Limpiar();
+                        ContarRegistros();
+                        MessageBox.Show("Categoria eliminado exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
-        private void LimpiarCampos()
+        private void Limpiar()
         {
-            txtNombreCategoria.Text = "";
+            txtId.Text = "0";
+            txtIndice.Text = "-1";
+            txtDescripcion.Text = "";
             boxEstado.SelectedIndex = 0;
             txtConsultar.Text = "";
         }
-        private void CrearCategoria()
+        private void Registrar_Editar_Categoria()
         {
             string mensaje = string.Empty;
 
-            Categoria categoria = new Categoria()
+            Categoria Categoria = new Categoria()
             {
                 IdCategoria = Convert.ToInt32(txtId.Text),
-                Descripcion = txtNombreCategoria.Text,
-                Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1
+                Descripcion = txtDescripcion.Text,
+                Estado = Convert.ToInt32(((OpcionCombo)boxEstado.SelectedItem).valor) == 1 ? true : false
             };
-            int IdCategoriaGenerado = logicaCategoria.Registrar(categoria, out mensaje);
 
-            if (categoria.IdCategoria != 0)
+            if (Categoria.IdCategoria == 0)
             {
-                DatosCategoria.Rows.Add(new object[] {"",IdCategoriaGenerado,txtNombreCategoria.Text,
-            ((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
-            ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
 
-                LimpiarCampos();
-                MessageBox.Show("Categoria agregada exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dialogo = MessageBox.Show("¿Desea agregar este nueva categoria?",
+                "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    //Registrar
+                    int IdCategoriaGenerado = logicaCategoria.Registrar(Categoria, out mensaje);
+
+                    if (IdCategoriaGenerado != 0)
+                    {
+                        DatosCategoria.Rows.Add(new object[] {"",IdCategoriaGenerado,txtDescripcion.Text,
+                        ((OpcionCombo)boxEstado.SelectedItem).valor.ToString(),
+                        ((OpcionCombo)boxEstado.SelectedItem).texto.ToString()});
+                        ContarRegistros();
+                        Limpiar();
+                        MessageBox.Show("Categoria agregada exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
             else
             {
-                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult dialogo = MessageBox.Show("¿Desea editar este categoria?",
+                "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogo == DialogResult.No) { }
+                else
+                {
+                    //Editar
+                    bool resultado = new LogicaCategoria().Editar(Categoria, out mensaje);
+                    if (resultado)
+                    {
+                        DataGridViewRow row = DatosCategoria.Rows[Convert.ToInt32(txtIndice.Text)];
+                        row.Cells["IdCategoria"].Value = Convert.ToInt32(txtId.Text);
+                        row.Cells["Descripcion"].Value = txtDescripcion.Text;
+                        row.Cells["Estado"].Value = ((OpcionCombo)boxEstado.SelectedItem).valor.ToString();
+                        row.Cells["EstadoValor"].Value = ((OpcionCombo)boxEstado.SelectedItem).texto.ToString();
+                        Limpiar();
+                        MessageBox.Show("Categoria editada exitosamente.", "Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
             }
-        }
-        private void AgregarCategoria()
-        {
-            ///* Si el botón dice "Agregar" entonces empieza el proceso de agregación.
-            //    Caso contrario, si NO dice "agregar", entonces significa que el Categoria va a editar.
-            // */
-            //if (BtnAgregar.Text == "Agregar")
-            //{
-            //    try
-            //    {
-            //        //Validamos si hay campos vacios
-            //        if (txtNombreCategoria.Text == "")
-            //        {
-            //            MessageBox.Show("Hay campos vacios.", "Mensaje del sistema",
-            //            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //            txtNombreCategoria.Focus();
-            //        }
-            //        else
-            //        {
-            //            //Le preguntamos si quiere agregar la categoría
-            //            DialogResult resultado = MessageBox.Show("Desea agregar la categoría "
-            //            + txtNombreCategoria.Text.ToUpperInvariant() + " al registro?", "Mensaje del sistema",
-            //            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            //            //sI dice que si, empieza el proceso de agregación
-            //            if (resultado == DialogResult.Yes)
-            //            {
-            //                bool categoriaExistente = false;
-
-            //                //Validamos si esa categoria ya se encuentra registrada
-            //                foreach (var item in categoriaImpl.ListarCategorias())
-            //                {
-            //                    if (item.Nombre.ToString() == txtNombreCategoria.Text.ToUpperInvariant())
-            //                    {
-            //                        categoriaExistente = true;
-            //                        break;
-
-            //                    }
-            //                }
-
-            //                //Si ya existe entonces le avisamos al Categoria que ya existe esa categoria.
-            //                if (categoriaExistente)
-            //                {
-            //                    MessageBox.Show("La categoría " + txtNombreCategoria.Text.ToUpperInvariant()
-            //                        + " ya se encuentra registrada.", "Mensaje del sistema",
-            //                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //                }
-            //                else
-            //                {
-            //                    //Creamos la categoría
-            //                    CrearCategoria();
-
-            //                    //Reseteamos la configuración
-            //                    LimpiarCampos();
-
-            //                    MessageBox.Show("Categoría creada exitosamente.", "Mensaje del sistema",
-            //                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //                    //Actualizamos el contador
-            //                    TxContador.Text = "Registros: " + categoriaImpl.ListarCategorias().Count;
-            //                }
-            //            }
-            //            else
-            //            {
-            //                //Si el Categoria se arrepiente, le mandanos este mensaje.
-            //                MessageBox.Show("Proceso cancelado.", "Mensaje del sistema",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //                LimpiarCampos();
-            //            }
-
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show(ex.Message, "Mensaje del sistema",
-            //        MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-            //else
-            //{
-            //    //ModificarCategoria();
-            //}
         }
         private void LlenarDatos()
         {
-            TxContador.Text = "Registros: " + DatosCategoria.Rows.Count.ToString();
+            lblContador.Text = "Registros: " + DatosCategoria.Rows.Count.ToString();
 
             boxEstado.Items.Add(new OpcionCombo() { valor = 1, texto = "Activo" });
             boxEstado.Items.Add(new OpcionCombo() { valor = 2, texto = "Inactivo" });
@@ -284,35 +251,86 @@ namespace Presentacion.Paneles
         }
         #endregion
 
-        #region BOTONES CRUD
-
-        #endregion
-
         #region BOTONES SECUNDARIOS
-        private void BtnLimpiar_Click(object sender, System.EventArgs e)
-        {
-            txtNombreCategoria.Text = "";
-        }
         private void BtnExportarExcel_Click(object sender, EventArgs e)
         {
             ExportarExcel();
         }
         #endregion
 
-        #region EXTRAS
         private void TxtConsultar_TextChanged(object sender, EventArgs e)
         {
             FiltrarBusqueda();
         }
-        private void Datos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //posicion = Datos.CurrentRow.Index;
-        }
-        #endregion
 
         private void BtnLimpiar_Click_1(object sender, EventArgs e)
         {
-            LimpiarCampos();
+            Limpiar();
+        }
+
+        private void BtnAgregar_Click(object sender, EventArgs e)
+        {
+            Registrar_Editar_Categoria();
+        }
+
+        private void DatosCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (DatosCategoria.Columns[e.ColumnIndex].Name == "btnSeleccion")
+                {
+                    int indice = e.RowIndex;
+
+                    if (indice >= 0)
+                    {
+                        if (e.RowIndex < 0)
+                            return;
+                        if (e.ColumnIndex == 0)
+                        {
+                            txtIndice.Text = indice.ToString();
+                            txtId.Text = DatosCategoria.Rows[indice].Cells["IdCategoria"].Value.ToString();
+                            txtDescripcion.Text = DatosCategoria.Rows[indice].Cells["Descripcion"].Value.ToString();
+
+                            foreach (OpcionCombo oc in boxEstado.Items)
+                            {
+
+                                if (oc.texto == Convert.ToString(DatosCategoria.Rows[indice].Cells["EstadoValor"].Value))
+                                {
+                                    int indiceBoxRol = boxEstado.Items.IndexOf(oc);
+                                    boxEstado.SelectedIndex = indiceBoxRol;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DatosCategoria_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                if (this.DatosCategoria.Columns[e.ColumnIndex].Name == "EstadoValor")
+                {
+                    if (Convert.ToString(e.Value) == "Activo")
+                    {
+                        e.CellStyle.BackColor = System.Drawing.Color.FromArgb(15, 140, 59);
+                    }
+                    else
+                    {
+                        e.CellStyle.BackColor = System.Drawing.Color.FromArgb(255, 23, 23);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void DatosCategoria_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -339,9 +357,9 @@ namespace Presentacion.Paneles
             }
         }
 
-        private void BtnAgregar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            CrearCategoria();
+            EliminarCategoria();
         }
     }
 }

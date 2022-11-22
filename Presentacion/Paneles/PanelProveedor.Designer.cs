@@ -46,13 +46,6 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.btnLimpiarConsulta = new System.Windows.Forms.Button();
             this.DatosProveedor = new System.Windows.Forms.DataGridView();
-            this.PanelLateral = new System.Windows.Forms.Panel();
-            this.boxEstado = new Presentacion.Recursos.RJComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtDocumento = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnSeleccion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.IdProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +53,13 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PanelLateral = new System.Windows.Forms.Panel();
+            this.boxEstado = new Presentacion.Recursos.RJComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DatosProveedor)).BeginInit();
             this.PanelLateral.SuspendLayout();
@@ -250,6 +250,7 @@
             // DatosProveedor
             // 
             this.DatosProveedor.AllowUserToAddRows = false;
+            this.DatosProveedor.AllowUserToDeleteRows = false;
             this.DatosProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -308,6 +309,62 @@
             this.DatosProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosProveedor_CellContentClick_1);
             this.DatosProveedor.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DatosProveedor_CellFormatting);
             this.DatosProveedor.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosProveedor_CellPainting_1);
+            // 
+            // btnSeleccion
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.btnSeleccion.DefaultCellStyle = dataGridViewCellStyle2;
+            this.btnSeleccion.FillWeight = 22.3855F;
+            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSeleccion.HeaderText = "";
+            this.btnSeleccion.Name = "btnSeleccion";
+            this.btnSeleccion.ReadOnly = true;
+            // 
+            // IdProveedor
+            // 
+            this.IdProveedor.HeaderText = "ID";
+            this.IdProveedor.Name = "IdProveedor";
+            this.IdProveedor.ReadOnly = true;
+            this.IdProveedor.Visible = false;
+            // 
+            // Documento
+            // 
+            this.Documento.FillWeight = 118.7478F;
+            this.Documento.HeaderText = "DOCUMENTO";
+            this.Documento.Name = "Documento";
+            this.Documento.ReadOnly = true;
+            // 
+            // RazonSocial
+            // 
+            this.RazonSocial.FillWeight = 118.7478F;
+            this.RazonSocial.HeaderText = "RAZÓN SOCIAL";
+            this.RazonSocial.Name = "RazonSocial";
+            this.RazonSocial.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            this.Telefono.FillWeight = 112.8669F;
+            this.Telefono.HeaderText = "TELEFONO";
+            this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.FillWeight = 89.54315F;
+            this.Estado.HeaderText = "ESTADO VALOR";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            this.Estado.Visible = false;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.FillWeight = 66.9607F;
+            this.EstadoValor.HeaderText = "ESTADO";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
             // 
             // PanelLateral
             // 
@@ -406,62 +463,6 @@
             this.label10.Size = new System.Drawing.Size(124, 18);
             this.label10.TabIndex = 35;
             this.label10.Text = "Consulta filtrada:";
-            // 
-            // btnSeleccion
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.btnSeleccion.DefaultCellStyle = dataGridViewCellStyle2;
-            this.btnSeleccion.FillWeight = 22.3855F;
-            this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSeleccion.HeaderText = "";
-            this.btnSeleccion.Name = "btnSeleccion";
-            this.btnSeleccion.ReadOnly = true;
-            // 
-            // IdProveedor
-            // 
-            this.IdProveedor.HeaderText = "ID";
-            this.IdProveedor.Name = "IdProveedor";
-            this.IdProveedor.ReadOnly = true;
-            this.IdProveedor.Visible = false;
-            // 
-            // Documento
-            // 
-            this.Documento.FillWeight = 118.7478F;
-            this.Documento.HeaderText = "DOCUMENTO";
-            this.Documento.Name = "Documento";
-            this.Documento.ReadOnly = true;
-            // 
-            // RazonSocial
-            // 
-            this.RazonSocial.FillWeight = 118.7478F;
-            this.RazonSocial.HeaderText = "RAZÓN SOCIAL";
-            this.RazonSocial.Name = "RazonSocial";
-            this.RazonSocial.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            this.Telefono.FillWeight = 112.8669F;
-            this.Telefono.HeaderText = "TELEFONO";
-            this.Telefono.Name = "Telefono";
-            this.Telefono.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.FillWeight = 89.54315F;
-            this.Estado.HeaderText = "ESTADO VALOR";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Visible = false;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.FillWeight = 66.9607F;
-            this.EstadoValor.HeaderText = "ESTADO";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
             // 
             // PanelProveedor
             // 

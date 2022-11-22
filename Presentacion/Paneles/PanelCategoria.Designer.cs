@@ -33,26 +33,26 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.TxContador = new System.Windows.Forms.Label();
+            this.lblContador = new System.Windows.Forms.Label();
             this.txtConsultar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNombreCategoria = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.boxEstado = new Presentacion.Recursos.RJComboBox();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.BtnExportarExcel = new System.Windows.Forms.Button();
             this.DatosCategoria = new System.Windows.Forms.DataGridView();
             this.btnSeleccion = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtIndice = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.boxEstado = new Presentacion.Recursos.RJComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DatosCategoria)).BeginInit();
             this.SuspendLayout();
@@ -68,15 +68,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Consulta filtrada:";
             // 
-            // TxContador
+            // lblContador
             // 
-            this.TxContador.AutoSize = true;
-            this.TxContador.ForeColor = System.Drawing.Color.White;
-            this.TxContador.Location = new System.Drawing.Point(12, 110);
-            this.TxContador.Name = "TxContador";
-            this.TxContador.Size = new System.Drawing.Size(92, 18);
-            this.TxContador.TabIndex = 6;
-            this.TxContador.Text = "Registros: 0";
+            this.lblContador.AutoSize = true;
+            this.lblContador.ForeColor = System.Drawing.Color.White;
+            this.lblContador.Location = new System.Drawing.Point(12, 109);
+            this.lblContador.Name = "lblContador";
+            this.lblContador.Size = new System.Drawing.Size(92, 18);
+            this.lblContador.TabIndex = 6;
+            this.lblContador.Text = "Registros: 0";
             // 
             // txtConsultar
             // 
@@ -100,15 +100,15 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Nombre:";
             // 
-            // txtNombreCategoria
+            // txtDescripcion
             // 
-            this.txtNombreCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.txtNombreCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreCategoria.ForeColor = System.Drawing.Color.White;
-            this.txtNombreCategoria.Location = new System.Drawing.Point(8, 26);
-            this.txtNombreCategoria.Name = "txtNombreCategoria";
-            this.txtNombreCategoria.Size = new System.Drawing.Size(150, 26);
-            this.txtNombreCategoria.TabIndex = 9;
+            this.txtDescripcion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescripcion.ForeColor = System.Drawing.Color.White;
+            this.txtDescripcion.Location = new System.Drawing.Point(8, 26);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(150, 26);
+            this.txtDescripcion.TabIndex = 9;
             // 
             // panel1
             // 
@@ -118,13 +118,12 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.boxEstado);
-            this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnAgregar);
-            this.panel1.Controls.Add(this.txtNombreCategoria);
+            this.panel1.Controls.Add(this.txtDescripcion);
             this.panel1.Location = new System.Drawing.Point(15, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(822, 60);
+            this.panel1.Size = new System.Drawing.Size(711, 60);
             this.panel1.TabIndex = 11;
             // 
             // btnLimpiar
@@ -139,7 +138,7 @@
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.Image = global::Presentacion.Properties.Resources.codigo_limpio;
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLimpiar.Location = new System.Drawing.Point(707, 25);
+            this.btnLimpiar.Location = new System.Drawing.Point(597, 26);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnLimpiar.Size = new System.Drawing.Size(104, 26);
@@ -172,7 +171,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.Image = global::Presentacion.Properties.Resources.limpiar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.Location = new System.Drawing.Point(597, 25);
+            this.btnEliminar.Location = new System.Drawing.Point(487, 26);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnEliminar.Size = new System.Drawing.Size(104, 26);
@@ -181,48 +180,7 @@
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnEliminar.UseVisualStyleBackColor = false;
-            // 
-            // boxEstado
-            // 
-            this.boxEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxEstado.BorderSize = 1;
-            this.boxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxEstado.ForeColor = System.Drawing.Color.Gray;
-            this.boxEstado.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxEstado.ListTextColor = System.Drawing.Color.Gray;
-            this.boxEstado.Location = new System.Drawing.Point(169, 26);
-            this.boxEstado.MinimumSize = new System.Drawing.Size(200, 26);
-            this.boxEstado.Name = "boxEstado";
-            this.boxEstado.Padding = new System.Windows.Forms.Padding(1);
-            this.boxEstado.Size = new System.Drawing.Size(200, 26);
-            this.boxEstado.TabIndex = 14;
-            this.boxEstado.Texts = "";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(142)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(142)))));
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Image = global::Presentacion.Properties.Resources.edit;
-            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditar.Location = new System.Drawing.Point(487, 25);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnEditar.Size = new System.Drawing.Size(104, 26);
-            this.btnEditar.TabIndex = 21;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnAgregar
             // 
@@ -273,6 +231,7 @@
             // DatosCategoria
             // 
             this.DatosCategoria.AllowUserToAddRows = false;
+            this.DatosCategoria.AllowUserToDeleteRows = false;
             this.DatosCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -291,7 +250,7 @@
             this.DatosCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DatosCategoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccion,
-            this.IdUsuario,
+            this.IdCategoria,
             this.Descripcion,
             this.Estado,
             this.EstadoValor});
@@ -326,6 +285,9 @@
             this.DatosCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DatosCategoria.Size = new System.Drawing.Size(1073, 490);
             this.DatosCategoria.TabIndex = 20;
+            this.DatosCategoria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosCategoria_CellContentClick);
+            this.DatosCategoria.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DatosCategoria_CellFormatting);
+            this.DatosCategoria.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosCategoria_CellPainting);
             // 
             // btnSeleccion
             // 
@@ -334,22 +296,22 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             this.btnSeleccion.DefaultCellStyle = dataGridViewCellStyle2;
-            this.btnSeleccion.FillWeight = 19.83354F;
+            this.btnSeleccion.FillWeight = 12.31173F;
             this.btnSeleccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSeleccion.HeaderText = "";
             this.btnSeleccion.Name = "btnSeleccion";
             this.btnSeleccion.ReadOnly = true;
             // 
-            // IdUsuario
+            // IdCategoria
             // 
-            this.IdUsuario.HeaderText = "ID";
-            this.IdUsuario.Name = "IdUsuario";
-            this.IdUsuario.ReadOnly = true;
-            this.IdUsuario.Visible = false;
+            this.IdCategoria.HeaderText = "ID";
+            this.IdCategoria.Name = "IdCategoria";
+            this.IdCategoria.ReadOnly = true;
+            this.IdCategoria.Visible = false;
             // 
             // Descripcion
             // 
-            this.Descripcion.FillWeight = 105.2105F;
+            this.Descripcion.FillWeight = 202.9712F;
             this.Descripcion.HeaderText = "CATEGORIA";
             this.Descripcion.Name = "Descripcion";
             this.Descripcion.ReadOnly = true;
@@ -364,7 +326,7 @@
             // 
             // EstadoValor
             // 
-            this.EstadoValor.FillWeight = 117.497F;
+            this.EstadoValor.FillWeight = 27.25808F;
             this.EstadoValor.HeaderText = "ESTADO";
             this.EstadoValor.Name = "EstadoValor";
             this.EstadoValor.ReadOnly = true;
@@ -395,16 +357,48 @@
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtId.Visible = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label9.Location = new System.Drawing.Point(11, 89);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(249, 19);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Lista de categorías registradas:";
+            // 
+            // boxEstado
+            // 
+            this.boxEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxEstado.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxEstado.BorderSize = 1;
+            this.boxEstado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxEstado.ForeColor = System.Drawing.Color.Gray;
+            this.boxEstado.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxEstado.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxEstado.ListTextColor = System.Drawing.Color.Gray;
+            this.boxEstado.Location = new System.Drawing.Point(169, 26);
+            this.boxEstado.MinimumSize = new System.Drawing.Size(200, 26);
+            this.boxEstado.Name = "boxEstado";
+            this.boxEstado.Padding = new System.Windows.Forms.Padding(1);
+            this.boxEstado.Size = new System.Drawing.Size(200, 26);
+            this.boxEstado.TabIndex = 14;
+            this.boxEstado.Texts = "";
+            // 
             // PanelCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.ClientSize = new System.Drawing.Size(1100, 636);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.DatosCategoria);
-            this.Controls.Add(this.TxContador);
+            this.Controls.Add(this.lblContador);
             this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnExportarExcel);
@@ -426,25 +420,25 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label TxContador;
+        private System.Windows.Forms.Label lblContador;
         private System.Windows.Forms.TextBox txtConsultar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtNombreCategoria;
+        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
         private Recursos.RJComboBox boxEstado;
         private System.Windows.Forms.Button BtnExportarExcel;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView DatosCategoria;
+        private System.Windows.Forms.TextBox txtIndice;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
-        private System.Windows.Forms.TextBox txtIndice;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label label9;
     }
 }

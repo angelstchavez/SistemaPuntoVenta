@@ -37,6 +37,7 @@
             this.cerrarSesion = new System.Windows.Forms.Button();
             this.usuarios = new System.Windows.Forms.Button();
             this.clientes = new System.Windows.Forms.Button();
+            this.productos = new System.Windows.Forms.Button();
             this.categorias = new System.Windows.Forms.Button();
             this.compras = new System.Windows.Forms.Button();
             this.ventas = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Contenedor = new System.Windows.Forms.Panel();
-            this.productos = new System.Windows.Forms.Button();
             this.MenuLateral.SuspendLayout();
             this.BarraLogo.SuspendLayout();
             this.BarraSuperior.SuspendLayout();
@@ -258,6 +258,30 @@
             this.clientes.UseVisualStyleBackColor = false;
             this.clientes.Click += new System.EventHandler(this.Btn_07_Click);
             // 
+            // productos
+            // 
+            this.productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.productos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.productos.FlatAppearance.BorderSize = 0;
+            this.productos.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.productos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productos.ForeColor = System.Drawing.Color.White;
+            this.productos.Image = global::Presentacion.Properties.Resources.producto;
+            this.productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productos.Location = new System.Drawing.Point(0, 195);
+            this.productos.Margin = new System.Windows.Forms.Padding(4);
+            this.productos.Name = "productos";
+            this.productos.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.productos.Size = new System.Drawing.Size(200, 45);
+            this.productos.TabIndex = 18;
+            this.productos.Text = " Productos";
+            this.productos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.productos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.productos.UseVisualStyleBackColor = false;
+            this.productos.Click += new System.EventHandler(this.productos_Click);
+            // 
             // categorias
             // 
             this.categorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
@@ -384,12 +408,10 @@
             // 
             // BtnRegresar
             // 
-            this.BtnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.BtnRegresar.BackColor = System.Drawing.Color.Black;
             this.BtnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRegresar.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
-            this.BtnRegresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.BtnRegresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.BtnRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegresar.ForeColor = System.Drawing.Color.White;
             this.BtnRegresar.Image = global::Presentacion.Properties.Resources.regresar;
@@ -536,29 +558,6 @@
             this.Contenedor.Name = "Contenedor";
             this.Contenedor.Size = new System.Drawing.Size(899, 636);
             this.Contenedor.TabIndex = 3;
-            // 
-            // productos
-            // 
-            this.productos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.productos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.productos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.productos.FlatAppearance.BorderSize = 0;
-            this.productos.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
-            this.productos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
-            this.productos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productos.ForeColor = System.Drawing.Color.White;
-            this.productos.Image = global::Presentacion.Properties.Resources.producto;
-            this.productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productos.Location = new System.Drawing.Point(0, 195);
-            this.productos.Margin = new System.Windows.Forms.Padding(4);
-            this.productos.Name = "productos";
-            this.productos.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.productos.Size = new System.Drawing.Size(200, 45);
-            this.productos.TabIndex = 18;
-            this.productos.Text = " Productos";
-            this.productos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.productos.UseVisualStyleBackColor = false;
             // 
             // Dashboard
             // 

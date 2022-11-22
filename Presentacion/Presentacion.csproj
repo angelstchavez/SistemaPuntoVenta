@@ -151,6 +151,12 @@
     <Compile Include="Recursos\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Recursos\VentProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\VentProducto.Designer.cs">
+      <DependentUpon>VentProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recursos\VentProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\RJComboBox.resx">
       <DependentUpon>RJComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\VentProducto.resx">
+      <DependentUpon>VentProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\VentProveedor.resx">
       <DependentUpon>VentProveedor.cs</DependentUpon>
@@ -418,6 +427,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Iconos\camion-de-reparto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\desembalaje.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

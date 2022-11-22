@@ -60,6 +60,7 @@ namespace Datos.Datos.Registros
                 {
                     SqlCommand cmd = new SqlCommand("InsertarCategoria", connection);
                     cmd.Parameters.AddWithValue("@Descripcion", Categoria.Descripcion);
+                    cmd.Parameters.AddWithValue("@Estado", Categoria.Estado);
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -91,8 +92,10 @@ namespace Datos.Datos.Registros
                     SqlCommand cmd = new SqlCommand("EditarCategoria", connection);
                     cmd.Parameters.AddWithValue("@IdCategoria", Categoria.IdCategoria);
                     cmd.Parameters.AddWithValue("@Descripcion", Categoria.Descripcion);
+                    cmd.Parameters.AddWithValue("@Estado", Categoria.Estado);
                     cmd.Parameters.AddWithValue("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
+                    cmd.CommandType = CommandType.StoredProcedure;
                     connection.Open();
                     cmd.ExecuteNonQuery();
 
@@ -121,8 +124,8 @@ namespace Datos.Datos.Registros
                 {
                     SqlCommand cmd = new SqlCommand("EliminarCategoria", connection);
                     cmd.Parameters.AddWithValue("@IdCategoria", Categoria.IdCategoria);
-                    cmd.Parameters.AddWithValue("@Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
-                    cmd.Parameters.AddWithValue("@Mensaje", SqlDbType.VarChar).Direction = ParameterDirection.Output;
+                    cmd.Parameters.AddWithValue("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output;
                     cmd.CommandType = CommandType.StoredProcedure;
                     connection.Open();
                     cmd.ExecuteNonQuery();

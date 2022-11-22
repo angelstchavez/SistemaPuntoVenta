@@ -131,22 +131,30 @@ namespace Presentacion.Ventanas
             AbrirOpcion(new Paneles.PanelCliente(), "Gestor de clientes");
             BtnRegresar.Visible = true;
         }
-
+        
         private void Btn_08_Click(object sender, System.EventArgs e)
         {
             AbrirOpcion(new Paneles.PanelUsuario(), "Gestor de usuarios");
             BtnRegresar.Visible = true;
         }
-
+        
         private void Btn_09_Click(object sender, EventArgs e)
         {
             AbrirOpcion(new Paneles.PanelReporte(), "Gestor de reportes");
             BtnRegresar.Visible = true;
         }
+        
         private void Btn_010_Click(object sender, EventArgs e)
         {
             abrirPanelAcercaDe();
         }
+        
+        private void productos_Click(object sender, EventArgs e)
+        {
+            AbrirOpcion(new Paneles.PanelProducto(), "Gestor de productos");
+            BtnRegresar.Visible = true;
+        }
+
         #endregion
 
         #region BOTONES SECUNDARIOS

@@ -86,6 +86,7 @@
             // DatosProductos
             // 
             this.DatosProductos.AllowUserToAddRows = false;
+            this.DatosProductos.AllowUserToDeleteRows = false;
             this.DatosProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -343,6 +344,7 @@
             this.btnBuscarProd.TabIndex = 44;
             this.btnBuscarProd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnBuscarProd.UseVisualStyleBackColor = false;
+            this.btnBuscarProd.Click += new System.EventHandler(this.btnBuscarProd_Click);
             // 
             // label7
             // 

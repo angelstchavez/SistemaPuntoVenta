@@ -37,7 +37,10 @@ namespace Presentacion.Recursos
             //Llenar tabla
             foreach (var item in proveedor)
             {
-                DatosProveedor.Rows.Add(new object[] { item.IdProveedor, item.Documento, item.RazonSocial });
+                if (item.Estado == true)
+                {
+                    DatosProveedor.Rows.Add(new object[] { item.IdProveedor, item.Documento, item.RazonSocial });
+                }
             }
         }
 
