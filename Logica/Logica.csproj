@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logica\Registros\LogicaCategoria.cs" />
+    <Compile Include="Logica\Registros\LogicaCompra.cs" />
     <Compile Include="Logica\Registros\LogicaPermiso.cs" />
     <Compile Include="Logica\Registros\LogicaProducto.cs" />
     <Compile Include="Logica\Roles\LogicaCliente.cs" />

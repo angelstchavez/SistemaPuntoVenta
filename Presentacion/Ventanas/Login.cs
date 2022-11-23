@@ -18,15 +18,7 @@ namespace Presentacion.Ventanas
         {
             try
             {
-                //LogicaUsuario logicaUsuario = new LogicaUsuario();
-
-                //List<Usuario> test = logicaUsuario.Listar();
-                //foreach (var item in logicaUsuario.Listar())
-                //{
-                //    MessageBox.Show(item.ToString());
-                //}
-
-                Usuario usuario = new LogicaUsuario().Validad().Where(u => u.Documento == txtUsuario.Text && u.Contraseña == txtContraseña.Text).FirstOrDefault();
+                Usuario usuario = new LogicaUsuario().Validar().Where(u => u.Documento == txtUsuario.Text && u.Contraseña == txtContraseña.Text).FirstOrDefault();
 
                 if(txtUsuario.Text == "")
                 {

@@ -13,7 +13,7 @@ namespace Logica.Logica.Roles
             return datosUsuario.ListarUsuarios();
         }
 
-        public List<Usuario> Validad()
+        public List<Usuario> Validar()
         {
             return datosUsuario.ValidarUsuarios();
         }

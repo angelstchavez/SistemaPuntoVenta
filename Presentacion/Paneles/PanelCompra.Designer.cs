@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.DatosProductos = new System.Windows.Forms.DataGridView();
+            this.DatosCarrito = new System.Windows.Forms.DataGridView();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,14 +66,14 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.btnBuscarProv = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtProv = new System.Windows.Forms.TextBox();
+            this.txtIdProv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.boxTipoDocumento = new Presentacion.Recursos.RJComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DatosProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosCarrito)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -81,17 +81,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // DatosProductos
+            // DatosCarrito
             // 
-            this.DatosProductos.AllowUserToAddRows = false;
-            this.DatosProductos.AllowUserToDeleteRows = false;
-            this.DatosProductos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.DatosCarrito.AllowUserToAddRows = false;
+            this.DatosCarrito.AllowUserToDeleteRows = false;
+            this.DatosCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DatosProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DatosProductos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.DatosProductos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.DatosProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DatosCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DatosCarrito.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DatosCarrito.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.DatosCarrito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,9 +99,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DatosProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DatosProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DatosProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DatosCarrito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DatosCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DatosCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
             this.Producto,
             this.PrecioCompra,
@@ -116,13 +116,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DatosProductos.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DatosProductos.EnableHeadersVisualStyles = false;
-            this.DatosProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.DatosProductos.Location = new System.Drawing.Point(12, 192);
-            this.DatosProductos.Name = "DatosProductos";
-            this.DatosProductos.ReadOnly = true;
-            this.DatosProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.DatosCarrito.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DatosCarrito.EnableHeadersVisualStyles = false;
+            this.DatosCarrito.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.DatosCarrito.Location = new System.Drawing.Point(12, 192);
+            this.DatosCarrito.Name = "DatosCarrito";
+            this.DatosCarrito.ReadOnly = true;
+            this.DatosCarrito.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,17 +130,18 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DatosProductos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DatosProductos.RowHeadersWidth = 20;
-            this.DatosProductos.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DatosProductos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.DatosProductos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.DatosProductos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.DatosProductos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.DatosProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DatosProductos.Size = new System.Drawing.Size(1076, 397);
-            this.DatosProductos.TabIndex = 28;
-            this.DatosProductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosProductos_CellPainting);
+            this.DatosCarrito.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.DatosCarrito.RowHeadersWidth = 20;
+            this.DatosCarrito.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DatosCarrito.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.DatosCarrito.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.DatosCarrito.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.DatosCarrito.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.DatosCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DatosCarrito.Size = new System.Drawing.Size(1076, 397);
+            this.DatosCarrito.TabIndex = 28;
+            this.DatosCarrito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosProductos_CellContentClick);
+            this.DatosCarrito.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosProductos_CellPainting);
             // 
             // IdProducto
             // 
@@ -214,6 +215,7 @@
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // panel1
             // 
@@ -532,7 +534,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtProv);
+            this.panel2.Controls.Add(this.txtIdProv);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btnBuscarProv);
             this.panel2.Controls.Add(this.txtRazonSocial);
@@ -544,18 +546,18 @@
             this.panel2.Size = new System.Drawing.Size(487, 84);
             this.panel2.TabIndex = 34;
             // 
-            // txtProv
+            // txtIdProv
             // 
-            this.txtProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.txtProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtProv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtProv.Location = new System.Drawing.Point(455, 20);
-            this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(22, 26);
-            this.txtProv.TabIndex = 41;
-            this.txtProv.Text = "0";
-            this.txtProv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtProv.Visible = false;
+            this.txtIdProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.txtIdProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIdProv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtIdProv.Location = new System.Drawing.Point(455, 20);
+            this.txtIdProv.Name = "txtIdProv";
+            this.txtIdProv.Size = new System.Drawing.Size(22, 26);
+            this.txtIdProv.TabIndex = 41;
+            this.txtIdProv.Text = "0";
+            this.txtIdProv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtIdProv.Visible = false;
             // 
             // label6
             // 
@@ -601,7 +603,7 @@
             this.lblTotalPagar.Name = "lblTotalPagar";
             this.lblTotalPagar.Size = new System.Drawing.Size(168, 35);
             this.lblTotalPagar.TabIndex = 45;
-            this.lblTotalPagar.Text = "$0";
+            this.lblTotalPagar.Text = "0";
             this.lblTotalPagar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label14
@@ -647,14 +649,14 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.DatosProductos);
+            this.Controls.Add(this.DatosCarrito);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PanelCompra";
             this.Text = "PanelCompra";
             this.Load += new System.EventHandler(this.PanelCompra_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DatosProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosCarrito)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -668,7 +670,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView DatosProductos;
+        private System.Windows.Forms.DataGridView DatosCarrito;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAgregarProd;
@@ -702,7 +704,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtIdProd;
-        private System.Windows.Forms.TextBox txtProv;
+        private System.Windows.Forms.TextBox txtIdProv;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioCompra;
