@@ -151,6 +151,12 @@
     <Compile Include="Recursos\RJComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Recursos\VentCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\VentCliente.Designer.cs">
+      <DependentUpon>VentCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recursos\VentProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\RJComboBox.resx">
       <DependentUpon>RJComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\VentCliente.resx">
+      <DependentUpon>VentCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\VentProducto.resx">
       <DependentUpon>VentProducto.cs</DependentUpon>
@@ -433,6 +442,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Iconos\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\senalando.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\correcto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Fotos\foto_01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Fotos\foto_02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Fotos\foto_03.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Fotos\foto_04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\entrega-rapida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\cambio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

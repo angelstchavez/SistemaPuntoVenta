@@ -29,7 +29,7 @@ namespace Datos.Datos.Registros
                     idCorrelativo = Convert.ToInt32(command.ExecuteScalar());
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     idCorrelativo = 0;
                     connection.Close();

@@ -1,11 +1,14 @@
 ﻿using Datos.Datos.Roles;
 using Entidad.Registros;
 using Entidad.Roles;
+using iTextSharp.text;
 using Logica.Logica.Registros;
 using Logica.Logica.Roles;
 using Presentacion.Paneles;
+using Presentacion.Properties;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Text;
 using System.Globalization;
 using System.Windows.Forms;

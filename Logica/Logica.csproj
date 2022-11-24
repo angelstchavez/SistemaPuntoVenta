@@ -45,6 +45,7 @@
     <Compile Include="Logica\Registros\LogicaCompra.cs" />
     <Compile Include="Logica\Registros\LogicaPermiso.cs" />
     <Compile Include="Logica\Registros\LogicaProducto.cs" />
+    <Compile Include="Logica\Registros\LogicaVenta.cs" />
     <Compile Include="Logica\Roles\LogicaCliente.cs" />
     <Compile Include="Logica\Roles\LogicaProveedor.cs" />
     <Compile Include="Logica\Roles\LogicaRol.cs" />

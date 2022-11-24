@@ -49,6 +49,7 @@ namespace Presentacion.Ventanas
                 }
             }
         }
+        
         private void AbrirNuevoPanel(Form formHijo)
         {
             while (Contenedor.Controls.Count > 0) { Contenedor.Controls.RemoveAt(0); }
@@ -59,6 +60,7 @@ namespace Presentacion.Ventanas
             Contenedor.Tag = fh;
             fh.Show();
         }
+        
         private void AbrirOpcion(Form panel, string titulo)
         {
             MenuLateral.Visible = false;
@@ -92,7 +94,7 @@ namespace Presentacion.Ventanas
         #region BOTONES PRINCIPALES
         private void Btn_01_Click(object sender, System.EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelVenta(), "Gestor de ventas");
+            AbrirOpcion(new Paneles.PanelVenta(usuarioActual), "Gestor de ventas");
             BtnRegresar.Visible = true;
         }
 

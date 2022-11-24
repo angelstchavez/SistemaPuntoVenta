@@ -57,6 +57,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.boxTipoDocumento = new Presentacion.Recursos.RJComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,7 +65,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
-            this.btnBuscarProv = new System.Windows.Forms.Button();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtIdProv = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -72,7 +73,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.boxTipoDocumento = new Presentacion.Recursos.RJComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DatosCarrito)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -206,12 +206,12 @@
             this.btnAgregar.ForeColor = System.Drawing.Color.White;
             this.btnAgregar.Image = global::Presentacion.Properties.Resources.envio;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAgregar.Location = new System.Drawing.Point(978, 596);
+            this.btnAgregar.Location = new System.Drawing.Point(909, 596);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnAgregar.Size = new System.Drawing.Size(110, 29);
+            this.btnAgregar.Size = new System.Drawing.Size(179, 29);
             this.btnAgregar.TabIndex = 29;
-            this.btnAgregar.Text = "Registrar";
+            this.btnAgregar.Text = "Registrar compra";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAgregar.UseVisualStyleBackColor = false;
@@ -436,6 +436,26 @@
             this.label5.TabIndex = 40;
             this.label5.Text = "Información de compra:";
             // 
+            // boxTipoDocumento
+            // 
+            this.boxTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxTipoDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxTipoDocumento.BorderSize = 1;
+            this.boxTipoDocumento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxTipoDocumento.ForeColor = System.Drawing.Color.Gray;
+            this.boxTipoDocumento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxTipoDocumento.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxTipoDocumento.ListTextColor = System.Drawing.Color.Gray;
+            this.boxTipoDocumento.Location = new System.Drawing.Point(189, 49);
+            this.boxTipoDocumento.MinimumSize = new System.Drawing.Size(200, 26);
+            this.boxTipoDocumento.Name = "boxTipoDocumento";
+            this.boxTipoDocumento.Padding = new System.Windows.Forms.Padding(1);
+            this.boxTipoDocumento.Size = new System.Drawing.Size(200, 26);
+            this.boxTipoDocumento.TabIndex = 39;
+            this.boxTipoDocumento.Texts = "";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -510,25 +530,25 @@
             this.txtRazonSocial.Size = new System.Drawing.Size(250, 26);
             this.txtRazonSocial.TabIndex = 43;
             // 
-            // btnBuscarProv
+            // btnBuscarCliente
             // 
-            this.btnBuscarProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.btnBuscarProv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarProv.FlatAppearance.BorderSize = 0;
-            this.btnBuscarProv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
-            this.btnBuscarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
-            this.btnBuscarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarProv.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarProv.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarProv.Image = global::Presentacion.Properties.Resources.buscar;
-            this.btnBuscarProv.Location = new System.Drawing.Point(189, 49);
-            this.btnBuscarProv.Name = "btnBuscarProv";
-            this.btnBuscarProv.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.btnBuscarProv.Size = new System.Drawing.Size(26, 26);
-            this.btnBuscarProv.TabIndex = 40;
-            this.btnBuscarProv.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBuscarProv.UseVisualStyleBackColor = false;
-            this.btnBuscarProv.Click += new System.EventHandler(this.btnBuscarProv_Click);
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
+            this.btnBuscarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarCliente.Image = global::Presentacion.Properties.Resources.buscar;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(189, 49);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.btnBuscarCliente.Size = new System.Drawing.Size(26, 26);
+            this.btnBuscarCliente.TabIndex = 40;
+            this.btnBuscarCliente.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarProv_Click);
             // 
             // panel2
             // 
@@ -536,7 +556,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtIdProv);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.btnBuscarProv);
+            this.panel2.Controls.Add(this.btnBuscarCliente);
             this.panel2.Controls.Add(this.txtRazonSocial);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label4);
@@ -618,26 +638,6 @@
             this.label14.Text = "Total a pagar:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // boxTipoDocumento
-            // 
-            this.boxTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxTipoDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxTipoDocumento.BorderSize = 1;
-            this.boxTipoDocumento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxTipoDocumento.ForeColor = System.Drawing.Color.Gray;
-            this.boxTipoDocumento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxTipoDocumento.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxTipoDocumento.ListTextColor = System.Drawing.Color.Gray;
-            this.boxTipoDocumento.Location = new System.Drawing.Point(189, 49);
-            this.boxTipoDocumento.MinimumSize = new System.Drawing.Size(200, 26);
-            this.boxTipoDocumento.Name = "boxTipoDocumento";
-            this.boxTipoDocumento.Padding = new System.Windows.Forms.Padding(1);
-            this.boxTipoDocumento.Size = new System.Drawing.Size(200, 26);
-            this.boxTipoDocumento.TabIndex = 39;
-            this.boxTipoDocumento.Texts = "";
-            // 
             // PanelCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -684,7 +684,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtRazonSocial;
-        private System.Windows.Forms.Button btnBuscarProv;
+        private System.Windows.Forms.Button btnBuscarCliente;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCantidad;

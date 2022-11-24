@@ -56,6 +56,7 @@
     <Compile Include="Datos\Registros\DatosCompra.cs" />
     <Compile Include="Datos\Registros\DatosPermisos.cs" />
     <Compile Include="Datos\Registros\DatosProducto.cs" />
+    <Compile Include="Datos\Registros\DatosVenta.cs" />
     <Compile Include="Datos\Roles\DatosCliente.cs" />
     <Compile Include="Datos\Roles\DatosProveedor.cs" />
     <Compile Include="Datos\Roles\DatosRol.cs" />

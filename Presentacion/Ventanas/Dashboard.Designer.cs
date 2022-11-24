@@ -408,7 +408,7 @@
             // 
             // BtnRegresar
             // 
-            this.BtnRegresar.BackColor = System.Drawing.Color.Black;
+            this.BtnRegresar.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.BtnRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnRegresar.Dock = System.Windows.Forms.DockStyle.Right;
             this.BtnRegresar.FlatAppearance.BorderSize = 0;
