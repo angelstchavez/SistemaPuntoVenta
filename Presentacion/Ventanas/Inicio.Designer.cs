@@ -52,7 +52,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.compras = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -293,7 +293,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Controls.Add(this.label11);
+            this.panel8.Controls.Add(this.compras);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(12, 12);
             this.panel8.Name = "panel8";
@@ -309,16 +309,16 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // label11
+            // compras
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 28F, System.Drawing.FontStyle.Bold);
-            this.label11.ForeColor = System.Drawing.Color.DarkOrange;
-            this.label11.Location = new System.Drawing.Point(1, 28);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 45);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "0";
+            this.compras.AutoSize = true;
+            this.compras.Font = new System.Drawing.Font("Arial", 28F, System.Drawing.FontStyle.Bold);
+            this.compras.ForeColor = System.Drawing.Color.White;
+            this.compras.Location = new System.Drawing.Point(1, 28);
+            this.compras.Name = "compras";
+            this.compras.Size = new System.Drawing.Size(41, 45);
+            this.compras.TabIndex = 12;
+            this.compras.Text = "0";
             // 
             // label12
             // 
@@ -326,9 +326,9 @@
             this.label12.ForeColor = System.Drawing.Color.DarkGray;
             this.label12.Location = new System.Drawing.Point(6, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 18);
+            this.label12.Size = new System.Drawing.Size(73, 18);
             this.label12.TabIndex = 11;
-            this.label12.Text = "Ganancias";
+            this.label12.Text = "Compras";
             // 
             // panel9
             // 
@@ -489,7 +489,7 @@
         private System.Windows.Forms.Label lblCategorias;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label compras;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

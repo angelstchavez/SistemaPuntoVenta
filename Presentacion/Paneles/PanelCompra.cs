@@ -74,6 +74,7 @@ namespace Presentacion.Paneles
 
             if (!productoExiste)
             {
+
                 precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
                 decimal subTotal = (Convert.ToDecimal(txtCantidad.Text) * Convert.ToDecimal(txtPrecioCompra.Text));
 
@@ -200,7 +201,7 @@ namespace Presentacion.Paneles
             if (DatosCarrito.Rows.Count < 1)
             {
                 {
-                    MessageBox.Show("La lista de productos a comprar está vacía.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("El carrito de compra está vacío.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
 
@@ -225,7 +226,7 @@ namespace Presentacion.Paneles
 
             LogicaCompra logicaCompra = new LogicaCompra();
             int idCorrelativo = logicaCompra.ObtenerCorrelativo();
-            string numeroDocumento = string.Format("{0:00000}",idCorrelativo);
+            string numeroDocumento = string.Format("{0:00000}", idCorrelativo);
 
             Compra compra = new Compra()
             {
@@ -233,21 +234,21 @@ namespace Presentacion.Paneles
                 ObjProvedor = new Proveedor() { IdProveedor = Convert.ToInt32(txtIdProv.Text) },
                 TipoDocumento = ((OpcionCombo)boxTipoDocumento.SelectedItem).texto,
                 NumeroDocumento = numeroDocumento,
-                MontoTotal = Convert.ToDecimal(lblTotalPagar.Text)        
+                MontoTotal = Convert.ToDecimal(lblTotalPagar.Text)
             };
 
             string mensaje = string.Empty;
-            bool respuesta = logicaCompra.Registrar(compra,detalleCompra, out mensaje);
+            bool respuesta = logicaCompra.Registrar(compra, detalleCompra, out mensaje);
 
             if (respuesta)
             {
                 var resultado = MessageBox.Show("Número de compra generada:\n" + numeroDocumento
-                    + "\n¿Desea copiar al portapales?","Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    + "\n¿Desea copiar al portapales?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                if(resultado == DialogResult.OK)
+                if (resultado == DialogResult.OK)
                 {
                     Clipboard.SetText(numeroDocumento);
-                    MessageBox.Show("Copia generada.","Atención",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Copia generada.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     txtIdProv.Text = "0";
                     txtDocumento.Text = "";
@@ -257,7 +258,11 @@ namespace Presentacion.Paneles
                 }
                 else
                 {
-
+                    txtIdProv.Text = "0";
+                    txtDocumento.Text = "";
+                    txtRazonSocial.Text = "";
+                    DatosCarrito.Rows.Clear();
+                    CalcularTotal();
                 }
 
             }
@@ -361,6 +366,7 @@ namespace Presentacion.Paneles
 
                     if (indice >= 0)
                     {
+
                         DatosCarrito.Rows.RemoveAt(indice);
                         CalcularTotal();
                     }

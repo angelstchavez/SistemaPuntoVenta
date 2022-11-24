@@ -1,4 +1,5 @@
-﻿using Entidad.Registros;
+﻿using DocumentFormat.OpenXml.Office2016.Drawing.Command;
+using Entidad.Registros;
 using Entidad.Roles;
 using Logica.Logica.Registros;
 using Presentacion.Properties;
@@ -43,6 +44,13 @@ namespace Presentacion.Paneles
             txtIdProv.Text = "0";
         }
 
+        private bool StockValidado()
+        {
+            if(Convert.ToInt32(txtStock.Text) < Convert.ToInt32(txtCantidad.Text))
+            { return false; }
+            else { return true; }
+        }
+        
         private void abrirPanelCliente()
         {
             Form form = new Form();
@@ -142,6 +150,14 @@ namespace Presentacion.Paneles
                     return;
                 }
 
+                if (!StockValidado())
+                {
+                    MessageBox.Show("La cantidad ingresada supera el stock disponible.\n" +
+                        "Verifique nuevamente la cantidad del producto a ingresar.","Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtCantidad.Select();
+                    return;
+                }
+
                 foreach (DataGridViewRow fila in DatosCarrito.Rows)
                 {
                     if (fila.Cells["IdProducto"].Value.ToString() == txtIdProd.Text)
@@ -153,21 +169,33 @@ namespace Presentacion.Paneles
 
                 if (!productoExiste)
                 {
-                    precioCompra = Convert.ToDecimal(txtPrecioVenta.Text);
-                    decimal subTotal = (Convert.ToDecimal(txtCantidad.Text) * Convert.ToDecimal(txtPrecioVenta.Text));
 
-                    DatosCarrito.Rows.Add(new object[]
+                    LogicaVenta logicaVenta = new LogicaVenta();
+                    bool respuesta = logicaVenta.RestarStock
+                        (
+                        Convert.ToInt32(txtIdProd.Text),
+                        Convert.ToInt32(txtCantidad.Text)
+                        );
+
+                    if (respuesta)
                     {
+
+                        precioCompra = Convert.ToDecimal(txtPrecioVenta.Text);
+                        decimal subTotal = (Convert.ToDecimal(txtCantidad.Text) * Convert.ToDecimal(txtPrecioVenta.Text));
+
+                        DatosCarrito.Rows.Add(new object[]
+                        {
                     txtIdProd.Text,
                     txtNombreProd.Text,
                     precioCompra.ToString("0.00"),
                     precioVenta.ToString("0.00"),
                     txtCantidad.Text,
                     subTotal.ToString("0.00")
-                    });
+                        });
 
-                    CalcularTotal();
-                    LimpiarCampos();
+                        CalcularTotal();
+                        LimpiarCampos();
+                    }
                 }
             }
             catch (Exception ex)
@@ -303,8 +331,18 @@ namespace Presentacion.Paneles
 
                     if (indice >= 0)
                     {
-                        DatosCarrito.Rows.RemoveAt(indice);
-                        CalcularTotal();
+                        LogicaVenta logicaVenta = new LogicaVenta();
+                        bool respuesta = logicaVenta.SumarStock
+                            (
+                            Convert.ToInt32(DatosCarrito.Rows[indice].Cells["IdProducto"].Value.ToString()),
+                            Convert.ToInt32(DatosCarrito.Rows[indice].Cells["Cantidad"].Value.ToString())
+                            );
+
+                        if (respuesta)
+                        {
+                            DatosCarrito.Rows.RemoveAt(indice);
+                            CalcularTotal();
+                        }
                     }
                 }
             }
