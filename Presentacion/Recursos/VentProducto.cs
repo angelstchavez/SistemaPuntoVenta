@@ -28,9 +28,9 @@ namespace Presentacion.Recursos
             //Llenar tabla
             foreach (var item in productos)
             {
-                if (item.Estado == true)
+                if (item.Estado == true && item.Stock > 1)
                 {
-                    DatosProducto.Rows.Add(new object[] {item.IdProducto,item.Codigo, item.Nombre, item.ObjCategoria.Descripcion,item.Stock,item.PrecioCompra,item.PrecioVenta });
+                    DatosProducto.Rows.Add(new object[] { item.IdProducto, item.Codigo, item.Nombre, item.ObjCategoria.Descripcion, item.Stock, item.PrecioCompra, item.PrecioVenta });
                 }
             }
         }

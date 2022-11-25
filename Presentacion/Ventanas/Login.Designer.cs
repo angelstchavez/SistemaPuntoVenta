@@ -146,14 +146,14 @@
             // 
             // BtnIngresar
             // 
-            this.BtnIngresar.BackColor = System.Drawing.Color.White;
+            this.BtnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(102)))));
             this.BtnIngresar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnIngresar.FlatAppearance.BorderSize = 0;
-            this.BtnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.BtnIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(163)))));
+            this.BtnIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(81)))), ((int)(((byte)(163)))));
             this.BtnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIngresar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIngresar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.BtnIngresar.ForeColor = System.Drawing.Color.White;
             this.BtnIngresar.Location = new System.Drawing.Point(361, 251);
             this.BtnIngresar.Name = "BtnIngresar";
             this.BtnIngresar.Size = new System.Drawing.Size(211, 40);

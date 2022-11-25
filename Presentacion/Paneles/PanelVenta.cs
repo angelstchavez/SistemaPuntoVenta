@@ -18,11 +18,11 @@ namespace Presentacion.Paneles
 {
     public partial class PanelVenta : Form
     {
-        private Usuario UsuarioIngresado;
+        private Usuario usuarioIngresado;
 
         public PanelVenta(Usuario usuario = null)
         {
-            UsuarioIngresado = usuario;
+            usuarioIngresado = usuario;
             InitializeComponent();
         }
 
@@ -46,11 +46,11 @@ namespace Presentacion.Paneles
 
         private bool StockValidado()
         {
-            if(Convert.ToInt32(txtStock.Text) < Convert.ToInt32(txtCantidad.Text))
+            if (Convert.ToInt32(txtStock.Text) < Convert.ToInt32(txtCantidad.Text))
             { return false; }
             else { return true; }
         }
-        
+
         private void abrirPanelCliente()
         {
             Form form = new Form();
@@ -72,7 +72,7 @@ namespace Presentacion.Paneles
                 if (result == DialogResult.OK)
                 {
                     txtDocumento.Text = mm.cliente.Documento.ToString();
-                    txtombreCompleto.Text = mm.cliente.NombreCompleto.ToString();
+                    txtNombreCompleto.Text = mm.cliente.NombreCompleto.ToString();
                 }
                 else
                 {
@@ -82,9 +82,96 @@ namespace Presentacion.Paneles
             }
         }
 
+        private void RealizarVenta()
+        {
+            if (txtDocumento.Text == "")
+            {
+                MessageBox.Show("Ingrese el documento del cliente o en su defecto escoja un cliente registrado.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDocumento.Focus();
+                return;
+            }
+
+            if (txtNombreCompleto.Text == "")
+            {
+                MessageBox.Show("Ingrese el nombre del cliente o en su defecto escoja un cliente registrado.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNombreCompleto.Focus();
+                return;
+            }
+
+            if (DatosCarrito.Rows.Count < 1)
+            {
+                MessageBox.Show("La venta no tiene productos registrados.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            DataTable detalleCompra = new DataTable();
+            detalleCompra.Columns.Add("IdProducto", typeof(string));
+            detalleCompra.Columns.Add("PrecioVenta", typeof(decimal));
+            detalleCompra.Columns.Add("Cantidad", typeof(int));
+            detalleCompra.Columns.Add("SubTotal", typeof(decimal));
+
+            foreach (DataGridViewRow row in DatosCarrito.Rows)
+            {
+                detalleCompra.Rows.Add(new object[]
+                {
+                    Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()),
+                    row.Cells["PrecioVenta"].Value.ToString(),
+                    row.Cells["Cantidad"].Value.ToString(),
+                    row.Cells["SubTotal"].Value.ToString(),
+                });
+            }
+
+            LogicaVenta logicaVenta = new LogicaVenta();
+            int idCorrelativo = logicaVenta.ObtenerCorrelativo();
+            string numeroDocumento = string.Format("{0:00000}", idCorrelativo);
+
+            Venta venta = new Venta()
+            {
+                ObjUsuario = new Usuario() { IdUsuario = usuarioIngresado.IdUsuario },
+                TipoDocumento = ((OpcionCombo)boxTipoDocumento.SelectedItem).texto,
+                NumeroDocumento = numeroDocumento,
+                DocumentoCliente = txtDocumento.Text,
+                NombreCliente = txtNombreCompleto.Text,
+                MontoTotal = Convert.ToDecimal(lblTotalPagar.Text)
+            };
+
+            string mensaje = string.Empty;
+            bool respuesta = logicaVenta.Registrar(venta, detalleCompra, out mensaje);
+
+            if (respuesta)
+            {
+                var resultado = MessageBox.Show("Número de venta generada:\n" + numeroDocumento
+                    + "\n\n¿Desea copiar al portapales?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (resultado == DialogResult.OK)
+                {
+                    Clipboard.SetText(numeroDocumento);
+                    MessageBox.Show("Copia generada.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtIdProv.Text = "0";
+                    txtDocumento.Text = "";
+                    //txtRazonSocial.Text = "";
+                    DatosCarrito.Rows.Clear();
+                    CalcularTotal();
+                }
+                else
+                {
+                    txtIdProv.Text = "0";
+                    txtDocumento.Text = "";
+                    //txtRazonSocial.Text = "";
+                    DatosCarrito.Rows.Clear();
+                    CalcularTotal();
+                }
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void abrirPanelProducto()
         {
-            txtCodgProducto.BackColor = System.Drawing.Color.FromArgb(12, 12, 12);
+            txtCodgProducto.BackColor = Color.FromArgb(12, 12, 12);
 
             Form form = new Form();
             using (VentProducto mm = new VentProducto())
@@ -92,7 +179,7 @@ namespace Presentacion.Paneles
                 form.StartPosition = FormStartPosition.CenterScreen;
                 form.FormBorderStyle = FormBorderStyle.None;
                 form.Opacity = .70d;
-                form.BackColor = System.Drawing.Color.Black;
+                form.BackColor = Color.Black;
                 form.WindowState = FormWindowState.Maximized;
                 form.TopMost = true;
                 form.Location = this.Location;
@@ -153,7 +240,7 @@ namespace Presentacion.Paneles
                 if (!StockValidado())
                 {
                     MessageBox.Show("La cantidad ingresada supera el stock disponible.\n" +
-                        "Verifique nuevamente la cantidad del producto a ingresar.","Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        "Verifique nuevamente la cantidad del producto a ingresar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtCantidad.Select();
                     return;
                 }
@@ -224,14 +311,15 @@ namespace Presentacion.Paneles
 
         private void LimpiarCampos()
         {
-            txtCodgProducto.BackColor = System.Drawing.Color.FromArgb(12, 12, 12);
+            txtCodgProducto.BackColor = Color.FromArgb(12, 12, 12);
             txtIdProd.Text = "0";
             txtCodgProducto.Text = "";
             txtNombreProd.Text = "";
             txtPrecioVenta.Text = "";
             txtStock.Text = "";
             txtCantidad.Text = "";
-
+            txtxPago.Text = "";
+            txtCambio.Text = "";
         }
 
         private void CalcularCambio()
@@ -373,6 +461,25 @@ namespace Presentacion.Paneles
             if (e.KeyData == Keys.Enter)
             {
                 CalcularCambio();
+            }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            RealizarVenta();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("¿Desea limpiar esta venta?\n(Esta acción no se puede deshacer)", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                LimpiarCampos();
+                txtDocumento.Text = "";
+                txtNombreCompleto.Text = "";
+                DatosCarrito.Rows.Clear();
+                CalcularTotal();
             }
         }
     }

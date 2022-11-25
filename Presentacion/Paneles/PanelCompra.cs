@@ -382,5 +382,20 @@ namespace Presentacion.Paneles
         {
             RegistrarCompra();
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            var respuesta = MessageBox.Show("¿Desea limpiar esta compra?\n(Esta acción no se puede deshacer)", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (respuesta == DialogResult.Yes)
+            {
+                LimpiarCampos();
+                txtDocumento.Text = "";
+                txtNombreProd.Text = "";
+                txtRazonSocial.Text = "";
+                DatosCarrito.Rows.Clear();
+                CalcularTotal();
+            }
+        }
     }
 }

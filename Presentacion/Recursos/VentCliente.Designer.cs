@@ -65,7 +65,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Location = new System.Drawing.Point(11, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 18);
             this.label1.TabIndex = 51;
@@ -86,13 +86,13 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.MediumPurple;
             this.label9.Location = new System.Drawing.Point(11, 7);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(285, 24);
+            this.label9.Size = new System.Drawing.Size(370, 35);
             this.label9.TabIndex = 45;
-            this.label9.Text = "Lista de clientes registrados:";
+            this.label9.Text = "Lista de clientes activos:";
             // 
             // btnLimpiarConsulta
             // 

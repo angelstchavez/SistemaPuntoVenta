@@ -112,7 +112,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Presentacion.Properties.Resources.cierre;
-            this.pictureBox2.Location = new System.Drawing.Point(170, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(152, 5);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.TabIndex = 18;
@@ -142,7 +142,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Presentacion.Properties.Resources.hombre;
-            this.pictureBox3.Location = new System.Drawing.Point(170, 7);
+            this.pictureBox3.Location = new System.Drawing.Point(151, 7);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.TabIndex = 19;
@@ -172,7 +172,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = global::Presentacion.Properties.Resources.producto;
-            this.pictureBox6.Location = new System.Drawing.Point(170, 8);
+            this.pictureBox6.Location = new System.Drawing.Point(152, 6);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(24, 24);
             this.pictureBox6.TabIndex = 21;
@@ -202,7 +202,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::Presentacion.Properties.Resources.proveedor;
-            this.pictureBox7.Location = new System.Drawing.Point(170, 8);
+            this.pictureBox7.Location = new System.Drawing.Point(151, 6);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(24, 24);
             this.pictureBox7.TabIndex = 22;
@@ -232,7 +232,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Presentacion.Properties.Resources.usuario;
-            this.pictureBox4.Location = new System.Drawing.Point(170, 8);
+            this.pictureBox4.Location = new System.Drawing.Point(151, 6);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(24, 24);
             this.pictureBox4.TabIndex = 20;
@@ -262,7 +262,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Presentacion.Properties.Resources.categoria;
-            this.pictureBox5.Location = new System.Drawing.Point(170, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(152, 6);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.TabIndex = 21;
@@ -297,13 +297,13 @@
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(12, 12);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(200, 82);
+            this.panel8.Size = new System.Drawing.Size(180, 82);
             this.panel8.TabIndex = 13;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.dinero;
-            this.pictureBox1.Location = new System.Drawing.Point(170, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(152, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.TabIndex = 17;
@@ -336,9 +336,9 @@
             this.panel9.Controls.Add(this.pictureBox2);
             this.panel9.Controls.Add(this.ventas);
             this.panel9.Controls.Add(this.label1);
-            this.panel9.Location = new System.Drawing.Point(218, 12);
+            this.panel9.Location = new System.Drawing.Point(12, 100);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 82);
+            this.panel9.Size = new System.Drawing.Size(180, 82);
             this.panel9.TabIndex = 18;
             // 
             // panel10
@@ -347,9 +347,9 @@
             this.panel10.Controls.Add(this.pictureBox3);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.lblClientes);
-            this.panel10.Location = new System.Drawing.Point(424, 12);
+            this.panel10.Location = new System.Drawing.Point(12, 364);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(200, 82);
+            this.panel10.Size = new System.Drawing.Size(180, 82);
             this.panel10.TabIndex = 19;
             // 
             // panel2
@@ -358,9 +358,9 @@
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.lblUsuarios);
-            this.panel2.Location = new System.Drawing.Point(630, 12);
+            this.panel2.Location = new System.Drawing.Point(12, 452);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 82);
+            this.panel2.Size = new System.Drawing.Size(180, 82);
             this.panel2.TabIndex = 20;
             // 
             // panel1
@@ -369,9 +369,9 @@
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblCategorias);
-            this.panel1.Location = new System.Drawing.Point(12, 100);
+            this.panel1.Location = new System.Drawing.Point(12, 188);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 82);
+            this.panel1.Size = new System.Drawing.Size(180, 82);
             this.panel1.TabIndex = 21;
             // 
             // panel11
@@ -380,9 +380,9 @@
             this.panel11.Controls.Add(this.pictureBox6);
             this.panel11.Controls.Add(this.label4);
             this.panel11.Controls.Add(this.lblProductos);
-            this.panel11.Location = new System.Drawing.Point(218, 100);
+            this.panel11.Location = new System.Drawing.Point(12, 276);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(200, 82);
+            this.panel11.Size = new System.Drawing.Size(180, 82);
             this.panel11.TabIndex = 22;
             // 
             // panel3
@@ -391,9 +391,9 @@
             this.panel3.Controls.Add(this.pictureBox7);
             this.panel3.Controls.Add(this.lblProveedores);
             this.panel3.Controls.Add(this.lbl);
-            this.panel3.Location = new System.Drawing.Point(424, 100);
+            this.panel3.Location = new System.Drawing.Point(12, 540);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 82);
+            this.panel3.Size = new System.Drawing.Size(180, 82);
             this.panel3.TabIndex = 23;
             // 
             // pictureBox9
@@ -409,10 +409,10 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox8.Image = global::Presentacion.Properties.Resources.oficina;
-            this.pictureBox8.Location = new System.Drawing.Point(12, 542);
+            this.pictureBox8.Location = new System.Drawing.Point(790, 12);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(82, 82);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

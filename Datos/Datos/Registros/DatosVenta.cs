@@ -103,6 +103,7 @@ namespace Datos.Datos.Registros
                     command.Parameters.AddWithValue("IdUsuario", Venta.ObjUsuario.IdUsuario);
                     command.Parameters.AddWithValue("TipoDocumento", Venta.TipoDocumento);
                     command.Parameters.AddWithValue("NumeroDocumento", Venta.NumeroDocumento);
+                    command.Parameters.AddWithValue("NombreCliente", Venta.NombreCliente);
                     command.Parameters.AddWithValue("DocumentoCliente", Venta.DocumentoCliente);
                     command.Parameters.AddWithValue("MontoPago", Venta.MontoPago);
                     command.Parameters.AddWithValue("MontoCambio", Venta.MontoCambio);
