@@ -95,9 +95,9 @@
             this.label9.ForeColor = System.Drawing.Color.OrangeRed;
             this.label9.Location = new System.Drawing.Point(11, 7);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(387, 35);
+            this.label9.Size = new System.Drawing.Size(404, 35);
             this.label9.TabIndex = 45;
-            this.label9.Text = "Lista de productos ativos:";
+            this.label9.Text = "Lista de productos activos:";
             // 
             // btnLimpiarConsulta
             // 

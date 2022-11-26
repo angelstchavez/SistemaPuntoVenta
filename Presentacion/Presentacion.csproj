@@ -453,18 +453,6 @@
     <None Include="Imagenes\Iconos\correcto.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Imagenes\Fotos\foto_01.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Imagenes\Fotos\foto_02.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Imagenes\Fotos\foto_03.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Imagenes\Fotos\foto_04.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Imagenes\Iconos\add.png" />
   </ItemGroup>
   <ItemGroup>

@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.boxTipoDocumento = new Presentacion.Recursos.RJComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -80,6 +79,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.boxTipoDocumento = new Presentacion.Recursos.RJComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -93,7 +93,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.boxTipoDocumento);
             this.panel3.Controls.Add(this.label2);
@@ -115,26 +114,6 @@
             this.label5.TabIndex = 40;
             this.label5.Text = "Información de venta:";
             // 
-            // boxTipoDocumento
-            // 
-            this.boxTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxTipoDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxTipoDocumento.BorderSize = 1;
-            this.boxTipoDocumento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxTipoDocumento.ForeColor = System.Drawing.Color.Gray;
-            this.boxTipoDocumento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxTipoDocumento.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxTipoDocumento.ListTextColor = System.Drawing.Color.Gray;
-            this.boxTipoDocumento.Location = new System.Drawing.Point(189, 49);
-            this.boxTipoDocumento.MinimumSize = new System.Drawing.Size(200, 26);
-            this.boxTipoDocumento.Name = "boxTipoDocumento";
-            this.boxTipoDocumento.Padding = new System.Windows.Forms.Padding(1);
-            this.boxTipoDocumento.Size = new System.Drawing.Size(200, 26);
-            this.boxTipoDocumento.TabIndex = 39;
-            this.boxTipoDocumento.Texts = "";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -152,7 +131,7 @@
             this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFecha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
-            this.txtFecha.Location = new System.Drawing.Point(6, 49);
+            this.txtFecha.Location = new System.Drawing.Point(8, 49);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(177, 26);
@@ -172,7 +151,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.txtIdProv);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btnBuscarProv);
@@ -214,13 +192,13 @@
             this.btnBuscarProv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.btnBuscarProv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarProv.FlatAppearance.BorderSize = 0;
-            this.btnBuscarProv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
-            this.btnBuscarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
+            this.btnBuscarProv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnBuscarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnBuscarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarProv.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProv.ForeColor = System.Drawing.Color.White;
             this.btnBuscarProv.Image = global::Presentacion.Properties.Resources.buscar;
-            this.btnBuscarProv.Location = new System.Drawing.Point(169, 48);
+            this.btnBuscarProv.Location = new System.Drawing.Point(170, 50);
             this.btnBuscarProv.Name = "btnBuscarProv";
             this.btnBuscarProv.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnBuscarProv.Size = new System.Drawing.Size(26, 26);
@@ -235,7 +213,7 @@
             this.txtNombreCompleto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtNombreCompleto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreCompleto.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtNombreCompleto.Location = new System.Drawing.Point(206, 48);
+            this.txtNombreCompleto.Location = new System.Drawing.Point(208, 50);
             this.txtNombreCompleto.Name = "txtNombreCompleto";
             this.txtNombreCompleto.Size = new System.Drawing.Size(217, 26);
             this.txtNombreCompleto.TabIndex = 43;
@@ -266,7 +244,7 @@
             this.txtDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.txtDocumento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDocumento.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtDocumento.Location = new System.Drawing.Point(5, 48);
+            this.txtDocumento.Location = new System.Drawing.Point(7, 50);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(160, 26);
             this.txtDocumento.TabIndex = 40;
@@ -274,7 +252,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtIdProd);
             this.panel1.Controls.Add(this.txtCantidad);
             this.panel1.Controls.Add(this.label12);
@@ -375,13 +352,13 @@
             this.btnBuscarProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.btnBuscarProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarProd.FlatAppearance.BorderSize = 0;
-            this.btnBuscarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
-            this.btnBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(86)))), ((int)(((byte)(173)))));
+            this.btnBuscarProd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrange;
+            this.btnBuscarProd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrange;
             this.btnBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarProd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProd.ForeColor = System.Drawing.Color.White;
             this.btnBuscarProd.Image = global::Presentacion.Properties.Resources.buscar;
-            this.btnBuscarProd.Location = new System.Drawing.Point(189, 50);
+            this.btnBuscarProd.Location = new System.Drawing.Point(187, 50);
             this.btnBuscarProd.Name = "btnBuscarProd";
             this.btnBuscarProd.Padding = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.btnBuscarProd.Size = new System.Drawing.Size(26, 26);
@@ -521,15 +498,16 @@
             this.DatosCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DatosCarrito.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DatosCarrito.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.DatosCarrito.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DatosCarrito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DatosCarrito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DatosCarrito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DatosCarrito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DatosCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
@@ -539,28 +517,28 @@
             this.Cantidad,
             this.SubTotal,
             this.BtnEliminar});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DatosCarrito.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DatosCarrito.DefaultCellStyle = dataGridViewCellStyle2;
             this.DatosCarrito.EnableHeadersVisualStyles = false;
             this.DatosCarrito.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
             this.DatosCarrito.Location = new System.Drawing.Point(12, 192);
             this.DatosCarrito.Name = "DatosCarrito";
             this.DatosCarrito.ReadOnly = true;
             this.DatosCarrito.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DarkOrange;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DatosCarrito.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkOrange;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DatosCarrito.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.DatosCarrito.RowHeadersWidth = 20;
             this.DatosCarrito.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.DatosCarrito.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -740,6 +718,26 @@
             this.btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // boxTipoDocumento
+            // 
+            this.boxTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxTipoDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxTipoDocumento.BorderSize = 1;
+            this.boxTipoDocumento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxTipoDocumento.ForeColor = System.Drawing.Color.Gray;
+            this.boxTipoDocumento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxTipoDocumento.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxTipoDocumento.ListTextColor = System.Drawing.Color.Gray;
+            this.boxTipoDocumento.Location = new System.Drawing.Point(189, 49);
+            this.boxTipoDocumento.MinimumSize = new System.Drawing.Size(200, 26);
+            this.boxTipoDocumento.Name = "boxTipoDocumento";
+            this.boxTipoDocumento.Padding = new System.Windows.Forms.Padding(1);
+            this.boxTipoDocumento.Size = new System.Drawing.Size(200, 26);
+            this.boxTipoDocumento.TabIndex = 39;
+            this.boxTipoDocumento.Texts = "";
             // 
             // PanelVenta
             // 

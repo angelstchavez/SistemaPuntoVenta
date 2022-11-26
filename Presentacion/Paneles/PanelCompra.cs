@@ -205,16 +205,16 @@ namespace Presentacion.Paneles
                 }
             }
 
-            DataTable detalleCompra = new DataTable();
-            detalleCompra.Columns.Add("IdProducto", typeof(string));
-            detalleCompra.Columns.Add("PrecioCompra", typeof(decimal));
-            detalleCompra.Columns.Add("PrecioVenta", typeof(decimal));
-            detalleCompra.Columns.Add("Cantidad", typeof(int));
-            detalleCompra.Columns.Add("SubTotal", typeof(decimal));
+            DataTable detalleVenta = new DataTable();
+            detalleVenta.Columns.Add("IdProducto", typeof(string));
+            detalleVenta.Columns.Add("PrecioCompra", typeof(decimal));
+            detalleVenta.Columns.Add("PrecioVenta", typeof(decimal));
+            detalleVenta.Columns.Add("Cantidad", typeof(int));
+            detalleVenta.Columns.Add("SubTotal", typeof(decimal));
 
             foreach (DataGridViewRow row in DatosCarrito.Rows)
             {
-                detalleCompra.Rows.Add(new object[]
+                detalleVenta.Rows.Add(new object[]
                 {
                     Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()),
                     row.Cells["PrecioCompra"].Value.ToString(),
@@ -238,7 +238,7 @@ namespace Presentacion.Paneles
             };
 
             string mensaje = string.Empty;
-            bool respuesta = logicaCompra.Registrar(compra, detalleCompra, out mensaje);
+            bool respuesta = logicaCompra.Registrar(compra, detalleVenta, out mensaje);
 
             if (respuesta)
             {
