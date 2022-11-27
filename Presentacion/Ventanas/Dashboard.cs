@@ -49,7 +49,7 @@ namespace Presentacion.Ventanas
                 }
             }
         }
-        
+
         private void AbrirNuevoPanel(Form formHijo)
         {
             while (Contenedor.Controls.Count > 0) { Contenedor.Controls.RemoveAt(0); }
@@ -60,14 +60,14 @@ namespace Presentacion.Ventanas
             Contenedor.Tag = fh;
             fh.Show();
         }
-        
+
         private void AbrirOpcion(Form panel, string titulo)
         {
             MenuLateral.Visible = false;
             Titulo.Text = titulo;
             AbrirNuevoPanel(panel);
         }
-        
+
         private void abrirPanelAcercaDe()
         {
             Form form = new Form();
@@ -124,7 +124,7 @@ namespace Presentacion.Ventanas
 
         private void Btn_06_Click(object sender, System.EventArgs e)
         {
-            AbrirOpcion(new Paneles.PanelCategoria(), "Mantenimiento");
+            AbrirOpcion(new Paneles.PanelCategoria(), "Gestor de categorías");
             BtnRegresar.Visible = true;
         }
 
@@ -133,27 +133,33 @@ namespace Presentacion.Ventanas
             AbrirOpcion(new Paneles.PanelCliente(), "Gestor de clientes");
             BtnRegresar.Visible = true;
         }
-        
+
         private void Btn_08_Click(object sender, System.EventArgs e)
         {
             AbrirOpcion(new Paneles.PanelUsuario(), "Gestor de usuarios");
             BtnRegresar.Visible = true;
         }
-        
+
         private void Btn_09_Click(object sender, EventArgs e)
         {
             AbrirOpcion(new Paneles.PanelReporte(), "Gestor de reportes");
             BtnRegresar.Visible = true;
         }
-        
+
         private void Btn_010_Click(object sender, EventArgs e)
         {
             abrirPanelAcercaDe();
         }
-        
+
         private void productos_Click(object sender, EventArgs e)
         {
             AbrirOpcion(new Paneles.PanelProducto(), "Gestor de productos");
+            BtnRegresar.Visible = true;
+        }
+
+        private void registros_Click(object sender, EventArgs e)
+        {
+            AbrirOpcion(new Paneles.PanelRegistros(), "Gestor de registros");
             BtnRegresar.Visible = true;
         }
 
@@ -170,7 +176,7 @@ namespace Presentacion.Ventanas
         {
             DialogResult dialogo = MessageBox.Show("¿Desea cerrar el sesión?",
             "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogo == DialogResult.No) {  }
+            if (dialogo == DialogResult.No) { }
             else
             {
                 this.Hide();
@@ -234,5 +240,7 @@ namespace Presentacion.Ventanas
 
         }
         #endregion
+
+
     }
 }

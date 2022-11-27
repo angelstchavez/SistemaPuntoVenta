@@ -1,17 +1,12 @@
-﻿using DocumentFormat.OpenXml.Office2016.Drawing.Command;
-using Entidad.Registros;
+﻿using Entidad.Registros;
 using Entidad.Roles;
 using Logica.Logica.Registros;
 using Presentacion.Properties;
 using Presentacion.Recursos;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.Paneles

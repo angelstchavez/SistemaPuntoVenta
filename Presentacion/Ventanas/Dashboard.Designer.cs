@@ -39,10 +39,11 @@
             this.clientes = new System.Windows.Forms.Button();
             this.productos = new System.Windows.Forms.Button();
             this.categorias = new System.Windows.Forms.Button();
+            this.registros = new System.Windows.Forms.Button();
             this.compras = new System.Windows.Forms.Button();
             this.ventas = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.BarraLogo = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BarraSuperior = new System.Windows.Forms.Panel();
             this.BtnRegresar = new System.Windows.Forms.Button();
@@ -81,9 +82,9 @@
             this.MenuLateral.Controls.Add(this.clientes);
             this.MenuLateral.Controls.Add(this.productos);
             this.MenuLateral.Controls.Add(this.categorias);
+            this.MenuLateral.Controls.Add(this.registros);
             this.MenuLateral.Controls.Add(this.compras);
             this.MenuLateral.Controls.Add(this.ventas);
-            this.MenuLateral.Controls.Add(this.button1);
             this.MenuLateral.Controls.Add(this.BarraLogo);
             this.MenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuLateral.Location = new System.Drawing.Point(0, 0);
@@ -104,7 +105,7 @@
             this.acercaDe.ForeColor = System.Drawing.Color.White;
             this.acercaDe.Image = global::Presentacion.Properties.Resources.informacion;
             this.acercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.acercaDe.Location = new System.Drawing.Point(0, 460);
+            this.acercaDe.Location = new System.Drawing.Point(0, 500);
             this.acercaDe.Margin = new System.Windows.Forms.Padding(4);
             this.acercaDe.Name = "acercaDe";
             this.acercaDe.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -128,7 +129,7 @@
             this.configuracion.ForeColor = System.Drawing.Color.White;
             this.configuracion.Image = global::Presentacion.Properties.Resources.setting;
             this.configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.configuracion.Location = new System.Drawing.Point(0, 415);
+            this.configuracion.Location = new System.Drawing.Point(0, 455);
             this.configuracion.Margin = new System.Windows.Forms.Padding(4);
             this.configuracion.Name = "configuracion";
             this.configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -151,7 +152,7 @@
             this.reportes.ForeColor = System.Drawing.Color.White;
             this.reportes.Image = global::Presentacion.Properties.Resources.reporte;
             this.reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportes.Location = new System.Drawing.Point(0, 370);
+            this.reportes.Location = new System.Drawing.Point(0, 410);
             this.reportes.Margin = new System.Windows.Forms.Padding(4);
             this.reportes.Name = "reportes";
             this.reportes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -175,7 +176,7 @@
             this.proveedores.ForeColor = System.Drawing.Color.White;
             this.proveedores.Image = global::Presentacion.Properties.Resources.proveedor;
             this.proveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.proveedores.Location = new System.Drawing.Point(0, 330);
+            this.proveedores.Location = new System.Drawing.Point(0, 370);
             this.proveedores.Margin = new System.Windows.Forms.Padding(4);
             this.proveedores.Name = "proveedores";
             this.proveedores.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -222,7 +223,7 @@
             this.usuarios.ForeColor = System.Drawing.Color.White;
             this.usuarios.Image = global::Presentacion.Properties.Resources.usuario;
             this.usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.usuarios.Location = new System.Drawing.Point(0, 285);
+            this.usuarios.Location = new System.Drawing.Point(0, 325);
             this.usuarios.Margin = new System.Windows.Forms.Padding(4);
             this.usuarios.Name = "usuarios";
             this.usuarios.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -246,7 +247,7 @@
             this.clientes.ForeColor = System.Drawing.Color.White;
             this.clientes.Image = global::Presentacion.Properties.Resources.hombre;
             this.clientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.clientes.Location = new System.Drawing.Point(0, 240);
+            this.clientes.Location = new System.Drawing.Point(0, 280);
             this.clientes.Margin = new System.Windows.Forms.Padding(4);
             this.clientes.Name = "clientes";
             this.clientes.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -270,7 +271,7 @@
             this.productos.ForeColor = System.Drawing.Color.White;
             this.productos.Image = global::Presentacion.Properties.Resources.producto;
             this.productos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.productos.Location = new System.Drawing.Point(0, 195);
+            this.productos.Location = new System.Drawing.Point(0, 235);
             this.productos.Margin = new System.Windows.Forms.Padding(4);
             this.productos.Name = "productos";
             this.productos.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -294,7 +295,7 @@
             this.categorias.ForeColor = System.Drawing.Color.White;
             this.categorias.Image = global::Presentacion.Properties.Resources.categoria;
             this.categorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.categorias.Location = new System.Drawing.Point(0, 150);
+            this.categorias.Location = new System.Drawing.Point(0, 190);
             this.categorias.Margin = new System.Windows.Forms.Padding(4);
             this.categorias.Name = "categorias";
             this.categorias.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -305,6 +306,29 @@
             this.categorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.categorias.UseVisualStyleBackColor = false;
             this.categorias.Click += new System.EventHandler(this.Btn_06_Click);
+            // 
+            // registros
+            // 
+            this.registros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.registros.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.registros.FlatAppearance.BorderSize = 0;
+            this.registros.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
+            this.registros.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
+            this.registros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registros.ForeColor = System.Drawing.Color.White;
+            this.registros.Image = global::Presentacion.Properties.Resources.consultas;
+            this.registros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.registros.Location = new System.Drawing.Point(0, 145);
+            this.registros.Margin = new System.Windows.Forms.Padding(4);
+            this.registros.Name = "registros";
+            this.registros.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.registros.Size = new System.Drawing.Size(200, 45);
+            this.registros.TabIndex = 20;
+            this.registros.Text = " Consultar registros";
+            this.registros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.registros.UseVisualStyleBackColor = false;
+            this.registros.Click += new System.EventHandler(this.registros_Click);
             // 
             // compras
             // 
@@ -318,13 +342,13 @@
             this.compras.ForeColor = System.Drawing.Color.White;
             this.compras.Image = global::Presentacion.Properties.Resources.caja;
             this.compras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.compras.Location = new System.Drawing.Point(0, 105);
+            this.compras.Location = new System.Drawing.Point(0, 100);
             this.compras.Margin = new System.Windows.Forms.Padding(4);
             this.compras.Name = "compras";
             this.compras.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.compras.Size = new System.Drawing.Size(200, 45);
             this.compras.TabIndex = 3;
-            this.compras.Text = " Compras";
+            this.compras.Text = " Realizar compra";
             this.compras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.compras.UseVisualStyleBackColor = false;
             this.compras.Click += new System.EventHandler(this.Btn_02_Click);
@@ -341,47 +365,48 @@
             this.ventas.ForeColor = System.Drawing.Color.White;
             this.ventas.Image = global::Presentacion.Properties.Resources.cierre;
             this.ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ventas.Location = new System.Drawing.Point(0, 60);
+            this.ventas.Location = new System.Drawing.Point(0, 55);
             this.ventas.Margin = new System.Windows.Forms.Padding(4);
             this.ventas.Name = "ventas";
             this.ventas.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.ventas.Size = new System.Drawing.Size(200, 45);
             this.ventas.TabIndex = 2;
-            this.ventas.Text = " Ventas";
+            this.ventas.Text = " Realizar venta";
             this.ventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ventas.UseVisualStyleBackColor = false;
             this.ventas.Click += new System.EventHandler(this.Btn_01_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(0, 35);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(200, 25);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Procesos";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // BarraLogo
             // 
             this.BarraLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.BarraLogo.Controls.Add(this.button1);
             this.BarraLogo.Controls.Add(this.label1);
             this.BarraLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.BarraLogo.Location = new System.Drawing.Point(0, 0);
             this.BarraLogo.Margin = new System.Windows.Forms.Padding(4);
             this.BarraLogo.Name = "BarraLogo";
-            this.BarraLogo.Size = new System.Drawing.Size(200, 35);
+            this.BarraLogo.Size = new System.Drawing.Size(200, 55);
             this.BarraLogo.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.LightGray;
+            this.button1.Location = new System.Drawing.Point(0, 35);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 20);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Menú de procesos";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -624,5 +649,6 @@
         private System.Windows.Forms.Button reportes;
         private System.Windows.Forms.Button acercaDe;
         private System.Windows.Forms.Button productos;
+        private System.Windows.Forms.Button registros;
     }
 }

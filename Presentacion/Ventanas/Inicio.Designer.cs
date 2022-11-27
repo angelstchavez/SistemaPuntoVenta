@@ -336,7 +336,7 @@
             this.panel9.Controls.Add(this.pictureBox2);
             this.panel9.Controls.Add(this.ventas);
             this.panel9.Controls.Add(this.label1);
-            this.panel9.Location = new System.Drawing.Point(12, 100);
+            this.panel9.Location = new System.Drawing.Point(198, 12);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(180, 82);
             this.panel9.TabIndex = 18;
@@ -347,7 +347,7 @@
             this.panel10.Controls.Add(this.pictureBox3);
             this.panel10.Controls.Add(this.label2);
             this.panel10.Controls.Add(this.lblClientes);
-            this.panel10.Location = new System.Drawing.Point(12, 364);
+            this.panel10.Location = new System.Drawing.Point(198, 100);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(180, 82);
             this.panel10.TabIndex = 19;
@@ -358,7 +358,7 @@
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.lblUsuarios);
-            this.panel2.Location = new System.Drawing.Point(12, 452);
+            this.panel2.Location = new System.Drawing.Point(384, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(180, 82);
             this.panel2.TabIndex = 20;
@@ -369,7 +369,7 @@
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.lblCategorias);
-            this.panel1.Location = new System.Drawing.Point(12, 188);
+            this.panel1.Location = new System.Drawing.Point(384, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 82);
             this.panel1.TabIndex = 21;
@@ -380,7 +380,7 @@
             this.panel11.Controls.Add(this.pictureBox6);
             this.panel11.Controls.Add(this.label4);
             this.panel11.Controls.Add(this.lblProductos);
-            this.panel11.Location = new System.Drawing.Point(12, 276);
+            this.panel11.Location = new System.Drawing.Point(12, 100);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(180, 82);
             this.panel11.TabIndex = 22;
@@ -391,7 +391,7 @@
             this.panel3.Controls.Add(this.pictureBox7);
             this.panel3.Controls.Add(this.lblProveedores);
             this.panel3.Controls.Add(this.lbl);
-            this.panel3.Location = new System.Drawing.Point(12, 540);
+            this.panel3.Location = new System.Drawing.Point(570, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(180, 82);
             this.panel3.TabIndex = 23;

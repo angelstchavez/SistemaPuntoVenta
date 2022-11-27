@@ -122,6 +122,12 @@
     <Compile Include="Paneles\PanelProveedor.Designer.cs">
       <DependentUpon>PanelProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paneles\PanelRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paneles\PanelRegistros.Designer.cs">
+      <DependentUpon>PanelRegistros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Paneles\PanelReporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,12 @@
     <Compile Include="Recursos\VentCliente.Designer.cs">
       <DependentUpon>VentCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Recursos\VentCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\VentCompras.Designer.cs">
+      <DependentUpon>VentCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recursos\VentProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +180,12 @@
     </Compile>
     <Compile Include="Recursos\VentProveedor.Designer.cs">
       <DependentUpon>VentProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\VentVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursos\VentVentas.Designer.cs">
+      <DependentUpon>VentVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\Carga.cs">
       <SubType>Form</SubType>
@@ -217,6 +235,9 @@
     <EmbeddedResource Include="Paneles\PanelProveedor.resx">
       <DependentUpon>PanelProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Paneles\PanelRegistros.resx">
+      <DependentUpon>PanelRegistros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Paneles\PanelReporte.resx">
       <DependentUpon>PanelReporte.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,11 +258,17 @@
     <EmbeddedResource Include="Recursos\VentCliente.resx">
       <DependentUpon>VentCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\VentCompras.resx">
+      <DependentUpon>VentCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Recursos\VentProducto.resx">
       <DependentUpon>VentProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recursos\VentProveedor.resx">
       <DependentUpon>VentProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\VentVentas.resx">
+      <DependentUpon>VentVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Carga.resx">
       <DependentUpon>Carga.cs</DependentUpon>
@@ -460,6 +487,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Iconos\cambio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\consultas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\Iconos\carpetica.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
