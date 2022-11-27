@@ -99,6 +99,13 @@ namespace Presentacion.Paneles
                 return;
             }
 
+            if (txtxPago.Text == "")
+            {
+                MessageBox.Show("¡REGISTRE EL INGRESO DE LA VENTRA!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtxPago.Select();
+                return;
+            }
+
             DataTable detalleCompra = new DataTable();
             detalleCompra.Columns.Add("IdProducto", typeof(string));
             detalleCompra.Columns.Add("PrecioVenta", typeof(decimal));

@@ -1,6 +1,7 @@
 ﻿using Entidad.Registros;
 using Logica.Logica.Registros;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Presentacion.Recursos
@@ -17,6 +18,8 @@ namespace Presentacion.Recursos
             Venta venta = new LogicaVenta().ObtenerVenta(txtConsultar.Text);
             if (venta.IdVenta != 0)
             {
+                txtDocumento.Visible = true;
+                txtDocumento.Text = "VENTA: " + txtConsultar.Text;
 
                 fecha.Text = venta.FechaRegistro;
                 tipoDocumento.Text = venta.TipoDocumento;
@@ -26,6 +29,8 @@ namespace Presentacion.Recursos
                 montoPago.Text = venta.MontoPago.ToString("0.00");
                 montoCambio.Text = venta.MontoCambio.ToString("0.00");
                 montoTotal.Text = venta.MontoTotal.ToString("0.00");
+
+                fecha.BackColor = Color.FromArgb(64, 64, 64);
 
                 DatosVentas.Rows.Clear();
 
@@ -53,6 +58,8 @@ namespace Presentacion.Recursos
 
         private void LimpiarConsulta()
         {
+            txtDocumento.Visible = false;
+            txtDocumento.Text = "";
             txtConsultar.Select();
             txtConsultar.Text = "";
             fecha.Text = "";
@@ -88,6 +95,11 @@ namespace Presentacion.Recursos
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarConsulta();
+        }
+
+        private void txtConsultar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter) { ConsultarVenta(); }
         }
     }
 }

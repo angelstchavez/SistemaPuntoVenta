@@ -23,19 +23,29 @@ namespace Presentacion.Paneles
             Form fh = formHijo;
             fh.TopLevel = false;
             fh.Dock = DockStyle.Fill;
+            Contenedor.Controls.Clear();
             Contenedor.Controls.Add(fh);
             Contenedor.Tag = fh;
             fh.Show();
         }
 
-        private void compras_Click(object sender, EventArgs e)
-        {
-            AbrirNuevoPanel(new Recursos.VentCompras());
-        }
-
         private void ventas_Click(object sender, EventArgs e)
         {
             AbrirNuevoPanel(new Recursos.VentVentas());
+            ventas.BackColor = Color.DarkOrange;
+            ventas.ForeColor = Color.Black;
+            compras.BackColor = Color.FromArgb(20, 20, 20);
+            compras.ForeColor = Color.White;
+        }
+
+        private void compras_Click(object sender, EventArgs e)
+        {
+            AbrirNuevoPanel(new Recursos.VentCompras());
+            compras.BackColor = Color.DarkOrange;
+            compras.ForeColor = Color.Black;
+
+            ventas.BackColor = Color.FromArgb(20, 20, 20);
+            ventas.ForeColor = Color.White;
         }
     }
 }

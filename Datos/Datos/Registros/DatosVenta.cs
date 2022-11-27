@@ -163,6 +163,7 @@ namespace Datos.Datos.Registros
                             {
                                 IdVenta = int.Parse(reader["IdVenta"].ToString()),
                                 ObjUsuario = new Usuario() { NombreCompleto = reader["NombreCompleto"].ToString() },
+                                NombreCliente = reader["NombreCliente"].ToString(),
                                 DocumentoCliente = reader["DocumentoCliente"].ToString(),
                                 TipoDocumento = reader["TipoDocumento"].ToString(),
                                 NumeroDocumento = reader["NumeroDocumento"].ToString(),
