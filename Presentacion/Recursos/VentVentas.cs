@@ -40,25 +40,25 @@ namespace Presentacion.Recursos
 
                 DatosVentas.Rows.Clear();
 
-                foreach (DetalleVenta item in venta.ListDatalleVenta)
+                foreach (DetalleVenta detalleVenta in venta.ListDatalleVenta)
                 {
                     DatosVentas.Rows.Add(new object[]
                     {
-                        item.ObjProducto.Nombre,
-                        item.PrecioVenta,
-                        item.Cantidad,
-                        item.SubTotal
+                        detalleVenta.ObjProducto.Nombre,
+                        detalleVenta.PrecioVenta,
+                        detalleVenta.Cantidad,
+                        detalleVenta.SubTotal
                     });
                 }
 
                 MessageBox.Show("Venta: " + txtConsultar.Text + " encontrada con exito.",
-                    "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtConsultar.Text = "";
             }
             else
             {
                 MessageBox.Show("No se entontró una venta con el documento: " + txtConsultar.Text,
-                    "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    "Atención", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

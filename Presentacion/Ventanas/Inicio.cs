@@ -51,6 +51,8 @@ namespace Presentacion.Ventanas
                 LogicaCategoria logicaCategoria = new LogicaCategoria();
                 LogicaProveedor logicaProveedor = new LogicaProveedor();
                 LogicaProducto logicaProducto = new LogicaProducto();
+                LogicaCompra logicaCompra = new LogicaCompra();
+                LogicaVenta logicaVenta = new LogicaVenta();
 
                 //Registros
                 List<Usuario> usuarios = logicaUsuario.Listar();
@@ -58,6 +60,8 @@ namespace Presentacion.Ventanas
                 List<Categoria> categorias = logicaCategoria.Listar();
                 List<Proveedor> proveedores = logicaProveedor.Listar();
                 List<Producto> productos = logicaProducto.Listar();
+                List<Compra> compras = logicaCompra.Listar();
+                List<Venta> ventas = logicaVenta.Listar();
 
                 //Contadores
                 int contUsuarios = 0;
@@ -65,6 +69,8 @@ namespace Presentacion.Ventanas
                 int contCategorias = 0;
                 int contProveedores = 0;
                 int contProductos = 0;
+                int contCompras = 0;
+                int contVentas = 0;
 
                 //Recorrido por los registros
                 foreach (var item in usuarios) { contUsuarios++; }
@@ -72,6 +78,8 @@ namespace Presentacion.Ventanas
                 foreach (var item in categorias) { contCategorias++; }
                 foreach (var item in proveedores) { contProveedores++; }
                 foreach (var item in productos) { contProductos++; }
+                foreach (var item in compras) { contCompras++; }
+                foreach (var item in ventas) { contVentas++; }
 
                 //Textos
                 lblClientes.Text = Convert.ToString(contClientes);
@@ -79,10 +87,12 @@ namespace Presentacion.Ventanas
                 lblCategorias.Text = Convert.ToString(contCategorias);
                 lblProveedores.Text = Convert.ToString(contProveedores);
                 lblProductos.Text = Convert.ToString(contProductos);
+                lblCompras.Text = Convert.ToString(contCompras);
+                lblVentas.Text = Convert.ToString(contVentas);
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

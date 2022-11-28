@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Datos.Datos.Registros
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     public class DatosCompra
     {
         /// <summary>Devuelve el siguiente número en la secuencia de números de la columna "ID_COMPRA" de la tabla COMPRA</summary>
@@ -42,6 +45,47 @@ namespace Datos.Datos.Registros
                 }
             }
             return idCorrelativo;
+        }
+
+        /// <summary>Lista las Compras registradas.</summary>
+        /// <returns>
+        ///   La lista de Compras
+        /// </returns>
+        public List<Compra> ListarCompras()
+        {
+            List<Compra> Compras = new List<Compra>();
+
+            using (SqlConnection connection = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("SELECT [IdCompra],[IdUsuario],[IdProveedor],[TipoDocumento],[NumeroDocumento],[MontoTotal],[FechaRegistro] FROM [COMPRA]");
+                    SqlCommand command = new SqlCommand(query.ToString(), connection)
+                    {
+                        CommandType = CommandType.Text
+                    };
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Compras.Add(new Compra()
+                            {
+                                IdCompra = Convert.ToInt32(reader["IdCompra"]),
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Compras = new List<Compra>();
+                    connection.Close();
+                    throw ex;
+                }
+            }
+            return Compras;
         }
 
         /// <summary>Registrars the compra.</summary>

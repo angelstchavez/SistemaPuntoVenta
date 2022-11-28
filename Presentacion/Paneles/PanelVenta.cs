@@ -101,7 +101,7 @@ namespace Presentacion.Paneles
 
             if (txtxPago.Text == "")
             {
-                MessageBox.Show("¡REGISTRE EL INGRESO DE LA VENTRA!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("¡REGISTRE EL INGRESO DE LA VENTA!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtxPago.Select();
                 return;
             }

@@ -1,5 +1,6 @@
 ﻿using Datos.Datos.Registros;
 using Entidad.Registros;
+using System.Collections.Generic;
 using System.Data;
 
 namespace Logica.Logica.Registros
@@ -21,6 +22,15 @@ namespace Logica.Logica.Registros
         public int ObtenerCorrelativo()
         {
             return datosCompra.ObtenerCorrelativo();
+        }
+
+        /// <summary>
+        /// Enumera esta instancia.
+        /// </summary>
+        /// <returns>la lista de Compras</returns>
+        public List<Compra> Listar()
+        {
+            return datosCompra.ListarCompras();
         }
 
         /// <summary>

@@ -26,6 +26,15 @@ namespace Logica.Logica.Registros
         }
 
         /// <summary>
+        /// Enumera esta instancia.
+        /// </summary>
+        /// <returns>la lista de Ventas</returns>
+        public List<Venta> Listar()
+        {
+            return datosVenta.ListarVentas();
+        }
+
+        /// <summary>
         /// Resta stock de un producto especifico.
         /// </summary>
         /// <param name="idProducto">El identificador producto.</param>

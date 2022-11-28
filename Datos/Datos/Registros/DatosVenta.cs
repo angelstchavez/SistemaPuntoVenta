@@ -45,6 +45,47 @@ namespace Datos.Datos.Registros
             return idCorrelativo;
         }
 
+        /// <summary>Lista las ventas registradas.</summary>
+        /// <returns>
+        ///   La lista de ventas
+        /// </returns>
+        public List<Venta> ListarVentas()
+        {
+            List<Venta> Ventas = new List<Venta>();
+
+            using (SqlConnection connection = new SqlConnection(Conexion.cadena))
+            {
+                try
+                {
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("SELECT [IdVenta],[IdUsuario],[TipoDocumento],[NumeroDocumento],[NombreCliente],[DocumentoCliente],[MontoPago],[MontoCambio],[MontoTotal],[FechaRegistro] FROM [VENTA]");
+                    SqlCommand command = new SqlCommand(query.ToString(), connection)
+                    {
+                        CommandType = CommandType.Text
+                    };
+
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Ventas.Add(new Venta()
+                            {
+                                IdVenta = Convert.ToInt32(reader["IdVenta"]),
+                            });
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Ventas = new List<Venta>();
+                    connection.Close();
+                    throw ex;
+                }
+            }
+            return Ventas;
+        }
+
         /// <summary>Resta elementos del stock de un producto.</summary>
         /// <param name="idProducto">El id del producto.</param>
         /// <param name="cantidad">La cantidad.</param>

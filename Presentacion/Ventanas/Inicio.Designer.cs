@@ -33,7 +33,7 @@
             this.TxHora = new System.Windows.Forms.Label();
             this.ControlFechaHora = new System.Windows.Forms.Timer(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ventas = new System.Windows.Forms.Label();
+            this.lblVentas = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblClientes = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.compras = new System.Windows.Forms.Label();
+            this.lblCompras = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -118,16 +118,16 @@
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
-            // ventas
+            // lblVentas
             // 
-            this.ventas.AutoSize = true;
-            this.ventas.Font = new System.Drawing.Font("Arial", 28F, System.Drawing.FontStyle.Bold);
-            this.ventas.ForeColor = System.Drawing.Color.White;
-            this.ventas.Location = new System.Drawing.Point(1, 28);
-            this.ventas.Name = "ventas";
-            this.ventas.Size = new System.Drawing.Size(41, 45);
-            this.ventas.TabIndex = 12;
-            this.ventas.Text = "0";
+            this.lblVentas.AutoSize = true;
+            this.lblVentas.Font = new System.Drawing.Font("Arial", 28F, System.Drawing.FontStyle.Bold);
+            this.lblVentas.ForeColor = System.Drawing.Color.White;
+            this.lblVentas.Location = new System.Drawing.Point(1, 28);
+            this.lblVentas.Name = "lblVentas";
+            this.lblVentas.Size = new System.Drawing.Size(41, 45);
+            this.lblVentas.TabIndex = 12;
+            this.lblVentas.Text = "0";
             // 
             // label1
             // 
@@ -293,7 +293,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Controls.Add(this.compras);
+            this.panel8.Controls.Add(this.lblCompras);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Location = new System.Drawing.Point(12, 12);
             this.panel8.Name = "panel8";
@@ -309,16 +309,16 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
-            // compras
+            // lblCompras
             // 
-            this.compras.AutoSize = true;
-            this.compras.Font = new System.Drawing.Font("Arial", 28F, System.Drawing.FontStyle.Bold);
-            this.compras.ForeColor = System.Drawing.Color.White;
-            this.compras.Location = new System.Drawing.Point(1, 28);
-            this.compras.Name = "compras";
-            this.compras.Size = new System.Drawing.Size(41, 45);
-            this.compras.TabIndex = 12;
-            this.compras.Text = "0";
+            this.lblCompras.AutoSize = true;
+            this.lblCompras.Font = new System.Drawing.Font("Arial", 28F, System.Drawing.FontStyle.Bold);
+            this.lblCompras.ForeColor = System.Drawing.Color.White;
+            this.lblCompras.Location = new System.Drawing.Point(1, 28);
+            this.lblCompras.Name = "lblCompras";
+            this.lblCompras.Size = new System.Drawing.Size(41, 45);
+            this.lblCompras.TabIndex = 12;
+            this.lblCompras.Text = "0";
             // 
             // label12
             // 
@@ -334,7 +334,7 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.panel9.Controls.Add(this.pictureBox2);
-            this.panel9.Controls.Add(this.ventas);
+            this.panel9.Controls.Add(this.lblVentas);
             this.panel9.Controls.Add(this.label1);
             this.panel9.Location = new System.Drawing.Point(198, 12);
             this.panel9.Name = "panel9";
@@ -476,7 +476,7 @@
         private System.Windows.Forms.Label TxFecha;
         private System.Windows.Forms.Label TxHora;
         private System.Windows.Forms.Timer ControlFechaHora;
-        private System.Windows.Forms.Label ventas;
+        private System.Windows.Forms.Label lblVentas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.Label label2;
@@ -489,7 +489,7 @@
         private System.Windows.Forms.Label lblCategorias;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label compras;
+        private System.Windows.Forms.Label lblCompras;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
