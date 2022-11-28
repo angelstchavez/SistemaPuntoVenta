@@ -6,26 +6,26 @@
     public class Rol
     {
         /// <summary>
-        /// Gets or sets the identifier rol.
+        /// Obtiene o establece el identificador rol.
         /// </summary>
         /// <value>
-        /// The identifier rol.
+        /// El identificador del rol.
         /// </value>
         public int IdRol { get; set; }
 
         /// <summary>
-        /// Gets or sets the descripcion.
+        /// Obtiene o establece la descripción.
         /// </summary>
         /// <value>
-        /// The descripcion.
+        /// La descripción.
         /// </value>
         public string Descripcion { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

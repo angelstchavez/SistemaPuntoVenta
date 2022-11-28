@@ -6,50 +6,50 @@
     public class DetalleVenta
     {
         /// <summary>
-        /// Gets or sets the identifier detalle venta.
+        /// Obtiene o establece el identificador detalle venta.
         /// </summary>
         /// <value>
-        /// The identifier detalle venta.
+        /// El identificador detalle venta.
         /// </value>
         public int IdDetalleVenta { get; set; }
 
         /// <summary>
-        /// Gets or sets the object producto.
+        /// Obtiene o establece el objeto producto.
         /// </summary>
         /// <value>
-        /// The object producto.
+        /// El objeto producto.
         /// </value>
         public Producto ObjProducto { get; set; }
 
         /// <summary>
-        /// Gets or sets the precio venta.
+        /// Obtiene o establece el precio de venta.
         /// </summary>
         /// <value>
-        /// The precio venta.
+        /// El precio de venta.
         /// </value>
         public decimal PrecioVenta { get; set; }
 
         /// <summary>
-        /// Gets or sets the cantidad.
+        /// Obtiene o establece la cantidad.
         /// </summary>
         /// <value>
-        /// The cantidad.
+        /// La cantidad.
         /// </value>
         public int Cantidad { get; set; }
 
         /// <summary>
-        /// Gets or sets the sub total.
+        /// Obtiene o establece el subtotal.
         /// </summary>
         /// <value>
-        /// The sub total.
+        /// El subtotal.
         /// </value>
         public decimal SubTotal { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

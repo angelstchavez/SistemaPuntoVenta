@@ -15,9 +15,9 @@ namespace Datos.Datos.Roles
     public class DatosUsuario
     {
         /// <summary>
-        /// Listars the usuarios.
+        /// Lista los usuarios desde la base de datos.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Los usuarios registrados.</returns>
         public List<Usuario> ListarUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -63,9 +63,9 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Validars the usuarios.
+        /// Valida la existencia de los usuarios.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Los usuarios existentes.</returns>
         public List<Usuario> ValidarUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -109,11 +109,11 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Registrars the usuario.
+        /// Registra usuarios en la base de datos
         /// </summary>
-        /// <param name="usuario">The usuario.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="usuario">El usuario.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>El id del usuario registrado.</returns>
         public int RegistrarUsuario(Usuario usuario, out string mensaje)
         {
             int IdUsuarioResultado = 0;
@@ -151,11 +151,11 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Editars the usuario.
+        /// Edita usuarios en la base de datos
         /// </summary>
-        /// <param name="usuario">The usuario.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="usuario">El usuario.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>Un booleano.</returns>
         public bool EditarUsuario(Usuario usuario, out string mensaje)
         {
             bool respuesta = false;
@@ -194,11 +194,11 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Eliminars the usuario.
+        /// Elimina usuarios en la base de datos.
         /// </summary>
-        /// <param name="usuario">The usuario.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="usuario">El usuario.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>Un booleano.</returns>
         public bool EliminarUsuario(Usuario usuario, out string mensaje)
         {
             bool respuesta = false;

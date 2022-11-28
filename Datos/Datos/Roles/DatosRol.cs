@@ -12,9 +12,9 @@ namespace Datos.Datos.Registros
     public class DatosRol
     {
         /// <summary>
-        /// Listars the roles.
+        /// Lista los roles desde la base de datos.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>los roles registrados</returns>
         public List<Rol> ListarRoles()
         {
             List<Rol> roles = new List<Rol>();

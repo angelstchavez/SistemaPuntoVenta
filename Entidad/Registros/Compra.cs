@@ -9,66 +9,66 @@ namespace Entidad.Registros
     public class Compra
     {
         /// <summary>
-        /// Gets or sets the identifier compra.
+        /// Obtiene o establece el identificador compra.
         /// </summary>
         /// <value>
-        /// The identifier compra.
+        /// El identificador compra.
         /// </value>
         public int IdCompra { get; set; }
 
         /// <summary>
-        /// Gets or sets the object usuario.
+        /// Obtiene o establece el objeto usuario.
         /// </summary>
         /// <value>
-        /// The object usuario.
+        /// el objeto usuario.
         /// </value>
         public Usuario ObjUsuario { get; set; }
 
         /// <summary>
-        /// Gets or sets the object provedor.
+        /// Obtiene o establece el provedor del objeto.
         /// </summary>
         /// <value>
-        /// The object provedor.
+        /// El objeto provedor.
         /// </value>
         public Proveedor ObjProvedor { get; set; }
 
         /// <summary>
-        /// Gets or sets the tipo documento.
+        /// Obtiene o establece el tipo de documento.
         /// </summary>
         /// <value>
-        /// The tipo documento.
+        /// El tipo de documento.
         /// </value>
         public string TipoDocumento { get; set; }
 
         /// <summary>
-        /// Gets or sets the numero documento.
+        /// Obtiene o establece el número de documento.
         /// </summary>
         /// <value>
-        /// The numero documento.
+        /// El numero de documento.
         /// </value>
         public string NumeroDocumento { get; set; }
 
         /// <summary>
-        /// Gets or sets the monto total.
+        /// Obtiene o establece el monto total.
         /// </summary>
         /// <value>
-        /// The monto total.
+        /// El monto total.
         /// </value>
         public decimal MontoTotal { get; set; }
 
         /// <summary>
-        /// Gets or sets the list detalle compra.
+        /// Obtiene o establece la lista detalle de compra.
         /// </summary>
         /// <value>
-        /// The list detalle compra.
+        /// La list detalle de compra.
         /// </value>
         public List<DetalleCompra> ListDetalleCompra { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

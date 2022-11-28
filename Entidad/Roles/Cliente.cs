@@ -6,58 +6,58 @@
     public class Cliente
     {
         /// <summary>
-        /// Gets or sets the identifier cliente.
+        /// Obtiene o establece el identificador cliente.
         /// </summary>
         /// <value>
-        /// The identifier cliente.
+        /// El cliente identificador.
         /// </value>
         public int IdCliente { get; set; }
 
         /// <summary>
-        /// Gets or sets the documento.
+        /// Obtiene o establece el documento.
         /// </summary>
         /// <value>
-        /// The documento.
-        /// </value>
+        /// El documento.
+        /// </value>.
         public string Documento { get; set; }
 
         /// <summary>
-        /// Gets or sets the nombre completo.
+        /// Obtiene o establece el nombre completo.
         /// </summary>
         /// <value>
-        /// The nombre completo.
+        /// El nombre completo.
         /// </value>
         public string NombreCompleto { get; set; }
 
         /// <summary>
-        /// Gets or sets the telefono.
+        /// Obtiene o establece el teléfono.
         /// </summary>
         /// <value>
-        /// The telefono.
+        /// El teléfono.
         /// </value>
         public string Telefono { get; set; }
 
         /// <summary>
-        /// Gets or sets the correo.
+        /// Obtiene o establece el correo.
         /// </summary>
         /// <value>
-        /// The correo.
+        /// El correo.
         /// </value>
         public string Correo { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Cliente"/> is estado.
+        /// Obtiene o establece un valor que indica el estado del <see cref="Cliente"/>.
         /// </summary>
         /// <value>
-        ///   <c>true</c> if estado; otherwise, <c>false</c>.
+        ///   <c>true</c> si el estado es activo; De lo contrario, <c>false</c>.
         /// </value>
         public bool Estado { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

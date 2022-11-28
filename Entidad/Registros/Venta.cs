@@ -9,90 +9,90 @@ namespace Entidad.Registros
     public class Venta
     {
         /// <summary>
-        /// Gets or sets the identifier venta.
+        /// Obtiene o establece el identificador de venta.
         /// </summary>
         /// <value>
-        /// The identifier venta.
+        /// El identificador de venta.
         /// </value>
         public int IdVenta { get; set; }
 
         /// <summary>
-        /// Gets or sets the object usuario.
+        /// Obtiene o establece el objeto usuario.
         /// </summary>
         /// <value>
-        /// The object usuario.
+        /// El objeto usuario.
         /// </value>
         public Usuario ObjUsuario { get; set; }
 
         /// <summary>
-        /// Gets or sets the tipo documento.
+        /// Obtiene o establece el tipo de documento.
         /// </summary>
         /// <value>
-        /// The tipo documento.
+        /// El tipo de documento.
         /// </value>
         public string TipoDocumento { get; set; }
 
         /// <summary>
-        /// Gets or sets the numero documento.
+        /// Obtiene o establece el número de documento.
         /// </summary>
         /// <value>
-        /// The numero documento.
+        /// El número de documento.
         /// </value>
         public string NumeroDocumento { get; set; }
 
         /// <summary>
-        /// Gets or sets the documento cliente.
+        /// Obtiene o establece el documento del cliente.
         /// </summary>
         /// <value>
-        /// The documento cliente.
+        /// El documento del cliente.
         /// </value>
         public string DocumentoCliente { get; set; }
 
         /// <summary>
-        /// Gets or sets the nombre cliente.
+        /// Obtiene o establece el nombre del cliente.
         /// </summary>
         /// <value>
-        /// The nombre cliente.
+        /// El nombre del cliente.
         /// </value>
         public string NombreCliente { get; set; }
 
         /// <summary>
-        /// Gets or sets the monto pago.
+        /// Obtiene o establece el monto de pago.
         /// </summary>
         /// <value>
-        /// The monto pago.
+        /// El monto de pago.
         /// </value>
         public decimal MontoPago { get; set; }
 
         /// <summary>
-        /// Gets or sets the monto cambio.
+        /// Obtiene o establece el monto de cambio.
         /// </summary>
         /// <value>
-        /// The monto cambio.
+        /// El monto del cambio.
         /// </value>
         public decimal MontoCambio { get; set; }
 
         /// <summary>
-        /// Gets or sets the monto total.
+        /// Obtiene o establece el monto total.
         /// </summary>
         /// <value>
-        /// The monto total.
+        /// El monto total.
         /// </value>
         public decimal MontoTotal { get; set; }
 
         /// <summary>
-        /// Gets or sets the list datalle venta.
+        /// Obtiene o establece la lista datalle venta.
         /// </summary>
         /// <value>
-        /// The list datalle venta.
+        /// La lista datalle venta.
         /// </value>
         public List<DetalleVenta> ListDatalleVenta { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

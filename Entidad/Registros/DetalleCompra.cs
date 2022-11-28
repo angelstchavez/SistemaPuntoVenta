@@ -6,58 +6,58 @@
     public class DetalleCompra
     {
         /// <summary>
-        /// Gets or sets the identifier detalle compra.
+        /// Obtiene o establece el identificador detalle compra.
         /// </summary>
         /// <value>
-        /// The identifier detalle compra.
+        /// El identificador detalle compra.
         /// </value>
         public int IdDetalleCompra { get; set; }
 
         /// <summary>
-        /// Gets or sets the object producto.
+        /// Obtiene o establece el objeto producto.
         /// </summary>
         /// <value>
-        /// The object producto.
+        /// El objeto producto.
         /// </value>
         public Producto ObjProducto { get; set; }
 
         /// <summary>
-        /// Gets or sets the precio compra.
+        /// Obtiene o establece el precio de compra.
         /// </summary>
         /// <value>
-        /// The precio compra.
+        /// El precio de compra.
         /// </value>
         public decimal PrecioCompra { get; set; }
 
         /// <summary>
-        /// Gets or sets the precio venta.
+        /// Obtiene o establece el precio de venta.
         /// </summary>
         /// <value>
-        /// The precio venta.
+        /// El precio de venta.
         /// </value>
         public decimal PrecioVenta { get; set; }
 
         /// <summary>
-        /// Gets or sets the cantidad.
+        /// Obtiene o establece la cantidad.
         /// </summary>
         /// <value>
-        /// The cantidad.
+        /// La cantidad.
         /// </value>
         public int Cantidad { get; set; }
 
         /// <summary>
-        /// Gets or sets the monto total.
+        /// Obtiene o establece el monto total de la compra.
         /// </summary>
         /// <value>
-        /// The monto total.
+        /// El monto total.
         /// </value>
         public decimal MontoTotal { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

@@ -6,50 +6,50 @@
     public class Proveedor
     {
         /// <summary>
-        /// Gets or sets the identifier proveedor.
+        /// Obtiene o establece el identificador del proveedor.
         /// </summary>
         /// <value>
-        /// The identifier proveedor.
+        /// El identificador de proveedor.
         /// </value>
         public int IdProveedor { get; set; }
 
         /// <summary>
-        /// Gets or sets the documento.
+        /// Obtiene o establece el documento.
         /// </summary>
         /// <value>
-        /// The documento.
+        /// El documento.
         /// </value>
         public string Documento { get; set; }
 
         /// <summary>
-        /// Gets or sets the razon social.
+        /// Obtiene o establece el razonamiento social.
         /// </summary>
         /// <value>
-        /// The razon social.
+        /// La razón social.
         /// </value>
         public string RazonSocial { get; set; }
 
         /// <summary>
-        /// Gets or sets the telefono.
+        /// Obtiene o establece el teléfono.
         /// </summary>
         /// <value>
-        /// The telefono.
+        /// El teléfono.
         /// </value>
         public string Telefono { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Proveedor"/> is estado.
+        /// Obtiene o establece un valor que indica el estado del <see cref="Proveedor"/>.
         /// </summary>
         /// <value>
-        ///   <c>true</c> if estado; otherwise, <c>false</c>.
+        ///   <c>true</c> si el estado es activo; de lo contrario, <c>false</c>.
         /// </value>
         public bool Estado { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

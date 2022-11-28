@@ -12,24 +12,24 @@ namespace Logica.Logica.Registros
     public class LogicaProducto
     {
         /// <summary>
-        /// The datos producto
+        /// Los datos de los productos.
         /// </summary>
         private DatosProducto datosProducto = new DatosProducto();
 
         /// <summary>
-        /// Listars this instance.
+        /// Enumera esta instancia.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>La lista de productos.</returns>
         public List<Producto> Listar()
         {
             return datosProducto.ListarProductos();
         }
 
         /// <summary>
-        /// Registrars the specified producto.
+        /// Registra el producto especificado.
         /// </summary>
-        /// <param name="Producto">The producto.</param>
-        /// <param name="mensaje">The mensaje.</param>
+        /// <param name="Producto">Un producto.</param>
+        /// <param name="mensaje">Un mensaje.</param>
         /// <returns></returns>
         public int Registrar(Producto Producto, out string mensaje)
         {
@@ -42,11 +42,11 @@ namespace Logica.Logica.Registros
         }
 
         /// <summary>
-        /// Editars the specified producto.
+        /// Edita el producto especificado.
         /// </summary>
-        /// <param name="Producto">The producto.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Producto">El producto.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la edición es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Editar(Producto Producto, out string mensaje)
         {
             mensaje = string.Empty;
@@ -59,11 +59,11 @@ namespace Logica.Logica.Registros
         }
 
         /// <summary>
-        /// Eliminars the specified producto.
+        /// Elimina el producto especificado.
         /// </summary>
-        /// <param name="Producto">The producto.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Producto">El producto.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la eliminación es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Eliminar(Producto Producto, out string mensaje)
         {
             return datosProducto.EliminarProducto(Producto, out mensaje);

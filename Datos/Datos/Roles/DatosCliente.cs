@@ -61,10 +61,10 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Registrars the cliente.
+        /// Registra clientes en la base datos.
         /// </summary>
-        /// <param name="Cliente">The cliente.</param>
-        /// <param name="mensaje">The mensaje.</param>
+        /// <param name="Cliente">Un cliente.</param>
+        /// <param name="mensaje">Un mensaje.</param>
         /// <returns></returns>
         public int RegistrarCliente(Cliente Cliente, out string mensaje)
         {
@@ -102,10 +102,10 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Editars the cliente.
+        /// Edita clientes en la base datos.
         /// </summary>
-        /// <param name="Cliente">The cliente.</param>
-        /// <param name="mensaje">The mensaje.</param>
+        /// <param name="Cliente">Un cliente.</param>
+        /// <param name="mensaje">Un mensaje.</param>
         /// <returns></returns>
         public bool EditarCliente(Cliente Cliente, out string mensaje)
         {
@@ -144,10 +144,10 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Eliminars the cliente.
+        /// Elimina clientes en la base datos.
         /// </summary>
-        /// <param name="Cliente">The cliente.</param>
-        /// <param name="mensaje">The mensaje.</param>
+        /// <param name="Cliente">El cliente.</param>
+        /// <param name="mensaje">Un mensaje.</param>
         /// <returns></returns>
         public bool EliminarCliente(Cliente Cliente, out string mensaje)
         {

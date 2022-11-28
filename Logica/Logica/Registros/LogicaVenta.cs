@@ -12,12 +12,12 @@ namespace Logica.Logica.Registros
     public class LogicaVenta
     {
         /// <summary>
-        /// The datos venta
+        /// Los datos de la venta.
         /// </summary>
         private DatosVenta datosVenta = new DatosVenta();
 
         /// <summary>
-        /// Obteners the correlativo.
+        /// Obtenga el correlativo.
         /// </summary>
         /// <returns></returns>
         public int ObtenerCorrelativo()
@@ -26,33 +26,33 @@ namespace Logica.Logica.Registros
         }
 
         /// <summary>
-        /// Restars the stock.
+        /// Resta stock de un producto especifico.
         /// </summary>
-        /// <param name="idProducto">The identifier producto.</param>
-        /// <param name="cantidad">The cantidad.</param>
-        /// <returns></returns>
+        /// <param name="idProducto">El identificador producto.</param>
+        /// <param name="cantidad">Una cantidad.</param>
+        /// <returns><c>true</c> si la resta es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool RestarStock(int idProducto, int cantidad)
         {
             return datosVenta.RestarStock(idProducto, cantidad);
         }
 
         /// <summary>
-        /// Sumars the stock.
+        /// Suma stock de un producto especifico.
         /// </summary>
-        /// <param name="idProducto">The identifier producto.</param>
-        /// <param name="cantidad">The cantidad.</param>
-        /// <returns></returns>
+        /// <param name="idProducto">El identificador producto.</param>
+        /// <param name="cantidad">Una cantidad.</param>
+        /// <returns>><c>true</c> si la suma es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool SumarStock(int idProducto, int cantidad)
         {
             return datosVenta.SumarStock(idProducto, cantidad);
         }
 
         /// <summary>
-        /// Registrars the specified venta.
+        /// Registra la venta especificada.
         /// </summary>
-        /// <param name="Venta">The venta.</param>
-        /// <param name="detalleVenta">The detalle venta.</param>
-        /// <param name="mensaje">The mensaje.</param>
+        /// <param name="Venta">Una venta.</param>
+        /// <param name="detalleVenta">Un detalle de venta.</param>
+        /// <param name="mensaje">Un mensaje.</param>
         /// <returns></returns>
         public bool Registrar(Venta Venta, DataTable detalleVenta, out string mensaje)
         {
@@ -60,10 +60,10 @@ namespace Logica.Logica.Registros
         }
 
         /// <summary>
-        /// Obteners the venta.
+        /// Obtenga la venta.
         /// </summary>
-        /// <param name="numero">The numero.</param>
-        /// <returns></returns>
+        /// <param name="numero">El numero de venta.</param>
+        /// <returns>La venta encontrada.</returns>
         public Venta ObtenerVenta(string numero)
         {
             Venta venta = datosVenta.ObtenerVenta(numero);

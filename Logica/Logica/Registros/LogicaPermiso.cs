@@ -10,14 +10,14 @@ namespace Logica.Logica.Registros
     public class LogicaPermiso
     {
         /// <summary>
-        /// The datos permisos
+        /// Los datos de los permisos.
         /// </summary>
         private DatosPermisos datosPermisos = new DatosPermisos();
 
         /// <summary>
-        /// Listars the specified identifier usuario.
+        /// Lista el identificador de usuario especificado.
         /// </summary>
-        /// <param name="idUsuario">The identifier usuario.</param>
+        /// <param name="idUsuario">El identificador usuario.</param>
         /// <returns></returns>
         public List<Permiso> Listar(int idUsuario)
         {

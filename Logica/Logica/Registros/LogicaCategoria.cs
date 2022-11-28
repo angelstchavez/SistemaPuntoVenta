@@ -10,25 +10,25 @@ namespace Logica.Logica.Registros
     public class LogicaCategoria
     {
         /// <summary>
-        /// The datos categoria
+        /// Los datos de las categorias.
         /// </summary>
         private DatosCategoria datosCategoria = new DatosCategoria();
 
         /// <summary>
-        /// Listars this instance.
+        /// Enumera esta instancia.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>la lista de categorias</returns>
         public List<Categoria> Listar()
         {
             return datosCategoria.ListarCategorias();
         }
 
         /// <summary>
-        /// Registrars the specified categoria.
+        /// Registra la categoría especificada.
         /// </summary>
-        /// <param name="Categoria">The categoria.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Categoria">Una categoria.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si el registro es exitoso; de lo contrario, <c>false</c>.</returns>
         public int Registrar(Categoria Categoria, out string mensaje)
         {
             mensaje = string.Empty;
@@ -38,11 +38,11 @@ namespace Logica.Logica.Registros
         }
 
         /// <summary>
-        /// Editars the specified categoria.
+        /// Edita la categoría especificada.
         /// </summary>
-        /// <param name="Categoria">The categoria.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Categoria">La categoria.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la edición es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Editar(Categoria Categoria, out string mensaje)
         {
             mensaje = string.Empty;
@@ -53,11 +53,11 @@ namespace Logica.Logica.Registros
         }
 
         /// <summary>
-        /// Eliminars the specified categoria.
+        /// Elimina la categoría especificada.
         /// </summary>
-        /// <param name="Categoria">The categoria.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Categoria">La categoria.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la eliminación es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Eliminar(Categoria Categoria, out string mensaje)
         {
             return datosCategoria.EliminarCategoria(Categoria, out mensaje);

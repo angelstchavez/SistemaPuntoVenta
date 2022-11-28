@@ -6,74 +6,74 @@
     public class Usuario
     {
         /// <summary>
-        /// Gets or sets the identifier usuario.
+        /// Obtiene o establece el identificador usuario.
         /// </summary>
         /// <value>
-        /// The identifier usuario.
+        /// El identificador usuario.
         /// </value>
         public int IdUsuario { get; set; }
 
         /// <summary>
-        /// Gets or sets the documento.
+        /// Obtiene o establece el documento.
         /// </summary>
         /// <value>
-        /// The documento.
+        /// El documento.
         /// </value>
         public string Documento { get; set; }
 
         /// <summary>
-        /// Gets or sets the nombre completo.
+        /// Obtiene o establece el nombre completo.
         /// </summary>
         /// <value>
-        /// The nombre completo.
+        /// El nombre completo.
         /// </value>
         public string NombreCompleto { get; set; }
 
         /// <summary>
-        /// Gets or sets the correo.
+        /// Obtiene o establece el correo.
         /// </summary>
         /// <value>
-        /// The correo.
+        /// El correo.
         /// </value>
         public string Correo { get; set; }
 
         /// <summary>
-        /// Gets or sets the contraseña.
+        /// Obtiene o establece la contraseña.
         /// </summary>
         /// <value>
-        /// The contraseña.
+        /// La contraseña.
         /// </value>
         public string Contraseña { get; set; }
 
         /// <summary>
-        /// Gets or sets the ob j rol.
+        /// Obtiene o establece el objeto rol.
         /// </summary>
         /// <value>
-        /// The ob j rol.
+        /// The objeto rol.
         /// </value>
         public Rol ObJRol { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Usuario"/> is estado.
+        /// Obtiene o establece un valor que indica el estado del <see cref="Usuario"/>.
         /// </summary>
         /// <value>
-        ///   <c>true</c> if estado; otherwise, <c>false</c>.
+        ///   <c>true</c> si el estado es activo; de lo contrario, <c>false</c>.
         /// </value>
         public bool Estado { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
 
         /// <summary>
-        /// Converts to string.
+        /// Convierte en cadena.
         /// </summary>
         /// <returns>
-        /// A <see cref="System.String" /> that represents this instance.
+        /// una <see cref="System.String" /> que representa esta instancia.
         /// </returns>
         public override string ToString()
         {

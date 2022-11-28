@@ -11,14 +11,14 @@ namespace Logica.Logica.Roles
     {
 
         /// <summary>
-        /// The datos rol
+        /// Los datos del los roles.
         /// </summary>
         private DatosRol datosRol = new DatosRol();
 
         /// <summary>
-        /// Listars this instance.
+        /// Enumera esta instancia.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>La lista de roles registrados.</returns>
         public List<Rol> Listar()
         {
             return datosRol.ListarRoles();

@@ -1,4 +1,6 @@
-﻿namespace Entidad.Registros
+﻿using System.Security.Cryptography;
+
+namespace Entidad.Registros
 {
     /// <summary>
     /// 
@@ -6,34 +8,34 @@
     public class Categoria
     {
         /// <summary>
-        /// Gets or sets the identifier categoria.
+        /// Obtiene o establece la categoría del identificador.
         /// </summary>
         /// <value>
-        /// The identifier categoria.
+        /// Las categorías del identificador.
         /// </value>
         public int IdCategoria { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the descripcion.
+        /// Obtiene o establece la descripción.
         /// </summary>
         /// <value>
-        /// The descripcion.
+        /// La descripcion.
         /// </value>
         public string Descripcion { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Categoria"/> is estado.
+        /// Obtiene o establece un valor que indica el estado de la <see cref="Categoria"/>.
         /// </summary>
         /// <value>
-        ///   <c>true</c> if estado; otherwise, <c>false</c>.
+        ///   <c>true</c> si está activo; de lo contrario, <c>false</c>.
         /// </value>
         public bool Estado { get; set; }
-        
+
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

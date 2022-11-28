@@ -14,9 +14,9 @@ namespace Datos.Datos.Roles
     public class DatosProveedor
     {
         /// <summary>
-        /// Listars the proveedores.
+        /// Lista los proveedores.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>La lista de proveedores registrados.</returns>
         public List<Proveedor> ListarProveedores()
         {
             List<Proveedor> Proveedors = new List<Proveedor>();
@@ -59,11 +59,11 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Registrars the proveedor.
+        /// Registra proveedores en la base datos.
         /// </summary>
-        /// <param name="Proveedor">The proveedor.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Proveedor">UN proveedor.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>Un booleano.</returns>
         public int RegistrarProveedor(Proveedor Proveedor, out string mensaje)
         {
             int IdProveedorResultado = 0;
@@ -99,11 +99,11 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Editars the proveedor.
+        /// Edita proveedores en la base datos.
         /// </summary>
-        /// <param name="Proveedor">The proveedor.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Proveedor">El proveedor.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>Un booleano.</returns>
         public bool EditarProveedor(Proveedor Proveedor, out string mensaje)
         {
             bool resultado = false;
@@ -140,11 +140,11 @@ namespace Datos.Datos.Roles
         }
 
         /// <summary>
-        /// Eliminars the proveedor.
+        /// Elimina proveedores en la base de datos.
         /// </summary>
-        /// <param name="Proveedor">The proveedor.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Proveedor">El proveedor.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>Un booleano.</returns>
         public bool EliminarProveedor(Proveedor Proveedor, out string mensaje)
         {
             bool resultado = false;

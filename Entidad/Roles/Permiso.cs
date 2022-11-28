@@ -6,34 +6,34 @@
     public class Permiso
     {
         /// <summary>
-        /// Gets or sets the identifier permiso.
+        /// Obtiene o establece el permiso del identificador.
         /// </summary>
         /// <value>
-        /// The identifier permiso.
+        /// El identificador permiso.
         /// </value>
         public int IdPermiso { get; set; }
 
         /// <summary>
-        /// Gets or sets the object rol.
+        /// Obtiene o establece el rol del objeto.
         /// </summary>
         /// <value>
-        /// The object rol.
+        /// El rol del objeto.
         /// </value>
         public Rol objRol { get; set; }
 
         /// <summary>
-        /// Gets or sets the nombre menu.
+        /// Obtiene o establece el nombre del menú.
         /// </summary>
         /// <value>
-        /// The nombre menu.
+        /// El nombre del menú.
         /// </value>
         public string NombreMenu { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

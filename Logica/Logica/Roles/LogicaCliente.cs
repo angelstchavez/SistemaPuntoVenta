@@ -24,11 +24,11 @@ namespace Logica.Logica.Roles
         }
 
         /// <summary>
-        /// Registrars the specified cliente.
+        /// Registra el cliente especificado.
         /// </summary>
-        /// <param name="Cliente">The cliente.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Cliente">Un cliente.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si el registro es exitoso; de lo contrario, <c>false</c>.</returns>
         public int Registrar(Cliente Cliente, out string mensaje)
         {
             mensaje = string.Empty;
@@ -41,11 +41,11 @@ namespace Logica.Logica.Roles
         }
 
         /// <summary>
-        /// Editars the specified cliente.
+        /// Edita el cliente especificado.
         /// </summary>
-        /// <param name="Cliente">The cliente.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Cliente">Un cliente.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la edición es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Editar(Cliente Cliente, out string mensaje)
         {
             mensaje = string.Empty;
@@ -59,11 +59,11 @@ namespace Logica.Logica.Roles
         }
 
         /// <summary>
-        /// Eliminars the specified cliente.
+        /// Elimina el cliente especificado.
         /// </summary>
-        /// <param name="Cliente">The cliente.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Cliente">Un cliente.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la eliminación es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Eliminar(Cliente Cliente, out string mensaje)
         {
             return datosCliente.EliminarCliente(Cliente, out mensaje);

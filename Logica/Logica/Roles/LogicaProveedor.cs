@@ -10,25 +10,25 @@ namespace Logica.Logica.Roles
     public class LogicaProveedor
     {
         /// <summary>
-        /// The datos proveedor
+        /// Los datos de los provedoores.
         /// </summary>
         private DatosProveedor datosProveedor = new DatosProveedor();
 
         /// <summary>
-        /// Listars this instance.
+        /// Enumera esta instancia.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>La lista de proveedores.</returns>
         public List<Proveedor> Listar()
         {
             return datosProveedor.ListarProveedores();
         }
 
         /// <summary>
-        /// Registrars the specified proveedor.
+        /// Registra al proveedor especificado.
         /// </summary>
-        /// <param name="Proveedor">The proveedor.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Proveedor">Un proveedor.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si el registro es exitoso; de lo contrario, <c>false</c>.</returns>
         public int Registrar(Proveedor Proveedor, out string mensaje)
         {
             mensaje = string.Empty;
@@ -40,11 +40,11 @@ namespace Logica.Logica.Roles
         }
 
         /// <summary>
-        /// Editars the specified proveedor.
+        /// Edita el proveedor especificado.
         /// </summary>
-        /// <param name="Proveedor">The proveedor.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Proveedor">Un proveedor.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la edición es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Editar(Proveedor Proveedor, out string mensaje)
         {
             mensaje = string.Empty;
@@ -57,11 +57,11 @@ namespace Logica.Logica.Roles
         }
 
         /// <summary>
-        /// Eliminars the specified proveedor.
+        /// Elimina el proveedor especificado.
         /// </summary>
-        /// <param name="Proveedor">The proveedor.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="Proveedor">Un proveedor.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si la eliminación es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Eliminar(Proveedor Proveedor, out string mensaje)
         {
             return datosProveedor.EliminarProveedor(Proveedor, out mensaje);

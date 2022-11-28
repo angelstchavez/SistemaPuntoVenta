@@ -6,82 +6,82 @@
     public class Producto
     {
         /// <summary>
-        /// Gets or sets the identifier producto.
+        /// Obtiene o establece el identificador producto.
         /// </summary>
         /// <value>
-        /// The identifier producto.
+        /// El identificador producto.
         /// </value>
         public int IdProducto { get; set; }
 
         /// <summary>
-        /// Gets or sets the codigo.
+        /// Obtiene o establece el codigo.
         /// </summary>
         /// <value>
-        /// The codigo.
+        /// El codigo.
         /// </value>
         public string Codigo { get; set; }
 
         /// <summary>
-        /// Gets or sets the nombre.
+        /// Obtiene o establece el nombre.
         /// </summary>
         /// <value>
-        /// The nombre.
+        /// El nombre.
         /// </value>
         public string Nombre { get; set; }
 
         /// <summary>
-        /// Gets or sets the descripcion.
+        /// Obtiene o establece la descripcion.
         /// </summary>
         /// <value>
-        /// The descripcion.
+        /// La descripcion.
         /// </value>
         public string Descripcion { get; set; }
 
         /// <summary>
-        /// Gets or sets the object categoria.
+        /// Obtiene o establece el objeto categoria.
         /// </summary>
         /// <value>
-        /// The object categoria.
+        /// El objeto categoria.
         /// </value>
         public Categoria ObjCategoria { get; set; }
 
         /// <summary>
-        /// Gets or sets the stock.
+        /// Obtiene o establece el stock.
         /// </summary>
         /// <value>
-        /// The stock.
+        /// El stock.
         /// </value>
         public int Stock { get; set; }
 
         /// <summary>
-        /// Gets or sets the precio compra.
+        /// Obtiene o establece el precio de compra.
         /// </summary>
         /// <value>
-        /// The precio compra.
+        /// El precio de compra.
         /// </value>
         public decimal PrecioCompra { get; set; }
 
         /// <summary>
-        /// Gets or sets the precio venta.
+        /// Obtiene o establece el precio de venta.
         /// </summary>
         /// <value>
-        /// The precio venta.
+        /// El precio de venta.
         /// </value>
         public decimal PrecioVenta { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="Producto"/> is estado.
+        /// Obtiene o establece un valor que indica el estado del <see cref="Producto"/>.
         /// </summary>
         /// <value>
-        ///   <c>true</c> if estado; otherwise, <c>false</c>.
+        ///   <c>true</c> si el estado es activo; De lo contrario, <c>false</c>.
         /// </value>
         public bool Estado { get; set; }
 
         /// <summary>
-        /// Gets or sets the fecha registro.
+        /// Obtiene o establece la fecha de registro.
         /// </summary>
         /// <value>
-        /// The fecha registro.
+        /// La fecha de registro.
         /// </value>
         public string FechaRegistro { get; set; }
     }

@@ -10,34 +10,34 @@ namespace Logica.Logica.Roles
     public class LogicaUsuario
     {
         /// <summary>
-        /// The datos usuario
+        /// Los datos del usuario
         /// </summary>
         private DatosUsuario datosUsuario = new DatosUsuario();
 
         /// <summary>
-        /// Listars this instance.
+        /// Enumera esta instancia.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>La lista de usuarios.</returns>
         public List<Usuario> Listar()
         {
             return datosUsuario.ListarUsuarios();
         }
 
         /// <summary>
-        /// Validars this instance.
+        /// Valida esta instancia.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>La lista de usuarios registrados.</returns>
         public List<Usuario> Validar()
         {
             return datosUsuario.ValidarUsuarios();
         }
 
         /// <summary>
-        /// Registrars the specified usuario.
+        /// Registra el usuario especificado.
         /// </summary>
-        /// <param name="usuario">The usuario.</param>
-        /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <param name="usuario">Un usuario.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns><c>true</c> si el registro es exitoso; de lo contrario, <c>false</c>.</returns>
         public int Registrar(Usuario usuario, out string mensaje)
         {
             mensaje = string.Empty;
@@ -53,7 +53,7 @@ namespace Logica.Logica.Roles
         /// </summary>
         /// <param name="usuario">The usuario.</param>
         /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <returns><c>true</c> si la edición es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Editar(Usuario usuario, out string mensaje)
         {
             mensaje = string.Empty;
@@ -70,7 +70,7 @@ namespace Logica.Logica.Roles
         /// </summary>
         /// <param name="usuario">The usuario.</param>
         /// <param name="mensaje">The mensaje.</param>
-        /// <returns></returns>
+        /// <returns><c>true</c> si la eliminación es exitosa; de lo contrario, <c>false</c>.</returns>
         public bool Eliminar(Usuario usuario, out string mensaje)
         {
             return datosUsuario.EliminarUsuario(usuario, out mensaje);
