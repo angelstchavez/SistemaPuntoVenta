@@ -7,7 +7,7 @@ using System;
 namespace Datos.Datos.Registros
 {
     /// <summary>
-    /// 
+    /// Es una clase que contiene métodos que le permiten realizar operaciones CRUD de roles.
     /// </summary>
     public class DatosRol
     {

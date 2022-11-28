@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Logica.Logica.Registros
 {
     /// <summary>
-    /// 
+    /// Es una clase que contiene métodos que le permiten agregar, editar, eliminar y listar categorías.
     /// </summary>
     public class LogicaCategoria
     {

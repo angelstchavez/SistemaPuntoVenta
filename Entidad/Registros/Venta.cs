@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Entidad.Registros
 {
     /// <summary>
-    /// 
+    /// Esta clase instancia objetos de venta.
     /// </summary>
     public class Venta
     {

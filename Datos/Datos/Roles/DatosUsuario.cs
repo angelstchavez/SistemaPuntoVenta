@@ -10,7 +10,7 @@ using System.Net.Configuration;
 namespace Datos.Datos.Roles
 {
     /// <summary>
-    /// 
+    /// Es una clase que contiene métodos que le permiten realizar operaciones CRUD de usuarios.
     /// </summary>
     public class DatosUsuario
     {

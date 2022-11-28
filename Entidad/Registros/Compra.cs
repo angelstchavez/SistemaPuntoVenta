@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Entidad.Registros
 {
     /// <summary>
-    /// 
+    /// Esta clase instancia objetos de tipo Compra.
     /// </summary>
     public class Compra
     {

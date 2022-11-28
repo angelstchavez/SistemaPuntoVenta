@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace Datos.Datos.Registros
 {
     /// <summary>
-    ///   <br />
+    ///   Es una clase que contiene métodos que le permiten realizar operaciones CRUD de compras.
     /// </summary>
     public class DatosCompra
     {

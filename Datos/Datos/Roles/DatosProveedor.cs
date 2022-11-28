@@ -9,7 +9,7 @@ using System.Xml.Linq;
 namespace Datos.Datos.Roles
 {
     /// <summary>
-    /// 
+    /// Es una clase que contiene métodos que le permiten realizar operaciones CRUD de proveedores.
     /// </summary>
     public class DatosProveedor
     {

@@ -9,7 +9,7 @@ using Entidad.Registros;
 namespace Datos.Datos.Registros
 {
     /// <summary>
-    /// Es una clase que contiene métodos que le permiten realizar operaciones CRUD en una tabla llamada CATEGORÍA
+    /// Es una clase que contiene métodos que le permiten realizar operaciones CRUD de categorías.
     /// </summary>
     public class DatosCategoria
     {

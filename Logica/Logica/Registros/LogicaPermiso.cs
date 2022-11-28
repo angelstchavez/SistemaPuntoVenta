@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Logica.Logica.Registros
 {
     /// <summary>
-    /// 
+    /// Es una clase que contiene métodos que le permiten listar permisos.
     /// </summary>
     public class LogicaPermiso
     {

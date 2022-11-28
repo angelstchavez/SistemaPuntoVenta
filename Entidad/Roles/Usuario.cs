@@ -1,7 +1,7 @@
 ﻿namespace Entidad.Roles
 {
     /// <summary>
-    /// 
+    /// Esta clase instancia objetos de tipo Usuario.
     /// </summary>
     public class Usuario
     {

@@ -8,7 +8,7 @@ using System;
 namespace Datos.Datos.Roles
 {
     /// <summary>
-    ///   <br />
+    ///   Es una clase que contiene métodos que le permiten realizar operaciones CRUD de clientes.
     /// </summary>
     public class DatosCliente
     {

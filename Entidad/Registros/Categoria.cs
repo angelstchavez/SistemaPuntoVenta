@@ -3,7 +3,7 @@
 namespace Entidad.Registros
 {
     /// <summary>
-    /// 
+    /// Esta clase instancia objetos de tipo Categoria.
     /// </summary>
     public class Categoria
     {

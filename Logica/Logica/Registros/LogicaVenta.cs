@@ -7,7 +7,7 @@ using System.Data;
 namespace Logica.Logica.Registros
 {
     /// <summary>
-    /// 
+    /// Es una clase que contiene métodos que le permiten gestionar ventas.
     /// </summary>
     public class LogicaVenta
     {

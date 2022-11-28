@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Logica.Logica.Roles
 {
     /// <summary>
-    /// 
+    /// Es una clase que contiene métodos que le permiten listar roles.
     /// </summary>
     public class LogicaRol
     {

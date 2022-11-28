@@ -1,7 +1,7 @@
 ﻿namespace Entidad.Registros
 {
     /// <summary>
-    /// 
+    /// Esta clase instancia objetos de tipo DetalleVenta.
     /// </summary>
     public class DetalleVenta
     {
