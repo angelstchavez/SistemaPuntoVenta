@@ -53,7 +53,7 @@ namespace Presentacion.Ventanas
                     else { boton.Visible = false; }
                 }
             }
-        }m
+        }
 
         private void AbrirNuevoPanel(Form formHijo)
         {
