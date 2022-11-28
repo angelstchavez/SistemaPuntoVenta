@@ -1,6 +1,0 @@
-var searchData=
-[
-  ['obtenercorrelativo_0',['ObtenerCorrelativo',['../class_datos_1_1_datos_1_1_registros_1_1_datos_compra.html#ae59e06ff378de60bb1089c515ba76c02',1,'Datos.Datos.Registros.DatosCompra.ObtenerCorrelativo()'],['../class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a7ac9bc9a31c4ad28a5acb5d6987c8c6d',1,'Datos.Datos.Registros.DatosVenta.ObtenerCorrelativo()'],['../class_logica_1_1_logica_1_1_registros_1_1_logica_compra.html#acbc054fdecfcb0a899b8292c575c6899',1,'Logica.Logica.Registros.LogicaCompra.ObtenerCorrelativo()'],['../class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#aa7e05b95df725d8b2079d9adf72c9b24',1,'Logica.Logica.Registros.LogicaVenta.ObtenerCorrelativo()']]],
-  ['obtenerdetalleventa_1',['ObtenerDetalleVenta',['../class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a0b97cb5dfe2f2514a5a1d62bcfa5fab0',1,'Datos::Datos::Registros::DatosVenta']]],
-  ['obtenerventa_2',['ObtenerVenta',['../class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a386fcc9c7e5464ada98ae9bd629536ec',1,'Datos.Datos.Registros.DatosVenta.ObtenerVenta()'],['../class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#ab4ea7b6c166cfffbf79fd730106a2a9e',1,'Logica.Logica.Registros.LogicaVenta.ObtenerVenta()']]]
-];
