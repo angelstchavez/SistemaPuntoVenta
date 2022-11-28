@@ -7,8 +7,15 @@ using System.Text;
 
 namespace Datos.Datos.Registros
 {
+    /// <summary>
+    /// Es una clase que contiene métodos que le permiten realizar operaciones CRUD en una tabla llamada PRODUCTO
+    /// </summary>
     public class DatosProducto
     {
+        /// <summary>Lista los productos.</summary>
+        /// <returns>
+        ///   la lista de los productos.
+        /// </returns>
         public List<Producto> ListarProductos()
         {
             List<Producto> Productos = new List<Producto>();
@@ -54,7 +61,13 @@ namespace Datos.Datos.Registros
             }
             return Productos;
         }
-        
+
+        /// <summary>Registra los productos.</summary>
+        /// <param name="Producto">Un producto.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public int RegistrarProducto(Producto Producto, out string mensaje)
         {
             int resultado = 0;
@@ -91,6 +104,12 @@ namespace Datos.Datos.Registros
             return resultado;
         }
 
+        /// <summary>Edita los productos registrados.</summary>
+        /// <param name="Producto">El producto a editar.</param>
+        /// <param name="mensaje">Un mensaje</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public bool EditarProducto(Producto Producto, out string mensaje)
         {
             bool respuesta = false;
@@ -122,6 +141,12 @@ namespace Datos.Datos.Registros
             return respuesta;
         }
 
+        /// <summary>
+        /// Elimina los productos registrados.
+        /// </summary>
+        /// <param name="Producto">El producto a eliminar.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns></returns>
         public bool EliminarProducto(Producto Producto, out string mensaje)
         {
             bool respuesta = false;

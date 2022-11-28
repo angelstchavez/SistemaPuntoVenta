@@ -4,15 +4,31 @@ using System.Collections.Generic;
 
 namespace Logica.Logica.Registros
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class LogicaCategoria
     {
+        /// <summary>
+        /// The datos categoria
+        /// </summary>
         private DatosCategoria datosCategoria = new DatosCategoria();
 
+        /// <summary>
+        /// Listars this instance.
+        /// </summary>
+        /// <returns></returns>
         public List<Categoria> Listar()
         {
             return datosCategoria.ListarCategorias();
         }
 
+        /// <summary>
+        /// Registrars the specified categoria.
+        /// </summary>
+        /// <param name="Categoria">The categoria.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public int Registrar(Categoria Categoria, out string mensaje)
         {
             mensaje = string.Empty;
@@ -21,6 +37,12 @@ namespace Logica.Logica.Registros
             else { return datosCategoria.RegistrarCategoria(Categoria, out mensaje); }
         }
 
+        /// <summary>
+        /// Editars the specified categoria.
+        /// </summary>
+        /// <param name="Categoria">The categoria.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool Editar(Categoria Categoria, out string mensaje)
         {
             mensaje = string.Empty;
@@ -30,6 +52,12 @@ namespace Logica.Logica.Registros
 
         }
 
+        /// <summary>
+        /// Eliminars the specified categoria.
+        /// </summary>
+        /// <param name="Categoria">The categoria.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool Eliminar(Categoria Categoria, out string mensaje)
         {
             return datosCategoria.EliminarCategoria(Categoria, out mensaje);

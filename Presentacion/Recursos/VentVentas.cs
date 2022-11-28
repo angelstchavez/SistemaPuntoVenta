@@ -6,8 +6,14 @@ using System.Windows.Forms;
 
 namespace Presentacion.Recursos
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     public partial class VentVentas : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VentVentas" /> class.
+        /// </summary>
         public VentVentas()
         {
             InitializeComponent();

@@ -3,8 +3,14 @@ using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     public partial class Carga : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Carga" /> class.
+        /// </summary>
         public Carga()
         {
             InitializeComponent();

@@ -9,8 +9,15 @@ using System.Net.Configuration;
 
 namespace Datos.Datos.Roles
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class DatosUsuario
     {
+        /// <summary>
+        /// Listars the usuarios.
+        /// </summary>
+        /// <returns></returns>
         public List<Usuario> ListarUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -55,6 +62,10 @@ namespace Datos.Datos.Roles
             return usuarios;
         }
 
+        /// <summary>
+        /// Validars the usuarios.
+        /// </summary>
+        /// <returns></returns>
         public List<Usuario> ValidarUsuarios()
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -96,7 +107,13 @@ namespace Datos.Datos.Roles
             }
             return usuarios;
         }
-    
+
+        /// <summary>
+        /// Registrars the usuario.
+        /// </summary>
+        /// <param name="usuario">The usuario.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public int RegistrarUsuario(Usuario usuario, out string mensaje)
         {
             int IdUsuarioResultado = 0;
@@ -133,6 +150,12 @@ namespace Datos.Datos.Roles
             return IdUsuarioResultado;
         }
 
+        /// <summary>
+        /// Editars the usuario.
+        /// </summary>
+        /// <param name="usuario">The usuario.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool EditarUsuario(Usuario usuario, out string mensaje)
         {
             bool respuesta = false;
@@ -170,6 +193,12 @@ namespace Datos.Datos.Roles
             return respuesta;
         }
 
+        /// <summary>
+        /// Eliminars the usuario.
+        /// </summary>
+        /// <param name="usuario">The usuario.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool EliminarUsuario(Usuario usuario, out string mensaje)
         {
             bool respuesta = false;

@@ -4,20 +4,40 @@ using System.Collections.Generic;
 
 namespace Logica.Logica.Roles
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class LogicaUsuario
     {
+        /// <summary>
+        /// The datos usuario
+        /// </summary>
         private DatosUsuario datosUsuario = new DatosUsuario();
 
+        /// <summary>
+        /// Listars this instance.
+        /// </summary>
+        /// <returns></returns>
         public List<Usuario> Listar()
         {
             return datosUsuario.ListarUsuarios();
         }
 
+        /// <summary>
+        /// Validars this instance.
+        /// </summary>
+        /// <returns></returns>
         public List<Usuario> Validar()
         {
             return datosUsuario.ValidarUsuarios();
         }
 
+        /// <summary>
+        /// Registrars the specified usuario.
+        /// </summary>
+        /// <param name="usuario">The usuario.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public int Registrar(Usuario usuario, out string mensaje)
         {
             mensaje = string.Empty;
@@ -28,6 +48,12 @@ namespace Logica.Logica.Roles
             else { return datosUsuario.RegistrarUsuario(usuario, out mensaje); }
         }
 
+        /// <summary>
+        /// Editars the specified usuario.
+        /// </summary>
+        /// <param name="usuario">The usuario.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool Editar(Usuario usuario, out string mensaje)
         {
             mensaje = string.Empty;
@@ -39,6 +65,12 @@ namespace Logica.Logica.Roles
             
         }
 
+        /// <summary>
+        /// Eliminars the specified usuario.
+        /// </summary>
+        /// <param name="usuario">The usuario.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool Eliminar(Usuario usuario, out string mensaje)
         {
             return datosUsuario.EliminarUsuario(usuario, out mensaje);

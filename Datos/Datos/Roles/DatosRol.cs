@@ -6,8 +6,15 @@ using System;
 
 namespace Datos.Datos.Registros
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class DatosRol
     {
+        /// <summary>
+        /// Listars the roles.
+        /// </summary>
+        /// <returns></returns>
         public List<Rol> ListarRoles()
         {
             List<Rol> roles = new List<Rol>();

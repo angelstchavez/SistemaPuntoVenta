@@ -15,8 +15,16 @@ using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
 {
+    /// <summary>
+    ///   <para>
+    ///     <br />
+    ///   </para>
+    /// </summary>
     public partial class Inicio : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Inicio" /> class.
+        /// </summary>
         public Inicio()
         {
             InitializeComponent();

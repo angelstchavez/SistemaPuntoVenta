@@ -13,11 +13,19 @@ using System.Windows.Forms;
 
 namespace Presentacion.Recursos
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     public partial class VentCliente : Form
     {
 
+        /// <summary>Gets or sets the cliente.</summary>
+        /// <value>The cliente.</value>
         public Cliente cliente { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VentCliente" /> class.
+        /// </summary>
         public VentCliente()
         {
             InitializeComponent();

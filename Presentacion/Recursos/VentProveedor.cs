@@ -14,7 +14,13 @@ namespace Presentacion.Recursos
 {
     public partial class VentProveedor : Form
     {
+        /// <summary>Gets or sets the proveedor.</summary>
+        /// <value>The proveedor.</value>
         public Proveedor proveedor { get; set; }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="VentProveedor" /> class.
+        /// </summary>
         public VentProveedor()
         {
             InitializeComponent();

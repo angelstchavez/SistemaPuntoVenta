@@ -11,10 +11,15 @@ using System.Windows.Forms;
 
 namespace Presentacion.Ventanas
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     public partial class Dashboard : Form
     {
         private static Usuario usuarioActual;
 
+        /// <summary>Initializes a new instance of the <see cref="Dashboard" /> class.</summary>
+        /// <param name="usuario">The usuario.</param>
         public Dashboard(Usuario usuario)
         {
             usuarioActual = usuario;
@@ -48,7 +53,7 @@ namespace Presentacion.Ventanas
                     else { boton.Visible = false; }
                 }
             }
-        }
+        }m
 
         private void AbrirNuevoPanel(Form formHijo)
         {

@@ -8,8 +8,15 @@ using Entidad.Registros;
 
 namespace Datos.Datos.Registros
 {
+    /// <summary>
+    /// Es una clase que contiene métodos que le permiten realizar operaciones CRUD en una tabla llamada CATEGORÍA
+    /// </summary>
     public class DatosCategoria
     {
+        /// <summary>Lista las categorias registradas.</summary>
+        /// <returns>
+        ///   la lista de categorias.
+        /// </returns>
         public List<Categoria> ListarCategorias()
         {
             List<Categoria> Categorias = new List<Categoria>();
@@ -49,6 +56,12 @@ namespace Datos.Datos.Registros
             return Categorias;
         }
 
+        /// <summary>Registra las categoria.</summary>
+        /// <param name="Categoria">una categorias.</param>
+        /// <param name="mensaje">un mensaje.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public int RegistrarCategoria(Categoria Categoria, out string mensaje)
         {
             int IdCategoriaResultado = 0;
@@ -80,6 +93,12 @@ namespace Datos.Datos.Registros
             return IdCategoriaResultado;
         }
 
+        /// <summary>Edita las categorias.</summary>
+        /// <param name="Categoria">una categoria.</param>
+        /// <param name="mensaje">un mensaje.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public bool EditarCategoria(Categoria Categoria, out string mensaje)
         {
             bool resultado = false;
@@ -113,6 +132,12 @@ namespace Datos.Datos.Registros
             return resultado;
         }
 
+        /// <summary>Elimina las categorias.</summary>
+        /// <param name="Categoria">una categoria.</param>
+        /// <param name="mensaje">un mensaje.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public bool EliminarCategoria(Categoria Categoria, out string mensaje)
         {
             bool resultado = false;

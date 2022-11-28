@@ -5,11 +5,17 @@ using System.Data;
 using System.Text;
 using System;
 using Entidad.Registros;
+using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace Datos.Datos.Registros
 {
     public class DatosCompra
     {
+        /// <summary>Devuelve el siguiente número en la secuencia de números de la columna "ID_COMPRA" de la tabla COMPRA</summary>
+        /// <returns>
+        ///  El número de filas en la tabla.
+        /// </returns>
         public int ObtenerCorrelativo()
         {
             int idCorrelativo = 0;
@@ -38,6 +44,13 @@ namespace Datos.Datos.Registros
             return idCorrelativo;
         }
 
+        /// <summary>Registrars the compra.</summary>
+        /// <param name="compra">La compra.</param>
+        /// <param name="detalleCompra">El detalle compra.</param>
+        /// <param name="mensaje">El mensaje.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public bool RegistrarCompra(Compra compra, DataTable detalleCompra, out string mensaje)
         {
             bool resultado = false;

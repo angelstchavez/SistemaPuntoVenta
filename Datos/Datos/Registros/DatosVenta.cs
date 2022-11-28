@@ -8,8 +8,15 @@ using System.Collections.Generic;
 
 namespace Datos.Datos.Registros
 {
+    /// <summary>
+    /// Es una clase que contiene métodos que le permiten realizar operaciones para las ventas.
+    /// </summary>
     public class DatosVenta
     {
+        /// <summary>Obtiene el correlativo de una venta.</summary>
+        /// <returns>
+        ///   El idCorrelativo.
+        /// </returns>
         public int ObtenerCorrelativo()
         {
             int idCorrelativo = 0;
@@ -38,6 +45,12 @@ namespace Datos.Datos.Registros
             return idCorrelativo;
         }
 
+        /// <summary>Resta elementos del stock de un producto.</summary>
+        /// <param name="idProducto">El id del producto.</param>
+        /// <param name="cantidad">La cantidad.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public bool RestarStock(int idProducto, int cantidad)
         {
             bool respuesta = true;
@@ -65,6 +78,12 @@ namespace Datos.Datos.Registros
             return respuesta;
         }
 
+        /// <summary>Suma elementos del stock de un producto.</summary>
+        /// <param name="idProducto">El id del producto.</param>
+        /// <param name="cantidad">La cantidad.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public bool SumarStock(int idProducto, int cantidad)
         {
             bool respuesta = true;
@@ -92,6 +111,13 @@ namespace Datos.Datos.Registros
             return respuesta;
         }
 
+        /// <summary>Registra las ventas.</summary>
+        /// <param name="Venta">Una venta.</param>
+        /// <param name="detalleVenta">Un detalle venta.</param>
+        /// <param name="mensaje">Un mensaje.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public bool RegistrarVenta(Venta Venta, DataTable detalleVenta, out string mensaje)
         {
             bool resultado = false;
@@ -132,6 +158,11 @@ namespace Datos.Datos.Registros
             return resultado;
         }
 
+        /// <summary>Obtiene las ventas registradas.</summary>
+        /// <param name="numero">El numero dem venta a consultar.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public Venta ObtenerVenta(string numero)
         {
             Venta venta = new Venta();
@@ -186,6 +217,11 @@ namespace Datos.Datos.Registros
             return venta;
         }
 
+        /// <summary>Obtiene los detalles de las ventas.</summary>
+        /// <param name="idVenta">El id de la venta.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public List<DetalleVenta> ObtenerDetalleVenta(int idVenta)
         {
             List<DetalleVenta> detalleVenta = new List<DetalleVenta>();

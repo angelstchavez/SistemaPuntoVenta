@@ -8,8 +8,15 @@ using System.Xml.Linq;
 
 namespace Datos.Datos.Roles
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class DatosProveedor
     {
+        /// <summary>
+        /// Listars the proveedores.
+        /// </summary>
+        /// <returns></returns>
         public List<Proveedor> ListarProveedores()
         {
             List<Proveedor> Proveedors = new List<Proveedor>();
@@ -51,6 +58,12 @@ namespace Datos.Datos.Roles
             return Proveedors;
         }
 
+        /// <summary>
+        /// Registrars the proveedor.
+        /// </summary>
+        /// <param name="Proveedor">The proveedor.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public int RegistrarProveedor(Proveedor Proveedor, out string mensaje)
         {
             int IdProveedorResultado = 0;
@@ -85,6 +98,12 @@ namespace Datos.Datos.Roles
             return IdProveedorResultado;
         }
 
+        /// <summary>
+        /// Editars the proveedor.
+        /// </summary>
+        /// <param name="Proveedor">The proveedor.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool EditarProveedor(Proveedor Proveedor, out string mensaje)
         {
             bool resultado = false;
@@ -120,6 +139,12 @@ namespace Datos.Datos.Roles
             return resultado;
         }
 
+        /// <summary>
+        /// Eliminars the proveedor.
+        /// </summary>
+        /// <param name="Proveedor">The proveedor.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool EliminarProveedor(Proveedor Proveedor, out string mensaje)
         {
             bool resultado = false;

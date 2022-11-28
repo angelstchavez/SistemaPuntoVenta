@@ -1,7 +1,5 @@
 ﻿using Entidad.Registros;
-using Entidad.Roles;
 using Logica.Logica.Registros;
-using Logica.Logica.Roles;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -10,7 +8,11 @@ namespace Presentacion.Recursos
 {
     public partial class VentProducto : Form
     {
+        /// <summary>Gets or sets the producto.</summary>
+        /// <value>The producto.</value>
         public Producto producto { get; set; }
+
+        /// <summary>Initializes a new instance of the <see cref="VentProducto" /> class.</summary>
         public VentProducto()
         {
             InitializeComponent();

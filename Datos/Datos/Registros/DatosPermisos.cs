@@ -9,6 +9,11 @@ namespace Datos.Datos.Registros
 {
     public class DatosPermisos
     {
+        /// <summary>Lista los permisos registrados.</summary>
+        /// <param name="idUsuario"> El Id del usuario.</param>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         public List<Permiso> ListarPermisos(int idUsuario)
         {
             List<Permiso> permisos = new List<Permiso>();

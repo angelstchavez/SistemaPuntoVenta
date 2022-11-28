@@ -7,8 +7,17 @@ using System;
 
 namespace Datos.Datos.Roles
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     public class DatosCliente
     {
+        /// <summary>
+        /// Lista los clientes registrados.
+        /// </summary>
+        /// <returns>
+        /// La lista de clientes.
+        /// </returns>
         public List<Cliente> ListarClientes()
         {
             List<Cliente> Clientes = new List<Cliente>();
@@ -51,6 +60,12 @@ namespace Datos.Datos.Roles
             return Clientes;
         }
 
+        /// <summary>
+        /// Registrars the cliente.
+        /// </summary>
+        /// <param name="Cliente">The cliente.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public int RegistrarCliente(Cliente Cliente, out string mensaje)
         {
             int IdClienteResultado = 0;
@@ -86,6 +101,12 @@ namespace Datos.Datos.Roles
             return IdClienteResultado;
         }
 
+        /// <summary>
+        /// Editars the cliente.
+        /// </summary>
+        /// <param name="Cliente">The cliente.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool EditarCliente(Cliente Cliente, out string mensaje)
         {
             bool resultado = false;
@@ -122,6 +143,12 @@ namespace Datos.Datos.Roles
             return resultado;
         }
 
+        /// <summary>
+        /// Eliminars the cliente.
+        /// </summary>
+        /// <param name="Cliente">The cliente.</param>
+        /// <param name="mensaje">The mensaje.</param>
+        /// <returns></returns>
         public bool EliminarCliente(Cliente Cliente, out string mensaje)
         {
             bool respuesta = false;
