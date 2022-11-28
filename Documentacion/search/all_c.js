@@ -1,0 +1,15 @@
+var searchData=
+[
+  ['razonsocial_0',['RazonSocial',['../class_entidad_1_1_roles_1_1_proveedor.html#a5596a74f7b07bc13417f9a0493a423a8',1,'Entidad::Roles::Proveedor']]],
+  ['registrar_1',['Registrar',['../class_logica_1_1_logica_1_1_registros_1_1_logica_categoria.html#ade1f8309e795149533943a96c9fb34e1',1,'Logica.Logica.Registros.LogicaCategoria.Registrar()'],['../class_logica_1_1_logica_1_1_registros_1_1_logica_compra.html#a8313786303ff4fc431e56c3b9fc5d44f',1,'Logica.Logica.Registros.LogicaCompra.Registrar()'],['../class_logica_1_1_logica_1_1_registros_1_1_logica_producto.html#ac93e54fd873c819b8a8985664df00183',1,'Logica.Logica.Registros.LogicaProducto.Registrar()'],['../class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a4a80891a41e6c97919f09b080b5e79d3',1,'Logica.Logica.Registros.LogicaVenta.Registrar()'],['../class_logica_1_1_logica_1_1_roles_1_1_logica_cliente.html#ae8a93a97bf45b250c0738a7b9ac1f455',1,'Logica.Logica.Roles.LogicaCliente.Registrar()'],['../class_logica_1_1_logica_1_1_roles_1_1_logica_proveedor.html#af4af3afce8588840fb254b84ada4c054',1,'Logica.Logica.Roles.LogicaProveedor.Registrar()'],['../class_logica_1_1_logica_1_1_roles_1_1_logica_usuario.html#aa02077b4cfd558819a4d83dfbb2bab48',1,'Logica.Logica.Roles.LogicaUsuario.Registrar()']]],
+  ['registrarcategoria_2',['RegistrarCategoria',['../class_datos_1_1_datos_1_1_registros_1_1_datos_categoria.html#afee8445fd84de7a6294c214b60b92876',1,'Datos::Datos::Registros::DatosCategoria']]],
+  ['registrarcliente_3',['RegistrarCliente',['../class_datos_1_1_datos_1_1_roles_1_1_datos_cliente.html#a01ce2a547e5a279d9b1c0e9b43c62c58',1,'Datos::Datos::Roles::DatosCliente']]],
+  ['registrarcompra_4',['RegistrarCompra',['../class_datos_1_1_datos_1_1_registros_1_1_datos_compra.html#a42e4960eb0a0af4194d25126dd6776c6',1,'Datos::Datos::Registros::DatosCompra']]],
+  ['registrarproducto_5',['RegistrarProducto',['../class_datos_1_1_datos_1_1_registros_1_1_datos_producto.html#a4fa34573770791e73177a9ae09817dc0',1,'Datos::Datos::Registros::DatosProducto']]],
+  ['registrarproveedor_6',['RegistrarProveedor',['../class_datos_1_1_datos_1_1_roles_1_1_datos_proveedor.html#a5dca43afdfd39c742f8b446a8c5aa1f4',1,'Datos::Datos::Roles::DatosProveedor']]],
+  ['registrarusuario_7',['RegistrarUsuario',['../class_datos_1_1_datos_1_1_roles_1_1_datos_usuario.html#a1b28772a4c61fcfda0f9864ad342534f',1,'Datos::Datos::Roles::DatosUsuario']]],
+  ['registrarventa_8',['RegistrarVenta',['../class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#aa797dbdcf1b9d727baf59a7e66985e4a',1,'Datos::Datos::Registros::DatosVenta']]],
+  ['restarstock_9',['RestarStock',['../class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#ae956f3bbe319dabd38cc505bbda0c34c',1,'Datos.Datos.Registros.DatosVenta.RestarStock()'],['../class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a0cc64ea78396dc75a141dd090bed631c',1,'Logica.Logica.Registros.LogicaVenta.RestarStock()']]],
+  ['rjcombobox_10',['RJComboBox',['../class_presentacion_1_1_recursos_1_1_r_j_combo_box.html',1,'Presentacion::Recursos']]],
+  ['rol_11',['Rol',['../class_entidad_1_1_roles_1_1_rol.html',1,'Entidad::Roles']]]
+];

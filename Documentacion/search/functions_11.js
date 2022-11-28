@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['validadcontroles_0',['ValidadControles',['../class_presentacion_1_1_ventanas_1_1_dashboard.html#a9724f43eb93717cd0c8e477c82d8b0e0',1,'Presentacion::Ventanas::Dashboard']]],
+  ['validar_1',['Validar',['../class_logica_1_1_logica_1_1_roles_1_1_logica_usuario.html#a2ee4b1a22f82cf7822723c122ade71fe',1,'Logica::Logica::Roles::LogicaUsuario']]],
+  ['validarcredenciales_2',['ValidarCredenciales',['../class_presentacion_1_1_ventanas_1_1_login.html#a61320808f9394630d537bd6621017b85',1,'Presentacion::Ventanas::Login']]],
+  ['validardatos_3',['ValidarDatos',['../class_presentacion_1_1_paneles_1_1_panel_reporte.html#a230f660299d7756805795875778d4e1b',1,'Presentacion::Paneles::PanelReporte']]],
+  ['validarusuarios_4',['ValidarUsuarios',['../class_datos_1_1_datos_1_1_roles_1_1_datos_usuario.html#a23d14e005db819ffa32a01cb35cbd209',1,'Datos::Datos::Roles::DatosUsuario']]],
+  ['ventas_5fclick_5',['ventas_Click',['../class_presentacion_1_1_paneles_1_1_panel_registros.html#a0d9711af983cd255859e90c5ca96bd97',1,'Presentacion::Paneles::PanelRegistros']]],
+  ['ventcliente_6',['VentCliente',['../class_presentacion_1_1_recursos_1_1_vent_cliente.html#a7eee3a66ec65a87c984692c639805d75',1,'Presentacion::Recursos::VentCliente']]],
+  ['ventcliente_5fload_7',['VentCliente_Load',['../class_presentacion_1_1_recursos_1_1_vent_cliente.html#a82b05f4968d5f913058e04cf55fa12c7',1,'Presentacion::Recursos::VentCliente']]],
+  ['ventcompras_8',['VentCompras',['../class_presentacion_1_1_recursos_1_1_vent_compras.html#abdbfb09a259a2b50c3d1a145aae83e10',1,'Presentacion::Recursos::VentCompras']]],
+  ['ventproducto_9',['VentProducto',['../class_presentacion_1_1_recursos_1_1_vent_producto.html#a53416527bd3a9c34a0a23b7055109761',1,'Presentacion::Recursos::VentProducto']]],
+  ['ventproducto_5fload_10',['VentProducto_Load',['../class_presentacion_1_1_recursos_1_1_vent_producto.html#ac4effa2706b1f1ffdb00518488c852cf',1,'Presentacion::Recursos::VentProducto']]],
+  ['ventproveedor_11',['VentProveedor',['../class_presentacion_1_1_recursos_1_1_vent_proveedor.html#a9e2aede0bdaec4f39c1a6cc00fd01edf',1,'Presentacion::Recursos::VentProveedor']]],
+  ['ventproveedor_5fload_12',['VentProveedor_Load',['../class_presentacion_1_1_recursos_1_1_vent_proveedor.html#a3f4dc97ffcdf5a006cda534e37d3b010',1,'Presentacion::Recursos::VentProveedor']]],
+  ['ventregistros_13',['VentRegistros',['../class_presentacion_1_1_recursos_1_1_vent_registros.html#af2ddda99fb519fb13618a979151bcb18',1,'Presentacion::Recursos::VentRegistros']]],
+  ['ventventas_14',['VentVentas',['../class_presentacion_1_1_recursos_1_1_vent_ventas.html#a3d5ae8dba542d4476999256b4be6ff38',1,'Presentacion::Recursos::VentVentas']]],
+  ['ventventas_5fload_15',['VentVentas_Load',['../class_presentacion_1_1_recursos_1_1_vent_ventas.html#ac4a130ba79e4bb0758422209c5f8e9f7',1,'Presentacion::Recursos::VentVentas']]]
+];

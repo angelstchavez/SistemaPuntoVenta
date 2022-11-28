@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compunet System: Fichero Fuente C:/Users/angel/source/repos/angelstchavez/SistemaPuntoVenta/Presentacion/Recursos/VentVentas.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Compunet System
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Paquetes</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_vent_ventas_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">VentVentas.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_entidad_1_1_registros.html">Entidad.Registros</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_logica_1_1_logica_1_1_registros.html">Logica.Logica.Registros</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Drawing;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Windows.Forms;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_presentacion_1_1_recursos.html">Presentacion.Recursos</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_recursos_1_1_vent_ventas.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code hl_class" href="class_presentacion_1_1_recursos_1_1_vent_ventas.html">VentVentas</a> : Form</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_presentacion_1_1_recursos_1_1_vent_ventas.html#a3d5ae8dba542d4476999256b4be6ff38">   17</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="class_presentacion_1_1_recursos_1_1_vent_ventas.html#a3d5ae8dba542d4476999256b4be6ff38">VentVentas</a>()</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <a class="code hl_function" href="class_presentacion_1_1_recursos_1_1_vent_ventas.html#aa6a2f1205baf4e46d670810c57e1e368">InitializeComponent</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        }</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ConsultarVenta()</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>            <a class="code hl_class" href="class_entidad_1_1_registros_1_1_venta.html">Venta</a> venta = <span class="keyword">new</span> <a class="code hl_class" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html">LogicaVenta</a>().<a class="code hl_function" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#ab4ea7b6c166cfffbf79fd730106a2a9e">ObtenerVenta</a>(txtConsultar.Text);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">if</span> (venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#ad3e72e61996ad1068019033e2bc6596d">IdVenta</a> != 0)</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>                txtDocumento.Visible = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>                txtDocumento.Text = <span class="stringliteral">&quot;VENTA: &quot;</span> + txtConsultar.Text;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                fecha.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#ab76814f171a191f091cc1dc3963ffa9f">FechaRegistro</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                tipoDocumento.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#aae888016a2db90ada4ce6e7ab1c52e75">TipoDocumento</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>                usuario.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#a325fe69c78547d8c4eb549681dd3309d">ObjUsuario</a>.NombreCompleto;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                nombreCliente.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#aad7381eff3dc72f2154fbb8fad173757">NombreCliente</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                documentoCliente.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#ad392d87ce021aff97c1a8348b6682557">DocumentoCliente</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                montoPago.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#a6d46217a95cab6bd9057ccae3cccb639">MontoPago</a>.ToString(<span class="stringliteral">&quot;0.00&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                montoCambio.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#a14971b962ed9eb850ad9ccc0249e83e8">MontoCambio</a>.ToString(<span class="stringliteral">&quot;0.00&quot;</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                montoTotal.Text = venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#a00e73260ebc90e77c6d98e9bce2bcbe2">MontoTotal</a>.ToString(<span class="stringliteral">&quot;0.00&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                fecha.BackColor = Color.FromArgb(64, 64, 64);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                DatosVentas.Rows.Clear();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordflow">foreach</span> (<a class="code hl_class" href="class_entidad_1_1_registros_1_1_detalle_venta.html">DetalleVenta</a> detalleVenta <span class="keywordflow">in</span> venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#aaadc064b17ed890a3a4b1c18a0532eab">ListDatalleVenta</a>)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                    DatosVentas.Rows.Add(<span class="keyword">new</span> <span class="keywordtype">object</span>[]</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                        detalleVenta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_detalle_venta.html#a85a7d8c73e80638038722655fe466314">ObjProducto</a>.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_producto.html#ab4d63b2bcc9dd0da4de7e3ae5757cd13">Nombre</a>,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                        detalleVenta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_detalle_venta.html#adb75f677d2de18e2f294ea76bda63198">PrecioVenta</a>,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                        detalleVenta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_detalle_venta.html#aa22b7e85dbeab6c8f6853ac8354d04a7">Cantidad</a>,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                        detalleVenta.SubTotal</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                    });</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                }</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                MessageBox.Show(<span class="stringliteral">&quot;Venta: &quot;</span> + txtConsultar.Text + <span class="stringliteral">&quot; encontrada con exito.&quot;</span>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    <span class="stringliteral">&quot;Atención&quot;</span>, MessageBoxButtons.OK, MessageBoxIcon.Information);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                txtConsultar.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                MessageBox.Show(<span class="stringliteral">&quot;No se entontró una venta con el documento: &quot;</span> + txtConsultar.Text,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                    <span class="stringliteral">&quot;Atención&quot;</span>, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> LimpiarConsulta()</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            txtDocumento.Visible = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            txtDocumento.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            txtConsultar.Select();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            txtConsultar.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            fecha.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            tipoDocumento.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            usuario.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            nombreCliente.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            documentoCliente.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            montoPago.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            montoCambio.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            montoTotal.Text = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            DatosVentas.Rows.Clear();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> btnConsultar_Click(<span class="keywordtype">object</span> sender, EventArgs e)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <span class="keywordflow">if</span> (txtConsultar.Text == <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                MessageBox.Show(<span class="stringliteral">&quot;No ha ingresado el número de documento a consultar.&quot;</span>,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                     <span class="stringliteral">&quot;Atención&quot;</span>, MessageBoxButtons.OK, MessageBoxIcon.Warning);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                txtConsultar.Select();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                ConsultarVenta();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> VentVentas_Load(<span class="keywordtype">object</span> sender, EventArgs e)</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        {</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            txtConsultar.Select();</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> btnLimpiar_Click(<span class="keywordtype">object</span> sender, EventArgs e)</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            LimpiarConsulta();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        }</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> txtConsultar_KeyDown(<span class="keywordtype">object</span> sender, KeyEventArgs e)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="keywordflow">if</span> (e.KeyData == Keys.Enter) { ConsultarVenta(); }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_detalle_venta_html"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_detalle_venta.html">Entidad.Registros.DetalleVenta</a></div><div class="ttdoc">Esta clase instancia objetos de tipo DetalleVenta.</div><div class="ttdef"><b>Definition:</b> <a href="_detalle_venta_8cs_source.html#l00006">DetalleVenta.cs:7</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_detalle_venta_html_a85a7d8c73e80638038722655fe466314"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_detalle_venta.html#a85a7d8c73e80638038722655fe466314">Entidad.Registros.DetalleVenta.ObjProducto</a></div><div class="ttdeci">Producto ObjProducto</div><div class="ttdoc">Obtiene o establece el objeto producto.</div><div class="ttdef"><b>Definition:</b> <a href="_detalle_venta_8cs_source.html#l00022">DetalleVenta.cs:22</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_detalle_venta_html_aa22b7e85dbeab6c8f6853ac8354d04a7"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_detalle_venta.html#aa22b7e85dbeab6c8f6853ac8354d04a7">Entidad.Registros.DetalleVenta.Cantidad</a></div><div class="ttdeci">int Cantidad</div><div class="ttdoc">Obtiene o establece la cantidad.</div><div class="ttdef"><b>Definition:</b> <a href="_detalle_venta_8cs_source.html#l00038">DetalleVenta.cs:38</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_detalle_venta_html_adb75f677d2de18e2f294ea76bda63198"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_detalle_venta.html#adb75f677d2de18e2f294ea76bda63198">Entidad.Registros.DetalleVenta.PrecioVenta</a></div><div class="ttdeci">decimal PrecioVenta</div><div class="ttdoc">Obtiene o establece el precio de venta.</div><div class="ttdef"><b>Definition:</b> <a href="_detalle_venta_8cs_source.html#l00030">DetalleVenta.cs:30</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_producto_html_ab4d63b2bcc9dd0da4de7e3ae5757cd13"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_producto.html#ab4d63b2bcc9dd0da4de7e3ae5757cd13">Entidad.Registros.Producto.Nombre</a></div><div class="ttdeci">string Nombre</div><div class="ttdoc">Obtiene o establece el nombre.</div><div class="ttdef"><b>Definition:</b> <a href="_producto_8cs_source.html#l00030">Producto.cs:30</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html">Entidad.Registros.Venta</a></div><div class="ttdoc">Esta clase instancia objetos de venta.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00009">Venta.cs:10</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_a00e73260ebc90e77c6d98e9bce2bcbe2"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#a00e73260ebc90e77c6d98e9bce2bcbe2">Entidad.Registros.Venta.MontoTotal</a></div><div class="ttdeci">decimal MontoTotal</div><div class="ttdoc">Obtiene o establece el monto total.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00081">Venta.cs:81</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_a14971b962ed9eb850ad9ccc0249e83e8"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#a14971b962ed9eb850ad9ccc0249e83e8">Entidad.Registros.Venta.MontoCambio</a></div><div class="ttdeci">decimal MontoCambio</div><div class="ttdoc">Obtiene o establece el monto de cambio.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00073">Venta.cs:73</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_a325fe69c78547d8c4eb549681dd3309d"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#a325fe69c78547d8c4eb549681dd3309d">Entidad.Registros.Venta.ObjUsuario</a></div><div class="ttdeci">Usuario ObjUsuario</div><div class="ttdoc">Obtiene o establece el objeto usuario.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00025">Venta.cs:25</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_a6d46217a95cab6bd9057ccae3cccb639"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#a6d46217a95cab6bd9057ccae3cccb639">Entidad.Registros.Venta.MontoPago</a></div><div class="ttdeci">decimal MontoPago</div><div class="ttdoc">Obtiene o establece el monto de pago.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00065">Venta.cs:65</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_aaadc064b17ed890a3a4b1c18a0532eab"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#aaadc064b17ed890a3a4b1c18a0532eab">Entidad.Registros.Venta.ListDatalleVenta</a></div><div class="ttdeci">List&lt; DetalleVenta &gt; ListDatalleVenta</div><div class="ttdoc">Obtiene o establece la lista datalle venta.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00089">Venta.cs:89</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_aad7381eff3dc72f2154fbb8fad173757"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#aad7381eff3dc72f2154fbb8fad173757">Entidad.Registros.Venta.NombreCliente</a></div><div class="ttdeci">string NombreCliente</div><div class="ttdoc">Obtiene o establece el nombre del cliente.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00057">Venta.cs:57</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_aae888016a2db90ada4ce6e7ab1c52e75"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#aae888016a2db90ada4ce6e7ab1c52e75">Entidad.Registros.Venta.TipoDocumento</a></div><div class="ttdeci">string TipoDocumento</div><div class="ttdoc">Obtiene o establece el tipo de documento.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00033">Venta.cs:33</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_ab76814f171a191f091cc1dc3963ffa9f"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#ab76814f171a191f091cc1dc3963ffa9f">Entidad.Registros.Venta.FechaRegistro</a></div><div class="ttdeci">string FechaRegistro</div><div class="ttdoc">Obtiene o establece la fecha de registro.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00097">Venta.cs:97</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_ad392d87ce021aff97c1a8348b6682557"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#ad392d87ce021aff97c1a8348b6682557">Entidad.Registros.Venta.DocumentoCliente</a></div><div class="ttdeci">string DocumentoCliente</div><div class="ttdoc">Obtiene o establece el documento del cliente.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00049">Venta.cs:49</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_ad3e72e61996ad1068019033e2bc6596d"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#ad3e72e61996ad1068019033e2bc6596d">Entidad.Registros.Venta.IdVenta</a></div><div class="ttdeci">int IdVenta</div><div class="ttdoc">Obtiene o establece el identificador de venta.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00017">Venta.cs:17</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html">Logica.Logica.Registros.LogicaVenta</a></div><div class="ttdoc">Es una clase que contiene métodos que le permiten gestionar ventas.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00012">LogicaVenta.cs:13</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_ab4ea7b6c166cfffbf79fd730106a2a9e"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#ab4ea7b6c166cfffbf79fd730106a2a9e">Logica.Logica.Registros.LogicaVenta.ObtenerVenta</a></div><div class="ttdeci">Venta ObtenerVenta(string numero)</div><div class="ttdoc">Obtenga la venta.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00076">LogicaVenta.cs:76</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_recursos_1_1_vent_ventas_html"><div class="ttname"><a href="class_presentacion_1_1_recursos_1_1_vent_ventas.html">Presentacion.Recursos.VentVentas</a></div><div class="ttdef"><b>Definition:</b> <a href="_vent_ventas_8cs_source.html#l00012">VentVentas.cs:13</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_recursos_1_1_vent_ventas_html_a3d5ae8dba542d4476999256b4be6ff38"><div class="ttname"><a href="class_presentacion_1_1_recursos_1_1_vent_ventas.html#a3d5ae8dba542d4476999256b4be6ff38">Presentacion.Recursos.VentVentas.VentVentas</a></div><div class="ttdeci">VentVentas()</div><div class="ttdoc">Initializes a new instance of the VentVentas class.</div><div class="ttdef"><b>Definition:</b> <a href="_vent_ventas_8cs_source.html#l00017">VentVentas.cs:17</a></div></div>
+<div class="ttc" id="aclass_presentacion_1_1_recursos_1_1_vent_ventas_html_aa6a2f1205baf4e46d670810c57e1e368"><div class="ttname"><a href="class_presentacion_1_1_recursos_1_1_vent_ventas.html#aa6a2f1205baf4e46d670810c57e1e368">Presentacion.Recursos.VentVentas.InitializeComponent</a></div><div class="ttdeci">void InitializeComponent()</div><div class="ttdoc">Required method for Designer support - do not modify the contents of this method with the code editor...</div><div class="ttdef"><b>Definition:</b> <a href="_vent_ventas_8_designer_8cs_source.html#l00029">VentVentas.Designer.cs:29</a></div></div>
+<div class="ttc" id="anamespace_entidad_1_1_registros_html"><div class="ttname"><a href="namespace_entidad_1_1_registros.html">Entidad.Registros</a></div><div class="ttdef"><b>Definition:</b> <a href="_categoria_8cs_source.html#l00003">Categoria.cs:4</a></div></div>
+<div class="ttc" id="anamespace_logica_1_1_logica_1_1_registros_html"><div class="ttname"><a href="namespace_logica_1_1_logica_1_1_registros.html">Logica.Logica.Registros</a></div><div class="ttdef"><b>Definition:</b> <a href="_logica_categoria_8cs_source.html#l00005">LogicaCategoria.cs:6</a></div></div>
+<div class="ttc" id="anamespace_presentacion_1_1_recursos_html"><div class="ttname"><a href="namespace_presentacion_1_1_recursos.html">Presentacion.Recursos</a></div><div class="ttdef"><b>Definition:</b> <a href="_opcion_combo_8cs_source.html#l00001">OpcionCombo.cs:2</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_da92606663f4ecb03aa66c183f15dac3.html">repos</a></li><li class="navelem"><a class="el" href="dir_9c5e7d6767d96e0707a1e3fd506334d5.html">angelstchavez</a></li><li class="navelem"><a class="el" href="dir_88c038d2586a9bec33979dacb97be9f4.html">SistemaPuntoVenta</a></li><li class="navelem"><a class="el" href="dir_4a9781de3c4f8d917450dfbe4ce52910.html">Presentacion</a></li><li class="navelem"><a class="el" href="dir_a6040082f7f00ea9d3399fcc38bdd6bb.html">Recursos</a></li><li class="navelem"><b>VentVentas.cs</b></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

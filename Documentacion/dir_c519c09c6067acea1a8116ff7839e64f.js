@@ -1,0 +1,27 @@
+var dir_c519c09c6067acea1a8116ff7839e64f =
+[
+    [ "PanelAcercaDe.cs", "_panel_acerca_de_8cs_source.html", null ],
+    [ "PanelAcercaDe.Designer.cs", "_panel_acerca_de_8_designer_8cs_source.html", null ],
+    [ "PanelCategoria.cs", "_panel_categoria_8cs_source.html", null ],
+    [ "PanelCategoria.Designer.cs", "_panel_categoria_8_designer_8cs_source.html", null ],
+    [ "PanelCliente.cs", "_panel_cliente_8cs_source.html", null ],
+    [ "PanelCliente.Designer.cs", "_panel_cliente_8_designer_8cs_source.html", null ],
+    [ "PanelCompra.cs", "_panel_compra_8cs_source.html", null ],
+    [ "PanelCompra.Designer.cs", "_panel_compra_8_designer_8cs_source.html", null ],
+    [ "PanelConfiguracion.cs", "_panel_configuracion_8cs_source.html", null ],
+    [ "PanelConfiguracion.Designer.cs", "_panel_configuracion_8_designer_8cs_source.html", null ],
+    [ "PanelMantenimiento.cs", "_panel_mantenimiento_8cs_source.html", null ],
+    [ "PanelMantenimiento.Designer.cs", "_panel_mantenimiento_8_designer_8cs_source.html", null ],
+    [ "PanelProducto.cs", "_panel_producto_8cs_source.html", null ],
+    [ "PanelProducto.Designer.cs", "_panel_producto_8_designer_8cs_source.html", null ],
+    [ "PanelProveedor.cs", "_panel_proveedor_8cs_source.html", null ],
+    [ "PanelProveedor.Designer.cs", "_panel_proveedor_8_designer_8cs_source.html", null ],
+    [ "PanelRegistros.cs", "_panel_registros_8cs_source.html", null ],
+    [ "PanelRegistros.Designer.cs", "_panel_registros_8_designer_8cs_source.html", null ],
+    [ "PanelReporte.cs", "_panel_reporte_8cs_source.html", null ],
+    [ "PanelReporte.Designer.cs", "_panel_reporte_8_designer_8cs_source.html", null ],
+    [ "PanelUsuario.cs", "_panel_usuario_8cs_source.html", null ],
+    [ "PanelUsuario.Designer.cs", "_panel_usuario_8_designer_8cs_source.html", null ],
+    [ "PanelVenta.cs", "_panel_venta_8cs_source.html", null ],
+    [ "PanelVenta.Designer.cs", "_panel_venta_8_designer_8cs_source.html", null ]
+];

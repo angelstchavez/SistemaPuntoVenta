@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Compunet System: Fichero Fuente C:/Users/angel/source/repos/angelstchavez/SistemaPuntoVenta/Logica/Logica/Registros/LogicaVenta.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(document).ready(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Compunet System
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Paquetes</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_logica_venta_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">LogicaVenta.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_datos_1_1_datos_1_1_registros.html">Datos.Datos.Registros</a>;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_entidad_1_1_registros.html">Entidad.Registros</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Data;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_logica_1_1_logica_1_1_registros.html">Logica.Logica.Registros</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html">LogicaVenta</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">   17</a></span>        <span class="keyword">private</span> <a class="code hl_class" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html">DatosVenta</a> <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html">DatosVenta</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#aa7e05b95df725d8b2079d9adf72c9b24">   23</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#aa7e05b95df725d8b2079d9adf72c9b24">ObtenerCorrelativo</a>()</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a>.<a class="code hl_function" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a7ac9bc9a31c4ad28a5acb5d6987c8c6d">ObtenerCorrelativo</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        }</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a945ae0acb334c9d26ef7fb2200603470">   32</a></span>        <span class="keyword">public</span> List&lt;Venta&gt; <a class="code hl_function" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a945ae0acb334c9d26ef7fb2200603470">Listar</a>()</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a>.<a class="code hl_function" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#ac9aae1a6684adf0783d48c4d6b85dacb">ListarVentas</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a0cc64ea78396dc75a141dd090bed631c">   43</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a0cc64ea78396dc75a141dd090bed631c">RestarStock</a>(<span class="keywordtype">int</span> idProducto, <span class="keywordtype">int</span> cantidad)</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a>.<a class="code hl_function" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#ae956f3bbe319dabd38cc505bbda0c34c">RestarStock</a>(idProducto, cantidad);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a7fdd94a5e439ce3c51a683a65d2d1bba">   54</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a7fdd94a5e439ce3c51a683a65d2d1bba">SumarStock</a>(<span class="keywordtype">int</span> idProducto, <span class="keywordtype">int</span> cantidad)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a>.<a class="code hl_function" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#ad7b3a821aae2689d75207df29da18b26">SumarStock</a>(idProducto, cantidad);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a4a80891a41e6c97919f09b080b5e79d3">   66</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a4a80891a41e6c97919f09b080b5e79d3">Registrar</a>(<a class="code hl_class" href="class_entidad_1_1_registros_1_1_venta.html">Venta</a> <a class="code hl_class" href="class_entidad_1_1_registros_1_1_venta.html">Venta</a>, DataTable detalleVenta, out <span class="keywordtype">string</span> mensaje)</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a>.<a class="code hl_function" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#aa797dbdcf1b9d727baf59a7e66985e4a">RegistrarVenta</a>(<a class="code hl_class" href="class_entidad_1_1_registros_1_1_venta.html">Venta</a>, detalleVenta, out mensaje);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#ab4ea7b6c166cfffbf79fd730106a2a9e">   76</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="class_entidad_1_1_registros_1_1_venta.html">Venta</a> <a class="code hl_function" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#ab4ea7b6c166cfffbf79fd730106a2a9e">ObtenerVenta</a>(<span class="keywordtype">string</span> numero)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        {</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <a class="code hl_class" href="class_entidad_1_1_registros_1_1_venta.html">Venta</a> venta = <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a>.<a class="code hl_function" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a386fcc9c7e5464ada98ae9bd629536ec">ObtenerVenta</a>(numero);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            <span class="keywordflow">if</span> (venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#ad3e72e61996ad1068019033e2bc6596d">IdVenta</a> != 0)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>                List&lt;DetalleVenta&gt; detalleVentas = <a class="code hl_variable" href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">datosVenta</a>.<a class="code hl_function" href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a0b97cb5dfe2f2514a5a1d62bcfa5fab0">ObtenerDetalleVenta</a>(venta.<a class="code hl_property" href="class_entidad_1_1_registros_1_1_venta.html#ad3e72e61996ad1068019033e2bc6596d">IdVenta</a>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                venta.ListDatalleVenta = detalleVentas;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="keywordflow">return</span> venta;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html">Datos.Datos.Registros.DatosVenta</a></div><div class="ttdoc">Es una clase que contiene métodos que le permiten realizar operaciones para las ventas.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00014">DatosVenta.cs:15</a></div></div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html_a0b97cb5dfe2f2514a5a1d62bcfa5fab0"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a0b97cb5dfe2f2514a5a1d62bcfa5fab0">Datos.Datos.Registros.DatosVenta.ObtenerDetalleVenta</a></div><div class="ttdeci">List&lt; DetalleVenta &gt; ObtenerDetalleVenta(int idVenta)</div><div class="ttdoc">Obtiene los detalles de las ventas.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00266">DatosVenta.cs:266</a></div></div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html_a386fcc9c7e5464ada98ae9bd629536ec"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a386fcc9c7e5464ada98ae9bd629536ec">Datos.Datos.Registros.DatosVenta.ObtenerVenta</a></div><div class="ttdeci">Venta ObtenerVenta(string numero)</div><div class="ttdoc">Obtiene las ventas registradas.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00207">DatosVenta.cs:207</a></div></div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html_a7ac9bc9a31c4ad28a5acb5d6987c8c6d"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#a7ac9bc9a31c4ad28a5acb5d6987c8c6d">Datos.Datos.Registros.DatosVenta.ObtenerCorrelativo</a></div><div class="ttdeci">int ObtenerCorrelativo()</div><div class="ttdoc">Obtiene el correlativo de una venta.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00020">DatosVenta.cs:20</a></div></div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html_aa797dbdcf1b9d727baf59a7e66985e4a"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#aa797dbdcf1b9d727baf59a7e66985e4a">Datos.Datos.Registros.DatosVenta.RegistrarVenta</a></div><div class="ttdeci">bool RegistrarVenta(Venta Venta, DataTable detalleVenta, out string mensaje)</div><div class="ttdoc">Registra las ventas.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00162">DatosVenta.cs:162</a></div></div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html_ac9aae1a6684adf0783d48c4d6b85dacb"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#ac9aae1a6684adf0783d48c4d6b85dacb">Datos.Datos.Registros.DatosVenta.ListarVentas</a></div><div class="ttdeci">List&lt; Venta &gt; ListarVentas()</div><div class="ttdoc">Lista las ventas registradas.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00052">DatosVenta.cs:52</a></div></div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html_ad7b3a821aae2689d75207df29da18b26"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#ad7b3a821aae2689d75207df29da18b26">Datos.Datos.Registros.DatosVenta.SumarStock</a></div><div class="ttdeci">bool SumarStock(int idProducto, int cantidad)</div><div class="ttdoc">Suma elementos del stock de un producto.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00128">DatosVenta.cs:128</a></div></div>
+<div class="ttc" id="aclass_datos_1_1_datos_1_1_registros_1_1_datos_venta_html_ae956f3bbe319dabd38cc505bbda0c34c"><div class="ttname"><a href="class_datos_1_1_datos_1_1_registros_1_1_datos_venta.html#ae956f3bbe319dabd38cc505bbda0c34c">Datos.Datos.Registros.DatosVenta.RestarStock</a></div><div class="ttdeci">bool RestarStock(int idProducto, int cantidad)</div><div class="ttdoc">Resta elementos del stock de un producto.</div><div class="ttdef"><b>Definition:</b> <a href="_datos_venta_8cs_source.html#l00095">DatosVenta.cs:95</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html">Entidad.Registros.Venta</a></div><div class="ttdoc">Esta clase instancia objetos de venta.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00009">Venta.cs:10</a></div></div>
+<div class="ttc" id="aclass_entidad_1_1_registros_1_1_venta_html_ad3e72e61996ad1068019033e2bc6596d"><div class="ttname"><a href="class_entidad_1_1_registros_1_1_venta.html#ad3e72e61996ad1068019033e2bc6596d">Entidad.Registros.Venta.IdVenta</a></div><div class="ttdeci">int IdVenta</div><div class="ttdoc">Obtiene o establece el identificador de venta.</div><div class="ttdef"><b>Definition:</b> <a href="_venta_8cs_source.html#l00017">Venta.cs:17</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html">Logica.Logica.Registros.LogicaVenta</a></div><div class="ttdoc">Es una clase que contiene métodos que le permiten gestionar ventas.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00012">LogicaVenta.cs:13</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_a0cc64ea78396dc75a141dd090bed631c"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a0cc64ea78396dc75a141dd090bed631c">Logica.Logica.Registros.LogicaVenta.RestarStock</a></div><div class="ttdeci">bool RestarStock(int idProducto, int cantidad)</div><div class="ttdoc">Resta stock de un producto especifico.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00043">LogicaVenta.cs:43</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_a2d296c9c453f5e8fb5f2ea68fc07cd5e"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a2d296c9c453f5e8fb5f2ea68fc07cd5e">Logica.Logica.Registros.LogicaVenta.datosVenta</a></div><div class="ttdeci">DatosVenta datosVenta</div><div class="ttdoc">Los datos de la venta.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00017">LogicaVenta.cs:17</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_a4a80891a41e6c97919f09b080b5e79d3"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a4a80891a41e6c97919f09b080b5e79d3">Logica.Logica.Registros.LogicaVenta.Registrar</a></div><div class="ttdeci">bool Registrar(Venta Venta, DataTable detalleVenta, out string mensaje)</div><div class="ttdoc">Registra la venta especificada.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00066">LogicaVenta.cs:66</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_a7fdd94a5e439ce3c51a683a65d2d1bba"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a7fdd94a5e439ce3c51a683a65d2d1bba">Logica.Logica.Registros.LogicaVenta.SumarStock</a></div><div class="ttdeci">bool SumarStock(int idProducto, int cantidad)</div><div class="ttdoc">Suma stock de un producto especifico.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00054">LogicaVenta.cs:54</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_a945ae0acb334c9d26ef7fb2200603470"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#a945ae0acb334c9d26ef7fb2200603470">Logica.Logica.Registros.LogicaVenta.Listar</a></div><div class="ttdeci">List&lt; Venta &gt; Listar()</div><div class="ttdoc">Enumera esta instancia.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00032">LogicaVenta.cs:32</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_aa7e05b95df725d8b2079d9adf72c9b24"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#aa7e05b95df725d8b2079d9adf72c9b24">Logica.Logica.Registros.LogicaVenta.ObtenerCorrelativo</a></div><div class="ttdeci">int ObtenerCorrelativo()</div><div class="ttdoc">Obtenga el correlativo.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00023">LogicaVenta.cs:23</a></div></div>
+<div class="ttc" id="aclass_logica_1_1_logica_1_1_registros_1_1_logica_venta_html_ab4ea7b6c166cfffbf79fd730106a2a9e"><div class="ttname"><a href="class_logica_1_1_logica_1_1_registros_1_1_logica_venta.html#ab4ea7b6c166cfffbf79fd730106a2a9e">Logica.Logica.Registros.LogicaVenta.ObtenerVenta</a></div><div class="ttdeci">Venta ObtenerVenta(string numero)</div><div class="ttdoc">Obtenga la venta.</div><div class="ttdef"><b>Definition:</b> <a href="_logica_venta_8cs_source.html#l00076">LogicaVenta.cs:76</a></div></div>
+<div class="ttc" id="anamespace_datos_1_1_datos_1_1_registros_html"><div class="ttname"><a href="namespace_datos_1_1_datos_1_1_registros.html">Datos.Datos.Registros</a></div><div class="ttdef"><b>Definition:</b> <a href="_datos_categoria_8cs_source.html#l00009">DatosCategoria.cs:10</a></div></div>
+<div class="ttc" id="anamespace_entidad_1_1_registros_html"><div class="ttname"><a href="namespace_entidad_1_1_registros.html">Entidad.Registros</a></div><div class="ttdef"><b>Definition:</b> <a href="_categoria_8cs_source.html#l00003">Categoria.cs:4</a></div></div>
+<div class="ttc" id="anamespace_logica_1_1_logica_1_1_registros_html"><div class="ttname"><a href="namespace_logica_1_1_logica_1_1_registros.html">Logica.Logica.Registros</a></div><div class="ttdef"><b>Definition:</b> <a href="_logica_categoria_8cs_source.html#l00005">LogicaCategoria.cs:6</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_da92606663f4ecb03aa66c183f15dac3.html">repos</a></li><li class="navelem"><a class="el" href="dir_9c5e7d6767d96e0707a1e3fd506334d5.html">angelstchavez</a></li><li class="navelem"><a class="el" href="dir_88c038d2586a9bec33979dacb97be9f4.html">SistemaPuntoVenta</a></li><li class="navelem"><a class="el" href="dir_4f752bea2733fd3f21dacaae11421a2e.html">Logica</a></li><li class="navelem"><a class="el" href="dir_abbd20fa66a3f1a4cae2d6ae0939546f.html">Logica</a></li><li class="navelem"><a class="el" href="dir_cc6a2cc77edf8891a1d7270192d96b02.html">Registros</a></li><li class="navelem"><b>LogicaVenta.cs</b></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+  </ul>
+</div>
+</body>
+</html>

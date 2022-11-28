@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['panelacercade_0',['PanelAcercaDe',['../class_presentacion_1_1_paneles_1_1_panel_acerca_de.html',1,'Presentacion::Paneles']]],
+  ['panelcategoria_1',['PanelCategoria',['../class_presentacion_1_1_paneles_1_1_panel_categoria.html',1,'Presentacion::Paneles']]],
+  ['panelcliente_2',['PanelCliente',['../class_presentacion_1_1_paneles_1_1_panel_cliente.html',1,'Presentacion::Paneles']]],
+  ['panelcompra_3',['PanelCompra',['../class_presentacion_1_1_paneles_1_1_panel_compra.html',1,'Presentacion::Paneles']]],
+  ['panelconfiguracion_4',['PanelConfiguracion',['../class_presentacion_1_1_paneles_1_1_panel_configuracion.html',1,'Presentacion::Paneles']]],
+  ['paneles_5',['Paneles',['../namespace_presentacion_1_1_paneles.html',1,'Presentacion']]],
+  ['panelmantenimiento_6',['PanelMantenimiento',['../class_presentacion_1_1_paneles_1_1_panel_mantenimiento.html',1,'Presentacion::Paneles']]],
+  ['panelproducto_7',['PanelProducto',['../class_presentacion_1_1_paneles_1_1_panel_producto.html',1,'Presentacion::Paneles']]],
+  ['panelproveedor_8',['PanelProveedor',['../class_presentacion_1_1_paneles_1_1_panel_proveedor.html',1,'Presentacion::Paneles']]],
+  ['panelregistros_9',['PanelRegistros',['../class_presentacion_1_1_paneles_1_1_panel_registros.html',1,'Presentacion::Paneles']]],
+  ['panelreporte_10',['PanelReporte',['../class_presentacion_1_1_paneles_1_1_panel_reporte.html',1,'Presentacion::Paneles']]],
+  ['panelusuario_11',['PanelUsuario',['../class_presentacion_1_1_paneles_1_1_panel_usuario.html',1,'Presentacion::Paneles']]],
+  ['panelventa_12',['PanelVenta',['../class_presentacion_1_1_paneles_1_1_panel_venta.html',1,'Presentacion::Paneles']]],
+  ['permiso_13',['Permiso',['../class_entidad_1_1_roles_1_1_permiso.html',1,'Entidad::Roles']]],
+  ['preciocompra_14',['PrecioCompra',['../class_entidad_1_1_registros_1_1_detalle_compra.html#a80094e0fbb60c06518b2e94c98018191',1,'Entidad.Registros.DetalleCompra.PrecioCompra()'],['../class_entidad_1_1_registros_1_1_producto.html#a1c40e48aa44819b9aa8489ad1259dba7',1,'Entidad.Registros.Producto.PrecioCompra()']]],
+  ['precioventa_15',['PrecioVenta',['../class_entidad_1_1_registros_1_1_detalle_compra.html#a399243a9cf5a460565a27cd9fc5aacc1',1,'Entidad.Registros.DetalleCompra.PrecioVenta()'],['../class_entidad_1_1_registros_1_1_detalle_venta.html#adb75f677d2de18e2f294ea76bda63198',1,'Entidad.Registros.DetalleVenta.PrecioVenta()'],['../class_entidad_1_1_registros_1_1_producto.html#a7a249b9cf34e2d07891be419bd0fb0cb',1,'Entidad.Registros.Producto.PrecioVenta()']]],
+  ['presentacion_16',['Presentacion',['../namespace_presentacion.html',1,'']]],
+  ['producto_17',['Producto',['../class_entidad_1_1_registros_1_1_producto.html',1,'Entidad::Registros']]],
+  ['producto_18',['producto',['../class_presentacion_1_1_recursos_1_1_vent_producto.html#a8e9be3f02c60cf1dc5941431f3f58f6e',1,'Presentacion::Recursos::VentProducto']]],
+  ['properties_19',['Properties',['../namespace_presentacion_1_1_properties.html',1,'Presentacion']]],
+  ['proveedor_20',['Proveedor',['../class_entidad_1_1_roles_1_1_proveedor.html',1,'Entidad::Roles']]],
+  ['proveedor_21',['proveedor',['../class_presentacion_1_1_recursos_1_1_vent_proveedor.html#ab4ab96838f5d4467526fbb09067e95af',1,'Presentacion::Recursos::VentProveedor']]],
+  ['recursos_22',['Recursos',['../namespace_presentacion_1_1_recursos.html',1,'Presentacion']]],
+  ['ventanas_23',['Ventanas',['../namespace_presentacion_1_1_ventanas.html',1,'Presentacion']]]
+];
