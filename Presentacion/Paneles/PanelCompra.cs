@@ -397,5 +397,13 @@ namespace Presentacion.Paneles
                 CalcularTotal();
             }
         }
+
+        private void DatosCarrito_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.DatosCarrito.Columns[e.ColumnIndex].Name == "SubTotal")
+            {
+                e.CellStyle.Font = new Font(this.Font, FontStyle.Bold);
+            }
+        }
     }
 }

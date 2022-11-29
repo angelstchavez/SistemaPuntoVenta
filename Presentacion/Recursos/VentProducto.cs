@@ -2,6 +2,7 @@
 using Logica.Logica.Registros;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Presentacion.Recursos
@@ -99,6 +100,35 @@ namespace Presentacion.Recursos
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DatosProducto_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            try
+            {
+                if (this.DatosProducto.Columns[e.ColumnIndex].Name == "Stock")
+                {
+                    e.CellStyle.Font = new Font(this.Font, FontStyle.Bold);
+
+                    if (Convert.ToInt32(e.Value) <= 0)
+                    {
+                        e.CellStyle.BackColor = System.Drawing.Color.FromArgb(255, 23, 23);
+                    }
+                    else if (Convert.ToInt32(e.Value) > 0 && Convert.ToInt32(e.Value) <= 10)
+                    {
+                        e.CellStyle.BackColor = System.Drawing.Color.DarkOrange;
+                        
+                    }
+                    else
+                    {
+                        e.CellStyle.BackColor = System.Drawing.Color.FromArgb(15, 140, 59);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

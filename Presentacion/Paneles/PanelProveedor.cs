@@ -303,6 +303,11 @@ namespace Presentacion.Paneles
         {
             try
             {
+                if (this.DatosProveedor.Columns[e.ColumnIndex].Name == "RazonSocial")
+                {
+                    e.CellStyle.Font = new Font(this.Font, FontStyle.Bold);
+                }
+
                 if (this.DatosProveedor.Columns[e.ColumnIndex].Name == "EstadoValor")
                 {
                     if (Convert.ToString(e.Value) == "Activo")

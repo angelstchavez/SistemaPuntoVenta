@@ -1,5 +1,4 @@
 ﻿using Datos.Datos.Roles;
-using DocumentFormat.OpenXml.Spreadsheet;
 using Entidad.Roles;
 using Logica.Logica.Roles;
 using Presentacion.Properties;
@@ -369,6 +368,11 @@ namespace Presentacion.Paneles
         {
             try
             {
+                if (this.DatosUsuario.Columns[e.ColumnIndex].Name == "Rol")
+                {
+                    e.CellStyle.Font = new Font(this.Font, FontStyle.Bold);
+                }
+
                 if (this.DatosUsuario.Columns[e.ColumnIndex].Name == "EstadoValor")
                 {
                     if (Convert.ToString(e.Value) == "Activo")

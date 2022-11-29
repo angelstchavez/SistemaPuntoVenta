@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.boxTipoDocumento = new Presentacion.Recursos.RJComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,14 +73,13 @@
             this.SubTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtxPago = new System.Windows.Forms.TextBox();
+            this.txtPago = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtCambio = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.boxTipoDocumento = new Presentacion.Recursos.RJComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -113,6 +113,26 @@
             this.label5.Size = new System.Drawing.Size(143, 16);
             this.label5.TabIndex = 40;
             this.label5.Text = "Información de venta:";
+            // 
+            // boxTipoDocumento
+            // 
+            this.boxTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxTipoDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxTipoDocumento.BorderSize = 1;
+            this.boxTipoDocumento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.boxTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.boxTipoDocumento.ForeColor = System.Drawing.Color.Gray;
+            this.boxTipoDocumento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.boxTipoDocumento.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.boxTipoDocumento.ListTextColor = System.Drawing.Color.Gray;
+            this.boxTipoDocumento.Location = new System.Drawing.Point(189, 49);
+            this.boxTipoDocumento.MinimumSize = new System.Drawing.Size(200, 26);
+            this.boxTipoDocumento.Name = "boxTipoDocumento";
+            this.boxTipoDocumento.Padding = new System.Windows.Forms.Padding(1);
+            this.boxTipoDocumento.Size = new System.Drawing.Size(200, 26);
+            this.boxTipoDocumento.TabIndex = 39;
+            this.boxTipoDocumento.Texts = "";
             // 
             // label2
             // 
@@ -549,6 +569,7 @@
             this.DatosCarrito.Size = new System.Drawing.Size(1076, 397);
             this.DatosCarrito.TabIndex = 44;
             this.DatosCarrito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DatosCarrito_CellContentClick);
+            this.DatosCarrito.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.DatosCarrito_CellFormatting);
             this.DatosCarrito.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DatosCarrito_CellPainting);
             // 
             // IdProducto
@@ -623,19 +644,19 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtxPago
+            // txtPago
             // 
-            this.txtxPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtxPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
-            this.txtxPago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtxPago.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtxPago.Location = new System.Drawing.Point(559, 598);
-            this.txtxPago.Name = "txtxPago";
-            this.txtxPago.Size = new System.Drawing.Size(120, 26);
-            this.txtxPago.TabIndex = 56;
-            this.txtxPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtxPago.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtxPago_KeyDown);
-            this.txtxPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtxPago_KeyPress);
+            this.txtPago.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
+            this.txtPago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPago.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtPago.Location = new System.Drawing.Point(559, 598);
+            this.txtPago.Name = "txtPago";
+            this.txtPago.Size = new System.Drawing.Size(120, 26);
+            this.txtPago.TabIndex = 56;
+            this.txtPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPago.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtxPago_KeyDown);
+            this.txtPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtxPago_KeyPress);
             // 
             // label18
             // 
@@ -717,26 +738,6 @@
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // boxTipoDocumento
-            // 
-            this.boxTipoDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxTipoDocumento.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxTipoDocumento.BorderSize = 1;
-            this.boxTipoDocumento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxTipoDocumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.boxTipoDocumento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.boxTipoDocumento.ForeColor = System.Drawing.Color.Gray;
-            this.boxTipoDocumento.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.boxTipoDocumento.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.boxTipoDocumento.ListTextColor = System.Drawing.Color.Gray;
-            this.boxTipoDocumento.Location = new System.Drawing.Point(189, 49);
-            this.boxTipoDocumento.MinimumSize = new System.Drawing.Size(200, 26);
-            this.boxTipoDocumento.Name = "boxTipoDocumento";
-            this.boxTipoDocumento.Padding = new System.Windows.Forms.Padding(1);
-            this.boxTipoDocumento.Size = new System.Drawing.Size(200, 26);
-            this.boxTipoDocumento.TabIndex = 39;
-            this.boxTipoDocumento.Texts = "";
-            // 
             // PanelVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -748,7 +749,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtCambio);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.txtxPago);
+            this.Controls.Add(this.txtPago);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.DatosCarrito);
@@ -814,7 +815,7 @@
         private System.Windows.Forms.Label lblTotalPagar;
         private System.Windows.Forms.DataGridView DatosCarrito;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtxPago;
+        private System.Windows.Forms.TextBox txtPago;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtCambio;
         private System.Windows.Forms.Label label19;

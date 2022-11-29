@@ -99,11 +99,18 @@ namespace Presentacion.Paneles
                 return;
             }
 
-            if (txtxPago.Text == "")
+            if (txtPago.Text == "")
             {
                 MessageBox.Show("¡REGISTRE EL INGRESO DE LA VENTA!", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtxPago.Select();
+                txtPago.Select();
                 return;
+            }
+
+            if(Convert.ToDecimal(txtPago.Text) < Convert.ToDecimal(lblTotalPagar.Text))
+            {
+                MessageBox.Show("El valor del ingreso es menor al valor subtotal de la venta.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPago.Select();
+                return; 
             }
 
             DataTable detalleCompra = new DataTable();
@@ -320,7 +327,7 @@ namespace Presentacion.Paneles
             txtPrecioVenta.Text = "";
             txtStock.Text = "";
             txtCantidad.Text = "";
-            txtxPago.Text = "";
+            txtPago.Text = "";
             txtCambio.Text = "";
         }
 
@@ -335,8 +342,8 @@ namespace Presentacion.Paneles
             decimal pagaCon = 0;
             decimal total = Convert.ToDecimal(lblTotalPagar.Text);
 
-            if (txtxPago.Text.Trim() == "") { txtxPago.Text = "$0"; }
-            if (decimal.TryParse(txtxPago.Text.Trim(), out pagaCon))
+            if (txtPago.Text.Trim() == "") { txtPago.Text = "$0"; }
+            if (decimal.TryParse(txtPago.Text.Trim(), out pagaCon))
             {
                 if (pagaCon < total)
                 {
@@ -482,6 +489,14 @@ namespace Presentacion.Paneles
                 txtNombreCompleto.Text = "";
                 DatosCarrito.Rows.Clear();
                 CalcularTotal();
+            }
+        }
+
+        private void DatosCarrito_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (this.DatosCarrito.Columns[e.ColumnIndex].Name == "SubTotal")
+            {
+                e.CellStyle.Font = new Font(this.Font, FontStyle.Bold);
             }
         }
     }

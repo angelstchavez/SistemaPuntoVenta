@@ -78,7 +78,6 @@ namespace Datos.Datos.Registros
                 try
                 {
                     SqlCommand cmd = new SqlCommand("InsertarProducto", connection);
-                    cmd.Parameters.AddWithValue("@IdProducto", Producto.IdProducto);
                     cmd.Parameters.AddWithValue("@Codigo", Producto.Codigo);
                     cmd.Parameters.AddWithValue("@Nombre", Producto.Nombre);
                     cmd.Parameters.AddWithValue("@Descripcion", Producto.Descripcion);
