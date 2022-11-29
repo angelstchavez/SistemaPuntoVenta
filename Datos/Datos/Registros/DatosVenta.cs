@@ -214,11 +214,11 @@ namespace Datos.Datos.Registros
                 {
                     conexion.Open();
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select v.IdVenta,u.NombreCompleto,");
+                    query.AppendLine("select v.IdVenta, u.NombreCompleto,");
                     query.AppendLine("v.DocumentoCliente, v.NombreCliente,");
-                    query.AppendLine("v.TipoDocumento , v. NumeroDocumento,");
+                    query.AppendLine("v.TipoDocumento, v.NumeroDocumento,");
                     query.AppendLine("v.MontoPago, v.MontoCambio, v.MontoTotal,");
-                    query.AppendLine("convert (char(10),v. FechaRegistro, 103) [FechaRegistro]");
+                    query.AppendLine("convert (char(10), v.FechaRegistro, 103) [FechaRegistro]");
                     query.AppendLine("from VENTA v");
                     query.AppendLine("inner join USUARIO u on u.IdUsuario = v.IdUsuario");
                     query.AppendLine($"where v.NumeroDocumento = @numero");
@@ -273,13 +273,13 @@ namespace Datos.Datos.Registros
                 {
                     conexion.Open();
                     StringBuilder query = new StringBuilder();
-                    query.AppendLine("select p.Nombre, dv. PrecioVenta, dv. Cantidad, dv. SubTotal from DETALLE_VENTA dv");
-                    query.AppendLine("inner join PRODUCTO p on p.IdProducto = dv. IdProducto");
-                    query.AppendLine("where dv.IdVenta = @idVenta");
+                    query.AppendLine("select p.Nombre, dv.PrecioVenta, dv.Cantidad, dv.SubTotal from DETALLE_VENTA dv");
+                    query.AppendLine("inner join PRODUCTO p on p.IdProducto = dv.IdProducto");
+                    query.AppendLine("where dv.IdVenta = @IdVenta");
 
 
                     SqlCommand command = new SqlCommand(query.ToString(), conexion);
-                    command.Parameters.AddWithValue("@idVenta", idVenta);
+                    command.Parameters.AddWithValue("@IdVenta", idVenta);
                     command.CommandType = CommandType.Text;
 
                     using (SqlDataReader reader = command.ExecuteReader())

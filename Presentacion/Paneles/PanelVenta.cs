@@ -113,15 +113,15 @@ namespace Presentacion.Paneles
                 return; 
             }
 
-            DataTable detalleCompra = new DataTable();
-            detalleCompra.Columns.Add("IdProducto", typeof(string));
-            detalleCompra.Columns.Add("PrecioVenta", typeof(decimal));
-            detalleCompra.Columns.Add("Cantidad", typeof(int));
-            detalleCompra.Columns.Add("SubTotal", typeof(decimal));
+            DataTable detalleVenta = new DataTable();
+            detalleVenta.Columns.Add("IdProducto", typeof(string));
+            detalleVenta.Columns.Add("PrecioVenta", typeof(decimal));
+            detalleVenta.Columns.Add("Cantidad", typeof(int));
+            detalleVenta.Columns.Add("SubTotal", typeof(decimal));
 
             foreach (DataGridViewRow row in DatosCarrito.Rows)
             {
-                detalleCompra.Rows.Add(new object[]
+                detalleVenta.Rows.Add(new object[]
                 {
                     Convert.ToInt32(row.Cells["IdProducto"].Value.ToString()),
                     row.Cells["PrecioVenta"].Value.ToString(),
@@ -133,6 +133,7 @@ namespace Presentacion.Paneles
             LogicaVenta logicaVenta = new LogicaVenta();
             int idCorrelativo = logicaVenta.ObtenerCorrelativo();
             string numeroDocumento = string.Format("{0:00000}", idCorrelativo);
+            CalcularCambio();
 
             Venta venta = new Venta()
             {
@@ -141,11 +142,13 @@ namespace Presentacion.Paneles
                 NumeroDocumento = numeroDocumento,
                 DocumentoCliente = txtDocumento.Text,
                 NombreCliente = txtNombreCompleto.Text,
-                MontoTotal = Convert.ToDecimal(lblTotalPagar.Text)
+                MontoPago = Convert.ToDecimal(txtPago.Text),
+                MontoCambio = Convert.ToDecimal(txtCambio.Text),
+                MontoTotal = Convert.ToDecimal(lblTotalPagar.Text),
             };
 
             string mensaje = string.Empty;
-            bool respuesta = logicaVenta.Registrar(venta, detalleCompra, out mensaje);
+            bool respuesta = logicaVenta.Registrar(venta, detalleVenta, out mensaje);
 
             if (respuesta)
             {

@@ -32,9 +32,9 @@ namespace Presentacion.Recursos
                 usuario.Text = venta.ObjUsuario.NombreCompleto;
                 nombreCliente.Text = venta.NombreCliente;
                 documentoCliente.Text = venta.DocumentoCliente;
-                montoPago.Text = venta.MontoPago.ToString("0.00");
-                montoCambio.Text = venta.MontoCambio.ToString("0.00");
-                montoTotal.Text = venta.MontoTotal.ToString("0.00");
+                montoPago.Text = venta.MontoPago.ToString();
+                montoCambio.Text = venta.MontoCambio.ToString();
+                montoTotal.Text = venta.MontoTotal.ToString();
 
                 fecha.BackColor = Color.FromArgb(64, 64, 64);
 
@@ -45,7 +45,7 @@ namespace Presentacion.Recursos
                     DatosVentas.Rows.Add(new object[]
                     {
                         detalleVenta.ObjProducto.Nombre,
-                        detalleVenta.PrecioVenta,
+                        detalleVenta.SubTotal / detalleVenta.Cantidad,
                         detalleVenta.Cantidad,
                         detalleVenta.SubTotal
                     });
