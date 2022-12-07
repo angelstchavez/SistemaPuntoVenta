@@ -77,6 +77,7 @@
             this.compras.Text = " Compras";
             this.compras.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.compras.UseVisualStyleBackColor = false;
+            this.compras.Visible = false;
             this.compras.Click += new System.EventHandler(this.compras_Click);
             // 
             // panel1

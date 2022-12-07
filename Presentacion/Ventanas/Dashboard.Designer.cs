@@ -105,7 +105,7 @@
             this.acercaDe.ForeColor = System.Drawing.Color.White;
             this.acercaDe.Image = global::Presentacion.Properties.Resources.informacion;
             this.acercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.acercaDe.Location = new System.Drawing.Point(0, 500);
+            this.acercaDe.Location = new System.Drawing.Point(0, 455);
             this.acercaDe.Margin = new System.Windows.Forms.Padding(4);
             this.acercaDe.Name = "acercaDe";
             this.acercaDe.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -121,7 +121,6 @@
             // 
             this.configuracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.configuracion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.configuracion.Dock = System.Windows.Forms.DockStyle.Top;
             this.configuracion.FlatAppearance.BorderSize = 0;
             this.configuracion.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.GrayText;
             this.configuracion.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.GrayText;
@@ -129,16 +128,17 @@
             this.configuracion.ForeColor = System.Drawing.Color.White;
             this.configuracion.Image = global::Presentacion.Properties.Resources.setting;
             this.configuracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.configuracion.Location = new System.Drawing.Point(0, 455);
+            this.configuracion.Location = new System.Drawing.Point(0, 463);
             this.configuracion.Margin = new System.Windows.Forms.Padding(4);
             this.configuracion.Name = "configuracion";
             this.configuracion.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.configuracion.Size = new System.Drawing.Size(200, 45);
+            this.configuracion.Size = new System.Drawing.Size(139, 37);
             this.configuracion.TabIndex = 16;
             this.configuracion.Text = " Configuración";
             this.configuracion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.configuracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.configuracion.UseVisualStyleBackColor = false;
+            this.configuracion.Visible = false;
             // 
             // reportes
             // 
